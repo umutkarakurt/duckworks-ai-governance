@@ -10,7 +10,7 @@ This folder translates material AI risks and governance requirements into **test
 ## Current artifacts
 
 - `Duckworks_AI_Control_Library_v1.0.xlsx`
-- `Duckworks_AI_Control_Framework_Report_v1.0.docx`
+- `Duckworks_AI_Control_Framework_Report_v1.0.md`
 
 ## Control design fields
 
@@ -32,6 +32,20 @@ The control library is intended to capture, where relevant:
 
 A control description is not evidence of implementation. Planned or unvalidated controls should remain clearly distinguished from controls that are implemented, operating, and supported by current evidence.
 
+Synthetic portfolio evidence may demonstrate control design, workflow logic, or testability, but it does not by itself establish production operating effectiveness.
+
+### Status interpretation
+
+- **Not implemented** — the control mechanism is not in place.
+- **Planned** — the control requirement and intended design are defined, but implementation has not been demonstrated.
+- **Weak / ad hoc** — some control activity exists, but it is informal, inconsistent, or materially incomplete.
+- **Partially implemented** — a control mechanism or material part of it exists, but coverage, evidence, consistency, or operating validation remains incomplete.
+- **Implemented** — the control mechanism is in place and supported by evidence appropriate to the claimed implementation boundary.
+
+An **Implemented** label does not automatically mean the control is operating effectively, effective at reducing the underlying risk, or independently validated. Those are separate assurance conclusions.
+
+For the current WingInspect worked example, `WI-01 — Qualified Human Final Inspection` is treated as **Partially implemented** because the portfolio demonstrates the intended workflow and synthetic control testing while real production authority and operating effectiveness remain unvalidated.
+
 ## Framework mapping
 
 Mappings to NIST, ISO/IEC, ENISA, OWASP, MITRE, or legal sources are used for traceability and design context. A mapping does not itself demonstrate:
@@ -44,6 +58,8 @@ Mappings to NIST, ISO/IEC, ENISA, OWASP, MITRE, or legal sources are used for tr
 ## Reviewer approach
 
 Choose a material risk scenario and follow it into the control library. The strongest portfolio demonstration is not the number of mapped frameworks; it is whether the control has a clear objective, owner, evidence source, test method, and a defensible causal relationship to the risk being treated.
+
+For a worked example, see the [`AI-004 WingInspect operating-evidence package`](../80-operating-evidence/AI-004-winginspect/), which links `AI-004-R01` to `WI-01`, synthetic execution records, human overrides, and a control-test workpaper while preserving the production-evidence limitation.
 
 ---
 
