@@ -187,6 +187,33 @@ The portfolio risk map summarizes the relative **Duckworks internal residual-ris
   </a>
 </p>
 
+### From Governance Design to Operating Evidence
+
+Project W.I.N.G. does not treat policies, frameworks, control descriptions, or governance-status fields as proof that a control is operating.
+
+The portfolio now includes a worked synthetic evidence chain showing how a material AI risk is translated into:
+
+**Risk → Control → Accountable Owner → Execution → Evidence → Testing → Monitoring**
+
+#### Worked example — AI-004 WingInspect Vision
+
+`AI-004-R01` addresses the risk that WingInspect Vision may fail to identify a material manufacturing defect and allow a defective component to progress through quality control.
+
+The worked evidence package operationalizes the existing canonical control **`WI-01 — Qualified Human Final Inspection`** through a **Mandatory Human Release Gate**, under which WingInspect Vision cannot independently authorize product acceptance.
+
+The package includes:
+
+- a control implementation card;
+- accountable operating ownership;
+- synthetic inspection execution records;
+- meaningful human override examples;
+- an auditable AI-output → human-review → final-disposition trail; and
+- a control-test workpaper.
+
+➡️ **[View the AI-004 WingInspect operating-evidence package](80-operating-evidence/AI-004-winginspect/)**
+
+> **Evidence boundary:** The execution records are synthetic portfolio evidence. They demonstrate control and assurance design, not real production operating effectiveness, measured WingInspect performance, or validated reduction of manufacturing risk.
+
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
@@ -258,6 +285,7 @@ duckworks-ai-governance/
 ├── 10-system-model-and-technical-documentation/
 ├── 11-assurance-testing-and-evaluation/
 ├── 12-monitoring-reporting-and-roadmap/
+├── 80-operating-evidence/
 ├── 90-visuals/
 └── 99-archive/
 ```
@@ -279,6 +307,7 @@ duckworks-ai-governance/
 | `10-system-model-and-technical-documentation` | Model cards, model documentation, AI BOM, architecture and data-flow material |
 | `11-assurance-testing-and-evaluation` | NIST ARIA work, adversarial review, control testing and future audit work |
 | `12-monitoring-reporting-and-roadmap` | KPIs/KRIs, dashboards, reassessment, reporting, implementation roadmap |
+| `80-operating-evidence` | Worked risk-to-control implementation, synthetic execution evidence, control testing, evidence indexing, and explicit production-evidence gaps |
 | `90-visuals` | Diagrams and supporting visuals |
 | `99-archive` | Superseded drafts and working versions retained for traceability |
 
@@ -323,8 +352,11 @@ A practical review sequence is:
 11. **Policies, SOPs, Playbooks, and Runbooks**  
     Review how governance requirements are operationalized.
 
-12. **Adversarial Review / Findings Register**  
-    Review identified weaknesses, unsupported assumptions, gaps, and improvement actions.
+12. **Operating Evidence — AI-004 WingInspect Vision**  
+    Review how a material risk is translated into the canonical `WI-01` control, accountable ownership, synthetic execution records, human override evidence, a control test, and an explicit production-evidence limitation.
+
+13. **Adversarial Review / Findings Register**  
+    Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
 
@@ -389,6 +421,14 @@ The repository includes or is intended to include:
 - AI governance operational playbooks;
 - AI governance runbooks;
 - incident, escalation, monitoring, and reassessment material.
+
+### Operating evidence
+
+- operating-evidence index;
+- WingInspect `WI-01` control implementation card;
+- synthetic WingInspect inspection execution log;
+- Human Release Gate control-test workpaper;
+- skeptical-review remediation tracker.
 
 ### Model and evaluation documentation
 
@@ -458,6 +498,8 @@ Material governance activities should therefore be traceable to evidence such as
 
 Where evidence is unavailable, the portfolio should state that explicitly rather than imply operating effectiveness.
 
+The current worked example is maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/) and deliberately distinguishes synthetic workflow/test evidence from production operating-effectiveness evidence.
+
 ---
 
 ## 14. Critical Assumptions Still Requiring Validation
@@ -515,8 +557,8 @@ Planned or future-phase work may include:
 - executive AI governance dashboard;
 - implementation roadmap;
 - AI assurance and internal-audit program;
-- formal control-testing workpapers;
-- expanded evidence repository;
+- additional formal control-testing workpapers beyond the current AI-004 worked example;
+- expanded operating-evidence coverage beyond the current AI-004 worked example;
 - system-specific monitoring records.
 
 The existence of a policy, framework, or template should not be interpreted as evidence that the process is fully operational.
