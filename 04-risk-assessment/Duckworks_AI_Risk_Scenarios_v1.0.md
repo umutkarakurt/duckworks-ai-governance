@@ -257,6 +257,28 @@ Duckworks uses a 5x5 Severity x Likelihood matrix. Each scenario is scored inher
 | **Target treatment / controls** | Validated minimum sensitivity; safety case; independent QA sampling; fail-safe/manual fallback.         |
 | **Target residual risk**        | **Severity 5 x Likelihood 1 = 5 Moderate**                                                              |
 
+#### Implementation evidence — AI-004-R01 / WI-01
+
+A worked implementation demonstration for the canonical control **`WI-01 — Qualified Human Final Inspection`** is available at:
+
+[`../80-operating-evidence/AI-004-winginspect/`](../80-operating-evidence/AI-004-winginspect/)
+
+The evidence package operationalizes `WI-01` through a **Mandatory Human Release Gate** and demonstrates, using synthetic portfolio records:
+
+- control design and decision boundaries;
+- a qualified manufacturing inspector as the control performer;
+- final release authorization only after recorded human review;
+- human accept/reject authority independent of the AI output;
+- documented AI overrides and rationale;
+- timestamped traceability from AI output to human decision and final disposition; and
+- a control-test workpaper over the complete synthetic inspection population.
+
+**Evidence state:** **Designed → Synthetic execution demonstrated → Synthetic operation tested.**
+
+**Assurance boundary:** This package does not establish real production operating effectiveness, actual WingInspect defect-detection performance, sustained inspector behavior under throughput pressure, or validated reduction of product-safety risk. The underlying real-world human-authority assumption therefore remains subject to operational validation.
+
+Accordingly, this synthetic evidence package does **not** provide additional residual-risk reduction credit. The current `AI-004-R01` residual risk, system-level **High (10)** rating, **Partially Effective** control status, and **Medium** evidence confidence remain unchanged by this portfolio demonstration.
+
 | **AI-004-R02** | **Operational / financial** | **Scenario risk progression** |
 |----------------|-----------------------------|-------------------------------|
 
@@ -488,7 +510,7 @@ A scenario must be reviewed or a new scenario added when a material change alter
 
 ## 14. Source Basis and Evidence Boundary
 
-This register is derived from the existing Duckworks Project W.I.N.G. source set. It does not introduce new measured incidents, performance results, control evidence or legal conclusions beyond those sources.
+This register is derived from the existing Duckworks Project W.I.N.G. source set. It does not introduce real incidents, measured production performance, or new legal conclusions. Where synthetic worked evidence is created for portfolio demonstration, it is cross-referenced explicitly and must not be interpreted as production operating-effectiveness evidence or as justification for additional residual-risk credit.
 
 | **Source artifact**                                                | **Use in this register**                                                                                                                |
 |--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
@@ -500,5 +522,6 @@ This register is derived from the existing Duckworks Project W.I.N.G. source set
 | **Duckworks Project Assumptions Register v1.0**                    | Open/critical assumptions, evidence boundaries and change triggers.                                                                     |
 | **Duckworks AI RACI Chart v1.0**                                   | System owner map, specialist challenge roles, committee approval and Internal Audit independence.                                       |
 | **Duckworks Responsible Use Policy and Governance Lifecycle SOP**  | Operational release gates, stop-use criteria, shadow-AI handling and evidence expectations.                                             |
+| **AI-004 WingInspect Operating Evidence Package**                  | Synthetic worked example linking AI-004-R01 to canonical control `WI-01`, inspection execution records, human override evidence and a control-test workpaper; not production operating-effectiveness evidence. |
 
-**Evidence discipline.** Existing controls shown in this register are those credited in the baseline assessment. Their presence in the document does not independently prove operating effectiveness. Target treatments are planned states and must not be represented as current controls until implementation and evidence are verified.
+**Evidence discipline.** Existing controls shown in this register are those credited in the baseline assessment. Their presence in the document does not independently prove operating effectiveness. Target treatments are planned states and must not be represented as current controls until implementation and evidence are verified. Synthetic execution or test artifacts may demonstrate control design and workflow logic, but they must not be represented as production operating-effectiveness evidence unless supported by sustained real operational data and appropriate assurance.
