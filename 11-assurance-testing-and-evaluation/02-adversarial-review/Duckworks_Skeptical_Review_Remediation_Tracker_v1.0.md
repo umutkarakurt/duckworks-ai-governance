@@ -30,7 +30,7 @@ Companion remediation record for the **Duckworks Skeptical Multi-Perspective AI 
 | **F-004 — High** | Human-oversight assumption used as risk treatment. The review asks what workflow evidence proves inspectors can and do override the model, including under throughput pressure. | `AI-004-R01` is linked to canonical control `WI-01 — Qualified Human Final Inspection`; its Mandatory Human Release Gate implementation package contains a control card, synthetic inspection records, AI/human disagreements in both directions, override rationale, and a control-test workpaper. | **Partially Addressed** | Synthetic records demonstrate the intended workflow, not actual inspector behavior, organizational incentives, or control resilience under real throughput pressure. Production observation/evidence remains required. |
 | **F-013 — High** | Evidence repository placeholder; generic folder references do not identify an execution record, date, version, owner, or result. | `80-operating-evidence/evidence-index.md` now identifies exact evidence objects for three worked examples: AI-004 WingInspect, AI-005 DuckTalent, and AI-006 PondGPT. Each package contains dated/versioned implementation and test artifacts with explicit evidence-state and production-evidence boundaries. | **Partially Addressed** | Exact evidence-object traceability is now demonstrated across three distinct controls, but the wider portfolio still contains credited or partially credited controls without equivalent execution-level evidence objects. |
 | **F-024 — High** | Human oversight is mostly design intent rather than demonstrated operation. | The AI-004 package demonstrates how `WI-01` final human authority, sequencing, override behavior, rationale capture, and release authorization would operate and be evidenced. | **Partially Addressed** | No claim is made that broader portfolio human-oversight arrangements or real production behavior have been validated. |
-| **F-033 — Moderate** | Design-heavy / operation-light portfolio; reviewer asks for one governance decision through evidence and testing rather than another template. | The portfolio now provides three materially different worked control chains and, for DuckTalent, extends the chain through a synthetic governance gate decision: `AI-005-R01 → DT-01/DT-02 → executable fairness testing → control-test evidence → governance evidence-pack review → DENIED real-applicant pilot`. | **Partially Addressed** | The worked decision is synthetic. Real committee operation, sustained monitoring history, production reassessment events, real approvals/non-approvals, and production outcome evidence remain unvalidated. |
+| **F-033 — Moderate** | Design-heavy / operation-light portfolio; reviewer asks for one governance decision from evidence and testing through monitoring and reassessment rather than another template. | DuckTalent now extends the chain through post-decision lifecycle evidence: `AI-005-R01 → DT-01/DT-02 → executable fairness testing → control-test evidence → DENIED pilot → DT-CHG-001 material change → executable regression monitoring → IR-001 reassessment → revised DENIED decision`. | **Partially Addressed** | The chain is synthetic. Real committee operation, sustained production monitoring history, real reassessment events, real approvals/non-approvals, and production outcome evidence remain unvalidated. |
 | **F-043 — Moderate** | Independent assurance not demonstrated. | A structured control-test workpaper now exists for `WI-01`, including population, procedure, results, limitations, and conclusion. | **Open** | The workpaper is a portfolio artifact and is not independent assurance. Independence, reviewer challenge, and production evidence would be required to address the finding. |
 | **F-047 — High** | Control-status taxonomy is inconsistent; implemented, operating, effective, and validated are not consistently separated. | The operating-evidence package explicitly distinguishes **Designed**, **Implemented**, **Operating**, **Effective**, and **Validated**, and records the AI-004 evidence state as **Designed → Synthetic execution demonstrated → Synthetic operation tested**. | **Partially Addressed** | The taxonomy is now explicit for the operating-evidence layer, but legacy portfolio artifacts still require reconciliation where older wording overstates status. |
 | **F-048 — High** | Risk-report wording overstates operation and leaves ambiguity over which credited controls genuinely operate. | The AI-004 risk scenario is cross-referenced to the synthetic `WI-01` evidence package with an explicit statement that the package does **not** justify additional residual-risk reduction credit and does not establish production operating effectiveness. | **Partially Addressed** | Broader risk-report/control-credit wording across other systems remains to be reconciled against the same evidence discipline. |
@@ -79,6 +79,18 @@ This creates a traceable worked chain:
 |---|---|---|---|---|
 | **F-014 — High** | Approval claims without approval artifacts. A governance status field is not evidence that the designated authority actually made the decision. | DuckTalent now has an exact synthetic lifecycle-decision artifact that identifies the decision question, evidence snapshot, evidence considered, blocking conditions, decision outcome, permitted boundary, action ownership, and reconsideration trigger. The record explicitly denies progression to a real-applicant pilot. | **Partially Addressed** | The artifact is a synthetic worked decision, not evidence of a real AI Governance Committee meeting or real executive approval/non-approval. It also does not retroactively evidence historical approval claims for FeatherForecast production or WingInspect/PondGPT restricted-pilot states. |
 
+### Monitoring and reassessment evidence
+
+DuckTalent now contains a second lifecycle decision after a material synthetic change trigger.
+
+The worked chain is:
+
+**Prior gate decision → `DT-CHG-001` proposed feature/ranking change → executable change-regression check → `DT-TRG-001` → `IR-001` reassessment → revised decision rejects change and preserves DO NOT DEPLOY**
+
+This materially strengthens the portfolio's answer to the broader monitoring/reassessment and operation-light challenge because a prior decision is no longer treated as static. The evidence shows that a later change can challenge prior remediation, reopen affected governance records, and produce a revised decision.
+
+It does **not** establish sustained production monitoring, real applicant/complaint/incident telemetry, production change-control operation, real committee reassessment, or validated risk reduction.
+
 ## 5. Findings Not Closed by the Current Operating-Evidence Packages
 
 The WingInspect, PondGPT, and DuckTalent work should **not** be used to imply closure of unrelated skeptical findings. In particular, the following remain outside the scope of these worked examples:
@@ -94,11 +106,11 @@ The WingInspect, PondGPT, and DuckTalent work should **not** be used to imply cl
 
 ## 6. Current Remediation Conclusion
 
-The AI-004 WingInspect, AI-005 DuckTalent, and AI-006 PondGPT operating-evidence packages materially improve Project W.I.N.G.'s ability to demonstrate the transition from governance design to executable, auditable control workflows across three distinct control archetypes. DuckTalent now additionally demonstrates how a synthetic evidence pack can be consumed at a lifecycle gate to support a traceable decision not to progress.
+The AI-004 WingInspect, AI-005 DuckTalent, and AI-006 PondGPT operating-evidence packages materially improve Project W.I.N.G.'s ability to demonstrate the transition from governance design to executable, auditable control workflows across three distinct control archetypes. DuckTalent now additionally demonstrates both a synthetic lifecycle decision and a later event-driven monitoring/reassessment cycle that challenges prior remediation and produces a revised decision.
 
 The defensible claim is:
 
-> **Project W.I.N.G. now contains three worked synthetic control-evidence chains and one worked synthetic lifecycle-decision record: meaningful human final authority for manufacturing quality/safety, executable authorization regression for generative-AI access control, executable fairness/proxy-feature testing for a consequential employment use case, and a DuckTalent gate decision that consumes the evidence and denies progression to a real-applicant pilot.**
+> **Project W.I.N.G. now contains three worked synthetic control-evidence chains plus a DuckTalent lifecycle sequence that consumes evidence at a gate, detects a later material configuration regression, opens reassessment, and produces a revised decision that preserves the real-applicant deployment block.**
 
 The project still does **not** claim that:
 
@@ -106,21 +118,23 @@ The project still does **not** claim that:
 - `WI-01`, `PG-02`, or `DT-02` is production-validated or operating effectively in a live environment;
 - WingInspect model performance, PondGPT production authorization inheritance, or DuckTalent real-applicant fairness has been established;
 - current residual risk has been reduced by the synthetic evidence;
-- the DuckTalent gate record represents a real committee meeting, real executive approval/non-approval, or real pilot authorization;
+- the DuckTalent gate or reassessment records represent a real committee meeting, real executive approval/non-approval, real production monitoring, or real pilot authorization;
 - independent assurance has been completed; or
 - the broader skeptical review is resolved.
 
 ## 7. Recommended Next Portfolio Maturity Step
 
-With three complementary operating-evidence archetypes and a worked synthetic DuckTalent gate decision now established, the next highest-value step should **not** be another system package or another approval template.
+The three complementary control-evidence archetypes and the DuckTalent decision → monitoring → reassessment sequence now provide a sufficient synthetic operating-model demonstration.
 
-Priority should shift to **post-decision lifecycle maturity**:
+The next highest-value step should **not** be another synthetic AI-system or lifecycle package.
 
-1. **Monitoring signal / material-change trigger** — create a worked synthetic monitoring event after a prior governance decision.
-2. **Reassessment** — show exactly which risk, impact, control, assumption, model/data, and governance records are reopened by that trigger.
-3. **Revised lifecycle decision** — demonstrate how new evidence changes, preserves, tightens, or suspends the prior gate without inventing production facts.
-4. **Evidence completeness / control traceability** — continue resolving `F-013` beyond the three worked examples.
-5. **Assurance boundary** — preserve the distinction between management testing, governance review, and independent assurance.
+Priority should shift to **portfolio consolidation and decision communication**:
+
+1. **Management reporting** — create a compact executive view that surfaces current gates, material risks, evidence maturity, unresolved blockers, and next decisions without implying production telemetry.
+2. **Authoritative-record cleanup** — continue resolving cross-artifact source-of-truth, document-control, and evidence-traceability findings such as `F-013`.
+3. **Interview case-study narrative** — package one end-to-end story showing how evidence changed a governance decision and how a later change triggered reassessment.
+4. **Assurance boundary** — retain the distinction between first/second-line management testing, governance review, and independent assurance.
+5. **Stop expanding synthetic evidence breadth** unless a specific skeptical-review finding or target-role requirement justifies it.
 
 The three current evidence archetypes are:
 
