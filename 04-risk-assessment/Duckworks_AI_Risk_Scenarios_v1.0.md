@@ -334,6 +334,33 @@ Accordingly, this synthetic evidence package does **not** provide additional res
 | **Target treatment / controls** | Legal review; job-relevance controls; representative testing; fairness metrics; adverse-impact investigation; challenge process. |
 | **Target residual risk**        | **Severity 5 x Likelihood 2 = 10 High**                                                                                          |
 
+#### Implementation evidence — AI-005-R01 / DT-01 / DT-02
+
+A worked pre-deployment fairness-control demonstration is available at:
+
+[`../80-operating-evidence/AI-005-ducktalent/`](../80-operating-evidence/AI-005-ducktalent/)
+
+The evidence chain links the preventive dependency **`DT-01 — Job-Relevance Criteria & Proxy Feature Governance`** to the detective control **`DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing`** and demonstrates, using synthetic portfolio data:
+
+- a synthetic approved-feature allow-list;
+- 24 synthetic applicants arranged as 12 matched pairs;
+- an executable fairness/adverse-impact test;
+- a deliberately seeded unapproved `Career_Gap_Months` scoring penalty;
+- matched-pair score comparisons;
+- selection-rate, true-positive-rate and false-negative-rate diagnostics;
+- detection of the unapproved feature and its measurable effect;
+- a pre-deployment `BLOCK` result;
+- generated exception evidence;
+- remediation by removing the unapproved feature;
+- full-population retesting; and
+- a control-test conclusion that a passing synthetic retest results only in **Eligible for further governance review**.
+
+**Evidence state:** **Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested.**
+
+**Assurance boundary:** The package does not use real applicants or real protected-characteristic data and does not establish production job relevance, real applicant fairness, lawful fairness-data processing, legal non-discrimination compliance, accessibility performance, candidate remedy effectiveness, or actual DuckTalent model behavior.
+
+Accordingly, `DT-02` may be classified as **Partially implemented within the synthetic portfolio boundary**, while `DT-01` remains **Not implemented**. This evidence does **not** provide current residual-risk reduction credit. DuckTalent remains system-level **Critical (20)**, **Not Implemented**, **Low evidence confidence**, and **Do not deploy in current state**.
+
 | **AI-005-R02** | **Human oversight & automation bias** | **Scenario risk progression** |
 |----------------|---------------------------------------|-------------------------------|
 
@@ -549,6 +576,7 @@ This register is derived from the existing Duckworks Project W.I.N.G. source set
 | **Duckworks AI RACI Chart v1.0**                                   | System owner map, specialist challenge roles, committee approval and Internal Audit independence.                                       |
 | **Duckworks Responsible Use Policy and Governance Lifecycle SOP**  | Operational release gates, stop-use criteria, shadow-AI handling and evidence expectations.                                             |
 | **AI-004 WingInspect Operating Evidence Package**                  | Synthetic worked example linking AI-004-R01 to canonical control `WI-01`, inspection execution records, human override evidence and a control-test workpaper; not production operating-effectiveness evidence. |
+| **AI-005 DuckTalent DT-02 Operating Evidence Package**             | Synthetic executable worked example linking AI-005-R01 to `DT-01` / `DT-02`, matched applicant pairs, seeded unapproved feature, diagnostic fairness metrics, deployment blocking, remediation and retest; not real-applicant fairness, legal discrimination analysis, or production operating-effectiveness evidence. |
 | **AI-006 PondGPT PG-02 Operating Evidence Package**                | Synthetic executable worked example linking AI-006-R01 to `PG-01` / `PG-02`, an authorization matrix, permission-regression code, seeded authorization defect, exception/gate evidence, remediation retest and control-test workpaper; not production operating-effectiveness evidence. |
 
 **Evidence discipline.** Existing controls shown in this register are those credited in the baseline assessment. Their presence in the document does not independently prove operating effectiveness. Target treatments are planned states and must not be represented as current controls until implementation and evidence are verified. Synthetic execution or test artifacts may demonstrate control design and workflow logic, but they must not be represented as production operating-effectiveness evidence unless supported by sustained real operational data and appropriate assurance.
