@@ -95,6 +95,8 @@ See: [`AI-005-ducktalent/`](./AI-005-ducktalent/)
 
 Governance decision: [`AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md`](./AI-005-ducktalent/AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md)
 
+Post-decision monitoring / reassessment: [`../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/`](../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/)
+
 ## Important Limitation
 
 Duckworks is a fictional portfolio organization.
@@ -110,6 +112,7 @@ They do **not** constitute:
 - validated production authorization inheritance;
 - real DuckTalent applicants, protected-characteristic data, production features, model behavior, fairness outcomes, accessibility results, or legal discrimination conclusions;
 - a real Duckworks AI Governance Committee meeting, real executive approval/non-approval, or real lifecycle authorization;
+- continuous production DuckTalent monitoring, real change telemetry, real reassessment operation, or real production suspension/authorization;
 - longitudinal control-effectiveness evidence;
 - demonstrated reduction of current residual risk; or
 - independent assurance over a live environment.

@@ -20,6 +20,11 @@ Synthetic portfolio evidence is explicitly distinguished from production operati
 | EV-AI005-007 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 | Production Feature-Governance / Fairness Evidence | Not available | Real job-relevance approval, production feature inventory, lawful group-data method, representative validation, and actual model/version evidence |
 | EV-AI005-008 | AI-005 — DuckTalent AI | AI-005-R01 | DT-02 / DT-07 | Real Applicant Outcome / Challenge Trend | Not available | Production fairness, contestability, error, complaint, and rights-impact outcome evidence |
 | EV-AI005-009 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 / Governance Gate | Synthetic Pre-Deployment Governance Gate Decision Record | Synthetic lifecycle decision demonstrated | Risk, impact, rights/privacy, model-documentation and control-test evidence are consumed at a lifecycle gate; advancement to a real-applicant pilot is denied, blocking conditions are recorded, and a reassessment trigger is defined |
+| EV-AI005-010 | AI-005 — DuckTalent AI | AI-005-R01 | Change / Monitoring | Synthetic Proposed Change Event `DT-CHG-001` | Synthetic material-change input | A proposed, unapproved feature/ranking configuration deliberately reintroduces `Career_Gap_Months` after prior remediation |
+| EV-AI005-011 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 / Change Monitoring | Executable Change-Regression Check | Synthetic monitoring mechanism demonstrated | Canonical DT-02 allow-list and matched-pair dataset are reused to test the proposed change for unapproved features and recreated outcome effects |
+| EV-AI005-012 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 / Reassessment Trigger | Change-Regression Result `DT-MON-001 / DT-TRG-001` | Synthetic reassessment trigger demonstrated | Seven monitoring assertions pass; the unapproved feature and recreated synthetic disparity are detected; the proposed configuration is rejected and `IR-001` is opened |
+| EV-AI005-013 | AI-005 — DuckTalent AI | AI-005-R01 | Risk / Impact / Rights / Privacy / Model / Controls | Reassessment Record `IR-001` | Synthetic reassessment performed | Affected governance records are explicitly reopened; current Critical risk, DT-01/DT-02 status and DO NOT DEPLOY position are revalidated |
+| EV-AI005-014 | AI-005 — DuckTalent AI | AI-005-R01 | Governance Gate / Change Control | Revised Governance Gate Decision | Synthetic revised lifecycle decision demonstrated | `DT-CHG-001` is rejected, the prior real-applicant block is preserved, and future material ranking/criteria/weight/feature changes are conditioned on version-diff and DT-02 regression evidence |
 | EV-AI006-001 | AI-006 — PondGPT | AI-006-R01 | PG-01 / PG-02 | Control Implementation Card | Designed | Authorization-risk objective, owner, triggers, evidence, gate rule, and measurement approach |
 | EV-AI006-002 | AI-006 — PondGPT | AI-006-R01 | PG-01 / PG-02 | Synthetic Authorization Matrix | Designed test input | Personas, source entitlements, repository exclusions, and DLP expectations |
 | EV-AI006-003 | AI-006 — PondGPT | AI-006-R01 | PG-02 | Executable Permission Regression Control | Synthetic technical implementation demonstrated | Reproducible control logic that executes authorization, DLP, change, exception, gate, and retest assertions |
@@ -83,6 +88,24 @@ The record therefore demonstrates that a successful synthetic control test does 
 It does **not** claim:
 
 **Real committee meeting → Real executive approval/non-approval → Real pilot authorization → Production operation → Validated risk reduction**
+
+### AI-005 — Synthetic Monitoring, Reassessment & Revised Decision
+
+Project W.I.N.G. now demonstrates:
+
+**Prior synthetic gate decision → Synthetic material-change event → Synthetic change-monitor execution → Synthetic reassessment trigger → Synthetic reassessment performed → Synthetic revised lifecycle decision**
+
+`DT-CHG-001` deliberately reintroduces `Career_Gap_Months` after the earlier DT-02 remediation. The executable regression monitor compares the proposed configuration with the existing synthetic approved-feature boundary, detects the unapproved feature and recreated matched-pair/group effect, and opens `IR-001`.
+
+The reassessment reopens the relevant risk, control, AIA, FRIA/HUDERIA, DPIA, model-documentation, and gate-decision records. It does **not** lower the system risk score.
+
+The revised decision is:
+
+**DENIED — reject `DT-CHG-001` and maintain DO NOT DEPLOY with real applicants**
+
+It does **not** claim:
+
+**Continuous production monitoring → Real telemetry/event signal → Real committee reassessment → Real production suspension/authorization → Validated operating effectiveness**
 
 ### PG-02 — Automated Permission Regression & DLP Tests
 
