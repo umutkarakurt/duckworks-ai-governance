@@ -179,6 +179,12 @@ The current portfolio baseline applies differentiated governance gates.
 
 These are **portfolio governance decisions based on the fictional scenario and documented assumptions**. They are not legal determinations.
 
+A compact management view of the current portfolio posture is available here:
+
+➡️ **[Executive AI Governance Decision Brief](12-monitoring-reporting-and-roadmap/Duckworks_Executive_AI_Governance_Decision_Brief_v1.0.md)**
+
+The brief summarizes current gates, residual-risk distribution, control implementation posture, evidence maturity, unresolved blockers, and the management decisions that require attention. It is a **synthetic management-reporting artifact**, not a live dashboard or production telemetry.
+
 The portfolio risk map summarizes the relative **Duckworks internal residual-risk position** and current governance response across the seven baseline entries. It is a management view, not a legal classification under the EU AI Act or any other legislation.
 
 <p align="center">
@@ -357,7 +363,7 @@ duckworks-ai-governance/
 | `09-third-party-ai-governance` | Vendor due diligence, contractual requirements, DPAs, supplier governance |
 | `10-system-model-and-technical-documentation` | Model cards, model documentation, AI BOM, architecture and data-flow material |
 | `11-assurance-testing-and-evaluation` | NIST ARIA work, adversarial review, control testing and future audit work |
-| `12-monitoring-reporting-and-roadmap` | KPIs/KRIs, dashboards, reassessment, reporting, implementation roadmap |
+| `12-monitoring-reporting-and-roadmap` | Executive decision reporting, KPIs/KRIs, monitoring/reassessment, dashboards, and implementation roadmap |
 | `80-operating-evidence` | Worked risk-to-control implementation, synthetic execution evidence, control testing, evidence indexing, and explicit production-evidence gaps |
 | `90-visuals` | Diagrams and supporting visuals |
 | `99-archive` | Superseded drafts and working versions retained for traceability |
@@ -415,7 +421,10 @@ A practical review sequence is:
 15. **Monitoring & Reassessment — AI-005 DuckTalent AI**  
     Review how a later proposed feature/ranking change challenges prior evidence, is detected through executable regression monitoring, opens `IR-001`, reopens affected governance records, and results in a revised decision that rejects the change and preserves the prior gate.
 
-16. **Adversarial Review / Findings Register**  
+16. **Executive AI Governance Decision Brief**  
+    Review the compact management view of current residual-risk distribution, lifecycle gates, control implementation posture, evidence maturity, unresolved blockers, and next management decisions.
+
+17. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
@@ -501,6 +510,7 @@ The repository includes or is intended to include:
 - DuckTalent synthetic governance gate decision record;
 - DuckTalent synthetic proposed-change event and executable change-regression monitor;
 - DuckTalent synthetic reassessment record and revised gate decision;
+- Executive AI Governance Decision Brief;
 - skeptical-review remediation tracker.
 
 ### Model and evaluation documentation
@@ -627,7 +637,7 @@ Planned or future-phase work may include:
 - AI monitoring and reassessment standard;
 - AI incident and escalation standard;
 - third-party AI due-diligence questionnaire;
-- executive AI governance dashboard;
+- live / production-connected executive AI governance dashboard beyond the current static decision brief;
 - implementation roadmap;
 - AI assurance and internal-audit program;
 - additional formal control-testing workpapers beyond the current AI-004, AI-005 and AI-006 worked examples;
