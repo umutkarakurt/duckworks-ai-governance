@@ -46,6 +46,8 @@ An **Implemented** label does not automatically mean the control is operating ef
 
 For the current WingInspect worked example, `WI-01 — Qualified Human Final Inspection` is treated as **Partially implemented** because the portfolio demonstrates the intended workflow and synthetic control testing while real production authority and operating effectiveness remain unvalidated.
 
+For the current PondGPT worked example, `PG-02 — Automated Permission Regression & DLP Tests` is treated as **Partially implemented** because the portfolio contains a reproducible executable synthetic test mechanism, generated evidence, seeded-defect detection, gate enforcement, and remediation/retest logic while production identity/connector/DLP/SIEM integration, sustained operating history, and production operating effectiveness remain unvalidated.
+
 ## Framework mapping
 
 Mappings to NIST, ISO/IEC, ENISA, OWASP, MITRE, or legal sources are used for traceability and design context. A mapping does not itself demonstrate:
@@ -59,7 +61,12 @@ Mappings to NIST, ISO/IEC, ENISA, OWASP, MITRE, or legal sources are used for tr
 
 Choose a material risk scenario and follow it into the control library. The strongest portfolio demonstration is not the number of mapped frameworks; it is whether the control has a clear objective, owner, evidence source, test method, and a defensible causal relationship to the risk being treated.
 
-For a worked example, see the [`AI-004 WingInspect operating-evidence package`](../80-operating-evidence/AI-004-winginspect/), which links `AI-004-R01` to `WI-01`, synthetic execution records, human overrides, and a control-test workpaper while preserving the production-evidence limitation.
+Two worked examples demonstrate different control archetypes:
+
+- [`AI-004 WingInspect operating-evidence package`](../80-operating-evidence/AI-004-winginspect/) — links `AI-004-R01` to `WI-01`, synthetic inspection execution, meaningful human overrides, and a control-test workpaper.
+- [`AI-006 PondGPT operating-evidence package`](../80-operating-evidence/AI-006-pondgpt/) — links `AI-006-R01` to the `PG-01` authorization boundary and `PG-02` detective control, executable permission-regression logic, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, and retesting.
+
+Both preserve the distinction between synthetic portfolio implementation/testing evidence and production operating effectiveness.
 
 ---
 
