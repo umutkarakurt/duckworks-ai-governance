@@ -86,8 +86,41 @@ The cadence above is Duckworks recommended practice, not a HUDERIA-prescribed le
 | **Review ID** | **Date**   | **Trigger**                     | **HUDERIA elements reopened** | **Key changes / impacts**                                                                    | **Decision**  | **Owner**                           | **Next review**                                           |
 |---------------|------------|---------------------------------|-------------------------------|----------------------------------------------------------------------------------------------|---------------|-------------------------------------|-----------------------------------------------------------|
 | IR-000        | 9 Aug 2026 | Initial pre-deployment baseline | COBRA / SEP / RIA / MP        | Full HUDERIA baseline created; stakeholder evidence and blocking controls remain incomplete. | DO NOT DEPLOY | AI Governance Lead / Business Owner | At completion of blocking actions / before any real pilot |
-| IR-001        | TBD        | Future                          | TBD                           | TBD                                                                                          | TBD           | TBD                                 | TBD                                                       |
+| IR-001        | 2 Sep 2026 | Synthetic proposed ranking / feature-set change (`DT-CHG-001`) | COBRA / RIA / MP; SEP need reconsidered | `Career_Gap_Months` is deliberately reintroduced after DT-02 remediation; regression monitoring detects the unapproved feature and recreated synthetic effect. | REJECT CHANGE / DO NOT DEPLOY | AI Governance Lead / Business Owner | Event-driven: materially revised evidence pack or new material trigger |
 | IR-002        | TBD        | Future                          | TBD                           | TBD                                                                                          | TBD           | TBD                                 | TBD                                                       |
+
+### 6.1 IR-001 — Worked synthetic event-driven reassessment
+
+`IR-001` is a portfolio demonstration of the event-driven workflow defined in this plan.
+
+The trigger package is maintained at:
+
+[`../../../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/`](../../../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/)
+
+The worked event does not represent production monitoring. `DT-CHG-001` is a deliberately proposed and unapproved synthetic configuration change that reintroduces `Career_Gap_Months` after the earlier DT-02 remediation.
+
+The executable monitor:
+
+1. compares the proposed feature set with the canonical synthetic DT-02 allow-list;
+2. detects the reintroduced unapproved feature;
+3. recreates a measurable matched-pair and group-level synthetic effect;
+4. opens `IR-001`;
+5. identifies the risk, control, AIA, FRIA/HUDERIA, DPIA, model-documentation and governance-decision records that require targeted reassessment; and
+6. preserves the existing **DO NOT DEPLOY** boundary.
+
+The reassessment concludes:
+
+- current residual risk remains **Critical (20)**;
+- production control effectiveness remains **Not Implemented**;
+- `DT-01` remains **Not Implemented**;
+- `DT-02` remains **Partially Implemented within the synthetic portfolio boundary**;
+- the proposed change is rejected; and
+- no residual-risk reduction or production-readiness claim is created.
+
+**Evidence maturity:**  
+**Synthetic material-change event → Synthetic reassessment trigger demonstrated → Synthetic reassessment performed → Synthetic revised lifecycle decision demonstrated**
+
+No real stakeholder consultation, applicant outcome, production telemetry, real committee reassessment, or legal/fairness conclusion is represented by `IR-001`.
 
 ## 7. Stop-Use Criteria
 
@@ -107,8 +140,8 @@ The cadence above is Duckworks recommended practice, not a HUDERIA-prescribed le
 
 ## 8. Governance Decision
 
-| **Current state.** Iterative review controls are designed but cannot be considered operational until DuckTalent reaches an approved pilot or production state. The current baseline review preserves the DO NOT DEPLOY decision. |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Current state.** The portfolio now demonstrates one synthetic event-driven review cycle (`IR-001`) after a proposed material feature/ranking change. This demonstrates reassessment workflow logic, not continuous production operation. DuckTalent remains pre-deployment and the current DO NOT DEPLOY decision is preserved. |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## Source Basis
 
