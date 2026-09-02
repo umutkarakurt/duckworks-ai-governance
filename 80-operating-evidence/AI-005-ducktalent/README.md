@@ -11,7 +11,7 @@
 
 This package demonstrates a third Project W.I.N.G. control archetype:
 
-**AI-005-R01 → DT-01 job-relevance/proxy boundary → DT-02 fairness testing → matched synthetic applicants → seeded unapproved proxy → measured outcome difference → deployment block → remediation → retest**
+**AI-005-R01 → DT-01 job-relevance/proxy boundary → DT-02 fairness testing → matched synthetic applicants → seeded unapproved proxy → measured outcome difference → deployment block → remediation → retest → governance gate review → real-applicant pilot denied**
 
 It is deliberately different from:
 
@@ -24,7 +24,7 @@ This package focuses on **fairness, job relevance, proxy-feature governance, and
 
 DuckTalent remains a pre-deployment concept. The portfolio's current governance decision is **Do not deploy in current state**.
 
-The synthetic evidence in this folder does not change that decision.
+The synthetic DT-02 evidence does not change that decision. The worked governance gate record now demonstrates how the available evidence is consumed at a lifecycle gate and reaches the same result: **DENIED — maintain DO NOT DEPLOY with real applicants**.
 
 ## Control relationship
 
@@ -90,6 +90,38 @@ Expected DT-02 response:
 6. `AI-005_2026-09-02_FAIR_Fairness_Exception.json`
 7. `AI-005_2026-09-02_FAIR_Fairness_Run_Summary.json`
 8. `AI-005_2026-09-02_MON_Fairness_Control_Test.md`
+9. `AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md`
+
+## Governance gate decision
+
+The worked gate decision asks:
+
+**May DuckTalent advance to a pilot using real applicants?**
+
+The record consumes the current risk assessment, acceptance criteria, lifecycle SOP, AIA/FRIA/DPIA, model-documentation gaps, DT-02 implementation evidence, run summary, and control-test result.
+
+The decision is:
+
+**DENIED — maintain DO NOT DEPLOY with real applicants**
+
+The reason is not that the DT-02 test failed. The DT-02 synthetic control test passed.
+
+The denial occurs because the wider evidence pack still shows:
+
+- **Critical (20)** current residual risk;
+- system control effectiveness **Not Implemented**;
+- `DT-01` **Not Implemented**;
+- production model/provider/version and architecture unresolved;
+- production-representative validation absent;
+- real-applicant fairness and lawful fairness-data methodology unvalidated;
+- meaningful human-oversight evidence absent;
+- transparency, contestability, remedy, accessibility, privacy, security, third-party, and monitoring conditions incomplete.
+
+The gate record therefore demonstrates a key governance principle:
+
+> **A successful control test does not authorize progression beyond the boundary supported by the total evidence.**
+
+The record is synthetic portfolio evidence. It is **not** evidence that a real Duckworks AI Governance Committee meeting occurred or that real executives approved or rejected a real system.
 
 ## Run locally
 
@@ -101,14 +133,20 @@ No third-party Python package or network access is required.
 
 ## Evidence maturity
 
+### DT-02 control evidence
+
 **Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested**
+
+### Governance-decision evidence
+
+**Synthetic control evidence available → Governance evidence pack reviewed → Synthetic lifecycle decision demonstrated**
 
 Not demonstrated:
 
-**Production fairness validated → Real-applicant operating effectiveness → Legal compliance → Validated rights-risk reduction → Independent assurance**
+**Real committee approval/non-approval → Real pilot authorization → Production fairness validated → Real-applicant operating effectiveness → Legal compliance → Validated rights-risk reduction → Independent assurance**
 
 ## Critical limitation
 
-> This package is a synthetic portfolio demonstration. It contains no real applicants, no real protected-characteristic data, no real DuckTalent model, no lawful-basis determination for fairness data, and no legal discrimination analysis.
+> This package is a synthetic portfolio demonstration. It contains no real applicants, no real protected-characteristic data, no real DuckTalent model, no lawful-basis determination for fairness data, no legal discrimination analysis, and no evidence of a real committee meeting or real executive approval/non-approval.
 
 The package therefore does not justify lowering DuckTalent's current **Critical (20)** residual-risk position or changing the **Do not deploy in current state** gate.
