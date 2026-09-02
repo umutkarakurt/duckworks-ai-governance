@@ -35,47 +35,61 @@ Companion remediation record for the **Duckworks Skeptical Multi-Perspective AI 
 | **F-047 — High** | Control-status taxonomy is inconsistent; implemented, operating, effective, and validated are not consistently separated. | The operating-evidence package explicitly distinguishes **Designed**, **Implemented**, **Operating**, **Effective**, and **Validated**, and records the AI-004 evidence state as **Designed → Synthetic execution demonstrated → Synthetic operation tested**. | **Partially Addressed** | The taxonomy is now explicit for the operating-evidence layer, but legacy portfolio artifacts still require reconciliation where older wording overstates status. |
 | **F-048 — High** | Risk-report wording overstates operation and leaves ambiguity over which credited controls genuinely operate. | The AI-004 risk scenario is cross-referenced to the synthetic `WI-01` evidence package with an explicit statement that the package does **not** justify additional residual-risk reduction credit and does not establish production operating effectiveness. | **Partially Addressed** | Broader risk-report/control-credit wording across other systems remains to be reconciled against the same evidence discipline. |
 
-## 3. Findings Not Closed by the AI-004 Evidence Package
+## 3. AI-006 PondGPT Evidence Remediation
 
-The WingInspect work should **not** be used to imply closure of unrelated skeptical findings. In particular, the following remain outside the scope of this remediation:
+| **Finding** | **Original issue** | **Remediation / evidence now available** | **Status** | **Remaining gap / closure condition** |
+|---|---|---|---|---|
+| **F-005 — High** | The skeptical review asks for negative authorization tests for users with different repository rights and the exact connector configuration tested, rather than relying on an assumption that PondGPT inherits source permissions correctly. | `AI-006-R01` is linked to `PG-01 — Permission-Aware Retrieval` and `PG-02 — Automated Permission Regression & DLP Tests`. The PondGPT operating-evidence package contains a synthetic authorization matrix, an executable permission-regression control, positive and negative persona tests, entitlement-change tests, DLP/exclusion assertions, a deliberately seeded Finance connector ACL defect, generated exception/gate evidence, remediation, retesting, and a full-population control-test workpaper. | **Partially Addressed** | The package demonstrates the exact synthetic authorization configuration and technical test logic, but it does not validate real PondGPT connector ACLs, source-system permission inheritance, identity-provider synchronization, DLP/SSE/CASB enforcement, SIEM alerting, provider controls, or sustained production execution. Production architecture and operating evidence remain required. |
+
+The defensible evidence state for `PG-02` is:
+
+**Designed → Synthetic technical implementation demonstrated → Synthetic technical execution demonstrated → Synthetic operation tested**
+
+It is **not** evidence of production authorization validation or sustained operating effectiveness.
+
+## 4. Findings Not Closed by the Current Operating-Evidence Packages
+
+The WingInspect and PondGPT work should **not** be used to imply closure of unrelated skeptical findings. In particular, the following remain outside the scope of these worked examples:
 
 - **F-001 / F-002** — risk methodology chronology and scoring semantics;
 - **F-003** — DuckDesign control credit;
-- **F-005** — PondGPT authorization evidence;
 - **F-006** — evidence-confidence overstatement;
 - **F-007 to F-011** — inventory, ownership, vendor/technology drift, change control, and document-control inconsistencies;
 - **F-012 / F-014** — acceptance and approval artifacts;
-- **F-015 / F-016** — technical GenAI security and AI BOM completeness;
+- **F-015 / F-016** — broader technical GenAI security and AI BOM completeness;
 - **F-019 to F-023** — privacy/data-protection evidence gaps;
 - **F-034 to F-046** — value, monitoring, risk appetite, assurance, reporting, incident and third-party maturity gaps.
 
-## 4. Current Remediation Conclusion
+## 5. Current Remediation Conclusion
 
-The AI-004 WingInspect operating-evidence package materially improves Project W.I.N.G.'s ability to demonstrate the transition from governance design to an executable, auditable control workflow.
+The AI-004 WingInspect and AI-006 PondGPT operating-evidence packages materially improve Project W.I.N.G.'s ability to demonstrate the transition from governance design to executable, auditable control workflows across two distinct control archetypes.
 
 The defensible claim is:
 
-> **Project W.I.N.G. now contains a worked synthetic example showing how a material AI risk can be translated into a preventive control, accountable operating ownership, human decision evidence, override records, control testing, and explicit effectiveness limitations.**
+> **Project W.I.N.G. now contains two worked synthetic evidence chains: one demonstrating meaningful human final authority for a manufacturing-quality risk, and one demonstrating executable technical authorization regression, seeded-defect detection, exception/gate handling, remediation, and retesting for a generative-AI access-control risk.**
 
 The project still does **not** claim that:
 
-- WingInspect is operating in a real production environment;
-- the human final-inspection control is production-validated;
-- the AI model's defect-detection performance is established;
-- the current residual risk has been reduced by the synthetic evidence;
+- WingInspect or PondGPT is operating in a real production environment;
+- `WI-01` or `PG-02` is production-validated or operating effectively in a live environment;
+- WingInspect model performance or PondGPT production authorization inheritance has been established;
+- current residual risk has been reduced by the synthetic evidence;
 - independent assurance has been completed; or
 - the broader skeptical review is resolved.
 
-## 5. Recommended Next Evidence Chain
+## 6. Recommended Next Evidence Chain
 
-After the AI-004 package is integrated and internally consistent, the next worked evidence chain should use a different control type rather than creating more generic policy material.
+With the WingInspect safety/human-oversight example and the PondGPT technical-security example now established, the next worked evidence chain should add a third, materially different governance pattern rather than extending either existing package.
 
-Priority candidates:
+**Priority: DuckTalent AI — fairness / rights / meaningful-human-review evidence.**
 
-1. **PondGPT** — technical/security control, such as permission regression testing or RAG authorization-boundary testing.
-2. **DuckTalent** — fairness/human-impact control, such as a meaningful-human-review or candidate challenge workflow.
+A strong next chain would connect a material DuckTalent employment-impact risk to a control such as meaningful human review, no automated rejection, reviewer rationale, candidate challenge/remedy, or fairness/adverse-impact testing, with synthetic execution records and explicit limits on what can be concluded without real applicant data and production operation.
 
-This extends the portfolio from one safety/human-oversight example toward a balanced set of **operational, technical, and rights-impact governance evidence**.
+This would give the portfolio three complementary evidence archetypes:
+
+1. **WingInspect** — safety / quality + meaningful human authority;
+2. **PondGPT** — technical AI security + executable authorization assurance;
+3. **DuckTalent** — fairness / fundamental-rights / people-impact governance.
 
 ## Portfolio Disclaimer
 
