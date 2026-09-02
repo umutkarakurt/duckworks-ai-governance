@@ -279,7 +279,7 @@ def main():
         "Critical_Failures_Gate_Blocked": 1 if seeded["Expansion_Gate_Actual"] == "BLOCK" else 0,
         "Remediation_Retest_Passed": remediation_pass,
         "Final_Expansion_Gate": gate_state,
-        "Evidence_State": "Designed -> Synthetic technical execution demonstrated -> Synthetic control operation tested",
+        "Evidence_State": "Designed -> Synthetic technical implementation demonstrated -> Synthetic technical execution demonstrated -> Synthetic operation tested",
         "Production_Operating_Effectiveness": "Not established"
     }
     SUMMARY_OUT.write_text(json.dumps(summary, indent=2), encoding="utf-8")

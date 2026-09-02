@@ -180,7 +180,7 @@ A real operating-effectiveness conclusion would require evidence such as:
 ## 10. Evidence state
 
 **Demonstrated:**  
-**Designed → Synthetic technical execution demonstrated → Synthetic control operation tested**
+**Designed → Synthetic technical implementation demonstrated → Synthetic technical execution demonstrated → Synthetic operation tested**
 
 **Not demonstrated:**  
 **Production authorization validated → Sustained operating effectiveness → Validated risk reduction → Independent assurance**

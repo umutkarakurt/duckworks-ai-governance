@@ -74,7 +74,7 @@ This package improves the design and synthetic technical evidence around those a
 
 Current demonstrated state:
 
-**Designed → Synthetic technical execution demonstrated → Synthetic control operation tested**
+**Designed → Synthetic technical implementation demonstrated → Synthetic technical execution demonstrated → Synthetic operation tested**
 
 Not demonstrated:
 
