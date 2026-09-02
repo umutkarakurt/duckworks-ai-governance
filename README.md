@@ -193,7 +193,7 @@ Project W.I.N.G. does not treat policies, frameworks, control descriptions, or g
 
 The portfolio now includes worked synthetic evidence chains showing how material AI risks are translated into:
 
-**Risk → Control → Accountable Owner → Execution → Evidence → Testing → Monitoring**
+**Risk → Control → Accountable Owner → Execution → Evidence → Testing → Governance Decision → Monitoring / Reassessment**
 
 #### Worked example — AI-004 WingInspect Vision
 
@@ -254,12 +254,16 @@ The package includes:
 - generated exception and run-summary evidence;
 - a pre-deployment `BLOCK` decision when the unapproved feature is detected;
 - remediation by removing the unapproved feature;
-- full-population retesting; and
-- a control-test workpaper demonstrating that successful retest leads only to further governance review, not automatic deployment approval.
+- full-population retesting;
+- a control-test workpaper demonstrating that successful retest leads only to further governance review, not automatic deployment approval;
+- a synthetic governance gate decision that consumes the evidence pack and denies advancement to a real-applicant pilot; and
+- a post-decision synthetic material-change event that reintroduces the remediated feature, triggers executable regression monitoring, opens `IR-001`, and produces a revised decision that rejects the proposed configuration and preserves the deployment block.
 
 ➡️ **[View the AI-005 DuckTalent operating-evidence package](80-operating-evidence/AI-005-ducktalent/)**
 
-> **Evidence boundary:** The group labels, applicants, scores, thresholds, and results are synthetic portfolio constructs. They do not represent real protected-characteristic data, real applicants, production DuckTalent behavior, legal discrimination analysis, or validated fairness. DuckTalent remains **Do not deploy in current state**.
+➡️ **[View the DuckTalent monitoring and reassessment package](12-monitoring-reporting-and-roadmap/AI-005-ducktalent/)**
+
+> **Evidence boundary:** The group labels, applicants, scores, thresholds, results, governance decisions, monitoring event, and reassessment are synthetic portfolio constructs. They do not represent real protected-characteristic data, real applicants, production DuckTalent behavior, legal discrimination analysis, validated fairness, continuous production monitoring, a real committee meeting, or real executive approval/non-approval. DuckTalent remains **Do not deploy in current state**.
 
 ---
 
@@ -406,9 +410,12 @@ A practical review sequence is:
     Review how an authorization risk is translated into `PG-01` / `PG-02`, an executable permission-regression control, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, retesting, and an explicit production-evidence limitation.
 
 14. **Operating Evidence — AI-005 DuckTalent AI**  
-    Review how a fundamental-rights/fairness risk is translated into the `DT-01` job-relevance/proxy boundary and `DT-02` detective control, matched synthetic applicants, seeded proxy-feature failure, diagnostic disparity metrics, deployment blocking, remediation, retesting, and explicit legal/evidence limitations.
+    Review how a fundamental-rights/fairness risk is translated into the `DT-01` job-relevance/proxy boundary and `DT-02` detective control, matched synthetic applicants, seeded proxy-feature failure, diagnostic disparity metrics, deployment blocking, remediation, retesting, and a synthetic governance gate decision.
 
-15. **Adversarial Review / Findings Register**  
+15. **Monitoring & Reassessment — AI-005 DuckTalent AI**  
+    Review how a later proposed feature/ranking change challenges prior evidence, is detected through executable regression monitoring, opens `IR-001`, reopens affected governance records, and results in a revised decision that rejects the change and preserves the prior gate.
+
+16. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
@@ -491,6 +498,9 @@ The repository includes or is intended to include:
 - executable DuckTalent fairness/adverse-impact test;
 - generated fairness results, exception, and run summary;
 - DuckTalent fairness control-test workpaper;
+- DuckTalent synthetic governance gate decision record;
+- DuckTalent synthetic proposed-change event and executable change-regression monitor;
+- DuckTalent synthetic reassessment record and revised gate decision;
 - skeptical-review remediation tracker.
 
 ### Model and evaluation documentation
@@ -561,7 +571,7 @@ Material governance activities should therefore be traceable to evidence such as
 
 Where evidence is unavailable, the portfolio should state that explicitly rather than imply operating effectiveness.
 
-The current worked examples are maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/), [`80-operating-evidence/AI-005-ducktalent/`](80-operating-evidence/AI-005-ducktalent/), and [`80-operating-evidence/AI-006-pondgpt/`](80-operating-evidence/AI-006-pondgpt/). All three deliberately distinguish synthetic workflow/technical-test evidence from production operating-effectiveness, legal-compliance, or validated-risk-reduction claims.
+The current worked examples are maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/), [`80-operating-evidence/AI-005-ducktalent/`](80-operating-evidence/AI-005-ducktalent/), and [`80-operating-evidence/AI-006-pondgpt/`](80-operating-evidence/AI-006-pondgpt/). All three deliberately distinguish synthetic workflow/technical-test evidence from production operating-effectiveness, legal-compliance, or validated-risk-reduction claims. DuckTalent additionally extends the chain through a synthetic lifecycle decision and an event-driven [`monitoring / reassessment demonstration`](12-monitoring-reporting-and-roadmap/AI-005-ducktalent/).
 
 ---
 
@@ -622,7 +632,7 @@ Planned or future-phase work may include:
 - AI assurance and internal-audit program;
 - additional formal control-testing workpapers beyond the current AI-004, AI-005 and AI-006 worked examples;
 - expanded operating-evidence coverage beyond the current AI-004, AI-005 and AI-006 worked examples;
-- system-specific monitoring records.
+- production system-specific monitoring histories beyond the current synthetic DuckTalent change/reassessment demonstration.
 
 The existence of a policy, framework, or template should not be interpreted as evidence that the process is fully operational.
 
