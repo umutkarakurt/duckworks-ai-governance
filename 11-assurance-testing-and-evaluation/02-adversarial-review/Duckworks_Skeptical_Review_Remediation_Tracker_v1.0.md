@@ -28,9 +28,9 @@ Companion remediation record for the **Duckworks Skeptical Multi-Perspective AI 
 | **Finding** | **Original issue** | **Remediation / evidence now available** | **Status** | **Remaining gap / closure condition** |
 |---|---|---|---|---|
 | **F-004 — High** | Human-oversight assumption used as risk treatment. The review asks what workflow evidence proves inspectors can and do override the model, including under throughput pressure. | `AI-004-R01` is linked to canonical control `WI-01 — Qualified Human Final Inspection`; its Mandatory Human Release Gate implementation package contains a control card, synthetic inspection records, AI/human disagreements in both directions, override rationale, and a control-test workpaper. | **Partially Addressed** | Synthetic records demonstrate the intended workflow, not actual inspector behavior, organizational incentives, or control resilience under real throughput pressure. Production observation/evidence remains required. |
-| **F-013 — High** | Evidence repository placeholder; generic folder references do not identify an execution record, date, version, owner, or result. | `80-operating-evidence/evidence-index.md` introduces exact evidence objects for the AI-004 worked example, and the WingInspect package contains dated/versioned control and test artifacts. | **Partially Addressed** | The improvement currently covers the canonical AI-004 example only. Other credited controls still require exact evidence-object traceability. |
+| **F-013 — High** | Evidence repository placeholder; generic folder references do not identify an execution record, date, version, owner, or result. | `80-operating-evidence/evidence-index.md` now identifies exact evidence objects for three worked examples: AI-004 WingInspect, AI-005 DuckTalent, and AI-006 PondGPT. Each package contains dated/versioned implementation and test artifacts with explicit evidence-state and production-evidence boundaries. | **Partially Addressed** | Exact evidence-object traceability is now demonstrated across three distinct controls, but the wider portfolio still contains credited or partially credited controls without equivalent execution-level evidence objects. |
 | **F-024 — High** | Human oversight is mostly design intent rather than demonstrated operation. | The AI-004 package demonstrates how `WI-01` final human authority, sequencing, override behavior, rationale capture, and release authorization would operate and be evidenced. | **Partially Addressed** | No claim is made that broader portfolio human-oversight arrangements or real production behavior have been validated. |
-| **F-033 — Moderate** | Design-heavy / operation-light portfolio; reviewer asks for one governance decision through evidence and testing rather than another template. | AI-004 now provides a worked chain: `AI-004-R01 → WI-01 → synthetic execution log → control test → monitoring/effectiveness requirements`. | **Partially Addressed** | The chain still lacks a real governance approval record, sustained monitoring history, reassessment event, and production outcome evidence. |
+| **F-033 — Moderate** | Design-heavy / operation-light portfolio; reviewer asks for one governance decision through evidence and testing rather than another template. | The portfolio now provides three materially different worked chains: `AI-004-R01 → WI-01 → human-release evidence`, `AI-006-R01 → PG-01/PG-02 → executable authorization regression`, and `AI-005-R01 → DT-01/DT-02 → executable synthetic fairness testing and deployment blocking`. | **Partially Addressed** | The worked chains remain synthetic and still lack real governance approval records, sustained monitoring histories, production reassessment events, and production outcome evidence. |
 | **F-043 — Moderate** | Independent assurance not demonstrated. | A structured control-test workpaper now exists for `WI-01`, including population, procedure, results, limitations, and conclusion. | **Open** | The workpaper is a portfolio artifact and is not independent assurance. Independence, reviewer challenge, and production evidence would be required to address the finding. |
 | **F-047 — High** | Control-status taxonomy is inconsistent; implemented, operating, effective, and validated are not consistently separated. | The operating-evidence package explicitly distinguishes **Designed**, **Implemented**, **Operating**, **Effective**, and **Validated**, and records the AI-004 evidence state as **Designed → Synthetic execution demonstrated → Synthetic operation tested**. | **Partially Addressed** | The taxonomy is now explicit for the operating-evidence layer, but legacy portfolio artifacts still require reconciliation where older wording overstates status. |
 | **F-048 — High** | Risk-report wording overstates operation and leaves ambiguity over which credited controls genuinely operate. | The AI-004 risk scenario is cross-referenced to the synthetic `WI-01` evidence package with an explicit statement that the package does **not** justify additional residual-risk reduction credit and does not establish production operating effectiveness. | **Partially Addressed** | Broader risk-report/control-credit wording across other systems remains to be reconciled against the same evidence discipline. |
@@ -47,9 +47,25 @@ The defensible evidence state for `PG-02` is:
 
 It is **not** evidence of production authorization validation or sustained operating effectiveness.
 
-## 4. Findings Not Closed by the Current Operating-Evidence Packages
+## 4. AI-005 DuckTalent Evidence Remediation
 
-The WingInspect and PondGPT work should **not** be used to imply closure of unrelated skeptical findings. In particular, the following remain outside the scope of these worked examples:
+The DuckTalent package adds a third evidence archetype focused on fairness, proxy-feature governance, and rights-sensitive pre-deployment testing.
+
+The worked chain is:
+
+**`AI-005-R01 → DT-01 → DT-02 → matched synthetic applicants → seeded unapproved feature → measured effect → deployment BLOCK → remediation → full-population retest`**
+
+The defensible evidence state is:
+
+**Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested**
+
+This package materially strengthens the evidence-repository and operation-light findings represented by `F-013` and `F-033`, but it does **not** close any finding that depends on real applicant data, actual production feature governance, lawful protected-characteristic processing, meaningful human review, applicant remedy, legal compliance, sustained monitoring, or independent assurance.
+
+DuckTalent remains **Critical (20)** and **Do not deploy in current state**.
+
+## 5. Findings Not Closed by the Current Operating-Evidence Packages
+
+The WingInspect, PondGPT, and DuckTalent work should **not** be used to imply closure of unrelated skeptical findings. In particular, the following remain outside the scope of these worked examples:
 
 - **F-001 / F-002** — risk methodology chronology and scoring semantics;
 - **F-003** — DuckDesign control credit;
@@ -60,36 +76,39 @@ The WingInspect and PondGPT work should **not** be used to imply closure of unre
 - **F-019 to F-023** — privacy/data-protection evidence gaps;
 - **F-034 to F-046** — value, monitoring, risk appetite, assurance, reporting, incident and third-party maturity gaps.
 
-## 5. Current Remediation Conclusion
+## 6. Current Remediation Conclusion
 
-The AI-004 WingInspect and AI-006 PondGPT operating-evidence packages materially improve Project W.I.N.G.'s ability to demonstrate the transition from governance design to executable, auditable control workflows across two distinct control archetypes.
+The AI-004 WingInspect, AI-005 DuckTalent, and AI-006 PondGPT operating-evidence packages materially improve Project W.I.N.G.'s ability to demonstrate the transition from governance design to executable, auditable control workflows across three distinct control archetypes.
 
 The defensible claim is:
 
-> **Project W.I.N.G. now contains two worked synthetic evidence chains: one demonstrating meaningful human final authority for a manufacturing-quality risk, and one demonstrating executable technical authorization regression, seeded-defect detection, exception/gate handling, remediation, and retesting for a generative-AI access-control risk.**
+> **Project W.I.N.G. now contains three worked synthetic evidence chains: meaningful human final authority for manufacturing quality/safety, executable authorization regression for generative-AI access control, and executable fairness/proxy-feature testing with deployment blocking for a consequential employment use case.**
 
 The project still does **not** claim that:
 
-- WingInspect or PondGPT is operating in a real production environment;
-- `WI-01` or `PG-02` is production-validated or operating effectively in a live environment;
-- WingInspect model performance or PondGPT production authorization inheritance has been established;
+- WingInspect, PondGPT, or DuckTalent is operating in a real production environment;
+- `WI-01`, `PG-02`, or `DT-02` is production-validated or operating effectively in a live environment;
+- WingInspect model performance, PondGPT production authorization inheritance, or DuckTalent real-applicant fairness has been established;
 - current residual risk has been reduced by the synthetic evidence;
 - independent assurance has been completed; or
 - the broader skeptical review is resolved.
 
-## 6. Recommended Next Evidence Chain
+## 7. Recommended Next Portfolio Maturity Step
 
-With the WingInspect safety/human-oversight example and the PondGPT technical-security example now established, the next worked evidence chain should add a third, materially different governance pattern rather than extending either existing package.
+With three complementary operating-evidence archetypes now established, the next highest-value step should **not** be a fourth synthetic system package.
 
-**Priority: DuckTalent AI — fairness / rights / meaningful-human-review evidence.**
+Priority should shift to lifecycle maturity across the existing evidence chains:
 
-A strong next chain would connect a material DuckTalent employment-impact risk to a control such as meaningful human review, no automated rejection, reviewer rationale, candidate challenge/remedy, or fairness/adverse-impact testing, with synthetic execution records and explicit limits on what can be concluded without real applicant data and production operation.
+1. **Evidence completeness / control traceability** — continue resolving `F-013` beyond the three worked examples.
+2. **Governance approval evidence** — add a worked committee/gate decision that consumes the control-test evidence without pretending to be a real approval.
+3. **Monitoring and reassessment** — demonstrate how a later monitoring signal or material change triggers reassessment and a revised governance decision.
+4. **Assurance boundary** — preserve the distinction between management testing and independent assurance.
 
-This would give the portfolio three complementary evidence archetypes:
+The three current evidence archetypes are:
 
 1. **WingInspect** — safety / quality + meaningful human authority;
 2. **PondGPT** — technical AI security + executable authorization assurance;
-3. **DuckTalent** — fairness / fundamental-rights / people-impact governance.
+3. **DuckTalent** — fairness / fundamental-rights + executable pre-deployment fairness assurance.
 
 ## Portfolio Disclaimer
 
