@@ -13,6 +13,7 @@ This folder is the portfolio's most detailed system-specific assessment set. Duc
 - `Duckworks_EU_Fundamental_Rights_Impact_Assessment_DuckTalent_v1.0.md`
 - `Duckworks_GDPR_Data_Protection_Impact_Assessment_DuckTalent_v1.0.md`
 - `01-huderia/` — Council of Europe HUDERIA-based assessment sequence.
+- [`../../80-operating-evidence/AI-005-ducktalent/`](../../80-operating-evidence/AI-005-ducktalent/) — synthetic `DT-02` pre-deployment fairness/adverse-impact operating-evidence demonstration.
 
 ## Current governance position
 
@@ -25,6 +26,14 @@ DuckTalent's recruitment purpose creates a strong preliminary route to EU AI Act
 The FRIA in this portfolio is intentionally described as **voluntary Article 27-aligned work on current Duckworks assumptions**, not as a claim that Article 27 legally requires Duckworks to perform that FRIA.
 
 The DPIA treats a GDPR DPIA as required before deployment on the current project assumptions, while lawful basis, actual processing design, jurisdiction-specific employment rules, and any Article 36 prior-consultation question remain subject to verified facts and specialist review.
+
+## Related operating evidence
+
+The worked `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing` package demonstrates an executable synthetic control over 24 matched synthetic applicants. It deliberately introduces an unapproved `Career_Gap_Months` scoring penalty, detects the resulting matched-pair/group effect, blocks the deployment gate, removes the feature, and retests the complete synthetic population.
+
+**Evidence state:** **Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested**
+
+This is supporting portfolio evidence only. It does not validate real applicant fairness, production feature governance, legal discrimination compliance, lawful use of protected-characteristic data, or a change to the **DO NOT DEPLOY** gate.
 
 ## Reviewer focus
 

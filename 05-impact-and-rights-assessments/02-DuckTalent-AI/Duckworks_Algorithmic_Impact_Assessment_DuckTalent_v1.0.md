@@ -230,10 +230,24 @@ The AIA does not assert that DuckTalent is biased; it identifies where unfair ou
 | Job criteria governance | Document role criteria; demonstrate job relevance; prohibit criteria that cannot be justified; version and approve changes.                                   | Required / not evidenced              |
 | Feature review          | Identify direct, proxy and derived features; challenge features that can reproduce protected-characteristic patterns or irrelevant disadvantage.              | Required / not evidenced              |
 | Data quality            | Validate parsing accuracy, missingness, duplicate handling, credential equivalence, language/format handling and source provenance.                           | Required / not evidenced              |
-| Group performance       | Where lawful and appropriate, evaluate error rates and selection/shortlisting outcomes across relevant groups; define investigation thresholds before launch. | Required / method not yet approved    |
+| Group performance       | Where lawful and appropriate, evaluate error rates and selection/shortlisting outcomes across relevant groups; define investigation thresholds before launch. | Synthetic DT-02 method demonstrated; production method, lawful data basis and thresholds not approved |
 | Accessibility           | Test application ingestion, recruiter interface and candidate-facing notices/challenge route for accessibility barriers.                                      | Required / not evidenced              |
 | Human review quality    | Test whether reviewers inspect source applications, understand model limitations, use override authority and do not mechanically follow ranking.              | Required / not evidenced              |
 | Feedback-loop risk      | Prevent recruiter/model outputs from becoming unchallenged future training labels that reinforce previous decisions.                                          | Required / architecture not validated |
+
+### 8.1 Related synthetic operating evidence — DT-02
+
+A worked operating-evidence package is available at [`../../80-operating-evidence/AI-005-ducktalent/`](../../80-operating-evidence/AI-005-ducktalent/).
+
+The package demonstrates `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing` against a synthetic `DT-01` feature-governance boundary using 24 synthetic applicants arranged as 12 matched pairs. It deliberately introduces an unapproved `Career_Gap_Months` score penalty, detects the resulting matched-pair and group-level effect, blocks the pre-deployment gate, records an exception, removes the feature, and successfully retests the complete synthetic population.
+
+The diagnostic pre-remediation results include a Reference selection rate of **58.33%** and Comparison selection rate of **25.00%**, with corresponding true-positive rates of **100%** and **42.86%**. After removal of the seeded feature, both synthetic groups have a **58.33%** selection rate and **100%** true-positive rate in this matched test population.
+
+These values are **not** legal fairness thresholds, adverse-impact safe harbors, or evidence of real-world discrimination. The group labels are synthetic test constructs and no real protected-characteristic data are used.
+
+**Evidence state:** **Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested**
+
+`DT-02` may therefore be treated as **Partially implemented within the synthetic portfolio boundary**. `DT-01` remains **Not implemented**, and the existing **DO NOT DEPLOY** decision remains unchanged.
 
 ## 9. Privacy, Security, and Third-Party Impact
 
@@ -268,7 +282,7 @@ Meaningful human oversight is a design and operating control, not a label. Duckw
 | AIA-01 | Validate intended purpose, role criteria and unsupported uses; prohibit autonomous rejection/hiring.                                                | Beatrice Van Duck / HR            | Before pilot with any applicant-like data     | Approved use-case specification and criteria register | Blocking |
 | AIA-02 | Complete Legal classification and applicability review using verified provider/deployer role, geography and intended purpose.                       | Amelia Duckett / General Counsel  | Before procurement/deployment decision        | Legal triage record                                   | Blocking |
 | AIA-03 | Complete privacy assessment and determine whether a formal GDPR DPIA is required; approve data flow, notices, retention and vendor roles.           | Delia Duckham / DPO               | Before personal-data processing               | Privacy review / DPIA decision                        | Blocking |
-| AIA-04 | Approve fairness-validation methodology, test design, protected/proxy feature review and acceptance/escalation thresholds.                          | HR + AI Governance + Data & AI    | Before deployment                             | Fairness test plan and results                        | Blocking |
+| AIA-04 | Approve fairness-validation methodology, test design, protected/proxy feature review and acceptance/escalation thresholds.                          | HR + AI Governance + Data & AI    | Before deployment                             | Approved production fairness method/results; synthetic DT-02 package demonstrates test logic only | Blocking |
 | AIA-05 | Validate parsing/ranking accuracy, error distribution, credential/language handling and failure modes.                                              | Dr. Ada Duckfield / Data & AI     | Before deployment                             | Validation report                                     | Blocking |
 | AIA-06 | Perform accessibility and inclusive-design assessment for candidate and recruiter interaction points.                                               | HR / Product or Accessibility SME | Before deployment                             | Accessibility assessment                              | Blocking |
 | AIA-07 | Implement meaningful human oversight, source review, override, reason recording, escalation and stop-use capabilities.                              | Beatrice Van Duck + HR Ops        | Before deployment                             | Procedure + workflow evidence + user testing          | Blocking |
@@ -406,6 +420,7 @@ The AIA is defensible only to the extent that its conclusions trace to source do
 
 | **Source / evidence**                           | **AIA use**                                                                                                                                             |
 |-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DuckTalent DT-02 Operating Evidence Package     | Synthetic executable fairness/proxy-feature worked example supporting Section 8.1; not production fairness, legal discrimination analysis, or deployment approval. |
 | Duckworks Business Scenario                     | Business drivers, intended DuckTalent capabilities, affected applicant concerns, governance mandate and seven-system portfolio.                         |
 | Duckworks Readiness Assessment                  | Critical DuckTalent residual-risk conclusion; priority governance issues; evidence maturity and portfolio findings.                                     |
 | Project Objectives / Scope                      | AIA objectives, affected-party domains, proportionality, evidence/auditability and explicit out-of-scope limitations.                                   |

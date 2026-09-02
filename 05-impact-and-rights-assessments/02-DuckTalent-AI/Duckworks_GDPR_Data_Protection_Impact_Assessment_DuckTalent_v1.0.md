@@ -208,6 +208,18 @@ This DPIA assesses risk to applicants and other data subjects. The labels below 
 </tbody>
 </table>
 
+### 8.1 Related synthetic operating evidence — DT-02
+
+A synthetic `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing` evidence package is available at [`../../80-operating-evidence/AI-005-ducktalent/`](../../80-operating-evidence/AI-005-ducktalent/).
+
+The package uses no real applicant or protected-characteristic data. It demonstrates how Duckworks could test an approved-feature boundary, identify a deliberately unapproved `Career_Gap_Months` scoring penalty, quantify the resulting matched-pair/group effect, block progression, remediate the feature configuration, and retest the full synthetic population.
+
+**Evidence state:** **Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested**
+
+The package is relevant to `DPIA-05` and action `DP-07` as **design and synthetic test evidence only**. It does not establish a lawful basis for fairness data, actual job relevance, real subgroup performance, legal non-discrimination compliance, or evidence sufficient for the intended real applicant population.
+
+`DP-07` therefore remains open and the DPIA's **DO NOT DEPLOY** decision is unchanged.
+
 ## 9. Data-Subject Rights and Human Oversight
 
 | **Requirement**       | **DuckTalent design expectation**                                                                                                                                                      |
@@ -268,7 +280,7 @@ This DPIA assesses risk to applicants and other data subjects. The labels below 
 | DP-04  | Define and approve applicant privacy / AI transparency notice and contestability route.                                              | DPO + Legal + HR                   | Before applicant processing      | Open        |
 | DP-05  | Demonstrate no autonomous rejection/hiring and validate meaningful human review, override and decision logging.                      | HR + AI Governance                 | Before controlled pilot          | Open        |
 | DP-06  | Complete parsing/ranking accuracy validation across relevant roles, formats, languages and edge cases.                               | Data & AI + HR                     | Before pilot approval            | Open        |
-| DP-07  | Complete fairness/proxy testing methodology and evidence sufficient for the intended applicant population.                           | HR + Data & AI + Legal/DPO         | Before production                | Open        |
+| DP-07  | Complete fairness/proxy testing methodology and evidence sufficient for the intended applicant population.                           | HR + Data & AI + Legal/DPO         | Before production                | Open — synthetic DT-02 demonstration only |
 | DP-08  | Complete security architecture/threat assessment and remediate material findings.                                                    | CISO + Technical Owner             | Before pilot                     | Open        |
 | DP-09  | Complete processor/vendor due diligence, Article 28 terms as applicable, data-use/retention/subprocessor/incident/exit controls.     | Procurement + Legal + DPO + CISO   | Before contract/use              | Open        |
 | DP-10  | Map international transfers and establish valid safeguards where required.                                                           | DPO + Legal + Procurement          | Before data transfer             | Open        |
@@ -356,7 +368,7 @@ Under GDPR Article 35(11), the controller must review the DPIA where necessary, 
 
 - Parsing/ranking validation, accuracy/error analysis and documented limitations.
 
-- Fairness/proxy testing methodology and results appropriate to the lawful data available and intended population.
+- Fairness/proxy testing methodology and results appropriate to the lawful data available and intended population; the synthetic DT-02 package is supporting design/test evidence and is not sufficient production evidence.
 
 - Human-oversight SOP, recruiter training, override mechanism and user-acceptance evidence.
 
