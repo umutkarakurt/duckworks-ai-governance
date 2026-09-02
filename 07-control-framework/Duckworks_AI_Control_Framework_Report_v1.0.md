@@ -28,7 +28,7 @@ Provide a defensible, auditable control design that links every material Duckwor
 
 Duckworks has 21 baseline material AI risk scenarios across seven inventory entries. The control design below creates a many-to-many risk/control model rather than inventing a separate control for every risk. Shared lifecycle, supplier, incident and evidence controls support system-specific safety, fairness, privacy, security, reliability and human-oversight controls.
 
-The companion control library contains 45 controls: 26 preventive, 13 detective and 6 corrective. Current implementation posture is intentionally conservative: 2 controls are recorded as Implemented, 18 as Partially Implemented, 17 as Planned, 7 as Not Implemented and 1 as Weak / Ad Hoc. Those labels are design/portfolio status indicators, not independent audit opinions.
+The companion control library contains 45 controls: 26 preventive, 13 detective and 6 corrective. Current implementation posture is intentionally conservative: 2 controls are recorded as Implemented, 19 as Partially Implemented, 16 as Planned, 7 as Not Implemented and 1 as Weak / Ad Hoc. Those labels are design/portfolio status indicators, not independent audit opinions.
 
 | **AI ID** | **System**               | **Current residual** | **Current gate**         | **Primary control focus**                                                                     |
 |-----------|--------------------------|----------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -278,8 +278,20 @@ Permission or retrieval configuration failure exposes restricted internal inform
 | AI-TPR-01      | AI Supplier Due Diligence & Contract Controls | Preventive | Percival Duckworth - Director Procurement & Vendor Assurance | Partially implemented |
 | AI-INC-01      | AI Incident, Containment & Stop-Use           | Corrective | Cassandra Duckley - Chief Information Security Officer       | Partially implemented |
 | PG-01          | Permission-Aware Retrieval                    | Preventive | Oliver Duckett - Head of IT & Cloud                          | Partially implemented |
-| PG-02          | Automated Permission Regression & DLP Tests   | Detective  | Oliver Duckett - Head of IT & Cloud                          | Planned               |
+| PG-02          | Automated Permission Regression & DLP Tests   | Detective  | Oliver Duckett - Head of IT & Cloud                          | Partially implemented |
 | PG-05          | GenAI Security Logging & Alerting             | Detective  | Cassandra Duckley - Chief Information Security Officer       | Partially implemented |
+
+#### PG-02 implementation / evidence note
+
+A worked executable evidence package is available at [`../80-operating-evidence/AI-006-pondgpt/`](../80-operating-evidence/AI-006-pondgpt/).
+
+The package implements the `PG-02` control logic in a deterministic Python test harness using a synthetic authorization matrix, synthetic personas, source entitlements, DLP/exclusion assertions, permission-change cases, a deliberately seeded connector ACL defect, exception/gate handling, remediation, and retesting.
+
+The synthetic execution performs 20 control assertions. The seeded Finance authorization defect is intentionally allowed to occur in the test environment so that PG-02 can demonstrate detection, alert generation, connector/corpus expansion blocking, remediation, and successful retest.
+
+`PG-02` is therefore classified as **Partially implemented** for portfolio-status purposes: a reproducible synthetic technical mechanism and evidence-generation workflow exist, but production identity/connector/DLP/SIEM integration, scheduled operating history, and production operating effectiveness are not evidenced.
+
+This synthetic implementation does **not** validate `ASM-009` or `ASM-030` as production facts and does not provide additional current residual-risk reduction credit.
 
 ### AI-006-R02 - Security & adversarial manipulation
 
@@ -384,7 +396,7 @@ The library is designed so that a GRC reviewer or Internal Audit team can later 
 
 - Meaningful human oversight is repeatedly assumed across DuckDesign, WingInspect, FeatherForecast and DuckTalent. A named human is not enough: workflow evidence must show sufficient information, time, authority and ability to override. For WingInspect specifically, the synthetic `WI-01` evidence package demonstrates the intended workflow and override logic, but `ASM-008` remains Open / Critical until real manufacturing authority and operating evidence are validated.
 
-- PondGPT source-authorization inheritance and third-party tenant/data-use controls are material assumptions. They should be treated as unverified until access tests and supplier evidence are obtained.
+- PondGPT source-authorization inheritance and third-party tenant/data-use controls are material assumptions. The synthetic PG-02 package now demonstrates executable permission-regression logic, seeded-defect detection, gating and retest, but `ASM-009` / `ASM-030` remain unverified production assumptions until real architecture, access tests, supplier evidence and operating records are obtained.
 
 - DuckTalent vendor/model/feature design is not finalized. Therefore fairness, privacy and explainability controls are control requirements, not claims about actual model behavior.
 
@@ -472,7 +484,7 @@ The risk coverage in this report is based on the Duckworks AI Risk Scenario Regi
 | DT-06     | Impact, Privacy & Legal Review Gate                                   | Preventive | Eleanor Duckford - AI Governance Lead                        | Not implemented       |
 | DT-07     | Candidate Notice, Challenge & Human Remedy                            | Corrective | Beatrice Van Duck - Chief People Officer                     | Not implemented       |
 | PG-01     | Permission-Aware Retrieval                                            | Preventive | Oliver Duckett - Head of IT & Cloud                          | Partially implemented |
-| PG-02     | Automated Permission Regression & DLP Tests                           | Detective  | Oliver Duckett - Head of IT & Cloud                          | Planned               |
+| PG-02     | Automated Permission Regression & DLP Tests                           | Detective  | Oliver Duckett - Head of IT & Cloud                          | Partially implemented |
 | PG-03     | Prompt Injection & RAG Poisoning Test Suite                           | Detective  | Cassandra Duckley - Chief Information Security Officer       | Planned               |
 | PG-04     | Tool Sandboxing & Allowlisted Actions                                 | Preventive | Oliver Duckett - Head of IT & Cloud                          | Partially implemented |
 | PG-05     | GenAI Security Logging & Alerting                                     | Detective  | Cassandra Duckley - Chief Information Security Officer       | Partially implemented |
