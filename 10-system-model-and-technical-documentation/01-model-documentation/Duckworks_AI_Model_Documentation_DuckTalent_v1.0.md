@@ -31,7 +31,7 @@ Model identity, design assumptions, data, evaluation, limitations, oversight, mo
 <thead>
 <tr class="header">
 <th><p><strong>Critical documentation status</strong></p>
-<p>The Duckworks source set defines DuckTalent at AI-system and business-use-case level but does not identify a specific underlying model, model family, provider, version, training corpus, architecture, hyperparameters, validation results, or production hosting design. Those facts are deliberately recorded as TBD / not evidenced. This document must not be represented as a completed model card or regulatory technical file until the missing technical evidence is supplied.</p></th>
+<p>The Duckworks source set defines DuckTalent at AI-system and business-use-case level but does not identify a specific underlying model, model family, provider, version, training corpus, production architecture, hyperparameters, production validation results, or production hosting design. A synthetic DT-02 fairness-control package now demonstrates test logic, matched-pair synthetic data, seeded proxy-feature detection, deployment blocking, remediation, and retesting; it is not production model validation. The remaining technical facts are deliberately recorded as TBD / not evidenced. This document must not be represented as a completed model card or regulatory technical file until the missing production technical evidence is supplied.</p></th>
 </tr>
 </thead>
 <tbody>
@@ -49,7 +49,7 @@ DuckTalent AI is a proposed recruitment decision-support system intended to pars
 | System documentation maturity   | Moderate                 | Purpose, ownership, affected parties, decision boundary, risk/impact position and governance controls are documented.                                                              |
 | Model documentation maturity    | Low                      | Underlying model/provider/version, architecture, training/validation data, performance, fairness, explainability and security evidence are not yet validated.                      |
 | Current model identifier        | TBD                      | A unique model/component ID must be assigned once the technical design or vendor/model is selected.                                                                                |
-| Validated performance           | None evidenced           | No real applicant validation, accuracy, fairness, robustness or human-factors results are present in the portfolio.                                                                |
+| Validated performance           | No production validation | A synthetic DT-02 fairness-control run is evidenced, but no real-applicant or production accuracy, fairness, robustness, accessibility or human-factors validation is present.        |
 | Production status               | Blocked                  | DuckTalent remains Do Not Deploy with real applicants until the blocking technical and governance evidence is complete.                                                            |
 | Primary documentation objective | Traceable model evidence | Establish a single controlled record linking model identity and technical evidence to the business use case, risk/impact assessments, approvals, monitoring and lifecycle changes. |
 
@@ -193,8 +193,8 @@ DuckTalent is expected to process applicant/recruitment information. The portfol
 | Operational input data   | CVs, application forms, qualifications, employment history, skills, and other approved recruitment information.     | Business use case documented; exact schema TBD.            |
 | Derived data             | Candidate summaries, comparison/suitability indicators, rankings and recommendations.                               | Expected output types documented; calculation logic TBD.   |
 | Training data            | TBD. No training corpus or fine-tuning data identified.                                                             | Not evidenced.                                             |
-| Validation data          | TBD. Controlled synthetic/approved validation data required before real use.                                        | Not evidenced.                                             |
-| Test data                | TBD. Must cover representative formats, languages, career patterns and error cases consistent with intended use.    | Not evidenced.                                             |
+| Validation data          | Production-representative validation data remain TBD. Controlled synthetic/approved validation is required before real use. | Synthetic DT-02 matched-pair fairness test data exist; not production-representative validation evidence. |
+| Test data                | A synthetic DT-02 dataset covers one fairness/proxy-feature scenario using matched applicants and career-gap variation. | Synthetic fairness-control test evidence exists; broader representative formats, languages, career patterns and error cases remain unevidenced. |
 | Protected/sensitive data | Not intended for ranking unless specifically lawful, necessary and approved; may appear incidentally in CVs.        | Restriction documented; detection/minimization design TBD. |
 | Data provenance          | Source, collection, licensing/rights, selection and transformation must be documented.                              | Not evidenced.                                             |
 | Labeling / ground truth  | If supervised labels or historical decisions are used, source, quality and bias implications must be documented.    | Not evidenced.                                             |
@@ -205,21 +205,21 @@ DuckTalent is expected to process applicant/recruitment information. The portfol
 
 | **Required field**                                     | **Status for DuckTalent v1.0** |
 |--------------------------------------------------------|--------------------------------|
-| Dataset identifier and version                         | TBD                            |
-| Purpose: training / validation / test / benchmark      | TBD                            |
-| Data source and provenance                             | TBD                            |
-| Collection period and geographic scope                 | TBD                            |
-| Population / sample definition                         | TBD                            |
-| Feature schema / modality                              | TBD                            |
-| Label definition and labeling process                  | TBD                            |
-| Selection / exclusion criteria                         | TBD                            |
-| Cleaning / transformation / augmentation               | TBD                            |
-| Known missingness / quality issues                     | TBD                            |
-| Representativeness analysis                            | TBD                            |
-| Sensitive / protected characteristics and proxy review | TBD                            |
-| Legal/contractual rights and permitted use             | TBD                            |
-| Data split and leakage controls                        | TBD                            |
-| Retention / deletion / reproducibility location        | TBD                            |
+| Dataset identifier and version                         | Synthetic DT-02 fairness test dataset exists; production dataset ID/version TBD |
+| Purpose: training / validation / test / benchmark      | Synthetic control test only; production validation purpose/design TBD |
+| Data source and provenance                             | Synthetic portfolio-generated data only; production provenance TBD |
+| Collection period and geographic scope                 | Not applicable to synthetic portfolio dataset; production scope TBD |
+| Population / sample definition                         | 24 synthetic applicants arranged as 12 matched pairs; production population definition TBD |
+| Feature schema / modality                              | Synthetic structured applicant attributes for DT-02 demonstration; production schema TBD |
+| Label definition and labeling process                  | Synthetic qualification label derived from approved-feature scoring logic; production ground-truth method TBD |
+| Selection / exclusion criteria                         | Defined for the synthetic DT-02 scenario only; production criteria TBD |
+| Cleaning / transformation / augmentation               | Deterministic synthetic construction; production preprocessing TBD |
+| Known missingness / quality issues                     | No production conclusion; synthetic scenario intentionally controlled |
+| Representativeness analysis                            | Not established; synthetic matched-pair dataset is not representative of a real applicant population |
+| Sensitive / protected characteristics and proxy review | No real protected-characteristic data used; seeded `Career_Gap_Months` feature used only as a synthetic proxy-governance test case |
+| Legal/contractual rights and permitted use             | Synthetic portfolio data only; lawful basis/rights for production fairness data remain TBD |
+| Data split and leakage controls                        | Not applicable to the current deterministic synthetic control test; production controls TBD |
+| Retention / deletion / reproducibility location        | Synthetic evidence retained in `80-operating-evidence/AI-005-ducktalent/`; production retention/deletion TBD |
 
 ## 7. Model Design and Development Record
 
@@ -229,7 +229,7 @@ DuckTalent is expected to process applicant/recruitment information. The portfol
 | Build / buy / adapt decision    | TBD                | Record supplier, pre-trained components, open-source components, internal code and modifications.                 |
 | General model logic             | TBD                | Document how inputs become summaries/scores/ranks without exposing irrelevant proprietary detail.                 |
 | Optimization objective          | Partly defined     | Business target is job-relevant comparison/reviewer support; technical loss/objective and ranking target are TBD. |
-| Feature / criteria logic        | TBD                | Create approved feature/criteria allow-list, weighting/rule specification and proxy-feature challenge.            |
+| Feature / criteria logic        | Synthetic test fixture demonstrated | DT-02 uses a synthetic approved-feature allow-list and deliberately seeded unapproved `Career_Gap_Months` penalty; production criteria, weights, rules and approvals remain TBD. |
 | Pre-trained components          | TBD                | List model names, versions, licences, use restrictions, known limitations and change dependencies.                |
 | Hyperparameters / configuration | TBD                | Record material parameters and configuration used for each validation and release.                                |
 | Computational resources         | TBD                | Document development/training/validation/production resources where material.                                     |
@@ -248,14 +248,14 @@ DuckTalent is expected to process applicant/recruitment information. The portfol
 
 ## 8. Validation, Testing, and Evaluation Plan
 
-No validated model-performance results are present in the current source set. The table below defines the evidence Duckworks should require. Candidate metrics are not acceptance thresholds; thresholds must be approved after baseline and pilot evidence exists.
+No validated production model-performance results are present in the current source set. A synthetic DT-02 fairness-control package now demonstrates one pre-deployment testing mechanism, including matched-pair data, a seeded unapproved feature, diagnostic disparity metrics, deployment blocking, remediation, and retesting. This is control/testability evidence rather than production model validation. The table below defines the evidence Duckworks should require. Candidate metrics are not acceptance thresholds; thresholds must be approved after baseline and pilot evidence exists.
 
 | **Evaluation domain**             | **Candidate metrics / tests**                                                                                                                              | **Evidence basis**                                          | **Gate**                                                            |
 |-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------|
 | Parsing / extraction quality      | Field-level precision/recall or error rate; missing-field rate; credential/language/format error patterns                                                  | Approved test set reflecting intended documents/populations | Threshold TBD before deployment                                     |
 | Ranking / recommendation quality  | Ranking error/discordance; reviewer correction; top-k relevance or task-specific measure as appropriate                                                    | Validated benchmark with documented ground truth            | Metric/threshold must match actual design                           |
 | Reliability / robustness          | Performance under missing data, unusual formats, adversarial/malformed documents, distribution shift and integration failure                               | Stress/edge-case test set                                   | Blocking if material failure modes lack controls                    |
-| Fairness / non-discrimination     | Group-level error and selection/shortlisting indicators where lawful and methodologically appropriate                                                      | Approved fairness method and lawful data basis              | No threshold fabricated; investigation/acceptance criteria required |
+| Fairness / non-discrimination     | Group-level error and selection/shortlisting indicators where lawful and methodologically appropriate                                                      | Synthetic DT-02 matched-pair test demonstrates control logic; approved production fairness method and lawful data basis still required | No threshold fabricated; production investigation/acceptance criteria required |
 | Accessibility / inclusion         | Performance on non-standard formats, disability-related accommodations, foreign qualifications, non-linear careers and language variations                 | Accessibility/user testing                                  | Blocking until material barriers addressed                          |
 | Human oversight / automation bias | Source-review completion, reviewer disagreement/override, comprehension and decision-quality testing                                                       | Controlled user test                                        | Human review must be demonstrably meaningful                        |
 | Explainability / interpretability | Reviewer ability to understand relevant factors, limitations and confidence/uncertainty where available                                                    | Usability/explanation testing                               | Must support correct interpretation and challenge                   |
@@ -277,9 +277,47 @@ No validated model-performance results are present in the current source set. Th
 </tbody>
 </table>
 
+### 8.1 Related synthetic operating evidence — DT-02
+
+A worked evidence package is maintained at:
+
+`80-operating-evidence/AI-005-ducktalent/`
+
+The package demonstrates `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing` using **24 synthetic applicants arranged as 12 matched pairs**. Within each pair, the approved synthetic job-related features are held equal while a deliberately unapproved `Career_Gap_Months` penalty is introduced into the pre-remediation scoring logic.
+
+The executable test demonstrates:
+
+- approved-feature allow-list checking;
+- matched-pair score comparison;
+- selection-rate, true-positive-rate and false-negative-rate diagnostics;
+- detection of the seeded unapproved feature and its measurable effect;
+- a pre-deployment `BLOCK` result;
+- generated exception evidence;
+- remediation by removing the unapproved feature;
+- full-population retesting; and
+- a final state of **ELIGIBLE_FOR_FURTHER_GOVERNANCE_REVIEW**, not deployment approval.
+
+The defensible evidence state is:
+
+**Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested**
+
+This evidence does **not** establish:
+
+- a real DuckTalent model or version;
+- production feature/criteria governance;
+- representative production validation data;
+- lawful processing of protected-characteristic data for fairness analysis;
+- real-applicant fairness or non-discrimination;
+- legal compliance;
+- accessibility performance;
+- production operating effectiveness; or
+- reduction of DuckTalent's current Critical risk.
+
+The current governance gate therefore remains **DO NOT DEPLOY with real applicants**.
+
 ## 9. Performance, Known Limitations, and Failure Modes
 
-Current validated performance: none evidenced. The following are known or reasonably foreseeable failure modes derived from the Duckworks impact/risk work; they are not claims that the system has already failed in these ways.
+Current validated production performance: none evidenced. Synthetic DT-02 results demonstrate fairness-control testability only. The following are known or reasonably foreseeable failure modes derived from the Duckworks impact/risk work; they are not claims that the system has already failed in these ways.
 
 | **ID** | **Failure mode**                      | **Description**                                                                                                                        | **Impact** |
 |--------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|------------|
@@ -314,13 +352,13 @@ Current validated performance: none evidenced. The following are known or reason
 
 | **Control area**         | **Minimum model-documentation requirement**                                                                                                   | **Current status**                                     |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| Fairness design          | Define fairness objectives, relevant groups, metrics, lawful data basis, limitations, investigation thresholds and remediation process.       | Not evidenced                                          |
-| Feature/proxy analysis   | Document direct/proxy/derived features and reasons for inclusion/exclusion.                                                                   | Not evidenced                                          |
+| Fairness design          | Define fairness objectives, relevant groups, metrics, lawful data basis, limitations, investigation thresholds and remediation process.       | Synthetic DT-02 test method and remediation workflow demonstrated; production objectives, lawful data basis and thresholds not approved |
+| Feature/proxy analysis   | Document direct/proxy/derived features and reasons for inclusion/exclusion.                                                                   | Synthetic allow-list / seeded unapproved-feature challenge demonstrated; production feature inventory and approvals not evidenced |
 | Explainability           | Describe what explanations are available to recruiters, what they mean, and what they do not prove.                                           | Not evidenced                                          |
 | Confidence / uncertainty | Where the model provides confidence, score or rank, document meaning, calibration/limitations and acceptable interpretation.                  | TBD - model design unknown                             |
 | Source traceability      | Reviewer should be able to inspect the applicant source information underlying a material summary or recommendation.                          | Required                                               |
 | Override / disregard     | Reviewer must be able to disregard/override the model output without artificial friction and record rationale where required.                 | Required; operating evidence absent                    |
-| Stop / escalation        | Users and owners must know when to suspend use or escalate anomalies, discriminatory patterns, security/privacy incidents or control failure. | Defined in governance SOP; model-specific triggers TBD |
+| Stop / escalation        | Users and owners must know when to suspend use or escalate anomalies, discriminatory patterns, security/privacy incidents or control failure. | Synthetic DT-02 deployment block demonstrated; production model-specific triggers and operating integration TBD |
 | Training                 | Recruiters/hiring managers require training on limitations, automation bias, prohibited uses and escalation.                                  | Required; delivery evidence absent                     |
 
 ## 11. Privacy, Security, and Third-Party Model Controls
@@ -395,11 +433,11 @@ Every model release must be traceable to the evidence used to approve it. A new 
 | MD-02  | Approved business use case and intended-purpose statement            | Blocking                  | Available at system level                                      |
 | MD-03  | Architecture and data-flow diagram                                   | Blocking                  | Not evidenced                                                  |
 | MD-04  | Model/provider technical specification and provenance                | Blocking                  | Not evidenced                                                  |
-| MD-05  | Training/validation/test dataset documentation                       | Blocking where applicable | Not evidenced                                                  |
-| MD-06  | Approved job-criteria / feature specification and version history    | Blocking                  | Not evidenced                                                  |
-| MD-07  | Validation plan, metric definitions and acceptance thresholds        | Blocking                  | Not evidenced                                                  |
-| MD-08  | Signed validation/test reports tied to exact version                 | Blocking                  | Not evidenced                                                  |
-| MD-09  | Fairness and accessibility method/results                            | Blocking                  | Not evidenced                                                  |
+| MD-05  | Training/validation/test dataset documentation                       | Blocking where applicable | Synthetic DT-02 test dataset documented; production training/validation/test dataset documentation not evidenced |
+| MD-06  | Approved job-criteria / feature specification and version history    | Blocking                  | Synthetic feature allow-list exists only as a DT-02 test fixture; production approval/version history not evidenced |
+| MD-07  | Validation plan, metric definitions and acceptance thresholds        | Blocking                  | Synthetic DT-02 config and diagnostic metrics exist; approved production validation plan and acceptance thresholds not evidenced |
+| MD-08  | Signed validation/test reports tied to exact version                 | Blocking                  | Synthetic DT-02 run summary and control-test workpaper exist; signed production model/version validation report not evidenced |
+| MD-09  | Fairness and accessibility method/results                            | Blocking                  | Synthetic DT-02 fairness/proxy test results exist; production fairness methodology/results and accessibility evidence not validated |
 | MD-10  | Explainability / reviewer interpretation evidence                    | Blocking                  | Not evidenced                                                  |
 | MD-11  | Human-oversight design and user testing                              | Blocking                  | Not evidenced                                                  |
 | MD-12  | Security threat model and test evidence                              | Blocking                  | Not evidenced                                                  |
@@ -425,6 +463,8 @@ Every model release must be traceable to the evidence used to approve it. A new 
 - HUDERIA pack - COBRA, stakeholder engagement design, risk/impact assessment, mitigation/remedies and iterative review.
 
 - AI Risk Assessment - scenario-based inherent/current/target risk, control effectiveness and treatment.
+
+- DuckTalent DT-02 Operating Evidence Package - synthetic matched-pair fairness/proxy-feature test data, executable test logic, generated results/exception/run summary, remediation/retest evidence, and control-test workpaper. This is not production fairness validation or legal non-discrimination evidence.
 
 - AI RACI and Lifecycle SOP - accountability, review, approval, release, monitoring, change and escalation procedures.
 
@@ -509,6 +549,7 @@ The following minimum record should be created for each material model or model-
 | Duckworks Scope / Acceptance Criteria                        | Synthetic-data boundary, technical testing limits, current Do Not Deploy gate and evidence expectations.              |
 | Duckworks Business Use Case Portfolio                        | Business owner, technical owner, inputs/outputs, permitted/prohibited uses, value measures and current gate.          |
 | DuckTalent AIA / DPIA / FRIA / HUDERIA records               | Impact, privacy, rights, stakeholder, mitigation and evidence requirements.                                           |
+| DuckTalent DT-02 Operating Evidence Package                     | Synthetic fairness/proxy-feature test design, matched-pair dataset, executable test, exception, remediation/retest, and explicit production/legal evidence boundaries. |
 | Duckworks AI Risk Methodology / RACI / Lifecycle SOP         | Risk, accountability, approval, monitoring, change and escalation expectations.                                       |
 | EU AI Act consolidated text, 27 July 2026 - EUR-Lex          | Conditional legal mapping for Annex III recruitment classification and Article 11 / Annex IV technical documentation. |
 | NIST AI RMF 1.0 / NIST AI RMF Playbook                       | Voluntary risk-management and documentation guidance.                                                                 |
@@ -533,7 +574,7 @@ The following minimum record should be created for each material model or model-
 <thead>
 <tr class="header">
 <th><p><strong>Final portfolio position</strong></p>
-<p>This document demonstrates how Duckworks would maintain an audit-ready model record without fabricating unavailable technical facts. DuckTalent remains blocked from production. The next legitimate step is to select or design the actual model/service, assign a versioned model ID, produce the missing architecture/data/provider evidence, execute approved validation and security/fairness testing, and then re-issue this record as a validated model documentation baseline.</p></th>
+<p>This document demonstrates how Duckworks would maintain an audit-ready model record without fabricating unavailable technical facts. DuckTalent remains blocked from production. A synthetic DT-02 fairness-control mechanism is now demonstrated, but the next legitimate step is still to select or design the actual model/service, assign a versioned model ID, produce the missing architecture/data/provider evidence, execute approved production-representative validation, security, fairness and accessibility testing, and then re-issue this record as a validated model documentation baseline.</p></th>
 </tr>
 </thead>
 <tbody>
