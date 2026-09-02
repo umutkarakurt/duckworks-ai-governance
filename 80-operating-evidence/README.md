@@ -69,6 +69,29 @@ The worked evidence package demonstrates:
 
 See: [`AI-006-pondgpt/`](./AI-006-pondgpt/)
 
+### AI-005 — DuckTalent AI
+
+**Material risk:** Training data, ranking criteria, features, or proxies may systematically disadvantage protected or otherwise disadvantaged applicants and restrict fair access to employment.
+
+**Preventive dependency:** `DT-01 — Job-Relevance Criteria & Proxy Feature Governance`
+
+**Detective control demonstrated:** `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing`
+
+The worked evidence package demonstrates:
+
+- a synthetic approved-feature allow-list;
+- 24 synthetic applicants arranged as 12 matched pairs;
+- executable fairness/adverse-impact test logic;
+- one deliberately seeded unapproved `Career_Gap_Months` scoring penalty;
+- matched-pair score and group-level diagnostic metrics;
+- detection of the unapproved feature and measurable disparity;
+- pre-deployment gate blocking;
+- generated exception evidence;
+- remediation and full-population retesting; and
+- a control-test conclusion that successful retest permits only further governance review.
+
+See: [`AI-005-ducktalent/`](./AI-005-ducktalent/)
+
 ## Important Limitation
 
 Duckworks is a fictional portfolio organization.
@@ -82,6 +105,7 @@ They do **not** constitute:
 - verified manufacturing outcomes;
 - actual PondGPT identity, connector, RAG, DLP, or SIEM activity;
 - validated production authorization inheritance;
+- real DuckTalent applicants, protected-characteristic data, production features, model behavior, fairness outcomes, accessibility results, or legal discrimination conclusions;
 - longitudinal control-effectiveness evidence;
 - demonstrated reduction of current residual risk; or
 - independent assurance over a live environment.

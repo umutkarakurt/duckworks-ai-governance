@@ -11,6 +11,14 @@ Synthetic portfolio evidence is explicitly distinguished from production operati
 | EV-AI004-003 | AI-004 — WingInspect Vision | AI-004-R01 | WI-01 | Human Release Gate Control Test | Synthetic operation tested | Control execution against the complete synthetic population |
 | EV-AI004-004 | AI-004 — WingInspect Vision | AI-004-R01 | WI-01 | Production Inspection Records | Not available | Real-world operating evidence |
 | EV-AI004-005 | AI-004 — WingInspect Vision | AI-004-R01 | WI-01 | Post-release Material Defect Trend | Not available | Outcome effectiveness / risk-reduction evidence |
+| EV-AI005-001 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 | Control Implementation Card | Designed | Fairness-risk objective, owner, triggers, evidence, gate rule, metrics, and legal/evidence boundaries |
+| EV-AI005-002 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 | Synthetic Applicant Fairness Test Dataset | Designed test input | Twenty-four synthetic applicants arranged as twelve matched pairs with approved job-related test features held equal within pairs |
+| EV-AI005-003 | AI-005 — DuckTalent AI | AI-005-R01 | DT-02 | Executable Fairness & Adverse-Impact Test | Synthetic technical implementation demonstrated | Reproducible test logic for feature allow-list conformance, matched-pair analysis, disparity diagnostics, deployment gating, remediation, and retest |
+| EV-AI005-004 | AI-005 — DuckTalent AI | AI-005-R01 | DT-02 | Fairness Test Results | Synthetic fairness execution demonstrated | Pre/post-remediation scores, shortlist outcomes, error types, and matched synthetic population results |
+| EV-AI005-005 | AI-005 — DuckTalent AI | AI-005-R01 | DT-02 | Seeded Fairness / Proxy-Feature Exception | Synthetic failure detection / gate response demonstrated | Detection of the intentionally unapproved `Career_Gap_Months` penalty, measurable matched-pair effect, deployment block, remediation, and retest requirement |
+| EV-AI005-006 | AI-005 — DuckTalent AI | AI-005-R01 | DT-02 | Fairness Control Test | Synthetic operation tested | Ten control assertions over the complete synthetic population and conclusion that DT-02 operated as designed within the portfolio scenario |
+| EV-AI005-007 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 | Production Feature-Governance / Fairness Evidence | Not available | Real job-relevance approval, production feature inventory, lawful group-data method, representative validation, and actual model/version evidence |
+| EV-AI005-008 | AI-005 — DuckTalent AI | AI-005-R01 | DT-02 / DT-07 | Real Applicant Outcome / Challenge Trend | Not available | Production fairness, contestability, error, complaint, and rights-impact outcome evidence |
 | EV-AI006-001 | AI-006 — PondGPT | AI-006-R01 | PG-01 / PG-02 | Control Implementation Card | Designed | Authorization-risk objective, owner, triggers, evidence, gate rule, and measurement approach |
 | EV-AI006-002 | AI-006 — PondGPT | AI-006-R01 | PG-01 / PG-02 | Synthetic Authorization Matrix | Designed test input | Personas, source entitlements, repository exclusions, and DLP expectations |
 | EV-AI006-003 | AI-006 — PondGPT | AI-006-R01 | PG-02 | Executable Permission Regression Control | Synthetic technical implementation demonstrated | Reproducible control logic that executes authorization, DLP, change, exception, gate, and retest assertions |
@@ -44,6 +52,18 @@ Project W.I.N.G. demonstrates:
 It does **not** claim:
 
 **Production operating effectiveness → Validated effectiveness**
+
+### DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing
+
+Project W.I.N.G. demonstrates:
+
+**Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested**
+
+The executable demonstration deliberately introduces an unapproved `Career_Gap_Months` scoring penalty into otherwise matched synthetic applicant pairs. The control succeeds because it detects the feature-governance violation, quantifies its effect, blocks the deployment gate, records an exception, removes the unapproved feature, and successfully retests the full synthetic population.
+
+It does **not** claim:
+
+**Production fairness validated → Real-applicant operating effectiveness → Legal compliance/non-discrimination → Validated rights-risk reduction → Independent assurance**
 
 ### PG-02 — Automated Permission Regression & DLP Tests
 
