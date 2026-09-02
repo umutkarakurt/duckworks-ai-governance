@@ -237,6 +237,30 @@ The package includes:
 
 > **Evidence boundary:** The executable control and generated records are synthetic portfolio evidence. They demonstrate reproducible technical-control logic and evidence generation, not validated production authorization inheritance, actual DLP/SIEM operation, sustained operating effectiveness, or reduction of PondGPT's current residual risk.
 
+#### Worked example — AI-005 DuckTalent AI
+
+`AI-005-R01` addresses the risk that training data, ranking criteria, features, or proxy variables may systematically disadvantage protected or otherwise disadvantaged applicants and restrict fair access to employment.
+
+The worked evidence package links the preventive dependency **`DT-01 — Job-Relevance Criteria & Proxy Feature Governance`** to the detective control **`DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing`**.
+
+The package includes:
+
+- a control implementation card;
+- a synthetic applicant test dataset containing 24 applicants arranged as 12 matched pairs;
+- an executable Python fairness/adverse-impact test;
+- an explicit approved-feature allow-list;
+- a deliberately seeded unapproved `Career_Gap_Months` scoring penalty;
+- selection-rate, true-positive-rate, false-negative-rate, and matched-pair diagnostics;
+- generated exception and run-summary evidence;
+- a pre-deployment `BLOCK` decision when the unapproved feature is detected;
+- remediation by removing the unapproved feature;
+- full-population retesting; and
+- a control-test workpaper demonstrating that successful retest leads only to further governance review, not automatic deployment approval.
+
+➡️ **[View the AI-005 DuckTalent operating-evidence package](80-operating-evidence/AI-005-ducktalent/)**
+
+> **Evidence boundary:** The group labels, applicants, scores, thresholds, and results are synthetic portfolio constructs. They do not represent real protected-characteristic data, real applicants, production DuckTalent behavior, legal discrimination analysis, or validated fairness. DuckTalent remains **Do not deploy in current state**.
+
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
@@ -381,7 +405,10 @@ A practical review sequence is:
 13. **Operating Evidence — AI-006 PondGPT**  
     Review how an authorization risk is translated into `PG-01` / `PG-02`, an executable permission-regression control, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, retesting, and an explicit production-evidence limitation.
 
-14. **Adversarial Review / Findings Register**  
+14. **Operating Evidence — AI-005 DuckTalent AI**  
+    Review how a fundamental-rights/fairness risk is translated into the `DT-01` job-relevance/proxy boundary and `DT-02` detective control, matched synthetic applicants, seeded proxy-feature failure, diagnostic disparity metrics, deployment blocking, remediation, retesting, and explicit legal/evidence limitations.
+
+15. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
@@ -459,6 +486,11 @@ The repository includes or is intended to include:
 - executable PondGPT permission-regression control;
 - generated PondGPT regression log, exception, and run summary;
 - PondGPT permission-regression control-test workpaper;
+- DuckTalent `DT-02` control implementation card;
+- synthetic matched-pair applicant fairness dataset;
+- executable DuckTalent fairness/adverse-impact test;
+- generated fairness results, exception, and run summary;
+- DuckTalent fairness control-test workpaper;
 - skeptical-review remediation tracker.
 
 ### Model and evaluation documentation
@@ -529,7 +561,7 @@ Material governance activities should therefore be traceable to evidence such as
 
 Where evidence is unavailable, the portfolio should state that explicitly rather than imply operating effectiveness.
 
-The current worked examples are maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/) and [`80-operating-evidence/AI-006-pondgpt/`](80-operating-evidence/AI-006-pondgpt/). Both deliberately distinguish synthetic workflow/technical-test evidence from production operating-effectiveness evidence.
+The current worked examples are maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/), [`80-operating-evidence/AI-005-ducktalent/`](80-operating-evidence/AI-005-ducktalent/), and [`80-operating-evidence/AI-006-pondgpt/`](80-operating-evidence/AI-006-pondgpt/). All three deliberately distinguish synthetic workflow/technical-test evidence from production operating-effectiveness, legal-compliance, or validated-risk-reduction claims.
 
 ---
 
@@ -588,8 +620,8 @@ Planned or future-phase work may include:
 - executive AI governance dashboard;
 - implementation roadmap;
 - AI assurance and internal-audit program;
-- additional formal control-testing workpapers beyond the current AI-004 and AI-006 worked examples;
-- expanded operating-evidence coverage beyond the current AI-004 and AI-006 worked examples;
+- additional formal control-testing workpapers beyond the current AI-004, AI-005 and AI-006 worked examples;
+- expanded operating-evidence coverage beyond the current AI-004, AI-005 and AI-006 worked examples;
 - system-specific monitoring records.
 
 The existence of a policy, framework, or template should not be interpreted as evidence that the process is fully operational.
