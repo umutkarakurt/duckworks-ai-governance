@@ -389,6 +389,32 @@ Accordingly, this synthetic evidence package does **not** provide additional res
 | **Target treatment / controls** | Automated permission-regression tests; DLP; sensitive-source denylist; logging and alerting.                            |
 | **Target residual risk**        | **Severity 4 x Likelihood 2 = 8 Moderate**                                                                              |
 
+#### Implementation evidence — AI-006-R01 / PG-01 / PG-02
+
+A worked technical-control demonstration for the PondGPT authorization boundary is available at:
+
+[`../80-operating-evidence/AI-006-pondgpt/`](../80-operating-evidence/AI-006-pondgpt/)
+
+The evidence chain links the preventive control **`PG-01 — Permission-Aware Retrieval`** to the detective control **`PG-02 — Automated Permission Regression & DLP Tests`** and demonstrates, using synthetic portfolio data:
+
+- a versioned authorization matrix with permitted and denied source access;
+- an executable Python regression control using synthetic personas and repositories;
+- positive and negative permission assertions;
+- pilot-source exclusions and DLP assertions;
+- entitlement removal/addition regression;
+- one deliberately seeded Finance connector ACL defect;
+- detection of the resulting unauthorized retrieval condition;
+- alert and exception generation;
+- connector/corpus expansion blocking;
+- remediation and successful retesting; and
+- a full-population control-test workpaper over 20 synthetic assertions.
+
+**Evidence state:** **Designed → Synthetic technical implementation demonstrated → Synthetic technical execution demonstrated → Synthetic operation tested.**
+
+**Assurance boundary:** The package does not establish actual PondGPT source-system authorization inheritance, real connector ACL configuration, production identity synchronization, real DLP/SSE/CASB enforcement, actual SIEM alerting, sustained weekly execution, or a measured unauthorized-retrieval escape rate.
+
+Accordingly, this synthetic evidence package does **not** provide additional residual-risk reduction credit. The current `AI-006-R01` residual risk, system-level **High (12)** rating, **Partially Effective** control status, **Medium** evidence confidence, and **Restricted pilot only** gate remain unchanged by this portfolio demonstration.
+
 | **AI-006-R02** | **Security & adversarial manipulation** | **Scenario risk progression** |
 |----------------|-----------------------------------------|-------------------------------|
 
@@ -523,5 +549,6 @@ This register is derived from the existing Duckworks Project W.I.N.G. source set
 | **Duckworks AI RACI Chart v1.0**                                   | System owner map, specialist challenge roles, committee approval and Internal Audit independence.                                       |
 | **Duckworks Responsible Use Policy and Governance Lifecycle SOP**  | Operational release gates, stop-use criteria, shadow-AI handling and evidence expectations.                                             |
 | **AI-004 WingInspect Operating Evidence Package**                  | Synthetic worked example linking AI-004-R01 to canonical control `WI-01`, inspection execution records, human override evidence and a control-test workpaper; not production operating-effectiveness evidence. |
+| **AI-006 PondGPT PG-02 Operating Evidence Package**                | Synthetic executable worked example linking AI-006-R01 to `PG-01` / `PG-02`, an authorization matrix, permission-regression code, seeded authorization defect, exception/gate evidence, remediation retest and control-test workpaper; not production operating-effectiveness evidence. |
 
 **Evidence discipline.** Existing controls shown in this register are those credited in the baseline assessment. Their presence in the document does not independently prove operating effectiveness. Target treatments are planned states and must not be represented as current controls until implementation and evidence are verified. Synthetic execution or test artifacts may demonstrate control design and workflow logic, but they must not be represented as production operating-effectiveness evidence unless supported by sustained real operational data and appropriate assurance.
