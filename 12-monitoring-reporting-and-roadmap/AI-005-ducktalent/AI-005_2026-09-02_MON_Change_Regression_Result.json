@@ -1,0 +1,79 @@
+{
+  "Monitoring_Record_ID": "DT-MON-001",
+  "Trigger_ID": "DT-TRG-001",
+  "Review_ID_To_Open": "IR-001",
+  "AI_System": "AI-005 \u2014 DuckTalent AI",
+  "Change_ID": "DT-CHG-001",
+  "Change_Type": "Ranking logic / feature-set configuration change",
+  "Evidence_Classification": "Portfolio / Synthetic / Non-production",
+  "Prior_Governance_Decision": "DENIED \u2014 maintain DO NOT DEPLOY with real applicants",
+  "Approved_Features": [
+    "Qualification_Match_Pct",
+    "Relevant_Experience_Years",
+    "Required_Certification",
+    "Skill_Match_Pct"
+  ],
+  "Proposed_Features": [
+    "Career_Gap_Months",
+    "Qualification_Match_Pct",
+    "Relevant_Experience_Years",
+    "Required_Certification",
+    "Skill_Match_Pct"
+  ],
+  "Unapproved_Features_Detected": [
+    "Career_Gap_Months"
+  ],
+  "Baseline_Group_Metrics": {
+    "Reference": {
+      "population": 12,
+      "selected": 7,
+      "selection_rate": 0.5833
+    },
+    "Comparison": {
+      "population": 12,
+      "selected": 7,
+      "selection_rate": 0.5833
+    }
+  },
+  "Proposed_Group_Metrics": {
+    "Reference": {
+      "population": 12,
+      "selected": 7,
+      "selection_rate": 0.5833
+    },
+    "Comparison": {
+      "population": 12,
+      "selected": 3,
+      "selection_rate": 0.25
+    }
+  },
+  "Matched_Pairs_With_Nonzero_Proposed_Score_Difference": 12,
+  "Material_Reassessment_Trigger": true,
+  "Reassessment_Reason": "A proposed ranking/feature configuration reintroduces a feature outside the approved synthetic allow-list and recreates a measurable matched-pair/group effect.",
+  "Records_To_Reopen": [
+    "AI-005-R01",
+    "DT-01",
+    "DT-02",
+    "DuckTalent AIA fairness / affected-person analysis",
+    "DuckTalent FRIA fairness / equality rights analysis",
+    "DuckTalent DPIA profiling / fairness-data analysis",
+    "DuckTalent model documentation feature / criteria record",
+    "DuckTalent lifecycle gate decision"
+  ],
+  "Immediate_Governance_Action": "REJECT proposed configuration; do not merge/approve; preserve DO NOT DEPLOY with real applicants; open IR-001 reassessment.",
+  "Control_Assertions": 7,
+  "Passed_Control_Assertions": 7,
+  "Failed_Control_Assertions": 0,
+  "Assertion_Results": {
+    "M01_material_feature_change_identified": true,
+    "M02_unapproved_feature_detected": true,
+    "M03_matched_pair_effect_detected": true,
+    "M04_group_outcome_difference_detected": true,
+    "M05_reassessment_trigger_opened": true,
+    "M06_proposed_configuration_not_approved": true,
+    "M07_current_real_applicant_gate_preserved": true
+  },
+  "Production_Monitoring_Effectiveness": "Not established",
+  "Legal_Compliance_or_Discrimination_Conclusion": "Not established",
+  "Evidence_State": "Synthetic material-change event -> Synthetic change-monitor execution -> Synthetic reassessment trigger demonstrated"
+}

@@ -1,0 +1,31 @@
+{
+  "Change_ID": "DT-CHG-001",
+  "AI_System": "AI-005 \u2014 DuckTalent AI",
+  "Date": "2026-09-02",
+  "Lifecycle_Context": "Concept / pre-deployment; real-applicant use remains prohibited",
+  "Change_Type": "Ranking logic / feature-set configuration change",
+  "Change_Status": "PROPOSED / NOT APPROVED",
+  "Synthetic_Scenario": true,
+  "Prior_Configuration": "DT-SYN-CFG-0.1-remediated",
+  "Proposed_Configuration": "DT-SYN-CFG-0.2-change-request",
+  "Synthetic_Change_Description": "A deliberately constructed change request reintroduces Career_Gap_Months as a score penalty after the prior DT-02 remediation removed it. This is a synthetic regression scenario created to demonstrate change monitoring and reassessment.",
+  "Proposed_Scoring_Features": [
+    "Relevant_Experience_Years",
+    "Skill_Match_Pct",
+    "Qualification_Match_Pct",
+    "Required_Certification",
+    "Career_Gap_Months"
+  ],
+  "Proposed_Career_Gap_Penalty_Per_Month": 0.8,
+  "Expected_Governance_Behavior": [
+    "detect_material_feature_change",
+    "compare_proposed_features_to_approved_allow_list",
+    "measure_synthetic_outcome_effect",
+    "open_reassessment",
+    "reject_unapproved_configuration",
+    "preserve_do_not_deploy_gate"
+  ],
+  "Real_Applicant_Data_Used": false,
+  "Production_Change": false,
+  "Legal_or_Fairness_Conclusion": "Not established"
+}
