@@ -53,7 +53,7 @@ Duckworks rule: an assumption that changes intended purpose, affected persons, l
 | ASM-006 | DuckTalent purpose            | DuckTalent parses, compares, ranks, and recommends job applicants but does not autonomously issue final rejection or hiring decisions.                              | Validated  | Critical        | Materially affects employment impact and legal classification analysis.                  | DuckTalent AIA                     |
 | ASM-007 | DuckDesign use                | DuckDesign outputs are advisory and require competent engineer review before prototyping or production.                                                             | Open       | Critical        | Safety and product risk depend on meaningful engineering validation.                     | Pilot operating procedure          |
 | ASM-008 | WingInspect use               | WingInspect flags defects but qualified human inspectors retain final acceptance/rejection authority.                                                               | Open       | Critical        | Quality/safety exposure changes if the model becomes autonomous.                         | WI-01 synthetic operating-evidence package demonstrates workflow/override logic; manufacturing procedure and production authority remain to be validated |
-| ASM-009 | PondGPT access                | PondGPT uses enterprise access controls and should not grant users access to documents they could not otherwise access.                                             | Open       | Critical        | Controls cross-user leakage and privilege amplification.                                 | Architecture evidence              |
+| ASM-009 | PondGPT access                | PondGPT uses enterprise access controls and should not grant users access to documents they could not otherwise access.                                             | Open       | Critical        | Controls cross-user leakage and privilege amplification.                                 | PG-02 synthetic executable evidence demonstrates test logic/detection/gating; production architecture and authorization inheritance remain to be validated |
 | ASM-010 | QuackBot escalation           | QuackBot can escalate uncertain, sensitive, or safety-relevant interactions to human support staff.                                                                 | Open       | High            | Reduces customer harm and supports oversight.                                            | Release design                     |
 | ASM-011 | FeatherForecast decisions     | FeatherForecast is decision support; purchasing and production commitments require authorized manager approval.                                                     | Open       | Medium          | Limits direct automation risk.                                                           | Supply chain SOP                   |
 | ASM-012 | Third-party mix               | Duckworks uses a combination of internally developed AI components and third-party models/services.                                                                 | Validated  | High            | Requires both development governance and supplier risk controls.                         | Architecture scenario              |
@@ -69,6 +69,12 @@ Duckworks rule: an assumption that changes intended purpose, affected persons, l
 | ASM-022 | Internal Audit independence   | Internal Audit observes and assures but does not design, own, or operate first/second-line AI controls.                                                             | Validated  | High            | Preserves three-lines independence.                                                      | Stakeholder model                  |
 | ASM-023 | Risk appetite                 | Critical residual AI risk is not acceptable for production without exceptional executive/board-level escalation; specific appetite thresholds may be refined later. | Open       | Critical        | Drives deployment decisions.                                                             | Risk methodology                   |
 | ASM-024 | Project technology neutrality | The governance design is model-, vendor-, cloud-, and GRC-platform-neutral unless a system-specific decision requires otherwise.                                    | Validated  | Low             | Keeps portfolio reusable.                                                                | Scope document                     |
+| ASM-025 | DuckDesign vendor architecture | DuckDesign AI uses a Duckworks-developed engineering workflow integrated with the fictional AetherForge AI GmbH hosted model service; Duckworks engineering data is contractually excluded from provider model training. | Open | High | Determines third-party, IP, confidentiality, training-data-use, and supplier-control requirements. | Vendor contract; architecture diagram; data-use terms |
+| ASM-026 | QuackBot vendor architecture | QuackBot uses the fictional HelixRiver AI Services S.A. hosted LLM, while Duckworks controls the RAG knowledge base, customer-support workflow, and escalation logic; provider reuse of Duckworks prompts/content for training is prohibited. | Open | High | Determines customer-data exposure, supplier controls, RAG accountability, and data-use restrictions. | Vendor contract; solution architecture; retention/training terms |
+| ASM-027 | FeatherForecast platform | FeatherForecast uses the fictional Northstar Planning Analytics GmbH ML platform, with Duckworks controlling datasets, forecasting configuration, thresholds, and operational decisions. | Open | Medium | Clarifies provider dependency while retaining Duckworks accountability for data and operational decisions. | Platform architecture; configuration record; supplier agreement |
+| ASM-028 | WingInspect imaging scope | WingInspect Vision uses fictional VisiCore Industrial AI components; production cameras are intended to capture products/components rather than perform employee surveillance or biometric identification. | Open | High | Materially affects privacy, workforce-impact, security, and regulatory screening. | Camera field-of-view review; system design; privacy assessment |
+| ASM-029 | DuckTalent vendor and decision boundary | DuckTalent AI is provided by fictional MeritPath HR Technologies S.A.; special-category attributes are not intended ranking features, and the system cannot autonomously reject or hire an applicant. | Open | Critical | Affects fairness testing, privacy, legal classification, human oversight, and deployment decision. | Vendor documentation; feature inventory; workflow configuration; HR procedure |
+| ASM-030 | PondGPT enterprise controls | PondGPT uses fictional LanternMind Enterprise AI Ltd. under an enterprise arrangement providing tenant isolation and no provider training on Duckworks content; retrieval permissions inherit authorization from source systems. | Open | Critical | Controls cross-user leakage, privilege amplification, third-party data use, and deployment scope. | PG-02 synthetic executable evidence demonstrates permission-regression logic; contract, production architecture, source authorization, DLP and retrieval-security evidence remain required |
 
 ### 3.1 WingInspect evidence boundary for ASM-008
 
@@ -85,11 +91,29 @@ Accordingly:
 
 Related evidence: [`../../../80-operating-evidence/AI-004-winginspect/`](../../../80-operating-evidence/AI-004-winginspect/)
 
+### 3.2 PondGPT evidence boundary for ASM-009 / ASM-030
+
+The Project W.I.N.G. operating-evidence package for `PG-02 — Automated Permission Regression & DLP Tests` provides a worked executable synthetic demonstration of the intended PondGPT authorization-assurance process.
+
+The package exercises the `PG-01 — Permission-Aware Retrieval` boundary through positive/negative personas, source entitlements, pilot exclusions, DLP assertions, permission changes, a deliberately seeded connector ACL defect, alert/exception generation, expansion blocking, remediation, and successful retesting.
+
+This evidence improves the **design, technical implementation, and synthetic test evidence** for PondGPT authorization controls but does not validate either assumption as a production fact. The portfolio does not contain real PondGPT connector configuration, identity-provider synchronization, production ACL mappings, actual DLP/SSE/CASB enforcement, real SIEM evidence, actual provider contract evidence, or sustained scheduled PG-02 execution.
+
+Accordingly:
+
+- `ASM-009` remains **Open / Critical**;
+- `ASM-030` remains **Open / Critical**;
+- `PG-02` may be described as **Partially implemented in the synthetic portfolio demonstration**, not production-validated;
+- the synthetic evidence does not justify additional residual-risk reduction credit; and
+- closure requires real architecture, contractual, authorization, DLP, connector, logging, and operating evidence.
+
+Related evidence: [`../../../80-operating-evidence/AI-006-pondgpt/`](../../../80-operating-evidence/AI-006-pondgpt/)
+
 ## 4. Critical Assumptions Requiring Early Validation
 
 1.  Confirm actual human decision authority for DuckTalent, DuckDesign, WingInspect, QuackBot, and FeatherForecast. For WingInspect, the synthetic `WI-01` package demonstrates the intended workflow, but production authority remains unvalidated.
 
-2.  Confirm PondGPT data-access architecture and retrieval authorization boundaries.
+2.  Confirm PondGPT data-access architecture, source-system authorization inheritance, connector ACLs, DLP enforcement, and enterprise-provider controls. The synthetic `PG-02` package demonstrates the intended test/control logic, but `ASM-009` and `ASM-030` remain unvalidated production assumptions.
 
 3.  Confirm whether any product-integrated AI can perform a safety function or directly control mechanical movement.
 
