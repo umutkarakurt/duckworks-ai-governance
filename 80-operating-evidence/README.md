@@ -24,7 +24,7 @@ Project W.I.N.G. distinguishes between five evidence states:
 
 These states are intentionally separated to avoid granting control-effectiveness credit based only on documentation.
 
-## Current Worked Example
+## Current Worked Examples
 
 ### AI-004 — WingInspect Vision
 
@@ -46,18 +46,44 @@ The worked evidence package demonstrates:
 
 See: [`AI-004-winginspect/`](./AI-004-winginspect/)
 
+### AI-006 — PondGPT
+
+**Material risk:** Incorrect retrieval permissions or connector authorization may cause PondGPT to return restricted internal information to a user who is not authorized to access the underlying source.
+
+**Preventive boundary:** `PG-01 — Permission-Aware Retrieval`
+
+**Detective control demonstrated:** `PG-02 — Automated Permission Regression & DLP Tests`
+
+The worked evidence package demonstrates:
+
+- a synthetic authorization matrix with positive and negative access expectations;
+- executable permission-regression logic;
+- pilot-source exclusion and synthetic DLP assertions;
+- entitlement-change regression;
+- one deliberately seeded connector ACL defect;
+- automated-style detection of the authorization mismatch;
+- exception and alert evidence;
+- connector/corpus expansion blocking;
+- remediation and successful retesting; and
+- a control-test conclusion over the complete synthetic test population.
+
+See: [`AI-006-pondgpt/`](./AI-006-pondgpt/)
+
 ## Important Limitation
 
 Duckworks is a fictional portfolio organization.
 
-All execution records in this folder are **synthetic portfolio evidence** created solely to demonstrate governance operating-model, control, and assurance design.
+All execution records, test identities, source permissions, alerts, exceptions, code execution, and control results in this folder are **synthetic portfolio evidence** created solely to demonstrate governance operating-model, technical-control, and assurance design.
 
 They do **not** constitute:
 
 - real production records;
 - measured WingInspect model performance;
 - verified manufacturing outcomes;
-- longitudinal control-effectiveness evidence; or
+- actual PondGPT identity, connector, RAG, DLP, or SIEM activity;
+- validated production authorization inheritance;
+- longitudinal control-effectiveness evidence;
+- demonstrated reduction of current residual risk; or
 - independent assurance over a live environment.
 
-Synthetic evidence may demonstrate control design and workflow logic, but it does not justify additional production residual-risk reduction credit.
+Synthetic evidence may demonstrate control design, workflow logic, technical testability, and reproducible evidence generation, but it does not justify additional production residual-risk reduction credit.

@@ -1,0 +1,15 @@
+{
+  "Exception_ID": "SEC-EXC-006-001",
+  "AI_System": "AI-006",
+  "Risk_ID": "AI-006-R01",
+  "Control_ID": "PG-02",
+  "Condition": "Seeded Finance connector ACL maps restricted source to All-Employees",
+  "Detected_By_Test": "PG02-T013",
+  "Expected_Retrieval": "DENY",
+  "Observed_Retrieval": "ALLOW",
+  "Alert_Generated": "YES",
+  "Expansion_Gate": "BLOCK",
+  "Remediation": "Restore Finance-only connector ACL mapping and rerun affected regression subset",
+  "Synthetic_Status": "Closed after successful remediation retest",
+  "Evidence_Classification": "Portfolio / Synthetic / Non-production"
+}

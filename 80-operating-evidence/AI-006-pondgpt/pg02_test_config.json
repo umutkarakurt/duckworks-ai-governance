@@ -1,0 +1,87 @@
+{
+  "control_id": "PG-02",
+  "control_name": "Automated Permission Regression & DLP Tests",
+  "ai_system": "AI-006",
+  "risk_id": "AI-006-R01",
+  "preventive_dependency": "PG-01",
+  "evidence_classification": "Portfolio / Synthetic / Non-production",
+  "run_date": "2026-09-01",
+  "personas": {
+    "USR-GEN-001": {
+      "role": "General Employee",
+      "groups": [
+        "All-Employees"
+      ]
+    },
+    "USR-ENG-001": {
+      "role": "Engineering User",
+      "groups": [
+        "All-Employees",
+        "Engineering"
+      ]
+    },
+    "USR-ENG-002": {
+      "role": "Engineering User",
+      "groups": [
+        "All-Employees",
+        "Engineering"
+      ]
+    },
+    "USR-ENG-003": {
+      "role": "General Employee promoted to Engineering",
+      "groups": [
+        "All-Employees"
+      ]
+    },
+    "USR-HR-001": {
+      "role": "HR User",
+      "groups": [
+        "All-Employees",
+        "HR"
+      ]
+    },
+    "USR-FIN-001": {
+      "role": "Finance User",
+      "groups": [
+        "All-Employees",
+        "Finance"
+      ]
+    },
+    "USR-SEC-001": {
+      "role": "Security User",
+      "groups": [
+        "All-Employees",
+        "Security"
+      ]
+    },
+    "USR-SYS-001": {
+      "role": "Test Harness",
+      "groups": [
+        "System-Test"
+      ]
+    }
+  },
+  "scheduled_frequency": "WEEKLY",
+  "change_triggers": [
+    "connector_change",
+    "source_permission_change",
+    "retrieval_policy_change",
+    "new_repository_expansion",
+    "remediation_retest"
+  ],
+  "seeded_defects": [
+    {
+      "defect_id": "SEED-ACL-001",
+      "resource_id": "DOC-FIN-001",
+      "fault": "Connector ACL maps Finance source to All-Employees",
+      "expected_source_group": "Finance",
+      "faulty_connector_group": "All-Employees",
+      "expected_control_response": [
+        "detect",
+        "alert",
+        "block_expansion",
+        "create_exception"
+      ]
+    }
+  ]
+}

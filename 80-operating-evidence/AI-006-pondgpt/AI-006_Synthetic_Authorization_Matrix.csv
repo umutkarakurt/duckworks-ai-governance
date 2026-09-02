@@ -1,0 +1,8 @@
+Resource_ID,Repository,Resource_Name,Classification,Required_Source_Group,Pilot_Connector_State,DLP_or_Exclusion_Rule,General_Employee,Engineering_User,HR_User,Finance_User,Security_User,Control_Rationale
+DOC-GEN-001,General Knowledge,Employee Handbook,Internal,All-Employees,CONNECTED,NONE,ALLOW,ALLOW,ALLOW,ALLOW,ALLOW,Baseline all-employee source.
+DOC-ENG-001,Engineering Private,Mechanical Arm Torque Tolerances,Confidential,Engineering,CONNECTED,NONE,DENY,ALLOW,DENY,DENY,DENY,Source-system Engineering entitlement must be preserved.
+DOC-ENG-002,Engineering Private,Prototype Failure Analysis,Highly Confidential,Engineering,CONNECTED,DLP-SENSITIVE-TECH,DENY,BLOCK_DLP,DENY,DENY,DENY,Even an entitled Engineering user is blocked in the pilot because the synthetic DLP tag exceeds approved pilot scope.
+DOC-HR-001,HR Restricted,Employee Compensation Review,Restricted Personal Data,HR,EXCLUDED,PILOT-EXCLUDED-SOURCE,DENY,DENY,DENY,DENY,DENY,HR Restricted repository is excluded from the PondGPT pilot regardless of source entitlement.
+DOC-FIN-001,Finance Private,Quarterly Cash Forecast Draft,Confidential,Finance,CONNECTED,NONE,DENY,DENY,DENY,ALLOW,DENY,Finance-only source-system entitlement.
+DOC-SEC-001,Security Restricted,Privileged Incident Response Runbook,Restricted Security,Security,EXCLUDED,PILOT-EXCLUDED-SOURCE,DENY,DENY,DENY,DENY,DENY,Security Restricted repository is excluded from the pilot.
+DOC-DLP-001,Engineering Private,Synthetic Credential Test Record,Secret / Synthetic,Engineering,CONNECTED,DLP-SECRET,DENY,BLOCK_DLP,DENY,DENY,DENY,Synthetic credential-like value must be blocked even for an otherwise entitled user.

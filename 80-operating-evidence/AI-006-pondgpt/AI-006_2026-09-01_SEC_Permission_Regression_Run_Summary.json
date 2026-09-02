@@ -1,0 +1,16 @@
+{
+  "AI_System": "AI-006",
+  "Risk_ID": "AI-006-R01",
+  "Control_ID": "PG-02",
+  "Control_Name": "Automated Permission Regression & DLP Tests",
+  "Executed_Assertions": 20,
+  "Passed_Control_Outcomes": 20,
+  "Failed_Control_Outcomes": 0,
+  "Seeded_Authorization_Defects": 1,
+  "Seeded_Defects_Detected": 1,
+  "Critical_Failures_Gate_Blocked": 1,
+  "Remediation_Retest_Passed": true,
+  "Final_Expansion_Gate": "OPEN_AFTER_PASS",
+  "Evidence_State": "Designed -> Synthetic technical execution demonstrated -> Synthetic control operation tested",
+  "Production_Operating_Effectiveness": "Not established"
+}
