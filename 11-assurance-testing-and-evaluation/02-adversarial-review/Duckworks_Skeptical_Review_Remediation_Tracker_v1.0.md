@@ -91,6 +91,24 @@ This materially strengthens the portfolio's answer to the broader monitoring/rea
 
 It does **not** establish sustained production monitoring, real applicant/complaint/incident telemetry, production change-control operation, real committee reassessment, or validated risk reduction.
 
+### Executive management-reporting evidence
+
+Project W.I.N.G. now contains `12-monitoring-reporting-and-roadmap/Duckworks_Executive_AI_Governance_Decision_Brief_v1.0.md`.
+
+The brief converts the underlying risk, gate, control-status and evidence-maturity records into a compact management decision view rather than another framework/control document. It explicitly highlights:
+
+- the current seven-entry portfolio decision posture;
+- 2 Critical, 4 High and 1 Moderate current residual-risk entries;
+- the 45-control implementation posture;
+- systems that are restricted, blocked, contained or allowed to continue with monitoring;
+- evidence maturity and production-evidence limitations;
+- the DuckTalent dynamic lifecycle sequence; and
+- the decisions/actions management should be able to answer.
+
+| **Finding** | **Original issue** | **Remediation / evidence now available** | **Status** | **Remaining gap / closure condition** |
+|---|---|---|---|---|
+| **F-044 — High** | Executive reporting operating evidence is missing; portfolio reporting is largely design intent rather than evidence of an executive decision-support process. | A versioned Executive AI Governance Decision Brief now consolidates current portfolio risk, gates, control posture, evidence maturity, blockers and next decisions into a management-facing artifact with explicit synthetic/non-production boundaries. | **Partially Addressed** | The brief is a static synthetic artifact. There is no recurring reporting cadence, evidence of real management review, live dashboard/telemetry, production trend history, decision minutes, action follow-up, or demonstrated executive reporting operation. |
+
 ## 5. Findings Not Closed by the Current Operating-Evidence Packages
 
 The WingInspect, PondGPT, and DuckTalent work should **not** be used to imply closure of unrelated skeptical findings. In particular, the following remain outside the scope of these worked examples:
@@ -102,15 +120,15 @@ The WingInspect, PondGPT, and DuckTalent work should **not** be used to imply cl
 - **F-012** — project acceptance-results evidence;
 - **F-015 / F-016** — broader technical GenAI security and AI BOM completeness;
 - **F-019 to F-023** — privacy/data-protection evidence gaps;
-- **F-034 to F-046** — value, monitoring, risk appetite, assurance, reporting, incident and third-party maturity gaps.
+- **F-034 to F-043 / F-045 / F-046** — value, monitoring, risk appetite, assurance, incident and third-party maturity gaps; `F-044` now has partial synthetic management-reporting evidence.
 
 ## 6. Current Remediation Conclusion
 
-The AI-004 WingInspect, AI-005 DuckTalent, and AI-006 PondGPT operating-evidence packages materially improve Project W.I.N.G.'s ability to demonstrate the transition from governance design to executable, auditable control workflows across three distinct control archetypes. DuckTalent now additionally demonstrates both a synthetic lifecycle decision and a later event-driven monitoring/reassessment cycle that challenges prior remediation and produces a revised decision.
+The AI-004 WingInspect, AI-005 DuckTalent, and AI-006 PondGPT operating-evidence packages materially improve Project W.I.N.G.'s ability to demonstrate the transition from governance design to executable, auditable control workflows across three distinct control archetypes. DuckTalent additionally demonstrates both a synthetic lifecycle decision and a later event-driven monitoring/reassessment cycle. The Executive AI Governance Decision Brief now adds a management-reporting layer that summarizes portfolio gates, material risk, evidence maturity, blockers and next decisions.
 
 The defensible claim is:
 
-> **Project W.I.N.G. now contains three worked synthetic control-evidence chains plus a DuckTalent lifecycle sequence that consumes evidence at a gate, detects a later material configuration regression, opens reassessment, and produces a revised decision that preserves the real-applicant deployment block.**
+> **Project W.I.N.G. now contains three worked synthetic control-evidence chains, a DuckTalent decision → monitoring → reassessment lifecycle sequence, and a compact executive decision brief that translates the underlying evidence into a management-facing risk/gate/action view.**
 
 The project still does **not** claim that:
 
@@ -119,22 +137,23 @@ The project still does **not** claim that:
 - WingInspect model performance, PondGPT production authorization inheritance, or DuckTalent real-applicant fairness has been established;
 - current residual risk has been reduced by the synthetic evidence;
 - the DuckTalent gate or reassessment records represent a real committee meeting, real executive approval/non-approval, real production monitoring, or real pilot authorization;
+- the Executive AI Governance Decision Brief represents a recurring live dashboard, real management review, or an operating executive-reporting process;
 - independent assurance has been completed; or
 - the broader skeptical review is resolved.
 
 ## 7. Recommended Next Portfolio Maturity Step
 
-The three complementary control-evidence archetypes and the DuckTalent decision → monitoring → reassessment sequence now provide a sufficient synthetic operating-model demonstration.
+The three complementary control-evidence archetypes, the DuckTalent decision → monitoring → reassessment sequence, and the Executive AI Governance Decision Brief now provide a sufficient synthetic operating-model and management-reporting demonstration.
 
-The next highest-value step should **not** be another synthetic AI-system or lifecycle package.
+The next highest-value step should **not** be another broad governance artifact.
 
-Priority should shift to **portfolio consolidation and decision communication**:
+Priority should shift to **portfolio consolidation and hiring conversion**:
 
-1. **Management reporting** — create a compact executive view that surfaces current gates, material risks, evidence maturity, unresolved blockers, and next decisions without implying production telemetry.
-2. **Authoritative-record cleanup** — continue resolving cross-artifact source-of-truth, document-control, and evidence-traceability findings such as `F-013`.
-3. **Interview case-study narrative** — package one end-to-end story showing how evidence changed a governance decision and how a later change triggered reassessment.
-4. **Assurance boundary** — retain the distinction between first/second-line management testing, governance review, and independent assurance.
-5. **Stop expanding synthetic evidence breadth** unless a specific skeptical-review finding or target-role requirement justifies it.
+1. **Interview case-study narrative** — package DuckTalent into a 60–90 second end-to-end story showing risk, executable evidence, a restrictive gate decision, later material change, reassessment, and the revised decision.
+2. **Five-minute portfolio walkthrough** — define the exact repository path a hiring manager should follow and the proof point each artifact demonstrates.
+3. **Authoritative-record cleanup** — continue resolving cross-artifact source-of-truth, document-control, and evidence-traceability findings such as `F-013` where they materially affect interview defensibility.
+4. **Resume / LinkedIn evidence framing** — translate the portfolio into concise achievement language using “designed,” “implemented synthetically,” and “demonstrated,” without implying production ownership.
+5. **Assurance boundary** — retain the distinction between management testing, governance review, and independent assurance.
 
 The three current evidence archetypes are:
 
