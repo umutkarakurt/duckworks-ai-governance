@@ -28,7 +28,7 @@ Provide a defensible, auditable control design that links every material Duckwor
 
 Duckworks has 21 baseline material AI risk scenarios across seven inventory entries. The control design below creates a many-to-many risk/control model rather than inventing a separate control for every risk. Shared lifecycle, supplier, incident and evidence controls support system-specific safety, fairness, privacy, security, reliability and human-oversight controls.
 
-The companion control library contains 45 controls: 26 preventive, 13 detective and 6 corrective. Current implementation posture is intentionally conservative: 2 controls are recorded as Implemented, 19 as Partially Implemented, 16 as Planned, 7 as Not Implemented and 1 as Weak / Ad Hoc. Those labels are design/portfolio status indicators, not independent audit opinions.
+The companion control library contains 45 controls: 26 preventive, 13 detective and 6 corrective. Current implementation posture is intentionally conservative: 2 controls are recorded as Implemented, 20 as Partially Implemented, 16 as Planned, 6 as Not Implemented and 1 as Weak / Ad Hoc. Those labels are design/portfolio status indicators, not independent audit opinions.
 
 | **AI ID** | **System**               | **Current residual** | **Current gate**         | **Primary control focus**                                                                     |
 |-----------|--------------------------|----------------------|--------------------------|-----------------------------------------------------------------------------------------------|
@@ -240,8 +240,32 @@ Training data or features encode historical/proxy bias -\> ranking disadvantages
 | AI-GOV-01      | Risk-Based Lifecycle Gate                         | Preventive | Eleanor Duckford - AI Governance Lead                        | Partially implemented |
 | AI-TPR-01      | AI Supplier Due Diligence & Contract Controls     | Preventive | Percival Duckworth - Director Procurement & Vendor Assurance | Partially implemented |
 | DT-01          | Job-Relevance Criteria & Proxy Feature Governance | Preventive | Beatrice Van Duck - Chief People Officer                     | Not implemented       |
-| DT-02          | Pre-Deployment Fairness & Adverse-Impact Testing  | Detective  | Beatrice Van Duck - Chief People Officer                     | Not implemented       |
+| DT-02          | Pre-Deployment Fairness & Adverse-Impact Testing  | Detective  | Beatrice Van Duck - Chief People Officer                     | Partially implemented |
 | DT-07          | Candidate Notice, Challenge & Human Remedy        | Corrective | Beatrice Van Duck - Chief People Officer                     | Not implemented       |
+
+#### DT-02 implementation / evidence note
+
+A worked executable evidence package is available at [`../80-operating-evidence/AI-005-ducktalent/`](../80-operating-evidence/AI-005-ducktalent/).
+
+The package implements a deterministic synthetic `DT-02` test harness over 24 synthetic applicants arranged as 12 matched pairs. Approved job-related test features are held equal within each pair while a deliberately unapproved `Career_Gap_Months` penalty is introduced into the pre-remediation scoring configuration.
+
+The synthetic execution demonstrates:
+
+- feature allow-list conformance testing;
+- matched-pair score comparison;
+- selection-rate and error diagnostics;
+- detection of the seeded unapproved feature;
+- pre-deployment gate blocking;
+- generated exception evidence;
+- removal of the unapproved feature;
+- full-population retesting; and
+- a final state of **Eligible for further governance review**, not deployment approval.
+
+`DT-02` is therefore classified as **Partially implemented** for portfolio-status purposes because a reproducible synthetic testing mechanism and evidence-generation workflow exist. `DT-01` remains **Not implemented** because the synthetic allow-list is only a test fixture and does not establish real DuckTalent job-criteria or feature governance.
+
+The defensible evidence state is **Designed → Synthetic technical implementation demonstrated → Synthetic fairness execution demonstrated → Synthetic operation tested**.
+
+This package uses no real applicants or real protected-characteristic data and does not establish legal discrimination, legal compliance, production fairness, lawful fairness-data processing, accessibility performance, or real DuckTalent model behavior. DuckTalent therefore remains **Critical**, **Do not deploy**, and system-level control effectiveness remains **Not Implemented**.
 
 ### AI-005-R02 - Human oversight & automation bias
 
@@ -398,7 +422,7 @@ The library is designed so that a GRC reviewer or Internal Audit team can later 
 
 - PondGPT source-authorization inheritance and third-party tenant/data-use controls are material assumptions. The synthetic PG-02 package now demonstrates executable permission-regression logic, seeded-defect detection, gating and retest, but `ASM-009` / `ASM-030` remain unverified production assumptions until real architecture, access tests, supplier evidence and operating records are obtained.
 
-- DuckTalent vendor/model/feature design is not finalized. Therefore fairness, privacy and explainability controls are control requirements, not claims about actual model behavior.
+- DuckTalent vendor/model/feature design is not finalized. The synthetic DT-02 package now demonstrates executable pre-deployment fairness-test logic, seeded unapproved-feature detection, deployment blocking and remediation/retest, but this does not validate production features, real applicant outcomes, lawful fairness-data processing or legal compliance. Fairness, privacy, explainability, human-oversight and candidate-remedy controls remain blocking requirements.
 
 - Current baseline control-effectiveness labels are assessment inputs, not independent assurance conclusions. This report does not upgrade Partially Effective or Weak controls merely by documenting them.
 
@@ -477,7 +501,7 @@ The risk coverage in this report is based on the Duckworks AI Risk Scenario Regi
 | WI-05     | False-Positive Tuning & QA Feedback Loop                              | Corrective | Dr. Ada Duckfield - Head of Data & AI                        | Planned               |
 | WI-06     | Change-Triggered Revalidation & Locked Baseline                       | Preventive | Dr. Ada Duckfield - Head of Data & AI                        | Partially implemented |
 | DT-01     | Job-Relevance Criteria & Proxy Feature Governance                     | Preventive | Beatrice Van Duck - Chief People Officer                     | Not implemented       |
-| DT-02     | Pre-Deployment Fairness & Adverse-Impact Testing                      | Detective  | Beatrice Van Duck - Chief People Officer                     | Not implemented       |
+| DT-02     | Pre-Deployment Fairness & Adverse-Impact Testing                      | Detective  | Beatrice Van Duck - Chief People Officer                     | Partially implemented |
 | DT-03     | Meaningful Human Review & No Automated Rejection                      | Preventive | Beatrice Van Duck - Chief People Officer                     | Not implemented       |
 | DT-04     | Reviewer Rationale, Training & Override Monitoring                    | Preventive | Beatrice Van Duck - Chief People Officer                     | Not implemented       |
 | DT-05     | Applicant Data Minimization, Field Exclusion & Retention              | Preventive | Beatrice Van Duck - Chief People Officer                     | Not implemented       |

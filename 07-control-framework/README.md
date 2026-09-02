@@ -48,6 +48,8 @@ For the current WingInspect worked example, `WI-01 — Qualified Human Final Ins
 
 For the current PondGPT worked example, `PG-02 — Automated Permission Regression & DLP Tests` is treated as **Partially implemented** because the portfolio contains a reproducible executable synthetic test mechanism, generated evidence, seeded-defect detection, gate enforcement, and remediation/retest logic while production identity/connector/DLP/SIEM integration, sustained operating history, and production operating effectiveness remain unvalidated.
 
+For the current DuckTalent worked example, `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing` is treated as **Partially implemented** because the portfolio contains a reproducible executable synthetic fairness-test mechanism, matched-pair test data, seeded unapproved-feature detection, deployment blocking, remediation and retest evidence. Real-applicant fairness, production feature governance, lawful fairness-data processing, legal compliance, and sustained operating effectiveness remain unvalidated. `DT-01` remains **Not implemented**.
+
 ## Framework mapping
 
 Mappings to NIST, ISO/IEC, ENISA, OWASP, MITRE, or legal sources are used for traceability and design context. A mapping does not itself demonstrate:
@@ -61,12 +63,13 @@ Mappings to NIST, ISO/IEC, ENISA, OWASP, MITRE, or legal sources are used for tr
 
 Choose a material risk scenario and follow it into the control library. The strongest portfolio demonstration is not the number of mapped frameworks; it is whether the control has a clear objective, owner, evidence source, test method, and a defensible causal relationship to the risk being treated.
 
-Two worked examples demonstrate different control archetypes:
+Three worked examples demonstrate different control archetypes:
 
 - [`AI-004 WingInspect operating-evidence package`](../80-operating-evidence/AI-004-winginspect/) — links `AI-004-R01` to `WI-01`, synthetic inspection execution, meaningful human overrides, and a control-test workpaper.
+- [`AI-005 DuckTalent operating-evidence package`](../80-operating-evidence/AI-005-ducktalent/) — links `AI-005-R01` to the `DT-01` job-relevance/proxy boundary and `DT-02` detective control, matched synthetic applicants, seeded proxy-feature failure, diagnostic disparity metrics, deployment blocking, remediation, and retesting.
 - [`AI-006 PondGPT operating-evidence package`](../80-operating-evidence/AI-006-pondgpt/) — links `AI-006-R01` to the `PG-01` authorization boundary and `PG-02` detective control, executable permission-regression logic, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, and retesting.
 
-Both preserve the distinction between synthetic portfolio implementation/testing evidence and production operating effectiveness.
+All three preserve the distinction between synthetic portfolio implementation/testing evidence and production operating effectiveness. The DuckTalent example additionally preserves the boundary between diagnostic fairness testing and any legal discrimination or compliance conclusion.
 
 ---
 
