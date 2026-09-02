@@ -11,7 +11,7 @@
 
 This package demonstrates a third Project W.I.N.G. control archetype:
 
-**AI-005-R01 → DT-01 job-relevance/proxy boundary → DT-02 fairness testing → matched synthetic applicants → seeded unapproved proxy → measured outcome difference → deployment block → remediation → retest → governance gate review → real-applicant pilot denied**
+**AI-005-R01 → DT-01 job-relevance/proxy boundary → DT-02 fairness testing → matched synthetic applicants → seeded unapproved proxy → deployment block → remediation → retest → governance gate review → real-applicant pilot denied → later material change → regression monitoring → reassessment → revised decision preserves block**
 
 It is deliberately different from:
 
@@ -92,6 +92,20 @@ Expected DT-02 response:
 8. `AI-005_2026-09-02_MON_Fairness_Control_Test.md`
 9. `AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md`
 
+### Post-decision lifecycle evidence
+
+The monitoring / reassessment continuation of this evidence chain is maintained under:
+
+[`../../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/`](../../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/)
+
+That package contains:
+
+- `DT-CHG-001` — a synthetic proposed material feature/ranking change;
+- executable change-regression monitoring;
+- `DT-MON-001 / DT-TRG-001` — synthetic monitoring and reassessment-trigger evidence;
+- `IR-001` — the targeted reassessment record; and
+- a revised governance gate decision rejecting the proposed change and preserving **DO NOT DEPLOY**.
+
 ## Governance gate decision
 
 The worked gate decision asks:
@@ -141,9 +155,13 @@ No third-party Python package or network access is required.
 
 **Synthetic control evidence available → Governance evidence pack reviewed → Synthetic lifecycle decision demonstrated**
 
+### Post-decision monitoring / reassessment evidence
+
+**Synthetic material-change event → Synthetic change-monitor execution → Synthetic reassessment trigger demonstrated → Synthetic reassessment performed → Synthetic revised lifecycle decision demonstrated**
+
 Not demonstrated:
 
-**Real committee approval/non-approval → Real pilot authorization → Production fairness validated → Real-applicant operating effectiveness → Legal compliance → Validated rights-risk reduction → Independent assurance**
+**Continuous production monitoring → Real committee approval/non-approval/reassessment → Real pilot authorization → Production fairness validated → Real-applicant operating effectiveness → Legal compliance → Validated rights-risk reduction → Independent assurance**
 
 ## Critical limitation
 
