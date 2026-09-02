@@ -4,7 +4,7 @@ Project W.I.N.G. distinguishes governance documentation from evidence that a gov
 
 This folder contains worked examples showing how an identified AI risk is translated into:
 
-**Risk → Control → Owner → Execution → Evidence → Testing → Monitoring**
+**Risk → Control → Owner → Execution → Evidence → Testing → Governance Decision → Monitoring / Reassessment**
 
 ## Purpose
 
@@ -87,10 +87,13 @@ The worked evidence package demonstrates:
 - detection of the unapproved feature and measurable disparity;
 - pre-deployment gate blocking;
 - generated exception evidence;
-- remediation and full-population retesting; and
-- a control-test conclusion that successful retest permits only further governance review.
+- remediation and full-population retesting;
+- a control-test conclusion that successful retest permits only further governance review; and
+- a synthetic governance gate decision that reviews the available evidence, denies advancement to a real-applicant pilot, records blocking conditions, and defines a reassessment trigger.
 
 See: [`AI-005-ducktalent/`](./AI-005-ducktalent/)
+
+Governance decision: [`AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md`](./AI-005-ducktalent/AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md)
 
 ## Important Limitation
 
@@ -106,6 +109,7 @@ They do **not** constitute:
 - actual PondGPT identity, connector, RAG, DLP, or SIEM activity;
 - validated production authorization inheritance;
 - real DuckTalent applicants, protected-characteristic data, production features, model behavior, fairness outcomes, accessibility results, or legal discrimination conclusions;
+- a real Duckworks AI Governance Committee meeting, real executive approval/non-approval, or real lifecycle authorization;
 - longitudinal control-effectiveness evidence;
 - demonstrated reduction of current residual risk; or
 - independent assurance over a live environment.

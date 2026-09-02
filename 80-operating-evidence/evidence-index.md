@@ -19,6 +19,7 @@ Synthetic portfolio evidence is explicitly distinguished from production operati
 | EV-AI005-006 | AI-005 — DuckTalent AI | AI-005-R01 | DT-02 | Fairness Control Test | Synthetic operation tested | Ten control assertions over the complete synthetic population and conclusion that DT-02 operated as designed within the portfolio scenario |
 | EV-AI005-007 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 | Production Feature-Governance / Fairness Evidence | Not available | Real job-relevance approval, production feature inventory, lawful group-data method, representative validation, and actual model/version evidence |
 | EV-AI005-008 | AI-005 — DuckTalent AI | AI-005-R01 | DT-02 / DT-07 | Real Applicant Outcome / Challenge Trend | Not available | Production fairness, contestability, error, complaint, and rights-impact outcome evidence |
+| EV-AI005-009 | AI-005 — DuckTalent AI | AI-005-R01 | DT-01 / DT-02 / Governance Gate | Synthetic Pre-Deployment Governance Gate Decision Record | Synthetic lifecycle decision demonstrated | Risk, impact, rights/privacy, model-documentation and control-test evidence are consumed at a lifecycle gate; advancement to a real-applicant pilot is denied, blocking conditions are recorded, and a reassessment trigger is defined |
 | EV-AI006-001 | AI-006 — PondGPT | AI-006-R01 | PG-01 / PG-02 | Control Implementation Card | Designed | Authorization-risk objective, owner, triggers, evidence, gate rule, and measurement approach |
 | EV-AI006-002 | AI-006 — PondGPT | AI-006-R01 | PG-01 / PG-02 | Synthetic Authorization Matrix | Designed test input | Personas, source entitlements, repository exclusions, and DLP expectations |
 | EV-AI006-003 | AI-006 — PondGPT | AI-006-R01 | PG-02 | Executable Permission Regression Control | Synthetic technical implementation demonstrated | Reproducible control logic that executes authorization, DLP, change, exception, gate, and retest assertions |
@@ -64,6 +65,24 @@ The executable demonstration deliberately introduces an unapproved `Career_Gap_M
 It does **not** claim:
 
 **Production fairness validated → Real-applicant operating effectiveness → Legal compliance/non-discrimination → Validated rights-risk reduction → Independent assurance**
+
+### AI-005 — Synthetic Governance Gate Decision
+
+Project W.I.N.G. additionally demonstrates:
+
+**Synthetic control evidence available → Governance evidence pack reviewed → Synthetic lifecycle decision demonstrated**
+
+The gate record asks whether DuckTalent may advance to a pilot using real applicants. It consumes the current Critical-risk conclusion, AIA/FRIA/DPIA position, model-documentation gaps, DT-02 implementation evidence, run summary, and control-test result.
+
+The decision is:
+
+**DENIED — maintain DO NOT DEPLOY with real applicants**
+
+The record therefore demonstrates that a successful synthetic control test does not override unresolved system-level risk, rights, privacy, model, human-oversight, security, accessibility, transparency, contestability, vendor, or monitoring conditions.
+
+It does **not** claim:
+
+**Real committee meeting → Real executive approval/non-approval → Real pilot authorization → Production operation → Validated risk reduction**
 
 ### PG-02 — Automated Permission Regression & DLP Tests
 
