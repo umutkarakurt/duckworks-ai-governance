@@ -191,7 +191,7 @@ The portfolio risk map summarizes the relative **Duckworks internal residual-ris
 
 Project W.I.N.G. does not treat policies, frameworks, control descriptions, or governance-status fields as proof that a control is operating.
 
-The portfolio now includes a worked synthetic evidence chain showing how a material AI risk is translated into:
+The portfolio now includes worked synthetic evidence chains showing how material AI risks are translated into:
 
 **Risk → Control → Accountable Owner → Execution → Evidence → Testing → Monitoring**
 
@@ -213,6 +213,29 @@ The package includes:
 ➡️ **[View the AI-004 WingInspect operating-evidence package](80-operating-evidence/AI-004-winginspect/)**
 
 > **Evidence boundary:** The execution records are synthetic portfolio evidence. They demonstrate control and assurance design, not real production operating effectiveness, measured WingInspect performance, or validated reduction of manufacturing risk.
+
+#### Worked example — AI-006 PondGPT
+
+`AI-006-R01` addresses the risk that incorrect retrieval permissions or connector authorization may expose restricted internal information to an employee who is not entitled to the underlying source.
+
+The worked evidence package links the preventive boundary **`PG-01 — Permission-Aware Retrieval`** to the detective control **`PG-02 — Automated Permission Regression & DLP Tests`**.
+
+The package includes:
+
+- a control implementation card;
+- a synthetic authorization matrix covering permitted, denied, excluded, and DLP-blocked sources;
+- an executable Python permission-regression control;
+- positive and negative authorization tests;
+- entitlement-change regression;
+- a deliberately seeded Finance connector ACL defect;
+- generated exception and run-summary evidence;
+- connector/corpus expansion blocking;
+- remediation and successful retesting; and
+- a full-population control-test workpaper covering 20 synthetic assertions.
+
+➡️ **[View the AI-006 PondGPT operating-evidence package](80-operating-evidence/AI-006-pondgpt/)**
+
+> **Evidence boundary:** The executable control and generated records are synthetic portfolio evidence. They demonstrate reproducible technical-control logic and evidence generation, not validated production authorization inheritance, actual DLP/SIEM operation, sustained operating effectiveness, or reduction of PondGPT's current residual risk.
 
 ---
 
@@ -353,9 +376,12 @@ A practical review sequence is:
     Review how governance requirements are operationalized.
 
 12. **Operating Evidence — AI-004 WingInspect Vision**  
-    Review how a material risk is translated into the canonical `WI-01` control, accountable ownership, synthetic execution records, human override evidence, a control test, and an explicit production-evidence limitation.
+    Review how a material safety/quality risk is translated into the canonical `WI-01` control, accountable ownership, synthetic execution records, human override evidence, a control test, and an explicit production-evidence limitation.
 
-13. **Adversarial Review / Findings Register**  
+13. **Operating Evidence — AI-006 PondGPT**  
+    Review how an authorization risk is translated into `PG-01` / `PG-02`, an executable permission-regression control, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, retesting, and an explicit production-evidence limitation.
+
+14. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
@@ -428,6 +454,11 @@ The repository includes or is intended to include:
 - WingInspect `WI-01` control implementation card;
 - synthetic WingInspect inspection execution log;
 - Human Release Gate control-test workpaper;
+- PondGPT `PG-02` control implementation card;
+- synthetic PondGPT authorization matrix;
+- executable PondGPT permission-regression control;
+- generated PondGPT regression log, exception, and run summary;
+- PondGPT permission-regression control-test workpaper;
 - skeptical-review remediation tracker.
 
 ### Model and evaluation documentation
@@ -498,7 +529,7 @@ Material governance activities should therefore be traceable to evidence such as
 
 Where evidence is unavailable, the portfolio should state that explicitly rather than imply operating effectiveness.
 
-The current worked example is maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/) and deliberately distinguishes synthetic workflow/test evidence from production operating-effectiveness evidence.
+The current worked examples are maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/) and [`80-operating-evidence/AI-006-pondgpt/`](80-operating-evidence/AI-006-pondgpt/). Both deliberately distinguish synthetic workflow/technical-test evidence from production operating-effectiveness evidence.
 
 ---
 
@@ -557,8 +588,8 @@ Planned or future-phase work may include:
 - executive AI governance dashboard;
 - implementation roadmap;
 - AI assurance and internal-audit program;
-- additional formal control-testing workpapers beyond the current AI-004 worked example;
-- expanded operating-evidence coverage beyond the current AI-004 worked example;
+- additional formal control-testing workpapers beyond the current AI-004 and AI-006 worked examples;
+- expanded operating-evidence coverage beyond the current AI-004 and AI-006 worked examples;
 - system-specific monitoring records.
 
 The existence of a policy, framework, or template should not be interpreted as evidence that the process is fully operational.
