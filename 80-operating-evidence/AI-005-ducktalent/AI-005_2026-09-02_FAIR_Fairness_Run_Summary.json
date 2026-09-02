@@ -1,0 +1,60 @@
+{
+  "AI_System": "AI-005",
+  "Risk_ID": "AI-005-R01",
+  "Control_ID": "DT-02",
+  "Control_Name": "Pre-Deployment Fairness & Adverse-Impact Testing",
+  "Synthetic_Applicants": 24,
+  "Matched_Pairs": 12,
+  "Control_Assertions": 10,
+  "Passed_Control_Assertions": 10,
+  "Failed_Control_Assertions": 0,
+  "Seeded_Unapproved_Feature": "Career_Gap_Months",
+  "Seeded_Issue_Detected": true,
+  "Pre_Remediation_Gate": "BLOCK",
+  "Post_Remediation_Gate": "ELIGIBLE_FOR_FURTHER_GOVERNANCE_REVIEW",
+  "Pre_Remediation_Group_Metrics": {
+    "Reference": {
+      "population": 12,
+      "selected": 7,
+      "selection_rate": 0.5833,
+      "qualified": 7,
+      "true_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "false_positive_count": 0
+    },
+    "Comparison": {
+      "population": 12,
+      "selected": 3,
+      "selection_rate": 0.25,
+      "qualified": 7,
+      "true_positive_rate": 0.4286,
+      "false_negative_rate": 0.5714,
+      "false_positive_count": 0
+    }
+  },
+  "Post_Remediation_Group_Metrics": {
+    "Reference": {
+      "population": 12,
+      "selected": 7,
+      "selection_rate": 0.5833,
+      "qualified": 7,
+      "true_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "false_positive_count": 0
+    },
+    "Comparison": {
+      "population": 12,
+      "selected": 7,
+      "selection_rate": 0.5833,
+      "qualified": 7,
+      "true_positive_rate": 1.0,
+      "false_negative_rate": 0.0,
+      "false_positive_count": 0
+    }
+  },
+  "Evidence_State": "Designed -> Synthetic technical implementation demonstrated -> Synthetic fairness execution demonstrated -> Synthetic operation tested",
+  "Production_Operating_Effectiveness": "Not established",
+  "Legal_Compliance_or_Discrimination_Conclusion": "Not established",
+  "Threshold_Boundary": "The shortlist threshold exists only to make the synthetic test deterministic. It is not a validated Duckworks production threshold, fairness threshold, legal threshold, or safe-harbor criterion.",
+  "Fairness_Interpretation": "Selection-rate and error metrics are diagnostic evidence only. No single metric or ratio establishes legal compliance, discrimination, or fairness."
+}

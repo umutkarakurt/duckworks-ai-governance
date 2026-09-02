@@ -1,0 +1,31 @@
+{
+  "ai_system": "AI-005",
+  "risk_id": "AI-005-R01",
+  "preventive_dependency": "DT-01",
+  "control_id": "DT-02",
+  "control_name": "Pre-Deployment Fairness & Adverse-Impact Testing",
+  "control_owner": "Beatrice Van Duck \u2014 Chief People Officer",
+  "evidence_classification": "Portfolio / Synthetic / Non-production",
+  "run_date": "2026-09-02",
+  "approved_scoring_features": [
+    "Relevant_Experience_Years",
+    "Skill_Match_Pct",
+    "Qualification_Match_Pct",
+    "Required_Certification"
+  ],
+  "seeded_unapproved_feature": "Career_Gap_Months",
+  "synthetic_shortlist_threshold": 75.0,
+  "threshold_boundary_note": "The shortlist threshold exists only to make the synthetic test deterministic. It is not a validated Duckworks production threshold, fairness threshold, legal threshold, or safe-harbor criterion.",
+  "fairness_interpretation": "Selection-rate and error metrics are diagnostic evidence only. No single metric or ratio establishes legal compliance, discrimination, or fairness.",
+  "seeded_issue": {
+    "issue_id": "FAIR-EXC-005-001",
+    "condition": "Pre-remediation scoring applies an unapproved penalty to Career_Gap_Months.",
+    "expected_control_response": [
+      "detect_feature_governance_violation",
+      "measure_group_outcome_difference",
+      "block_deployment_gate",
+      "remove_unapproved_feature",
+      "retest"
+    ]
+  }
+}

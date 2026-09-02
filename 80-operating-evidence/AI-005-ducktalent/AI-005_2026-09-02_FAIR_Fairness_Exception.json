@@ -1,0 +1,19 @@
+{
+  "Exception_ID": "FAIR-EXC-005-001",
+  "AI_System": "AI-005",
+  "Risk_ID": "AI-005-R01",
+  "Preventive_Dependency": "DT-01",
+  "Control_ID": "DT-02",
+  "Condition": "Pre-remediation scoring applies an unapproved penalty to Career_Gap_Months.",
+  "Unapproved_Feature_Detected": [
+    "Career_Gap_Months"
+  ],
+  "Pre_Remediation_Reference_Selection_Rate": 0.5833,
+  "Pre_Remediation_Comparison_Selection_Rate": 0.25,
+  "Pre_Remediation_Reference_TPR": 1.0,
+  "Pre_Remediation_Comparison_TPR": 0.4286,
+  "Deployment_Gate": "BLOCK",
+  "Remediation": "Remove Career_Gap_Months from scoring; retain approved job-related feature set; rerun full synthetic test population.",
+  "Post_Remediation_Status": "Synthetic retest passed",
+  "Legal_Interpretation": "None. Synthetic governance evidence only."
+}
