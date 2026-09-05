@@ -25,7 +25,11 @@
 **Information Security · GRC · AI Governance & AI Security**  
 CISSP · CISA · PMP · AIGP · AAISM · ISO/IEC 27001:2022 Lead Auditor
 
-Türkiye-based information security and GRC professional developing practical AI governance, risk, control, and assurance capabilities through this independent portfolio. Open to remote and international opportunities in AI governance, AI risk, GRC, information security, and technology assurance.
+Türkiye-based information security and GRC professional developing practical AI governance, risk, control, and assurance capabilities through this independent portfolio. 
+
+I wrote items for ISACA's official AAISM Questions, Answers and Explanations.
+
+Available for AI governance and ISO/IEC 42001 readiness work as a named associate, invoiced from Türkiye — and open to remote and international roles in AI governance, AI risk, GRC and technology assurance.
 
 **[LinkedIn](https://www.linkedin.com/in/r-umut-karakurt/)** · **[Email](mailto:rumutkarakurt@gmail.com)** · **[GitHub](https://github.com/umutkarakurt)** · **[Professional background and contact](#21-professional-background-and-contact)**
 
@@ -743,7 +747,7 @@ Through Project W.I.N.G., I demonstrate how I approach AI governance as an opera
 
 **Selected professional credentials:** CISSP · CISA · PMP · AIGP · AAISM · ISO/IEC 27001:2022 Lead Auditor. These are personal credentials; they do not certify or independently assure this portfolio.
 
-**Opportunities of interest:** AI Governance / Responsible AI, AI Risk, GRC, Information Security Governance, and Technology Risk / Assurance roles. Based in Türkiye and open to remote and international opportunities.
+**Availability:** Available for AI governance and ISO/IEC 42001 readiness work as a named associate, invoiced from Türkiye — and open to remote and international roles in AI governance, AI risk, GRC and technology assurance.
 
 | Contact | Details |
 |---|---|
