@@ -15,7 +15,19 @@
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / cybersecurity / GRC portfolio  
 **Status:** Portfolio baseline and continuing development  
-**Data classification:** Fictional, synthetic, anonymized, or public-source material only
+**Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
+
+---
+
+## Portfolio Author
+
+**Ramazan Umut Karakurt**  
+**Information Security · GRC · AI Governance & AI Security**  
+CISSP · CISA · PMP · AIGP · AAISM · ISO/IEC 27001:2022 Lead Auditor
+
+Türkiye-based information security and GRC professional developing practical AI governance, risk, control, and assurance capabilities through this independent portfolio. Open to remote and international opportunities in AI governance, AI risk, GRC, information security, and technology assurance.
+
+**[LinkedIn](https://www.linkedin.com/in/r-umut-karakurt/)** · **[Email](mailto:rumutkarakurt@gmail.com)** · **[GitHub](https://github.com/umutkarakurt)** · **[Professional background and contact](#21-professional-background-and-contact)**
 
 ---
 
@@ -703,7 +715,7 @@ The project is intended to demonstrate not only document production, but also th
 
 This repository is an educational and professional portfolio project.
 
-Duckworks, Project W.I.N.G., all named individuals, systems, datasets, risks, controls, incidents, decisions, vendors, and organizational circumstances are fictional.
+Duckworks, Project W.I.N.G., and all case-study individuals, systems, datasets, risks, controls, incidents, decisions, vendors, and organizational circumstances are fictional. The portfolio author’s professional profile and contact details are real.
 
 Regulatory analyses are governance-screening exercises based on project assumptions and public sources. They do not constitute legal advice.
 
@@ -717,3 +729,30 @@ References to ISO, NIST, ENISA, MITRE, OWASP, OECD, EU legislation, or other fra
 > No owner without accountability.  
 > No material risk without treatment.  
 > No control without evidence.**
+
+---
+
+## 21. Professional Background and Contact
+
+**Ramazan Umut Karakurt**  
+**Information Security · GRC · AI Governance & AI Security**
+
+I am an information security and GRC professional with public-sector experience spanning cybersecurity governance, information security management, risk management, audit readiness, and third-party security risk. My current role is **Ministerial Expert**, with information security and cybersecurity lead responsibilities at the **Ministry of Culture and Tourism, Republic of Türkiye**.
+
+Through Project W.I.N.G., I demonstrate how I approach AI governance as an operating discipline: translating risks into controls, assigning ownership, testing control logic, producing evidence, and supporting accountable decisions. The repository provides synthetic examples for technical discussion and portfolio review.
+
+**Selected professional credentials:** CISSP · CISA · PMP · AIGP · AAISM · ISO/IEC 27001:2022 Lead Auditor. These are personal credentials; they do not certify or independently assure this portfolio.
+
+**Opportunities of interest:** AI Governance / Responsible AI, AI Risk, GRC, Information Security Governance, and Technology Risk / Assurance roles. Based in Türkiye and open to remote and international opportunities.
+
+| Contact | Details |
+|---|---|
+| Email | [rumutkarakurt@gmail.com](mailto:rumutkarakurt@gmail.com) |
+| LinkedIn | [Ramazan Umut Karakurt](https://www.linkedin.com/in/r-umut-karakurt/) |
+| GitHub | [umutkarakurt](https://github.com/umutkarakurt) |
+| Location | Türkiye |
+| Languages | Turkish (native) · English (professional working proficiency) |
+
+For recruitment enquiries, professional connections, or discussion of the portfolio, please contact me by email or LinkedIn. My CV is available on request.
+
+*This is an independent personal portfolio. It does not represent my employer’s views, systems, governance posture, or endorsement.*
