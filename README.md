@@ -301,6 +301,16 @@ The governance methodology and controls are informed by:
 - **NIST AI Risk Management Framework (AI RMF 1.0)**;
 - **NIST AI 600-1 — Generative AI Profile**.
 
+### ISO/IEC 42001 — AIMS Evidence Baseline
+
+[View the AIMS overview and initial evidence matrix](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.0.md)
+
+The baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix, source references, and prioritized actions with closure criteria. It gives ISO/IEC 42001 practitioners a focused entry point for reviewing documented governance design and the evidence needed to demonstrate operation.
+
+The assessment is bounded to the supplied foundational documents. It has not yet reconciled the later operating-evidence packages described above; “operation not demonstrated” means evidence was not inspected for that baseline, not that the repository contains no synthetic execution evidence.
+
+**Mapping status:** Initial thematic mapping. Exact requirement and Annex A references remain pending verification against the standard. The baseline does not establish exhaustive coverage, conformity, certification, or production operating effectiveness.
+
 ### Technical and cybersecurity guidance
 
 The project also uses recognized technical references such as:
@@ -362,7 +372,7 @@ duckworks-ai-governance/
 | `08-policies-standards-and-operations` | Policies, SOPs, playbooks, runbooks, change and data-management documentation |
 | `09-third-party-ai-governance` | Vendor due diligence, contractual requirements, DPAs, supplier governance |
 | `10-system-model-and-technical-documentation` | Model cards, model documentation, AI BOM, architecture and data-flow material |
-| `11-assurance-testing-and-evaluation` | NIST ARIA work, adversarial review, control testing and future audit work |
+| `11-assurance-testing-and-evaluation` | ISO/IEC 42001 evidence mapping, NIST ARIA work, adversarial review, control testing and future audit work |
 | `12-monitoring-reporting-and-roadmap` | Executive decision reporting, KPIs/KRIs, monitoring/reassessment, dashboards, and implementation roadmap |
 | `80-operating-evidence` | Worked risk-to-control implementation, synthetic execution evidence, control testing, evidence indexing, and explicit production-evidence gaps |
 | `90-visuals` | Diagrams and supporting visuals |
@@ -424,7 +434,10 @@ A practical review sequence is:
 16. **Executive AI Governance Decision Brief**  
     Review the compact management view of current residual-risk distribution, lifecycle gates, control implementation posture, evidence maturity, unresolved blockers, and next management decisions.
 
-17. **Adversarial Review / Findings Register**  
+17. **[ISO/IEC 42001 AIMS Evidence Baseline](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.0.md)**  
+    Review the proposed management-system scope, thematic evidence mapping, source boundaries, and prioritized gaps. Detailed standard-reference verification and reconciliation with later operating evidence remain open.
+
+18. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
@@ -515,6 +528,7 @@ The repository includes or is intended to include:
 
 ### Model and evaluation documentation
 
+- ISO/IEC 42001 AIMS overview and initial thematic evidence matrix;
 - model-card template;
 - DuckTalent model documentation;
 - NIST ARIA evaluation documentation;
