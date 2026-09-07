@@ -1,7 +1,7 @@
 # AI Control Framework
 
 **Repository path:** `07-control-framework/`  
-**Status:** Portfolio baseline / control design  
+**Status:** Active evidence-aware control framework  
 
 [← Back to main portfolio](../README.md)
 
@@ -9,8 +9,10 @@ This folder translates material AI risks and governance requirements into **test
 
 ## Current artifacts
 
-- `Duckworks_AI_Control_Library_v1.0.xlsx`
-- `Duckworks_AI_Control_Framework_Report_v1.0.md`
+- [`Duckworks_AI_Control_Library_v1.0.xlsx`](Duckworks_AI_Control_Library_v1.0.xlsx)
+- [`Duckworks_AI_Control_Framework_Report_v1.2.md`](Duckworks_AI_Control_Framework_Report_v1.2.md) — **authoritative current control-status report**
+
+The v1.0 and v1.1 reports are retained for version history and are superseded by v1.2.
 
 ## Control design fields
 
@@ -48,7 +50,7 @@ For the current WingInspect worked example, `WI-01 — Qualified Human Final Ins
 
 For the current PondGPT worked example, `PG-02 — Automated Permission Regression & DLP Tests` is treated as **Partially implemented** because the portfolio contains a reproducible executable synthetic test mechanism, generated evidence, seeded-defect detection, gate enforcement, and remediation/retest logic while production identity/connector/DLP/SIEM integration, sustained operating history, and production operating effectiveness remain unvalidated.
 
-For the current DuckTalent worked example, `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing` is treated as **Partially implemented** because the portfolio contains a reproducible executable synthetic fairness-test mechanism, matched-pair test data, seeded unapproved-feature detection, deployment blocking, remediation and retest evidence. Real-applicant fairness, production feature governance, lawful fairness-data processing, legal compliance, and sustained operating effectiveness remain unvalidated. `DT-01` remains **Not implemented**.
+For the current DuckTalent worked example, `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing` is treated as **Partially implemented** because the portfolio contains a reproducible executable synthetic fairness-test mechanism, matched-pair test data, seeded unapproved-feature detection, deployment blocking, remediation, retest, and a bounded corrective-action effectiveness check. Real-applicant fairness, production feature governance, lawful fairness-data processing, legal compliance, and sustained operating effectiveness remain unvalidated. `DT-01` remains **Not implemented**, although a bounded preventive change gate is demonstrated synthetically.
 
 ## Framework mapping
 
@@ -67,6 +69,7 @@ Three worked examples demonstrate different control archetypes:
 
 - [`AI-004 WingInspect operating-evidence package`](../80-operating-evidence/AI-004-winginspect/) — links `AI-004-R01` to `WI-01`, synthetic inspection execution, meaningful human overrides, and a control-test workpaper.
 - [`AI-005 DuckTalent operating-evidence package`](../80-operating-evidence/AI-005-ducktalent/) — links `AI-005-R01` to the `DT-01` job-relevance/proxy boundary and `DT-02` detective control, matched synthetic applicants, seeded proxy-feature failure, diagnostic disparity metrics, deployment blocking, remediation, and retesting.
+- [`AI-005 DuckTalent internal-audit and corrective-action package`](../11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/) — extends the chain through finding, cause analysis, corrective action, executable recurrence-prevention testing, management review, and narrow closure.
 - [`AI-006 PondGPT operating-evidence package`](../80-operating-evidence/AI-006-pondgpt/) — links `AI-006-R01` to the `PG-01` authorization boundary and `PG-02` detective control, executable permission-regression logic, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, and retesting.
 
 All three preserve the distinction between synthetic portfolio implementation/testing evidence and production operating effectiveness. The DuckTalent example additionally preserves the boundary between diagnostic fairness testing and any legal discrimination or compliance conclusion.
