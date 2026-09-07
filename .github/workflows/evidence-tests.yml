@@ -1,0 +1,44 @@
+name: Evidence reproducibility
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run DuckTalent fairness control
+        run: python 80-operating-evidence/AI-005-ducktalent/dt02_fairness_adverse_impact_test.py
+
+      - name: Run PondGPT authorization control
+        run: python 80-operating-evidence/AI-006-pondgpt/pg02_permission_regression_test.py
+
+      - name: Run DuckTalent change monitor
+        run: python 12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Check.py
+
+      - name: Run DuckTalent corrective-action effectiveness gate
+        run: >-
+          python 11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/ducktalent_change_gate.py
+          --input 11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/change_test_cases.json
+          --output 11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/effectiveness_test_results.json
+
+      - name: Verify semantic evidence outcomes
+        run: |
+          python -c "import json; d=json.load(open('80-operating-evidence/AI-005-ducktalent/AI-005_2026-09-02_FAIR_Fairness_Run_Summary.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==10 and d['Post_Remediation_Gate']=='ELIGIBLE_FOR_FURTHER_GOVERNANCE_REVIEW'"
+          python -c "import json; d=json.load(open('80-operating-evidence/AI-006-pondgpt/AI-006_2026-09-01_SEC_Permission_Regression_Run_Summary.json')); assert d['Failed_Control_Outcomes']==0 and d['Passed_Control_Outcomes']==20 and d['Final_Expansion_Gate']=='OPEN_AFTER_PASS'"
+          python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Result.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==7 and d['Material_Reassessment_Trigger'] is True"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/effectiveness_test_results.json')); assert d['overall_status']=='pass' and d['total_cases']==3 and d['expected_results_met']==3 and d['deployment_authorizations']==0"
