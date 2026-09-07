@@ -13,6 +13,16 @@ This folder demonstrates how Duckworks moves beyond policy creation toward **eva
 |---|---|
 | `01-nist-aria/` | Internal evaluation documentation informed by public NIST ARIA materials. |
 | `02-adversarial-review/` | Skeptical multi-perspective review and structured findings register. |
+| [`03-iso42001/`](03-iso42001/) | AIMS thematic evidence baseline and master traceability crosswalk. |
+| [`04-internal-audit-and-corrective-action/`](04-internal-audit-and-corrective-action/) | Bounded synthetic audit, corrective-action, management-review and closure evidence. |
+
+## Current authoritative artifacts
+
+- [`ISO/IEC 42001 AIMS Evidence Baseline v1.2`](03-iso42001/duckworks-iso42001-evidence-baseline-v1.2.md)
+- [`AIMS Master Crosswalk v1.1`](03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.1.xlsx)
+- [`DuckTalent AIMS improvement-cycle package`](04-internal-audit-and-corrective-action/AI-005-ducktalent/)
+
+Earlier baseline and crosswalk versions are retained for traceability and are superseded by the versions listed above.
 
 ## Assurance principle
 
