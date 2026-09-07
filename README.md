@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / cybersecurity / GRC portfolio  
-**Status:** Portfolio baseline and continuing development  
+**Status:** v1.2 repository consolidation baseline and continuing development  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -285,6 +285,10 @@ The package includes:
 
 ➡️ **[View the DuckTalent monitoring and reassessment package](12-monitoring-reporting-and-roadmap/AI-005-ducktalent/)**
 
+➡️ **[View the DuckTalent AIMS internal-audit and corrective-action package](11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/)**
+
+The assurance package extends the chain through `IAF-2026-001`, cause analysis, `CAPA-2026-001`, executable recurrence-prevention testing, `MR-2026-001`, and narrow finding closure. The closure does not reduce current risk or change the **Do not deploy** gate.
+
 > **Evidence boundary:** The group labels, applicants, scores, thresholds, results, governance decisions, monitoring event, and reassessment are synthetic portfolio constructs. They do not represent real protected-characteristic data, real applicants, production DuckTalent behavior, legal discrimination analysis, validated fairness, continuous production monitoring, a real committee meeting, or real executive approval/non-approval. DuckTalent remains **Do not deploy in current state**.
 
 ---
@@ -319,11 +323,13 @@ The governance methodology and controls are informed by:
 
 ### ISO/IEC 42001 — AIMS Evidence Baseline
 
-[View the AIMS overview and initial evidence matrix](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.0.md)
+[View the reconciled AIMS Evidence Baseline v1.2](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.2.md)
 
-The baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix, source references, and prioritized actions with closure criteria. It gives ISO/IEC 42001 practitioners a focused entry point for reviewing documented governance design and the evidence needed to demonstrate operation.
+The baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix, current evidence IDs, the master crosswalk, and prioritized actions with closure criteria. It recognizes the bounded DuckTalent finding-to-closure cycle while preserving the distinction between a portfolio demonstration and an operating enterprise AIMS.
 
-The assessment is bounded to the supplied foundational documents. It has not yet reconciled the later operating-evidence packages described above; “operation not demonstrated” means evidence was not inspected for that baseline, not that the repository contains no synthetic execution evidence.
+The baseline is reconciled to the repository through the v1.2 consolidation release. It does not claim production operation, validated effectiveness, conformity, certification, legal compliance, or independent enterprise assurance.
+
+[Download the AIMS Master Crosswalk v1.1](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.1.xlsx) to trace AI entry → risk → control → evidence → decision/trigger → AIMS theme.
 
 **Mapping status:** Initial thematic mapping. Exact requirement and Annex A references remain pending verification against the standard. The baseline does not establish exhaustive coverage, conformity, certification, or production operating effectiveness.
 
@@ -447,13 +453,19 @@ A practical review sequence is:
 15. **Monitoring & Reassessment — AI-005 DuckTalent AI**  
     Review how a later proposed feature/ranking change challenges prior evidence, is detected through executable regression monitoring, opens `IR-001`, reopens affected governance records, and results in a revised decision that rejects the change and preserves the prior gate.
 
-16. **Executive AI Governance Decision Brief**  
+16. **Internal Audit & Corrective Action — AI-005 DuckTalent AI**  
+    Review the bounded synthetic chain from `IAF-2026-001` through cause analysis, corrective action, reproducible effectiveness testing, management review, and narrow finding closure.
+
+17. **Executive AI Governance Decision Brief**  
     Review the compact management view of current residual-risk distribution, lifecycle gates, control implementation posture, evidence maturity, unresolved blockers, and next management decisions.
 
-17. **[ISO/IEC 42001 AIMS Evidence Baseline](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.0.md)**  
-    Review the proposed management-system scope, thematic evidence mapping, source boundaries, and prioritized gaps. Detailed standard-reference verification and reconciliation with later operating evidence remain open.
+18. **[ISO/IEC 42001 AIMS Evidence Baseline v1.2](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.2.md)**  
+    Review the proposed management-system scope, reconciled thematic evidence mapping, source boundaries, completed bounded actions, and remaining enterprise gaps.
 
-18. **Adversarial Review / Findings Register**  
+19. **[AIMS Master Crosswalk v1.1](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.1.xlsx)**  
+    Filter the authoritative traceability view by AI ID, risk, control, evidence state, lifecycle gate, decision, trigger, finding, or AIMS theme.
+
+20. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
@@ -522,7 +534,7 @@ The repository includes or is intended to include:
 
 ### Operating evidence
 
-- operating-evidence index;
+- authoritative control-evidence index v1.2;
 - WingInspect `WI-01` control implementation card;
 - synthetic WingInspect inspection execution log;
 - Human Release Gate control-test workpaper;
@@ -539,12 +551,14 @@ The repository includes or is intended to include:
 - DuckTalent synthetic governance gate decision record;
 - DuckTalent synthetic proposed-change event and executable change-regression monitor;
 - DuckTalent synthetic reassessment record and revised gate decision;
+- DuckTalent internal-audit finding, root-cause analysis, corrective-action plan, executable effectiveness review, management-review record, and finding-closure record;
+- AIMS Master Crosswalk v1.1;
 - Executive AI Governance Decision Brief;
 - skeptical-review remediation tracker.
 
 ### Model and evaluation documentation
 
-- ISO/IEC 42001 AIMS overview and initial thematic evidence matrix;
+- ISO/IEC 42001 AIMS Evidence Baseline v1.2 and master crosswalk;
 - model-card template;
 - DuckTalent model documentation;
 - NIST ARIA evaluation documentation;
@@ -611,7 +625,7 @@ Material governance activities should therefore be traceable to evidence such as
 
 Where evidence is unavailable, the portfolio should state that explicitly rather than imply operating effectiveness.
 
-The current worked examples are maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/), [`80-operating-evidence/AI-005-ducktalent/`](80-operating-evidence/AI-005-ducktalent/), and [`80-operating-evidence/AI-006-pondgpt/`](80-operating-evidence/AI-006-pondgpt/). All three deliberately distinguish synthetic workflow/technical-test evidence from production operating-effectiveness, legal-compliance, or validated-risk-reduction claims. DuckTalent additionally extends the chain through a synthetic lifecycle decision and an event-driven [`monitoring / reassessment demonstration`](12-monitoring-reporting-and-roadmap/AI-005-ducktalent/).
+The current worked examples are maintained under [`80-operating-evidence/AI-004-winginspect/`](80-operating-evidence/AI-004-winginspect/), [`80-operating-evidence/AI-005-ducktalent/`](80-operating-evidence/AI-005-ducktalent/), and [`80-operating-evidence/AI-006-pondgpt/`](80-operating-evidence/AI-006-pondgpt/). All three deliberately distinguish synthetic workflow/technical-test evidence from production operating-effectiveness, legal-compliance, or validated-risk-reduction claims. DuckTalent additionally extends the chain through a synthetic lifecycle decision, an event-driven [`monitoring / reassessment demonstration`](12-monitoring-reporting-and-roadmap/AI-005-ducktalent/), and a bounded [`finding-to-closure improvement cycle`](11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/).
 
 ---
 
@@ -669,7 +683,7 @@ Planned or future-phase work may include:
 - third-party AI due-diligence questionnaire;
 - live / production-connected executive AI governance dashboard beyond the current static decision brief;
 - implementation roadmap;
-- AI assurance and internal-audit program;
+- recurring enterprise AI assurance and internal-audit program beyond the bounded DuckTalent demonstration;
 - additional formal control-testing workpapers beyond the current AI-004, AI-005 and AI-006 worked examples;
 - expanded operating-evidence coverage beyond the current AI-004, AI-005 and AI-006 worked examples;
 - production system-specific monitoring histories beyond the current synthetic DuckTalent change/reassessment demonstration.
