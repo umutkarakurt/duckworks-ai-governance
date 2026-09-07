@@ -1,0 +1,98 @@
+{
+  "baseline": {
+    "configuration_id": "DT-CFG-0.9.3-capa",
+    "allowlist_id": "DT-ALW-0.9.3",
+    "approved_features": [
+      "Job_Skills_Test",
+      "Relevant_Experience_Years",
+      "Required_Certification_Match"
+    ],
+    "weights": {
+      "Job_Skills_Test": 0.5,
+      "Relevant_Experience_Years": 0.3,
+      "Required_Certification_Match": 0.2
+    }
+  },
+  "cases": [
+    {
+      "case_id": "EFF-01",
+      "description": "Attempted recurrence of the prohibited Career_Gap_Months feature",
+      "proposed_features": [
+        "Job_Skills_Test",
+        "Relevant_Experience_Years",
+        "Required_Certification_Match",
+        "Career_Gap_Months"
+      ],
+      "proposed_weights": {
+        "Job_Skills_Test": 0.45,
+        "Relevant_Experience_Years": 0.25,
+        "Required_Certification_Match": 0.2,
+        "Career_Gap_Months": 0.1
+      },
+      "declared_weight_changes": [
+        "Job_Skills_Test",
+        "Relevant_Experience_Years",
+        "Career_Gap_Months"
+      ],
+      "evidence_ids": {
+        "risk_assessment": {"id": "AI-005-R01"},
+        "impact_assessment": {"id": "DuckTalent-AIA-v1.0"},
+        "rights_assessment": {"id": "DuckTalent-HUDERIA-v1.0"},
+        "privacy_assessment": {"id": "DuckTalent-DPIA-v1.0"},
+        "model_change_record": {"id": "DT-CHG-EFF-01"},
+        "dt02_result": {"id": "DT-02-EFF-01", "status": "pass"}
+      },
+      "attestations": {"technical_owner": true, "hr_process_owner": true},
+      "expected_decision": "blocked"
+    },
+    {
+      "case_id": "EFF-02",
+      "description": "Approved feature-weight change with complete evidence and attestations",
+      "proposed_features": [
+        "Job_Skills_Test",
+        "Relevant_Experience_Years",
+        "Required_Certification_Match"
+      ],
+      "proposed_weights": {
+        "Job_Skills_Test": 0.55,
+        "Relevant_Experience_Years": 0.25,
+        "Required_Certification_Match": 0.2
+      },
+      "declared_weight_changes": ["Job_Skills_Test", "Relevant_Experience_Years"],
+      "evidence_ids": {
+        "risk_assessment": {"id": "AI-005-R01"},
+        "impact_assessment": {"id": "DuckTalent-AIA-v1.0"},
+        "rights_assessment": {"id": "DuckTalent-HUDERIA-v1.0"},
+        "privacy_assessment": {"id": "DuckTalent-DPIA-v1.0"},
+        "model_change_record": {"id": "DT-CHG-EFF-02"},
+        "dt02_result": {"id": "DT-02-EFF-02", "status": "pass"}
+      },
+      "attestations": {"technical_owner": true, "hr_process_owner": true},
+      "expected_decision": "eligible_for_governance_review"
+    },
+    {
+      "case_id": "EFF-03",
+      "description": "Undeclared weight change with missing DT-02 result",
+      "proposed_features": [
+        "Job_Skills_Test",
+        "Relevant_Experience_Years",
+        "Required_Certification_Match"
+      ],
+      "proposed_weights": {
+        "Job_Skills_Test": 0.4,
+        "Relevant_Experience_Years": 0.4,
+        "Required_Certification_Match": 0.2
+      },
+      "declared_weight_changes": [],
+      "evidence_ids": {
+        "risk_assessment": {"id": "AI-005-R01"},
+        "impact_assessment": {"id": "DuckTalent-AIA-v1.0"},
+        "rights_assessment": {"id": "DuckTalent-HUDERIA-v1.0"},
+        "privacy_assessment": {"id": "DuckTalent-DPIA-v1.0"},
+        "model_change_record": {"id": "DT-CHG-EFF-03"}
+      },
+      "attestations": {"technical_owner": true, "hr_process_owner": true},
+      "expected_decision": "blocked"
+    }
+  ]
+}

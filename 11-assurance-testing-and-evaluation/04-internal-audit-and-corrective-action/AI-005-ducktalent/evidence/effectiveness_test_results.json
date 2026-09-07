@@ -1,0 +1,74 @@
+{
+  "control": "DuckTalent evidence-enforced change gate",
+  "capa_id": "CAPA-2026-001",
+  "evidence_boundary": "synthetic portfolio demonstration only",
+  "total_cases": 3,
+  "expected_results_met": 3,
+  "blocked_cases": 2,
+  "governance_review_eligible_cases": 1,
+  "deployment_authorizations": 0,
+  "overall_status": "pass",
+  "results": [
+    {
+      "case_id": "EFF-01",
+      "decision": "blocked",
+      "expected_decision": "blocked",
+      "expected_result_met": true,
+      "unapproved_features": [
+        "Career_Gap_Months"
+      ],
+      "changed_weights": [
+        "Career_Gap_Months",
+        "Job_Skills_Test",
+        "Relevant_Experience_Years"
+      ],
+      "undeclared_weight_changes": [],
+      "missing_evidence": [],
+      "missing_attestations": [],
+      "reasons": [
+        "UNAPPROVED_FEATURE"
+      ],
+      "deployment_authorized": false
+    },
+    {
+      "case_id": "EFF-02",
+      "decision": "eligible_for_governance_review",
+      "expected_decision": "eligible_for_governance_review",
+      "expected_result_met": true,
+      "unapproved_features": [],
+      "changed_weights": [
+        "Job_Skills_Test",
+        "Relevant_Experience_Years"
+      ],
+      "undeclared_weight_changes": [],
+      "missing_evidence": [],
+      "missing_attestations": [],
+      "reasons": [],
+      "deployment_authorized": false
+    },
+    {
+      "case_id": "EFF-03",
+      "decision": "blocked",
+      "expected_decision": "blocked",
+      "expected_result_met": true,
+      "unapproved_features": [],
+      "changed_weights": [
+        "Job_Skills_Test",
+        "Relevant_Experience_Years"
+      ],
+      "undeclared_weight_changes": [
+        "Job_Skills_Test",
+        "Relevant_Experience_Years"
+      ],
+      "missing_evidence": [
+        "dt02_result"
+      ],
+      "missing_attestations": [],
+      "reasons": [
+        "UNDECLARED_WEIGHT_CHANGE",
+        "MISSING_MANDATORY_EVIDENCE"
+      ],
+      "deployment_authorized": false
+    }
+  ]
+}
