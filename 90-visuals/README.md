@@ -7,9 +7,12 @@
 
 This folder contains diagrams and other supporting visuals used to explain the Duckworks governance model.
 
-## Current artifact
+## Current artifacts
 
-- `mermaid-diagram.png`
+- [`duckworks-ai-portfolio-risk-map.png`](duckworks-ai-portfolio-risk-map.png)
+- [`duckworks-ai-use-cases.png`](duckworks-ai-use-cases.png)
+- [`mermaid-diagram.png`](mermaid-diagram.png)
+- [`project-wing-governance-lifecycle.png`](project-wing-governance-lifecycle.png)
 
 ## Purpose
 
