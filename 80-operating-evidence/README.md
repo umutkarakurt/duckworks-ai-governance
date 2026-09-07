@@ -6,6 +6,10 @@ This folder contains worked examples showing how an identified AI risk is transl
 
 **Risk → Control → Owner → Execution → Evidence → Testing → Governance Decision → Monitoring / Reassessment**
 
+## Authoritative evidence index
+
+[`Duckworks_AI_Control_Evidence_Index_v1.2.md`](Duckworks_AI_Control_Evidence_Index_v1.2.md) is the current canonical evidence register. It consolidates 34 stable evidence IDs, including `EV-AI005-015`–`021` for the bounded DuckTalent finding-to-closure cycle. The prior generic index and v1.1 are retained as superseded history.
+
 ## Purpose
 
 Policies, standards, methodologies, and control descriptions do not by themselves demonstrate implementation.
@@ -96,6 +100,8 @@ See: [`AI-005-ducktalent/`](./AI-005-ducktalent/)
 Governance decision: [`AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md`](./AI-005-ducktalent/AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md)
 
 Post-decision monitoring / reassessment: [`../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/`](../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/)
+
+Internal audit and corrective action: [`../11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/`](../11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/)
 
 ## Important Limitation
 
