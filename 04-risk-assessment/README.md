@@ -1,7 +1,7 @@
 # AI Risk Assessment
 
 **Repository path:** `04-risk-assessment/`  
-**Status:** Active methodology and baseline risk-scenario register  
+**Status:** Active methodology and evidence-reconciled risk-scenario register  
 
 [← Back to main portfolio](../README.md)
 
@@ -9,10 +9,11 @@ This folder contains the active Duckworks method for identifying, scoring, treat
 
 ## Current artifacts
 
-- `Duckworks_AI_Risk_Classification_Assessment_Methodology_v1.0.md`
-- `Duckworks_AI_Risk_Scenarios_v1.0.md`
+- [`Duckworks_AI_Risk_Classification_Assessment_Methodology_v1.0.md`](Duckworks_AI_Risk_Classification_Assessment_Methodology_v1.0.md)
+- [`Duckworks_AI_Risk_Scenarios_v1.2.md`](Duckworks_AI_Risk_Scenarios_v1.2.md) — **authoritative current scenario register**
+- [`03-risk-evidence-reconciliation/`](03-risk-evidence-reconciliation/) — reconciliation analysis and workbook
 
-Superseded v0.9 working material is retained separately under `99-archive/`.
+`Duckworks_AI_Risk_Scenarios_v1.0.md` and v1.1 are retained for version history and are superseded by v1.2. Superseded v0.9 working material is retained separately under `99-archive/`.
 
 ## Method design
 
