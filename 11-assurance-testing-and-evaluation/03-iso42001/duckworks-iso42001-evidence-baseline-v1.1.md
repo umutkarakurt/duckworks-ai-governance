@@ -1,0 +1,246 @@
+# Duckworks — ISO/IEC 42001 AIMS Evidence Baseline
+
+**Project:** W.I.N.G. — Workflows, Intelligence, Next-Generation Governance  
+**Document ID:** DW-AIMS-EV-001  
+**Version:** 1.1  
+**Date:** 7 September 2026  
+**Status:** Reconciled thematic evidence baseline; approval and requirement-level verification pending  
+**Maintainer:** AI Governance Lead, Eleanor Duckford (fictional role)  
+**Proposed reviewer:** Chief Risk & Compliance Officer, Reginald Duckman (fictional role)  
+**Approval:** Not recorded  
+**Repository location:** `11-assurance-testing-and-evaluation/03-iso42001/`
+
+> **Portfolio boundary.** Duckworks and its personnel, systems, decisions, records, and data are fictional or synthetic. This baseline does not demonstrate ISO/IEC 42001 conformity, certification, legal compliance, production operation, real management approval, or independent assurance. A synthetic exercise receives credit only for what its inspectable inputs, outputs, and decisions demonstrate.
+
+## 1. Purpose and v1.1 reconciliation result
+
+This document reconciles the v1.0 AIMS evidence baseline with the current Project W.I.N.G. repository and the operating-evidence packages added after the original review.
+
+Version 1.0 correctly identified a strong design baseline and a material absence of inspected execution evidence. That conclusion is now partly superseded. The repository contains three bounded synthetic operating-evidence demonstrations, one synthetic governance decision, one material-change and reassessment cycle, and one static executive decision brief.
+
+The resulting position is:
+
+| Evidence layer | v1.0 position | v1.1 reconciled position |
+|---|---|---|
+| Governance and lifecycle design | Broadly documented, with gaps | Broadly documented, with the same approval and completeness limitations |
+| Control execution | Not demonstrated in reviewed sources | Demonstrated synthetically for `WI-01`, `DT-02`, and `PG-02` |
+| Lifecycle gate decision | Not inspected | Synthetic DuckTalent pre-deployment decision demonstrated; real committee action not demonstrated |
+| Change and reassessment | Design only | One synthetic DuckTalent material-change, trigger, reassessment, and revised-decision cycle demonstrated |
+| Management reporting | Not inspected | Static synthetic executive decision brief demonstrated; recurring review not demonstrated |
+| Production operating effectiveness | Not demonstrated | Still not demonstrated |
+| Validated risk reduction | Not demonstrated | Still not demonstrated; current residual-risk ratings are unchanged |
+| Independent assurance / certification | Not demonstrated | Still not demonstrated |
+
+This remains a **thematic evidence baseline**, not a clause-by-clause conformity or gap assessment. Exact ISO/IEC 42001:2023 requirement and Annex A references require verification against an authorized copy of the normative standard. No conformity score or readiness percentage is assigned.
+
+## 2. Scope and management-system boundary
+
+### 2.1 Proposed AIMS scope
+
+The proposed AIMS covers Duckworks' governance of the development, procurement, integration, and use of AI across engineering, manufacturing, customer operations, supply-chain planning, recruitment, and employee productivity. It includes intake, inventory, risk and impact assessment, control treatment, lifecycle decisions, monitoring, material change, incident handling, reassessment, and retirement.
+
+Supplier dependencies are within Duckworks' governance boundary to the extent that Duckworks selects, contracts with, configures, monitors, changes, or exits those services. Suppliers' internal management systems remain outside Duckworks' direct operational control.
+
+The AIMS boundary is distinct from the portfolio demonstration boundary. Project W.I.N.G. contains designs and synthetic exercises. Production deployment, real-data validation, sustained control operation, formal conformity assessment, and certification remain outside the demonstrated portfolio boundary.
+
+Before formal scope approval, Duckworks would still need to confirm legal entities, physical and virtual sites, jurisdictions, outsourced interfaces, and system-specific provider/deployer roles. The assumed EU/EEA nexus remains a project assumption rather than a verified organizational fact.
+
+### 2.2 Inventory coverage
+
+| Entry | Business responsibility | Current governance boundary |
+|---|---|---|
+| `AI-001` DuckDesign AI | VP Product & Engineering | Advisory output; competent engineering review |
+| `AI-002` QuackBot | Director of Customer Operations | Customer-support boundaries and human escalation |
+| `AI-003` FeatherForecast | Director of Supply Chain | Approval of material planning commitments and monitoring |
+| `AI-004` WingInspect Vision | Director of Manufacturing | Qualified inspector retains final release authority |
+| `AI-005` DuckTalent AI | Chief People Officer | Applicant recommendations; current gate remains **DO NOT DEPLOY** |
+| `AI-006` PondGPT | Head of IT & Cloud | Enterprise authorization, integrations, retrieval, and information boundaries |
+| `AI-007` Unregistered GenAI Usage | CISO / AI Governance Lead | Aggregate discovery and containment condition; decompose into separate use cases |
+
+There are **six registered AI systems plus one aggregate organizational condition**, not seven homogeneous systems. Inclusion in scope does not constitute approval.
+
+## 3. Evidence-state rules
+
+The following states are used in this baseline:
+
+| State | Meaning |
+|---|---|
+| **Design documented** | An inspected artifact describes the relevant process, responsibility, criteria, or control. Approval and adequacy may remain unverified. |
+| **Partial design** | Related design exists, but a material element, approval, integration, or completeness condition remains unverified. |
+| **Synthetic implementation demonstrated** | Inspectable fictional configuration or executable logic implements a bounded part of the design. |
+| **Synthetic operation demonstrated** | Inspectable synthetic inputs, outputs, exceptions, and decisions show the bounded process operating. |
+| **Synthetic lifecycle demonstrated** | A synthetic gate, change, reassessment, or revised decision consumes evidence and produces a traceable outcome. |
+| **Static synthetic reporting demonstrated** | A point-in-time fictional management view exists, but a recurring review cadence and real management use are not evidenced. |
+| **Not evidenced** | Sufficient evidence was not identified in the inspected source set. |
+| **Production operation not demonstrated** | Real, sustained operation for the exact system, version, population, and period has not been shown. |
+| **Validated effectiveness not demonstrated** | Evidence does not establish sustained real-world control effectiveness, outcome improvement, or independently validated risk reduction. |
+
+Evidence states are not automatically cumulative. A control card does not prove implementation; executable synthetic code does not prove production deployment; a passed synthetic retest does not prove lawful or fair real-world outcomes; and a static brief does not prove management review.
+
+## 4. Reconciled AIMS thematic evidence matrix
+
+Row IDs are local portfolio identifiers, not ISO clause numbers. “Current evidence” identifies the strongest state supported by the inspected repository. “Remaining acceptance condition” states what would be needed to support the next material claim.
+
+| ID / candidate theme | Current evidence and locator | Reconciled assessment | Proposed operating owner | Remaining acceptance condition |
+|---|---|---|---|---|
+| **M01 Organizational context and AIMS scope** | Project scope, organization profile, assumptions register; this document §2 | **Partial design** | CRCO | Approve scope identifying entities, sites, jurisdictions, AI roles, outsourced interfaces, exclusions, and rationale; resolve or explicitly retain scope assumptions |
+| **M02 Interested parties and needs** | Stakeholder register; DuckTalent impact/rights assessment set | **Design documented**; affected groups are identified, but consultation operation is not demonstrated | AI Governance Lead | Needs-to-process mapping plus a traceable consultation or synthetic feedback record showing consideration and resulting action |
+| **M03 Leadership, accountability, and AI policy** | Governance Charter, RACI, lifecycle SOP, AI Governance Policy | **Design documented**; approval, resourcing, communication, and leadership operation remain unverified | CRCO | Approved policy and charter, accepted authorities, resource decisions, communication record, and evidence of leadership oversight |
+| **M04 Risks and opportunities affecting the AIMS** | Risk methodology and system risk register; skeptical review/remediation tracker | **Partial design**; system risks and portfolio gaps are documented, but AIMS process risks/opportunities are not maintained as a distinct register | CRCO | AIMS-level risk/opportunity register covering competence, capacity, evidence quality, change, supplier dependency, auditability, and improvement actions |
+| **M05 AI risk assessment** | Risk methodology and risk scenarios; `AI-004-R01`, `AI-005-R01`, `AI-006-R01` linked through evidence index | **Design documented** with bounded synthetic control evidence for three risks; current residual-risk claims are not validated by production evidence | AI System Owner, supported by Risk | Approved, version-bound assessments; evidence-linked control-effectiveness rationale; reconciliation of residual-risk labels with actual evidence maturity |
+| **M06 AI impact assessment** | DuckTalent AIA, DPIA, FRIA, ethical assessment, and HUDERIA package; DuckTalent reassessment `IR-001` | **Design documented** and **synthetic reassessment demonstrated** for one material change; real affected-person engagement and legal conclusions remain unverified | Chief People Officer with Legal/Privacy | Approved applicability analysis, real stakeholder input where required, version-bound assessment, closure of blocking rights/privacy conditions, and authorized decision |
+| **M07 Risk treatment and control applicability** | Control framework; evidence index; implementation cards for `WI-01`, `DT-01/DT-02`, `PG-01/PG-02` | **Partial design** plus **synthetic implementation/operation demonstrated** for selected controls; portfolio-wide applicability rationale is absent | CRCO with control owners | Verified applicability record linking risk/impact, selected and excluded controls, rationale, owners, status, evidence IDs, exceptions, and residual-risk decision |
+| **M08 AI objectives and plans** | Project objectives and acceptance criteria; executive brief management actions | **Partial design**; project outcomes exist, but an approved ongoing AIMS objectives register does not | AI Governance Lead | Objective, baseline, metric, target, data source, owner, cadence, due date, dependencies, and response to missed target |
+| **M09 Resources, competence, and awareness** | Stakeholder/RACI role assignments; WingInspect qualified-inspector design | **Partial design**; role expectations exist, but competence assessment, authorization, training, and awareness records are not demonstrated | Relevant Business Owner | Role-specific criteria, training/assessment record, authorization limits, refresher trigger, and evidence of resource sufficiency |
+| **M10 Communication and documented information** | Versioned repository, evidence index, document metadata within key records | **Design documented in part**; evidence objects are indexed for three packages, but repository-wide authority, retention, access, review, and supersession rules remain incomplete | AI Governance Lead | Master document/evidence register with authoritative format, owner, status, approval, review date, access, retention basis, retrieval, supersession, and version linkage |
+| **M11 Operational planning and lifecycle gates** | Lifecycle SOP; `EV-AI005-009` pre-deployment gate; `EV-AI005-014` revised decision | **Synthetic lifecycle demonstrated** for DuckTalent; real governance committee operation and enterprise-wide gate enforcement are not demonstrated | Relevant AI System Owner; decision authority per gate | Authorized decision for exact version, participants and authority, reviewed evidence IDs, unresolved conditions, recorded dissent/exception, and enforced system state |
+| **M12 AI data and technical lifecycle controls** | Data management plan, model documentation, AIBOM; executable DuckTalent and PondGPT tests | **Partial design** plus **synthetic technical implementation demonstrated** for `DT-02` and `PG-02`; production dataset/model/service controls remain unverified | Head of Data & AI | Version-bound dataset/model/service records, provenance and quality checks, access evidence, deployment configuration, validation limits, and production monitoring linkage |
+| **M13 Third-party dependencies** | Vendor contract and DPA templates; supplier-related requirements in policies | **Partial design**; no worked supplier-governance case demonstrates due diligence through monitoring and exit | Director of Procurement & Vendor Assurance | Synthetic or real supplier assessment with provider/service ID, due diligence, findings, contract conditions, residual supplier risk, approval, change notification, monitoring, and exit plan |
+| **M14 Performance monitoring and evaluation** | `EV-AI004-003`, `EV-AI005-006`, `EV-AI006-006`; DuckTalent `EV-AI005-011/012`; executive decision brief | **Synthetic operation demonstrated** for three bounded control tests; **static synthetic reporting demonstrated**; continuous production monitoring and recurring evaluation are absent | Head of Data & AI with Business Owners | Defined population/period, thresholds and rationale, production measurements, exceptions, trend and outcome metrics, recurring management response, and evidence of follow-up |
+| **M15 Change and reassessment** | `EV-AI005-010` through `EV-AI005-014`; `DT-CHG-001`, `DT-MON-001`, `DT-TRG-001`, `IR-001` | **Synthetic lifecycle demonstrated** end-to-end for one DuckTalent material change | Relevant Technical Owner | Enterprise-wide trigger enforcement, production version diff, timely reassessment, authorized disposition, evidence invalidation rules, and post-change monitoring |
+| **M16 Internal audit** | Internal Audit independence assigned; control-test workpapers within worked packages | **Partial design**; control-test workpapers are portfolio artifacts, not an independent AIMS internal-audit program | Head of Internal Audit | Risk-based audit program, scope/criteria, competent independent auditor, sampling, workpapers, findings, reporting, follow-up, and disclosed self-review safeguards |
+| **M17 Management review** | Executive AI Governance Decision Brief | **Static synthetic reporting demonstrated**; it supports a review but is not evidence that a management review occurred | CEO, coordinated by CRCO | Dated review record covering inputs, performance, changes, findings, resources, opportunities, decisions, action owners, due dates, and follow-up |
+| **M18 Nonconformity, corrective action, and improvement** | Seeded exceptions/remediation/retests for DuckTalent and PondGPT; skeptical review remediation tracker | **Synthetic correction and retest demonstrated**; a complete nonconformity/root-cause/corrective-action/effectiveness/closure cycle is not | Relevant Process Owner | Controlled finding, immediate correction, cause analysis, systemic corrective action, recurrence prevention, effectiveness check, authorized closure, and management visibility |
+
+### 4.1 Matrix interpretation
+
+The strongest new evidence applies to **M05, M07, M11, M12, M14, M15, M17, and M18**, but at different levels. Only M11 and M15 contain a clear synthetic lifecycle decision chain. M17 contains a management input artifact, not a meeting record. M18 contains correction and retest behavior, not yet a complete corrective-action system.
+
+No row supports a claim of production AIMS operation or validated effectiveness.
+
+## 5. Reconciled operating-evidence mapping
+
+### 5.1 WingInspect Vision — human release authority
+
+| Evidence IDs | Control / risk | What is demonstrated | Boundary retained |
+|---|---|---|---|
+| `EV-AI004-001`–`003` | `WI-01` / `AI-004-R01` | Control design, synthetic inspection workflow, recorded human decisions and overrides, and full-population synthetic control test | `EV-AI004-004/005` remain unavailable; no real inspector behavior, manufacturing outcome, production effectiveness, or defect-risk reduction is claimed |
+
+**AIMS themes informed:** M05, M07, M09, M11, M14.
+
+### 5.2 DuckTalent AI — fairness control and governance lifecycle
+
+| Evidence IDs | Control / risk | What is demonstrated | Boundary retained |
+|---|---|---|---|
+| `EV-AI005-001`–`006` | `DT-01/DT-02` / `AI-005-R01` | Designed feature boundary, matched synthetic test input, executable fairness test, seeded failure, deployment block, remediation, and retest | `EV-AI005-007/008` remain unavailable; no real-applicant fairness, non-discrimination, rights-risk reduction, or legal compliance is claimed |
+| `EV-AI005-009` | Governance gate | Evidence-consuming synthetic pre-deployment decision; advancement to real-applicant use denied | No real committee or executive decision is claimed |
+| `EV-AI005-010`–`014` | Change / monitoring / reassessment | Material change, executable regression check, trigger, `IR-001` reassessment, rejected change, and preserved **DO NOT DEPLOY** gate | No continuous production monitoring, real change event, or production suspension is claimed |
+
+**AIMS themes informed:** M05, M06, M07, M11, M12, M14, M15, M18.
+
+### 5.3 PondGPT — authorization regression and containment
+
+| Evidence IDs | Control / risk | What is demonstrated | Boundary retained |
+|---|---|---|---|
+| `EV-AI006-001`–`006` | `PG-01/PG-02` / `AI-006-R01` | Control design, synthetic authorization matrix, executable regression logic, seeded ACL defect, alert/gate behavior, remediation, and retest | `EV-AI006-007/008` remain unavailable; no real identity synchronization, connector enforcement, DLP/SIEM operation, production effectiveness, or exposure reduction is claimed |
+
+**AIMS themes informed:** M05, M07, M11, M12, M14, M18.
+
+### 5.4 Executive management view
+
+The Executive AI Governance Decision Brief consolidates portfolio risk, lifecycle gates, control status, evidence maturity, unresolved blockers, and management actions. It supports M14 and M17 as **static synthetic reporting evidence**. It does not establish a recurring reporting cadence, accurate production telemetry, attendance, consideration by leadership, or action follow-up.
+
+## 6. Risk and decision reconciliation
+
+The added evidence does **not** justify a reduction in current residual risk or relaxation of any lifecycle gate.
+
+| Entry | Current portfolio position | v1.1 effect |
+|---|---|---|
+| `AI-004` WingInspect | High (10); restricted pilot | Synthetic `WI-01` workflow/test evidence recognized; production effectiveness still unavailable; no rating or gate change |
+| `AI-005` DuckTalent | Critical (20); **DO NOT DEPLOY** | Synthetic `DT-02` and lifecycle evidence recognized; unresolved privacy, rights, human-oversight, model, security, vendor, accessibility, transparency, and production-validation conditions preserve the block |
+| `AI-006` PondGPT | High (12); restricted pilot | Synthetic `PG-02` technical evidence recognized; production authorization/DLP/SIEM evidence unavailable; no rating or gate change |
+
+The canonical risk register still uses labels such as “Effective” or “Partially Effective” for some systems while the evidence index deliberately stops at bounded synthetic operation. This is an unresolved consistency issue. Each claimed control-effectiveness or residual-risk reduction should identify the evidence ID, evidence state, period, population, reviewer, and limitation supporting it. Until then, synthetic portfolio evidence should be described as demonstration evidence, not production effectiveness.
+
+`AI-007` also remains conceptually inconsistent where it receives one system-style risk score. It should be governed as an organizational discovery/containment risk and decomposed into separately registered systems or use cases before system-level assessment.
+
+## 7. Prioritized evidence action register
+
+| Action | Priority / related themes | Proposed owner | Concrete closure evidence | v1.1 status |
+|---|---|---|---|---|
+| **A01 Validate standard references** | P1 / all | AI Governance Lead | Authorized standard basis; verified requirement and Annex A mappings; completeness review by a second competent person | Open |
+| **A02 Reconcile current artifacts** | P1 / all | AI Governance Lead | Current repository snapshot, corrected paths, inspected operating-evidence IDs, and retained old/new assessment basis | **Completed for v1.1 thematic baseline**; repeat after material repository changes |
+| **A03 Confirm AIMS scope** | P1 / M01–M02 | CRCO | Approved fictional scope decision resolving entities, sites, jurisdictions, interfaces, and assumptions | Open |
+| **A04 Inspect DuckTalent evidence** | P1 / M05–M07, M11, M15 | Chief People Officer + Head of Data & AI | Linked assessment, control, code/configuration, synthetic data, failure, blocked gate, remediation, retest, change, reassessment, and revised decision | **Completed for bounded synthetic evidence**; production evidence remains open |
+| **A05 Establish applicability rationale** | P1 / M07 | CRCO | Requirement/control applicability register with inclusion/exclusion rationale, risk/impact links, owner, state, and evidence IDs | Open |
+| **A06 Demonstrate management-system improvement cycle** | P1 / M16–M18 | CRCO; Internal Audit retains independence | Synthetic internal-audit finding, root cause, corrective action, effectiveness check, management-review decision, and tracked closure | Open |
+| **A07 Define ongoing objectives and support** | P2 / M08–M10 | AI Governance Lead + Business Owners | Approved AIMS objectives, competence/awareness evidence, and document/evidence control rules | Open |
+| **A08 Resolve acceptance ambiguity** | P1 / M05, M11 | CRCO + General Counsel | Reconciled exceptional-risk language and gate rules; explicit statement that internal exception cannot waive applicable law or mandatory gate evidence | Open |
+| **A09 Align risk claims to evidence maturity** | P1 / M05, M07, M14 | Risk Owner + AI Governance Lead | Every effectiveness/residual-risk claim cites evidence IDs and distinguishes design, synthetic demonstration, production operation, and validation | Open |
+| **A10 Build a worked supplier-governance case** | P2 / M13 | Procurement & Vendor Assurance | PondGPT supplier intake, due diligence, contractual conditions, findings, residual supplier risk, approval, monitoring, change notification, and exit evidence | Open |
+| **A11 Create the master traceability register** | P1 / all | AI Governance Lead | AI ID → assumption → obligation/theme → assessment → risk → control → evidence → decision → monitoring trigger → owner → version/state | Open |
+
+### Highest-value next sequence
+
+1. Complete **A11** and **A09** together so management claims cannot exceed evidence maturity.
+2. Use the existing DuckTalent failure to complete **A06**, explicitly separating control testing from independent internal audit and management review.
+3. Complete **A05** only after **A01** verifies the current normative requirements and Annex A references.
+4. Build the PondGPT supplier case under **A10** to close the largest unworked lifecycle interface.
+
+## 8. Source index for v1.1
+
+### 8.1 Original baseline sources retained
+
+| Source ID | Artifact | Use |
+|---|---|---|
+| S03 | Duckworks AI Governance Project — In-Scope and Out-of-Scope Items | Project and production boundaries |
+| S06 | Duckworks AI Governance Project — Project Objectives | Intended outcomes and evidence expectations |
+| S07 | Duckworks Project Assumptions Register v1.0 | Assumptions and validation limits |
+| S10 | Duckworks — Fictional Organization Profile | Organization, use cases, and responsibilities |
+| S11 | Duckworks Project Stakeholders v1.0 | Owners, affected groups, forums, and independence |
+| S12 | Duckworks Project Acceptance Criteria v1.0 | Acceptance rules, gates, and evidence standards |
+| S13 | Duckworks Project Required Deliverables v1.0 | Baseline delivery plan/status |
+| S14 | Duckworks AI Risk Classification & Assessment Methodology v1.0 | Risk method, treatment, evidence credit, and reassessment |
+
+### 8.2 Repository evidence inspected for reconciliation
+
+| Source ID | Repository artifact | Primary use |
+|---|---|---|
+| R01 | [`80-operating-evidence/evidence-index.md`](../../../80-operating-evidence/evidence-index.md) | Canonical evidence IDs, states, and limitations |
+| R02 | [`80-operating-evidence/AI-004-winginspect/`](../../../80-operating-evidence/AI-004-winginspect/) | `WI-01` human release-gate evidence |
+| R03 | [`80-operating-evidence/AI-005-ducktalent/`](../../../80-operating-evidence/AI-005-ducktalent/) | `DT-01/DT-02` fairness control, failure, remediation, retest, and gate evidence |
+| R04 | [`80-operating-evidence/AI-006-pondgpt/`](../../../80-operating-evidence/AI-006-pondgpt/) | `PG-01/PG-02` authorization-regression evidence |
+| R05 | [`12-monitoring-reporting-and-roadmap/AI-005-ducktalent/`](../../../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/) | DuckTalent change, monitoring trigger, reassessment, and revised decision |
+| R06 | [`12-monitoring-reporting-and-roadmap/Duckworks_Executive_AI_Governance_Decision_Brief_v1.0.md`](../../../12-monitoring-reporting-and-roadmap/Duckworks_Executive_AI_Governance_Decision_Brief_v1.0.md) | Static synthetic management-reporting evidence |
+| R07 | [`11-assurance-testing-and-evaluation/02-adversarial-review/`](../02-adversarial-review/) | Challenge findings and remediation status |
+| R08 | [`04-risk-assessment/Duckworks_AI_Risk_Scenarios_v1.0.md`](../../../04-risk-assessment/Duckworks_AI_Risk_Scenarios_v1.0.md) | Current residual-risk and effectiveness labels requiring reconciliation |
+| R09 | [`07-control-framework/Duckworks_AI_Control_Framework_Report_v1.0.md`](../../../07-control-framework/Duckworks_AI_Control_Framework_Report_v1.0.md) | Control definitions and implementation posture |
+
+Repository evidence was inspected from `main` on 7 September 2026. The snapshot observed in the repository search results was commit `2ec149691a5fa97b8f2ebb8c945a6ba9a2eaf507`. If the repository advances, this matrix should be reviewed before being treated as current.
+
+### 8.3 Official public sources and limitation
+
+- [ISO/IEC 42001:2023 official overview](https://www.iso.org/standard/42001) — public description of the AI management system standard.
+- [ISO/IEC 42001 explained](https://www.iso.org/home/insights-news/resources/iso-42001-explained-what-it-is.html) — high-level explanation of management-system themes.
+
+These public pages do not replace the normative standard and are not used to claim exhaustive requirement coverage. Legal obligations remain subject to a separate, current applicability analysis using primary legal sources.
+
+## 9. Repository integration and maintenance
+
+Place this file at:
+
+`11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.1.md`
+
+Recommended README entry:
+
+`[ISO/IEC 42001 AIMS Evidence Baseline v1.1](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.1.md) — Reconciled thematic evidence mapping linked to current synthetic operating evidence; not a conformity, certification, legal-compliance, or production-effectiveness claim.`
+
+Retain v1.0 for version history or mark it superseded; do not leave both versions presented as equally current. Update this baseline when:
+
+- AIMS scope, assumptions, roles, or interfaces change;
+- a referenced artifact or evidence state changes;
+- a control is implemented in production or independently tested;
+- a material model, data, feature, purpose, supplier, or legal classification changes;
+- an internal audit, management review, nonconformity, or corrective action produces new evidence; or
+- verified normative mappings are added.
+
+## 10. Management conclusion
+
+Project W.I.N.G. has moved beyond a documentation-only baseline. It now demonstrates, within explicit synthetic limits, three control archetypes and a complete DuckTalent decision/change/reassessment sequence.
+
+That progress is material, but it is not equivalent to an operating AIMS. The portfolio still lacks approved scope and objectives, a verified applicability record, portfolio-wide evidence traceability, demonstrated competence and awareness, a worked supplier lifecycle, recurring production monitoring, an independent internal-audit program, an actual management-review record, and a complete corrective-action closure cycle.
+
+The defensible v1.1 conclusion is therefore:
+
+> **AIMS design is substantially represented; selected synthetic implementation and lifecycle evidence is demonstrated; production operation, validated effectiveness, conformity, certification, and legal compliance are not demonstrated.**
+
