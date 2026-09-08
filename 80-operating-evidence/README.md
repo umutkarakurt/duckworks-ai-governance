@@ -8,7 +8,7 @@ This folder contains worked examples showing how an identified AI risk is transl
 
 ## Authoritative evidence index
 
-[`Duckworks_AI_Control_Evidence_Index_v1.3.md`](Duckworks_AI_Control_Evidence_Index_v1.3.md) is the current canonical evidence register. It consolidates 42 stable evidence IDs, including `EV-AI006-009`–`016` for the bounded PondGPT supplier lifecycle. Earlier indexes are retained as superseded history.
+[`Duckworks_AI_Control_Evidence_Index_v1.4.md`](Duckworks_AI_Control_Evidence_Index_v1.4.md) is the current canonical evidence register. It consolidates 50 stable evidence IDs: 44 available synthetic records and six explicitly unavailable production-evidence records. The new `EV-AIMS-001`–`008` series covers the bounded AIMS objectives-and-support package. Earlier indexes are retained as superseded history.
 
 ## Purpose
 
@@ -29,6 +29,10 @@ Project W.I.N.G. distinguishes between five evidence states:
 These states are intentionally separated to avoid granting control-effectiveness credit based only on documentation.
 
 ## Current Worked Examples
+
+### AIMS objectives and support
+
+The [`AIMS objectives-and-support package`](../06-governance-operating-model/01-aims-objectives-and-support/) adds a formula-driven objectives dashboard, competence criteria and records, an executable authorization gate, explicit exceptions, and priority-scope document/evidence control. It demonstrates bounded synthetic management-system support operation and grants no real authorization.
 
 ### AI-004 — WingInspect Vision
 
