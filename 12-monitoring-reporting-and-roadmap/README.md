@@ -27,6 +27,14 @@ This is evidence of **synthetic monitoring/reassessment workflow execution**, no
 
 ## Current management-reporting evidence
 
+### AIMS Objectives and Performance Register
+
+The bounded v1.4 performance view is available here:
+
+[`Duckworks_AIMS_Objectives_and_Performance_Register_v1.0.xlsx`](../06-governance-operating-model/01-aims-objectives-and-support/Duckworks_AIMS_Objectives_and_Performance_Register_v1.0.xlsx)
+
+It summarizes eight objectives, current status, required management responses, competence eligibility and priority-document coverage. It is a formula-driven synthetic snapshot, not a live or production-connected dashboard, and does not demonstrate recurring management review.
+
 ### Executive AI Governance Decision Brief
 
 A compact management decision view is available at:
@@ -57,7 +65,7 @@ This is **static synthetic management-reporting evidence**. It does not demonstr
 ## Planned / still-unvalidated artifacts
 
 - AI Monitoring & Reassessment Standard;
-- governance KPI/KRI catalogue;
+- recurring governance KPI/KRI measurement and trend evidence beyond the bounded v1.4 objective register;
 - live / production-connected DuckPond executive governance dashboard beyond the current static decision brief;
 - recurring executive-reporting cadence and evidence of management review;
 - production system monitoring records and threshold evidence beyond the current synthetic DuckTalent example;
