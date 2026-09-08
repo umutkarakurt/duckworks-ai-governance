@@ -10,9 +10,9 @@ This folder translates material AI risks and governance requirements into **test
 ## Current artifacts
 
 - [`Duckworks_AI_Control_Library_v1.0.xlsx`](Duckworks_AI_Control_Library_v1.0.xlsx)
-- [`Duckworks_AI_Control_Framework_Report_v1.2.md`](Duckworks_AI_Control_Framework_Report_v1.2.md) — **authoritative current control-status report**
+- [`Duckworks_AI_Control_Framework_Report_v1.3.md`](Duckworks_AI_Control_Framework_Report_v1.3.md) — **authoritative current control-status report**
 
-The v1.0 and v1.1 reports are retained for version history and are superseded by v1.2.
+Versions 1.0–1.2 are retained for version history and are superseded by v1.3.
 
 ## Control design fields
 
@@ -71,6 +71,7 @@ Three worked examples demonstrate different control archetypes:
 - [`AI-005 DuckTalent operating-evidence package`](../80-operating-evidence/AI-005-ducktalent/) — links `AI-005-R01` to the `DT-01` job-relevance/proxy boundary and `DT-02` detective control, matched synthetic applicants, seeded proxy-feature failure, diagnostic disparity metrics, deployment blocking, remediation, and retesting.
 - [`AI-005 DuckTalent internal-audit and corrective-action package`](../11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/) — extends the chain through finding, cause analysis, corrective action, executable recurrence-prevention testing, management review, and narrow closure.
 - [`AI-006 PondGPT operating-evidence package`](../80-operating-evidence/AI-006-pondgpt/) — links `AI-006-R01` to the `PG-01` authorization boundary and `PG-02` detective control, executable permission-regression logic, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, and retesting.
+- [`AI-006 PondGPT supplier-governance package`](../09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/) — links `AI-006-R01` to `AI-TPR-01`, supplier due diligence, evidence gaps, contractual treatment, a conditional gate, material-change response, monitoring and exit design.
 
 All three preserve the distinction between synthetic portfolio implementation/testing evidence and production operating effectiveness. The DuckTalent example additionally preserves the boundary between diagnostic fairness testing and any legal discrimination or compliance conclusion.
 
