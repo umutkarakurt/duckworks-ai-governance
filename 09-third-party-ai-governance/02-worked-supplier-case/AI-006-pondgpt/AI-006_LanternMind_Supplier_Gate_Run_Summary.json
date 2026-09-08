@@ -1,0 +1,27 @@
+{
+  "gate_id": "TPR-GATE-AI006-2026-001",
+  "system_id": "AI-006",
+  "supplier": "LanternMind Enterprise AI Ltd. (fictional)",
+  "decision": "CONDITIONAL_RESTRICTED_PILOT_ONLY",
+  "human_authorization_required": true,
+  "unmet_broader_rollout_conditions": [
+    "BC-01",
+    "BC-02",
+    "BC-03",
+    "BC-04",
+    "BC-05"
+  ],
+  "prohibited_conditions_active": [],
+  "restricted_pilot_condition_failures": [],
+  "assertions": {
+    "automatic_approval_disabled": true,
+    "no_prohibited_condition_active": true,
+    "restricted_pilot_conditions_satisfied": true,
+    "broader_rollout_has_blockers": true,
+    "decision_matches_expected": true,
+    "broader_rollout_not_approved": true
+  },
+  "assertions_passed": 6,
+  "assertions_failed": 0,
+  "evidence_boundary": "Synthetic portfolio execution; no production effectiveness or supplier approval claim"
+}

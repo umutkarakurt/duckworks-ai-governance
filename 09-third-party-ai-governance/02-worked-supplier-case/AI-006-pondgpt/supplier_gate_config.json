@@ -1,0 +1,27 @@
+{
+  "gate_id": "TPR-GATE-AI006-2026-001",
+  "system_id": "AI-006",
+  "supplier": "LanternMind Enterprise AI Ltd. (fictional)",
+  "current_gate": "RESTRICTED_PILOT_ONLY",
+  "expected_decision": "CONDITIONAL_RESTRICTED_PILOT_ONLY",
+  "automatic_approval_permitted": false,
+  "prohibited_conditions": {
+    "known_active_supplier_training_on_duckworks_data": false,
+    "uncontained_confirmed_cross_tenant_exposure": false,
+    "prohibited_data_in_scope": false
+  },
+  "broader_rollout_conditions": [
+    {"id": "BC-01", "condition": "binding_no_training_and_restricted_use_terms", "status": "not_met", "evidence": "TPR-CL-02 proposed; not executed"},
+    {"id": "BC-02", "condition": "tenant_isolation_and_security_assurance_verified", "status": "not_met", "evidence": "LM-EV-003 and LM-EV-004 not evidenced"},
+    {"id": "BC-03", "condition": "hosting_transfer_and_subprocessor_review_complete", "status": "not_met", "evidence": "LM-EV-009 and LM-EV-010 partial"},
+    {"id": "BC-04", "condition": "retention_deletion_and_exit_test_complete", "status": "not_met", "evidence": "LM-EV-008 and LM-EV-018 not evidenced; LM-EV-017 not performed"},
+    {"id": "BC-05", "condition": "production_connector_dlp_siem_evidence_accepted", "status": "not_met", "evidence": "EV-AI006-007 and EV-AI006-008 unavailable"}
+  ],
+  "restricted_pilot_conditions": [
+    {"id": "PC-01", "condition": "approved_users_and_repositories_only", "status": "met_in_synthetic_design"},
+    {"id": "PC-02", "condition": "privileged_sensitive_and_unapproved_sources_excluded", "status": "met_in_synthetic_design"},
+    {"id": "PC-03", "condition": "tool_execution_disabled", "status": "met_in_synthetic_design"},
+    {"id": "PC-04", "condition": "permission_regression_before_expansion", "status": "met_in_synthetic_demonstration"}
+  ]
+}
+

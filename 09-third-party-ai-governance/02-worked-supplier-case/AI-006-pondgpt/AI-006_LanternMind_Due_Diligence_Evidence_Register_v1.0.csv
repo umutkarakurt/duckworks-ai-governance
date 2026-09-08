@@ -1,0 +1,20 @@
+Evidence_Item_ID,Domain,Requested_Evidence,Status,Source_or_Locator,Finding_ID,Owner,Acceptance_Condition,Review_Trigger
+LM-EV-001,Corporate,Certificate of incorporation and ownership structure,Not evidenced,None,LM-F01,Director Procurement & Vendor Assurance,Verify legal entity ownership sanctions and financial viability,Ownership or control change
+LM-EV-002,Service,Service architecture and exact model/version routing,Partial,Synthetic service description,LM-F02,Head of IT & Cloud,Obtain versioned architecture including fallback providers and data flows,Model or routing change
+LM-EV-003,Security,Current independent security assurance report,Not evidenced,None,LM-F03,CISO,Review scope exceptions and remediation status before expansion,Report expiry or critical finding
+LM-EV-004,Security,Tenant-isolation architecture and test results,Not evidenced,ASM-030 provider assertion only,LM-F04,CISO,Verify isolation design and recent test evidence before expansion,Architecture or tenancy change
+LM-EV-005,Identity,Administrative and support-access control evidence,Partial,Synthetic questionnaire response,LM-F05,Head of IT & Cloud,Verify MFA privileged access logging and periodic review,Support model or access change
+LM-EV-006,Cryptography,Encryption and key-management evidence,Not evidenced,None,LM-F06,CISO,Verify encryption scope algorithms key custody and rotation,Key or hosting change
+LM-EV-007,Data use,No-training and restricted-use commitment,Conditional,Proposed TPR-CL-02,LM-F07,DPO & Head of Privacy,Execute binding term and verify configuration,Data-use policy change
+LM-EV-008,Retention,Retention configuration and deletion procedure,Not evidenced,Proposed TPR-CL-03,LM-F08,DPO & Head of Privacy,Verify configured retention and obtain deletion attestation process,Retention change or termination
+LM-EV-009,Hosting,Hosting regions and remote-support locations,Partial,EU/EEA target only,LM-F09,DPO & Head of Privacy,Confirm regions transfers and support access before sensitive-source use,Region or support-location change
+LM-EV-010,Subprocessors,Complete subprocessor register,Partial,Synthetic partial register,LM-F10,Director Procurement & Vendor Assurance,Obtain purpose location data access and advance-notice mechanism,New or changed subprocessor
+LM-EV-011,Vulnerability,Secure development and vulnerability treatment summary,Partial,Synthetic questionnaire response,LM-F11,CISO,Review current testing and critical remediation evidence,Critical vulnerability or annual review
+LM-EV-012,Incident,Incident response plan and customer notification procedure,Conditional,Proposed TPR-CL-07,LM-F12,CISO,Execute 24-hour notice and cooperation obligation,Security or privacy incident
+LM-EV-013,Change,Material model/service change process,Conditional,Proposed TPR-CL-08,LM-F13,AI Governance Lead,Execute 30-day notice materiality and emergency-change terms,Material service change
+LM-EV-014,Audit,Customer logging evidence and audit support,Not evidenced,Proposed TPR-CL-09,LM-F14,CISO,Demonstrate log export investigation support and evidence retention,Investigation or assurance request
+LM-EV-015,Continuity,Resilience and recovery test summary,Not evidenced,None,LM-F15,Head of IT & Cloud,Review dependencies recovery objectives and latest test,Major outage or annual review
+LM-EV-016,IP,Input output and infringement terms,Conditional,Proposed TPR-CL-10,LM-F16,General Counsel,Execute rights allocation claims support and prohibited-use terms,Terms or model change
+LM-EV-017,Exit,Data and configuration export test,Not performed,Exit plan only,LM-F17,Head of IT & Cloud,Complete export restore and successor-readiness test,Annual test or termination
+LM-EV-018,Deletion,Termination deletion attestation,Not evidenced,Proposed TPR-CL-12,LM-F18,DPO & Head of Privacy,Define verifiable deletion evidence including subprocessors,Termination or deletion request
+
