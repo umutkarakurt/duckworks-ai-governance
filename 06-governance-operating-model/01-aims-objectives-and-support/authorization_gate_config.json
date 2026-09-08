@@ -1,0 +1,44 @@
+{
+  "gate_id": "AIMS-COMP-GATE-2026-001",
+  "as_of_date": "2026-09-08",
+  "human_authorization_required": true,
+  "evidence_boundary": "Synthetic portfolio execution; no employment, appointment, competence or production authorization claim",
+  "records": [
+    {
+      "record_id": "COMP-001",
+      "activity": "Coordinate lifecycle gate evidence packages",
+      "training_completed": true,
+      "assessment_threshold": 80,
+      "assessment_score": 92,
+      "authorization_expiry": "2027-09-07",
+      "refresher_due": "2027-08-08",
+      "suspension_active": false,
+      "scope_match": true,
+      "expected_result": "ELIGIBLE_FOR_HUMAN_AUTHORIZATION"
+    },
+    {
+      "record_id": "COMP-002",
+      "activity": "Authorize WingInspect item release",
+      "training_completed": true,
+      "assessment_threshold": 80,
+      "assessment_score": 88,
+      "authorization_expiry": "2026-08-31",
+      "refresher_due": "2026-08-01",
+      "suspension_active": false,
+      "scope_match": true,
+      "expected_result": "BLOCKED"
+    },
+    {
+      "record_id": "COMP-003",
+      "activity": "Approve completion recommendation for AI supplier due diligence",
+      "training_completed": true,
+      "assessment_threshold": 80,
+      "assessment_score": 74,
+      "authorization_expiry": "2027-08-31",
+      "refresher_due": "2027-07-31",
+      "suspension_active": false,
+      "scope_match": true,
+      "expected_result": "BLOCKED"
+    }
+  ]
+}
