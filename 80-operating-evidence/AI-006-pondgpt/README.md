@@ -113,3 +113,10 @@ No third-party Python packages or network access are required.
 ### Important interpretation
 
 The script demonstrates that the **control logic is executable and evidence-producing**. It does not establish that real PondGPT production connectors, identity groups, DLP enforcement, SIEM integration, or source-system permissions operate this way.
+
+## Supplier-governance extension
+
+The related [PondGPT supplier-governance evidence package](../../09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/) extends this technical authorization demonstration through supplier intake, due diligence, evidence gaps, supplier risk, proposed contract controls, a conditional gate decision, monitoring and exit design, a synthetic material-change response, and an executable supplier gate.
+
+Evidence IDs `EV-AI006-009`–`016` support a bounded synthetic `AI-TPR-01` demonstration. They do not validate LanternMind, execute contract terms, demonstrate recurring supplier monitoring, or change PondGPT's High-risk/restricted-pilot position.
+
