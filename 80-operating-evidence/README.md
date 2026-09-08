@@ -8,7 +8,7 @@ This folder contains worked examples showing how an identified AI risk is transl
 
 ## Authoritative evidence index
 
-[`Duckworks_AI_Control_Evidence_Index_v1.2.md`](Duckworks_AI_Control_Evidence_Index_v1.2.md) is the current canonical evidence register. It consolidates 34 stable evidence IDs, including `EV-AI005-015`–`021` for the bounded DuckTalent finding-to-closure cycle. The prior generic index and v1.1 are retained as superseded history.
+[`Duckworks_AI_Control_Evidence_Index_v1.3.md`](Duckworks_AI_Control_Evidence_Index_v1.3.md) is the current canonical evidence register. It consolidates 42 stable evidence IDs, including `EV-AI006-009`–`016` for the bounded PondGPT supplier lifecycle. Earlier indexes are retained as superseded history.
 
 ## Purpose
 
@@ -53,6 +53,8 @@ See: [`AI-004-winginspect/`](./AI-004-winginspect/)
 ### AI-006 — PondGPT
 
 **Material risk:** Incorrect retrieval permissions or connector authorization may cause PondGPT to return restricted internal information to a user who is not authorized to access the underlying source.
+
+The related [`AI-006 PondGPT supplier-governance package`](../09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/) extends the evidence chain through `AI-TPR-01`, a conditional supplier decision, material-change response, monitoring and exit design. It does not change the restricted-pilot gate or High-risk position.
 
 **Preventive boundary:** `PG-01 — Permission-Aware Retrieval`
 
