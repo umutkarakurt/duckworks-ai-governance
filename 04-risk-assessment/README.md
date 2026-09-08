@@ -10,10 +10,10 @@ This folder contains the active Duckworks method for identifying, scoring, treat
 ## Current artifacts
 
 - [`Duckworks_AI_Risk_Classification_Assessment_Methodology_v1.0.md`](Duckworks_AI_Risk_Classification_Assessment_Methodology_v1.0.md)
-- [`Duckworks_AI_Risk_Scenarios_v1.2.md`](Duckworks_AI_Risk_Scenarios_v1.2.md) — **authoritative current scenario register**
+- [`Duckworks_AI_Risk_Scenarios_v1.3.md`](Duckworks_AI_Risk_Scenarios_v1.3.md) — **authoritative current scenario register**
 - [`03-risk-evidence-reconciliation/`](03-risk-evidence-reconciliation/) — reconciliation analysis and workbook
 
-`Duckworks_AI_Risk_Scenarios_v1.0.md` and v1.1 are retained for version history and are superseded by v1.2. Superseded v0.9 working material is retained separately under `99-archive/`.
+Versions 1.0–1.2 are retained for version history and are superseded by v1.3. Superseded v0.9 working material is retained separately under `99-archive/`.
 
 ## Method design
 
