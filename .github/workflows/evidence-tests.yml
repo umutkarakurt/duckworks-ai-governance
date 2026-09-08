@@ -27,6 +27,9 @@ jobs:
       - name: Run PondGPT authorization control
         run: python 80-operating-evidence/AI-006-pondgpt/pg02_permission_regression_test.py
 
+      - name: Run PondGPT supplier gate
+        run: python 09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/supplier_gate_check.py
+
       - name: Run DuckTalent change monitor
         run: python 12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Check.py
 
@@ -40,5 +43,6 @@ jobs:
         run: |
           python -c "import json; d=json.load(open('80-operating-evidence/AI-005-ducktalent/AI-005_2026-09-02_FAIR_Fairness_Run_Summary.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==10 and d['Post_Remediation_Gate']=='ELIGIBLE_FOR_FURTHER_GOVERNANCE_REVIEW'"
           python -c "import json; d=json.load(open('80-operating-evidence/AI-006-pondgpt/AI-006_2026-09-01_SEC_Permission_Regression_Run_Summary.json')); assert d['Failed_Control_Outcomes']==0 and d['Passed_Control_Outcomes']==20 and d['Final_Expansion_Gate']=='OPEN_AFTER_PASS'"
+          python -c "import json; d=json.load(open('09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/AI-006_LanternMind_Supplier_Gate_Run_Summary.json')); assert d['assertions_failed']==0 and d['assertions_passed']==6 and d['decision']=='CONDITIONAL_RESTRICTED_PILOT_ONLY' and d['human_authorization_required'] is True"
           python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Result.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==7 and d['Material_Reassessment_Trigger'] is True"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/effectiveness_test_results.json')); assert d['overall_status']=='pass' and d['total_cases']==3 and d['expected_results_met']==3 and d['deployment_authorizations']==0"
