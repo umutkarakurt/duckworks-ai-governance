@@ -257,6 +257,10 @@ The package includes:
 
 ➡️ **[View the AI-006 PondGPT operating-evidence package](80-operating-evidence/AI-006-pondgpt/)**
 
+The related supplier-governance case extends the chain through `AI-TPR-01`: supplier intake, an 18-item due-diligence evidence register, six supplier-risk scenarios, 12 proposed contract controls, a conditional gate decision, monitoring and exit design, a blocked material-change event, and an executable supplier gate.
+
+➡️ **[View the AI-006 PondGPT supplier-governance package](09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/)**
+
 > **Evidence boundary:** The executable control and generated records are synthetic portfolio evidence. They demonstrate reproducible technical-control logic and evidence generation, not validated production authorization inheritance, actual DLP/SIEM operation, sustained operating effectiveness, or reduction of PondGPT's current residual risk.
 
 #### Worked example — AI-005 DuckTalent AI
@@ -323,13 +327,13 @@ The governance methodology and controls are informed by:
 
 ### ISO/IEC 42001 — AIMS Evidence Baseline
 
-[View the reconciled AIMS Evidence Baseline v1.2](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.2.md)
+[View the reconciled AIMS Evidence Baseline v1.3](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.3.md)
 
-The baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix, current evidence IDs, the master crosswalk, and prioritized actions with closure criteria. It recognizes the bounded DuckTalent finding-to-closure cycle while preserving the distinction between a portfolio demonstration and an operating enterprise AIMS.
+The baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix, current evidence IDs, the master crosswalk, and prioritized actions with closure criteria. It recognizes both the bounded DuckTalent finding-to-closure cycle and the bounded PondGPT supplier lifecycle while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
 
-The baseline is reconciled to the repository through the v1.2 consolidation release. It does not claim production operation, validated effectiveness, conformity, certification, legal compliance, or independent enterprise assurance.
+The baseline is reconciled through the v1.3 PondGPT supplier-governance milestone. It does not claim executed supplier controls, production operation, validated effectiveness, conformity, certification, legal compliance, or independent enterprise assurance.
 
-[Download the AIMS Master Crosswalk v1.1](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.1.xlsx) to trace AI entry → risk → control → evidence → decision/trigger → AIMS theme.
+[Download the AIMS Master Crosswalk v1.2](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.2.xlsx) to trace AI entry → risk → control → evidence → decision/trigger → AIMS theme.
 
 **Mapping status:** Initial thematic mapping. Exact requirement and Annex A references remain pending verification against the standard. The baseline does not establish exhaustive coverage, conformity, certification, or production operating effectiveness.
 
@@ -447,25 +451,28 @@ A practical review sequence is:
 13. **Operating Evidence — AI-006 PondGPT**  
     Review how an authorization risk is translated into `PG-01` / `PG-02`, an executable permission-regression control, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, retesting, and an explicit production-evidence limitation.
 
-14. **Operating Evidence — AI-005 DuckTalent AI**  
+14. **[Supplier Governance — AI-006 PondGPT](09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/)**  
+    Review the bounded supplier chain from intake and due diligence through evidence gaps, supplier risk, proposed contract conditions, conditional approval, monitoring, material-change response, and exit readiness.
+
+15. **Operating Evidence — AI-005 DuckTalent AI**  
     Review how a fundamental-rights/fairness risk is translated into the `DT-01` job-relevance/proxy boundary and `DT-02` detective control, matched synthetic applicants, seeded proxy-feature failure, diagnostic disparity metrics, deployment blocking, remediation, retesting, and a synthetic governance gate decision.
 
-15. **Monitoring & Reassessment — AI-005 DuckTalent AI**  
+16. **Monitoring & Reassessment — AI-005 DuckTalent AI**  
     Review how a later proposed feature/ranking change challenges prior evidence, is detected through executable regression monitoring, opens `IR-001`, reopens affected governance records, and results in a revised decision that rejects the change and preserves the prior gate.
 
-16. **Internal Audit & Corrective Action — AI-005 DuckTalent AI**  
+17. **Internal Audit & Corrective Action — AI-005 DuckTalent AI**  
     Review the bounded synthetic chain from `IAF-2026-001` through cause analysis, corrective action, reproducible effectiveness testing, management review, and narrow finding closure.
 
-17. **Executive AI Governance Decision Brief**  
+18. **Executive AI Governance Decision Brief**  
     Review the compact management view of current residual-risk distribution, lifecycle gates, control implementation posture, evidence maturity, unresolved blockers, and next management decisions.
 
-18. **[ISO/IEC 42001 AIMS Evidence Baseline v1.2](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.2.md)**  
+19. **[ISO/IEC 42001 AIMS Evidence Baseline v1.3](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.3.md)**  
     Review the proposed management-system scope, reconciled thematic evidence mapping, source boundaries, completed bounded actions, and remaining enterprise gaps.
 
-19. **[AIMS Master Crosswalk v1.1](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.1.xlsx)**  
+20. **[AIMS Master Crosswalk v1.2](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.2.xlsx)**  
     Filter the authoritative traceability view by AI ID, risk, control, evidence state, lifecycle gate, decision, trigger, finding, or AIMS theme.
 
-20. **Adversarial Review / Findings Register**  
+21. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
@@ -524,7 +531,8 @@ The repository includes or is intended to include:
 
 - AI vendor contract template;
 - AI data-processing agreement template;
-- third-party governance requirements.
+- third-party governance requirements; and
+- PondGPT worked supplier case: intake, due diligence, evidence gaps, supplier risk, contract conditions, decision, monitoring, change response, and exit design.
 
 ### Operational governance
 
@@ -534,7 +542,7 @@ The repository includes or is intended to include:
 
 ### Operating evidence
 
-- authoritative control-evidence index v1.2;
+- authoritative control-evidence index v1.3;
 - WingInspect `WI-01` control implementation card;
 - synthetic WingInspect inspection execution log;
 - Human Release Gate control-test workpaper;
@@ -543,6 +551,10 @@ The repository includes or is intended to include:
 - executable PondGPT permission-regression control;
 - generated PondGPT regression log, exception, and run summary;
 - PondGPT permission-regression control-test workpaper;
+- PondGPT supplier due-diligence assessment and evidence register;
+- PondGPT supplier risk assessment and proposed contract control schedule;
+- PondGPT conditional supplier gate decision, monitoring/exit plan, and material-change response;
+- executable PondGPT supplier gate and machine-readable result;
 - DuckTalent `DT-02` control implementation card;
 - synthetic matched-pair applicant fairness dataset;
 - executable DuckTalent fairness/adverse-impact test;
@@ -552,13 +564,13 @@ The repository includes or is intended to include:
 - DuckTalent synthetic proposed-change event and executable change-regression monitor;
 - DuckTalent synthetic reassessment record and revised gate decision;
 - DuckTalent internal-audit finding, root-cause analysis, corrective-action plan, executable effectiveness review, management-review record, and finding-closure record;
-- AIMS Master Crosswalk v1.1;
+- AIMS Master Crosswalk v1.2;
 - Executive AI Governance Decision Brief;
 - skeptical-review remediation tracker.
 
 ### Model and evaluation documentation
 
-- ISO/IEC 42001 AIMS Evidence Baseline v1.2 and master crosswalk;
+- ISO/IEC 42001 AIMS Evidence Baseline v1.3 and master crosswalk;
 - model-card template;
 - DuckTalent model documentation;
 - NIST ARIA evaluation documentation;
