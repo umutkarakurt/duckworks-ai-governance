@@ -24,6 +24,8 @@ It includes eight objectives, a six-sheet performance workbook, three synthetic 
 
 See: [`01-aims-objectives-and-support/`](01-aims-objectives-and-support/)
 
+The downstream [`AIMS risk, opportunity and management-review cycle`](../12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/) consumes these objectives and support records, records management decisions and assigned actions, and tests overdue/dependency escalation without granting authority or closing actions.
+
 ## Governance architecture
 
 The operating model is designed around:
