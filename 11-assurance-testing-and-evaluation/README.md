@@ -18,10 +18,11 @@ This folder demonstrates how Duckworks moves beyond policy creation toward **eva
 
 ## Current authoritative artifacts
 
-- [`ISO/IEC 42001 AIMS Evidence Baseline v1.4`](03-iso42001/duckworks-iso42001-evidence-baseline-v1.4.md)
-- [`AIMS Master Crosswalk v1.3`](03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.3.xlsx)
+- [`ISO/IEC 42001 AIMS Evidence Baseline v1.5`](03-iso42001/duckworks-iso42001-evidence-baseline-v1.5.md)
+- [`AIMS Master Crosswalk v1.4`](03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.4.xlsx)
 - [`DuckTalent AIMS improvement-cycle package`](04-internal-audit-and-corrective-action/AI-005-ducktalent/)
 - [`AIMS objectives and support package`](../06-governance-operating-model/01-aims-objectives-and-support/)
+- [`AIMS risk, opportunity and management-review cycle`](../12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/)
 
 Earlier baseline and crosswalk versions are retained for traceability and are superseded by the versions listed above.
 
