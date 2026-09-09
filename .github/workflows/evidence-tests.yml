@@ -42,6 +42,9 @@ jobs:
       - name: Run AIMS competence authorization gate
         run: python 06-governance-operating-model/01-aims-objectives-and-support/aims_authorization_gate.py
 
+      - name: Run AIMS management action gate
+        run: python 12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/aims_management_action_gate.py
+
       - name: Verify semantic evidence outcomes
         run: |
           python -c "import json; d=json.load(open('80-operating-evidence/AI-005-ducktalent/AI-005_2026-09-02_FAIR_Fairness_Run_Summary.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==10 and d['Post_Remediation_Gate']=='ELIGIBLE_FOR_FURTHER_GOVERNANCE_REVIEW'"
@@ -50,3 +53,4 @@ jobs:
           python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Result.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==7 and d['Material_Reassessment_Trigger'] is True"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/effectiveness_test_results.json')); assert d['overall_status']=='pass' and d['total_cases']==3 and d['expected_results_met']==3 and d['deployment_authorizations']==0"
           python -c "import json; d=json.load(open('06-governance-operating-model/01-aims-objectives-and-support/Duckworks_AIMS_Authorization_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==3 and d['blocked_records']==2 and d['eligible_for_human_authorization']==1 and d['authorizations_granted_by_script']==0 and d['human_authorization_required'] is True"
+          python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/Duckworks_AIMS_Management_Action_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==6 and d['overdue_escalations']==1 and d['blocked_dependencies']==1 and d['open_monitoring']==4 and d['actions_auto_closed']==0 and d['human_decision_required'] is True"
