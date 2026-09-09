@@ -10,9 +10,15 @@ This folder translates material AI risks and governance requirements into **test
 ## Current artifacts
 
 - [`Duckworks_AI_Control_Library_v1.0.xlsx`](Duckworks_AI_Control_Library_v1.0.xlsx)
-- [`Duckworks_AI_Control_Framework_Report_v1.3.md`](Duckworks_AI_Control_Framework_Report_v1.3.md) — **authoritative current control-status report**
+- [`Duckworks_AI_Control_Framework_Report_v1.4.md`](Duckworks_AI_Control_Framework_Report_v1.4.md) — **authoritative current control-status and applicability-reconciliation report**
 
-Versions 1.0–1.2 are retained for version history and are superseded by v1.3.
+Versions 1.0–1.3 are retained for version history and are superseded by v1.4.
+
+- [`01-aims-control-applicability/`](01-aims-control-applicability/) — 45-control applicability method, register, review record and executable validation gate
+
+## AIMS control applicability
+
+The v1.6 package records 44 Applicable and one Conditionally applicable control decision. It links every canonical control to its defined scope, rationale, owner, risks, evidence state, required action and review triggers. The result grants no production-effectiveness or residual-risk credit.
 
 ## Control design fields
 
