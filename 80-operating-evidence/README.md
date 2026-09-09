@@ -8,7 +8,7 @@ This folder contains worked examples showing how an identified AI risk is transl
 
 ## Authoritative evidence index
 
-[`Duckworks_AI_Control_Evidence_Index_v1.4.md`](Duckworks_AI_Control_Evidence_Index_v1.4.md) is the current canonical evidence register. It consolidates 50 stable evidence IDs: 44 available synthetic records and six explicitly unavailable production-evidence records. The new `EV-AIMS-001`–`008` series covers the bounded AIMS objectives-and-support package. Earlier indexes are retained as superseded history.
+[`Duckworks_AI_Control_Evidence_Index_v1.5.md`](Duckworks_AI_Control_Evidence_Index_v1.5.md) is the current canonical evidence register. It consolidates 58 stable evidence IDs: 52 available synthetic records and six explicitly unavailable production-evidence records. `EV-AIMS-001`–`008` covers the bounded AIMS objectives-and-support package; `EV-AIMS-009`–`016` covers the bounded risk, opportunity, management-review, assigned-action and escalation cycle. Earlier indexes are retained as superseded history.
 
 ## Purpose
 
@@ -33,6 +33,10 @@ These states are intentionally separated to avoid granting control-effectiveness
 ### AIMS objectives and support
 
 The [`AIMS objectives-and-support package`](../06-governance-operating-model/01-aims-objectives-and-support/) adds a formula-driven objectives dashboard, competence criteria and records, an executable authorization gate, explicit exceptions, and priority-scope document/evidence control. It demonstrates bounded synthetic management-system support operation and grants no real authorization.
+
+### AIMS risk, opportunity and management review
+
+The [`AIMS management-review cycle`](../12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/) adds AIMS-level risk/opportunity assessment, a release-triggered objective reconciliation, integrated management-review inputs, a synthetic review record, six assigned actions, deterministic overdue/dependency evaluation and an exception record. It changes no system risk score or lifecycle gate and closes no action automatically.
 
 ### AI-004 — WingInspect Vision
 
