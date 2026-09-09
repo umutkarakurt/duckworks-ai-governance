@@ -27,6 +27,16 @@ This is evidence of **synthetic monitoring/reassessment workflow execution**, no
 
 ## Current management-reporting evidence
 
+### AIMS risk, opportunity and management-review cycle
+
+The bounded v1.5 management-system cycle is available at:
+
+[`01-aims-management-review-cycle/`](./01-aims-management-review-cycle/)
+
+It connects a distinct AIMS risk-and-opportunity register and second objectives snapshot to `MR-AIMS-2026-002`, six assigned actions, an executable follow-up gate and an exception record. The defined synthetic follow-up scenario detects one overdue escalation and one blocked dependency, meets six expected outcomes, automatically closes no action and requires human disposition.
+
+This is one synthetic, evidence-consuming management-review cycle. It does not demonstrate a recurring review cadence, real executive attendance or approval, production telemetry, completed remediation, accepted risk, conformity or certification.
+
 ### AIMS Objectives and Performance Register
 
 The bounded v1.4 performance view is available here:
@@ -65,9 +75,9 @@ This is **static synthetic management-reporting evidence**. It does not demonstr
 ## Planned / still-unvalidated artifacts
 
 - AI Monitoring & Reassessment Standard;
-- recurring governance KPI/KRI measurement and trend evidence beyond the bounded v1.4 objective register;
+- recurring governance KPI/KRI measurement and trend evidence beyond the bounded v1.5 release snapshots;
 - live / production-connected DuckPond executive governance dashboard beyond the current static decision brief;
-- recurring executive-reporting cadence and evidence of management review;
+- a second completed management-review interval with real human dispositions and action-effectiveness evidence;
 - production system monitoring records and threshold evidence beyond the current synthetic DuckTalent example;
 - reassessment schedule / overdue-review view;
 - implementation roadmap with owners, dependencies, quick wins, and decision gates;
@@ -81,7 +91,7 @@ Future production reporting would additionally require current inventory coverag
 
 ## Current limitation
 
-The DuckTalent worked example demonstrates one **synthetic, event-driven change-monitoring and reassessment cycle**.
+The DuckTalent worked example demonstrates one **synthetic, event-driven change-monitoring and reassessment cycle**, and the v1.5 package demonstrates one bounded **AIMS-wide risk-to-review-to-action-follow-up cycle**.
 
 It should **not** be used to claim:
 
