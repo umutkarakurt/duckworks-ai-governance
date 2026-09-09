@@ -1,0 +1,21 @@
+{
+  "gate_id": "AIMS-CONTROL-APPLICABILITY-GATE-2026-001",
+  "as_of_date": "2026-09-09",
+  "controls_evaluated": 45,
+  "applicable": 44,
+  "conditionally_applicable": 1,
+  "not_applicable": 0,
+  "pending_decision": 0,
+  "evidence_linked_controls": 9,
+  "controls_without_linked_evidence": 36,
+  "unsupported_implemented_without_evidence": 2,
+  "expected_results_met": 7,
+  "expected_results_total": 7,
+  "failed_assertions": 0,
+  "failures": [],
+  "human_approval_required": true,
+  "decisions_auto_approved": 0,
+  "risk_acceptances_created": 0,
+  "production_effectiveness_claims_created": 0,
+  "evidence_boundary": "Synthetic portfolio validation; automation does not approve applicability, exclusions, risk acceptance, deployment, conformity or production effectiveness"
+}

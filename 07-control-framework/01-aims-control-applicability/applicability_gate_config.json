@@ -1,0 +1,58 @@
+{
+  "gate_id": "AIMS-CONTROL-APPLICABILITY-GATE-2026-001",
+  "register": "Duckworks_AIMS_Control_Applicability_Register_v1.0.csv",
+  "as_of_date": "2026-09-09",
+  "expected_control_count": 45,
+  "expected_applicable": 44,
+  "expected_conditionally_applicable": 1,
+  "expected_not_applicable": 0,
+  "expected_evidence_linked": 9,
+  "expected_without_evidence": 36,
+  "expected_unsupported_implemented_without_evidence": 2,
+  "allowed_decisions": [
+    "Applicable",
+    "Conditionally applicable",
+    "Not applicable",
+    "Pending decision"
+  ],
+  "required_columns": [
+    "Decision_ID",
+    "Control_ID",
+    "Control_Name",
+    "Control_Type",
+    "Control_Owner",
+    "Applicability_Decision",
+    "Applicability_Scope",
+    "Applicability_Rationale",
+    "Conditional_or_Exclusion_Criteria",
+    "Related_Risk_IDs",
+    "Source_Implementation_Status",
+    "Evidence_IDs",
+    "Evidence_Basis",
+    "Production_Effectiveness_Claim",
+    "Risk_Reduction_Credit",
+    "Assurance_Classification",
+    "Required_Action",
+    "Approval_Status",
+    "Decision_Owner",
+    "Review_Date",
+    "Next_Review_Date",
+    "Review_Triggers"
+  ],
+  "output": "Duckworks_AIMS_Control_Applicability_Gate_Run_Summary.json",
+  "human_approval_required": true,
+  "automation_authority": [
+    "validate structure",
+    "detect missing rationale",
+    "detect unsupported implementation assertion"
+  ],
+  "prohibited_automation": [
+    "approve applicability",
+    "approve exclusion",
+    "accept risk",
+    "authorize deployment",
+    "claim conformity",
+    "claim production effectiveness"
+  ]
+}
+
