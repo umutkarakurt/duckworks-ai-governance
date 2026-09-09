@@ -8,7 +8,7 @@ This folder contains worked examples showing how an identified AI risk is transl
 
 ## Authoritative evidence index
 
-[`Duckworks_AI_Control_Evidence_Index_v1.5.md`](Duckworks_AI_Control_Evidence_Index_v1.5.md) is the current canonical evidence register. It consolidates 58 stable evidence IDs: 52 available synthetic records and six explicitly unavailable production-evidence records. `EV-AIMS-001`–`008` covers the bounded AIMS objectives-and-support package; `EV-AIMS-009`–`016` covers the bounded risk, opportunity, management-review, assigned-action and escalation cycle. Earlier indexes are retained as superseded history.
+[`Duckworks_AI_Control_Evidence_Index_v1.6.md`](Duckworks_AI_Control_Evidence_Index_v1.6.md) is the current canonical evidence register. It consolidates 62 stable evidence IDs: 56 available synthetic records and six explicitly unavailable production-evidence records. `EV-AIMS-001`–`008` covers the bounded AIMS objectives-and-support package; `EV-AIMS-009`–`016` covers the bounded risk, opportunity, management-review, assigned-action and escalation cycle; and `EV-AIMS-017`–`020` covers the control-applicability method, register, human review record and executable validation summary. Earlier indexes are retained as superseded history.
 
 ## Purpose
 
