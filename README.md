@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / cybersecurity / GRC portfolio  
-**Status:** v1.4 AIMS objectives-and-support milestone and continuing development  
+**Status:** v1.5 AIMS risk, opportunity and management-review milestone and continuing development  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -305,6 +305,16 @@ It includes eight objectives, a formula-driven six-sheet workbook, three synthet
 
 > **Evidence boundary:** This is a bounded synthetic support-cycle demonstration. It does not establish recurring management-system operation, real personnel competence, enterprise-wide document control, production performance, conformity, or certification.
 
+#### AIMS risk, opportunity and management review
+
+The v1.5 package connects the prior objectives snapshot to a distinct AIMS risk-and-opportunity register, an AIMS-wide management-review record, six assigned actions, and executable follow-up.
+
+The deterministic gate evaluates every action against its due date, dependency and expected result. In the defined synthetic follow-up scenario it detects one overdue escalation and one blocked dependency, meets all six expected results, closes zero actions and requires human disposition.
+
+➡️ **[View the AIMS management-review cycle](12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/)**
+
+> **Evidence boundary:** This is one bounded synthetic review and follow-up cycle. It does not prove recurring management review, real leadership attendance or approval, completed remediation, production effectiveness, risk acceptance, ISO/IEC 42001 conformity, or certification.
+
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
@@ -337,13 +347,13 @@ The governance methodology and controls are informed by:
 
 ### ISO/IEC 42001 — AIMS Evidence Baseline
 
-[View the reconciled AIMS Evidence Baseline v1.4](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.4.md)
+[View the reconciled AIMS Evidence Baseline v1.5](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.5.md)
 
-The baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix, 50 current evidence IDs, the master crosswalk, and prioritized actions with closure criteria. It recognizes the DuckTalent improvement cycle, PondGPT supplier lifecycle, and AIMS objectives-and-support pack while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
+The baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix, 58 current evidence IDs, the master crosswalk, and prioritized actions with closure criteria. It recognizes the DuckTalent improvement cycle, PondGPT supplier lifecycle, AIMS objectives-and-support pack, and bounded AIMS-wide management-review cycle while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
 
-The baseline is reconciled through the v1.4 AIMS objectives-and-support milestone. It does not claim recurring AIMS operation, real competence or authorization, enterprise-wide records operation, production effectiveness, conformity, certification, legal compliance, or independent enterprise assurance.
+The baseline is reconciled through the v1.5 management-review milestone. It does not claim recurring AIMS operation, real competence or authorization, enterprise-wide records operation, production effectiveness, conformity, certification, legal compliance, or independent enterprise assurance.
 
-[Download the AIMS Master Crosswalk v1.3](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.3.xlsx) to trace AI entry → risk → control → evidence → decision/trigger → AIMS theme.
+[Download the AIMS Master Crosswalk v1.4](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.4.xlsx) to trace AI entry → risk → control → evidence → decision/trigger → AIMS theme.
 
 **Mapping status:** Initial thematic mapping. Exact requirement and Annex A references remain pending verification against the standard. The baseline does not establish exhaustive coverage, conformity, certification, or production operating effectiveness.
 
@@ -476,16 +486,19 @@ A practical review sequence is:
 18. **Executive AI Governance Decision Brief**  
     Review the compact management view of current residual-risk distribution, lifecycle gates, control implementation posture, evidence maturity, unresolved blockers, and next management decisions.
 
-19. **[ISO/IEC 42001 AIMS Evidence Baseline v1.4](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.4.md)**  
+19. **[ISO/IEC 42001 AIMS Evidence Baseline v1.5](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.5.md)**  
     Review the proposed management-system scope, reconciled thematic evidence mapping, source boundaries, completed bounded actions, and remaining enterprise gaps.
 
-20. **[AIMS Master Crosswalk v1.3](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.3.xlsx)**  
+20. **[AIMS Master Crosswalk v1.4](11-assurance-testing-and-evaluation/03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.4.xlsx)**  
     Filter the authoritative traceability view by AI ID, risk, control, evidence state, lifecycle gate, decision, trigger, finding, or AIMS theme.
 
 21. **[AIMS Objectives and Support](06-governance-operating-model/01-aims-objectives-and-support/)**  
     Review measurable objectives, formula status, competence criteria, authorization-gate enforcement, exceptions, and priority-scope document control.
 
-22. **Adversarial Review / Findings Register**  
+22. **[AIMS Risk, Opportunity and Management Review](12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/)**  
+    Review AIMS-level risks and opportunity, the second objective snapshot, integrated review inputs, retained gate decisions, assigned actions, deterministic escalation and the explicit human-decision boundary.
+
+23. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
 ---
@@ -555,7 +568,7 @@ The repository includes or is intended to include:
 
 ### Operating evidence
 
-- authoritative control-evidence index v1.4 with 50 stable records;
+- authoritative control-evidence index v1.5 with 58 stable records;
 - WingInspect `WI-01` control implementation card;
 - synthetic WingInspect inspection execution log;
 - Human Release Gate control-test workpaper;
@@ -579,13 +592,14 @@ The repository includes or is intended to include:
 - DuckTalent internal-audit finding, root-cause analysis, corrective-action plan, executable effectiveness review, management-review record, and finding-closure record;
 - AIMS objectives and performance workbook, competence/authorization register and executable gate;
 - AIMS document/evidence control standard and priority document register;
-- AIMS Master Crosswalk v1.3;
+- AIMS risk-and-opportunity register, AIMS-wide management-review record, action tracker and executable escalation gate;
+- AIMS Master Crosswalk v1.4;
 - Executive AI Governance Decision Brief;
 - skeptical-review remediation tracker.
 
 ### Model and evaluation documentation
 
-- ISO/IEC 42001 AIMS Evidence Baseline v1.4 and master crosswalk;
+- ISO/IEC 42001 AIMS Evidence Baseline v1.5 and master crosswalk;
 - model-card template;
 - DuckTalent model documentation;
 - NIST ARIA evaluation documentation;
