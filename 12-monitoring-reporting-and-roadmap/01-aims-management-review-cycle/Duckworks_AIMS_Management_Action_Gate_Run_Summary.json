@@ -1,0 +1,94 @@
+{
+  "gate_id": "AIMS-MGMT-ACTION-GATE-2026-001",
+  "as_of_date": "2026-10-01",
+  "actions_evaluated": 6,
+  "expected_results_met": 6,
+  "failed_assertions": 0,
+  "overdue_escalations": 1,
+  "blocked_dependencies": 1,
+  "open_monitoring": 4,
+  "recorded_closed": 0,
+  "actions_auto_closed": 0,
+  "human_decision_required": true,
+  "evidence_boundary": "Synthetic portfolio follow-up; no action is automatically closed, accepted or authorized",
+  "results": [
+    {
+      "action_id": "AIMS-ACT-001",
+      "owner": "Eleanor Duckford - AI Governance Lead",
+      "due_date": "2026-10-30",
+      "recorded_status": "Open",
+      "result": "MONITOR_OPEN",
+      "reasons": [
+        "OPEN_NOT_YET_DUE"
+      ],
+      "expected_result": "MONITOR_OPEN",
+      "expected_result_met": true,
+      "action_closed_by_script": false
+    },
+    {
+      "action_id": "AIMS-ACT-002",
+      "owner": "Percival Duckworth - Director Procurement & Vendor Assurance",
+      "due_date": "2026-12-15",
+      "recorded_status": "Blocked",
+      "result": "BLOCKED_DEPENDENCY",
+      "reasons": [
+        "DEPENDENCY_BLOCKED"
+      ],
+      "expected_result": "BLOCKED_DEPENDENCY",
+      "expected_result_met": true,
+      "action_closed_by_script": false
+    },
+    {
+      "action_id": "AIMS-ACT-003",
+      "owner": "Relevant Business Owners",
+      "due_date": "2026-09-30",
+      "recorded_status": "In Progress",
+      "result": "ESCALATE_OVERDUE",
+      "reasons": [
+        "DUE_DATE_PASSED"
+      ],
+      "expected_result": "ESCALATE_OVERDUE",
+      "expected_result_met": true,
+      "action_closed_by_script": false
+    },
+    {
+      "action_id": "AIMS-ACT-004",
+      "owner": "Dr. Ada Duckfield - Head of Data & AI",
+      "due_date": "2026-12-31",
+      "recorded_status": "Open",
+      "result": "MONITOR_OPEN",
+      "reasons": [
+        "OPEN_NOT_YET_DUE"
+      ],
+      "expected_result": "MONITOR_OPEN",
+      "expected_result_met": true,
+      "action_closed_by_script": false
+    },
+    {
+      "action_id": "AIMS-ACT-005",
+      "owner": "Head of Internal Audit",
+      "due_date": "2026-11-30",
+      "recorded_status": "Open",
+      "result": "MONITOR_OPEN",
+      "reasons": [
+        "OPEN_NOT_YET_DUE"
+      ],
+      "expected_result": "MONITOR_OPEN",
+      "expected_result_met": true,
+      "action_closed_by_script": false
+    },
+    {
+      "action_id": "AIMS-ACT-006",
+      "owner": "Eleanor Duckford - AI Governance Lead",
+      "due_date": "2026-12-31",
+      "recorded_status": "Open",
+      "result": "MONITOR_OPEN",
+      "reasons": [
+        "OPEN_NOT_YET_DUE"
+      ],
+      "expected_result": "MONITOR_OPEN",
+      "expected_result_met": true,
+      "action_closed_by_script": false
+    }
+  ]
+}

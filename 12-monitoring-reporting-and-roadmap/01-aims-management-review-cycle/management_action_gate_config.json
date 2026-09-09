@@ -1,0 +1,17 @@
+{
+  "gate_id": "AIMS-MGMT-ACTION-GATE-2026-001",
+  "as_of_date": "2026-10-01",
+  "tracker_file": "Duckworks_AIMS_Management_Action_Tracker_v1.0.csv",
+  "summary_file": "Duckworks_AIMS_Management_Action_Gate_Run_Summary.json",
+  "expected_results": {
+    "AIMS-ACT-001": "MONITOR_OPEN",
+    "AIMS-ACT-002": "BLOCKED_DEPENDENCY",
+    "AIMS-ACT-003": "ESCALATE_OVERDUE",
+    "AIMS-ACT-004": "MONITOR_OPEN",
+    "AIMS-ACT-005": "MONITOR_OPEN",
+    "AIMS-ACT-006": "MONITOR_OPEN"
+  },
+  "human_decision_required": true,
+  "evidence_boundary": "Synthetic portfolio follow-up; no action is automatically closed, accepted or authorized"
+}
+
