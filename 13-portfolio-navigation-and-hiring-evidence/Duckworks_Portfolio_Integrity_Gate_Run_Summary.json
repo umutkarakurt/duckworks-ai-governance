@@ -1,0 +1,40 @@
+{
+  "gate": "Portfolio integrity",
+  "version": "1.0",
+  "status": "PASS",
+  "assertions_passed": 13,
+  "assertions_total": 13,
+  "checks": {
+    "competency_count": 14,
+    "claim_count": 12,
+    "unique_competency_ids": true,
+    "unique_claim_ids": true,
+    "required_competency_ids_present": true,
+    "required_claim_ids_present": true,
+    "invalid_strength_count": 0,
+    "strong_competency_count": 13,
+    "missing_limitation_count": 0,
+    "missing_claim_boundary_count": 0,
+    "invalid_claim_status_count": 0,
+    "invalid_path_count": 0,
+    "missing_required_file_count": 0,
+    "required_cases_present": true,
+    "automatic_maturity_upgrades": 0
+  },
+  "assertions": {
+    "competency_count_matches": true,
+    "claim_count_matches": true,
+    "competency_ids_unique": true,
+    "claim_ids_unique": true,
+    "required_ids_present": true,
+    "strength_values_valid": true,
+    "strong_competency_threshold_met": true,
+    "limitations_complete": true,
+    "claim_statuses_valid": true,
+    "evidence_paths_resolve": true,
+    "required_files_present": true,
+    "interview_cases_covered": true,
+    "no_automatic_maturity_upgrade": true
+  },
+  "boundary": "This gate validates repository structure, traceability and claim boundaries. It does not validate production operation, legal compliance, certification or hiring outcomes."
+}

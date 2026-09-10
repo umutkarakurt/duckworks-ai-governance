@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "required_competency_ids": ["CMP-01", "CMP-02", "CMP-03", "CMP-04", "CMP-05", "CMP-06", "CMP-07", "CMP-08", "CMP-09", "CMP-10", "CMP-11", "CMP-12", "CMP-13", "CMP-14"],
+  "required_claim_ids": ["CLM-01", "CLM-02", "CLM-03", "CLM-04", "CLM-05", "CLM-06", "CLM-07", "CLM-08", "CLM-09", "CLM-10", "CLM-11", "CLM-12"],
+  "allowed_strengths": ["Strong", "Moderate"],
+  "allowed_claim_statuses": ["Allowed with boundary"],
+  "minimum_strong_competencies": 12,
+  "required_case_numbers": ["Case 1", "Case 2", "Case 3", "Case 4", "Case 5", "Case 6"],
+  "required_files": [
+    "13-portfolio-navigation-and-hiring-evidence/README.md",
+    "13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Evaluator_Guide_v1.0.md",
+    "13-portfolio-navigation-and-hiring-evidence/Duckworks_Interview_Case_Study_Pack_v1.0.md",
+    "13-portfolio-navigation-and-hiring-evidence/Duckworks_Competency_to_Evidence_Map_v1.0.csv",
+    "13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Claim_Boundary_Register_v1.0.csv",
+    "13-portfolio-navigation-and-hiring-evidence/Duckworks_Project_WING_Closeout_and_Forward_Roadmap_v1.0.md"
+  ],
+  "expected": {
+    "competency_count": 14,
+    "claim_count": 12,
+    "invalid_path_count": 0,
+    "invalid_claim_status_count": 0,
+    "automatic_maturity_upgrades": 0
+  }
+}
+
