@@ -15,11 +15,13 @@ This folder demonstrates how Duckworks moves beyond policy creation toward **eva
 | `02-adversarial-review/` | Skeptical multi-perspective review and structured findings register. |
 | [`03-iso42001/`](03-iso42001/) | AIMS thematic evidence baseline and master traceability crosswalk. |
 | [`04-internal-audit-and-corrective-action/`](04-internal-audit-and-corrective-action/) | Bounded synthetic audit, corrective-action, management-review and closure evidence. |
+| [`05-aims-internal-audit-programme/`](05-aims-internal-audit-programme/) | Risk-based 45-control audit universe, 2026–2027 programme, first-wave DD-01/FF-01 testing and open findings. |
 
 ## Current authoritative artifacts
 
-- [`ISO/IEC 42001 AIMS Evidence Baseline v1.6`](03-iso42001/duckworks-iso42001-evidence-baseline-v1.6.md)
-- [`AIMS Master Crosswalk v1.5`](03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.5.xlsx)
+- [`ISO/IEC 42001 AIMS Evidence Baseline v1.7`](03-iso42001/duckworks-iso42001-evidence-baseline-v1.7.md)
+- [`AIMS Master Crosswalk v1.6`](03-iso42001/Duckworks_AIMS_Master_Crosswalk_v1.6.xlsx)
+- [`AIMS internal-audit programme`](05-aims-internal-audit-programme/)
 - [`DuckTalent AIMS improvement-cycle package`](04-internal-audit-and-corrective-action/AI-005-ducktalent/)
 - [`AIMS objectives and support package`](../06-governance-operating-model/01-aims-objectives-and-support/)
 - [`AIMS risk, opportunity and management-review cycle`](../12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/)
