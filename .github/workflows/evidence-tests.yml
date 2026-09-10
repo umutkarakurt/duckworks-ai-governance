@@ -48,6 +48,9 @@ jobs:
       - name: Run AIMS control applicability gate
         run: python 07-control-framework/01-aims-control-applicability/aims_control_applicability_gate.py
 
+      - name: Run AIMS audit coverage gate
+        run: python 11-assurance-testing-and-evaluation/05-aims-internal-audit-programme/audit_coverage_gate.py
+
       - name: Verify semantic evidence outcomes
         run: |
           python -c "import json; d=json.load(open('80-operating-evidence/AI-005-ducktalent/AI-005_2026-09-02_FAIR_Fairness_Run_Summary.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==10 and d['Post_Remediation_Gate']=='ELIGIBLE_FOR_FURTHER_GOVERNANCE_REVIEW'"
@@ -58,4 +61,4 @@ jobs:
           python -c "import json; d=json.load(open('06-governance-operating-model/01-aims-objectives-and-support/Duckworks_AIMS_Authorization_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==3 and d['blocked_records']==2 and d['eligible_for_human_authorization']==1 and d['authorizations_granted_by_script']==0 and d['human_authorization_required'] is True"
           python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/Duckworks_AIMS_Management_Action_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==6 and d['overdue_escalations']==1 and d['blocked_dependencies']==1 and d['open_monitoring']==4 and d['actions_auto_closed']==0 and d['human_decision_required'] is True"
           python -c "import json; d=json.load(open('07-control-framework/01-aims-control-applicability/Duckworks_AIMS_Control_Applicability_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==7 and d['controls_evaluated']==45 and d['applicable']==44 and d['conditionally_applicable']==1 and d['not_applicable']==0 and d['evidence_linked_controls']==9 and d['unsupported_implemented_without_evidence']==2 and d['decisions_auto_approved']==0 and d['human_approval_required'] is True"
-
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/05-aims-internal-audit-programme/Duckworks_AIMS_Audit_Coverage_Gate_Run_Summary.json')); assert d['status']=='PASS' and d['assertions_passed']==13 and d['controls_in_universe']==45 and d['priority_counts']=={'P1 Immediate':2,'P2 High':23,'P3 Medium':20} and d['programme_population']==45 and d['first_wave_controls']==['DD-01','FF-01'] and d['test_steps']==14 and d['open_findings']==2 and d['findings_auto_closed']==0 and d['production_effectiveness_claims']==0 and d['human_disposition_required'] is True"
