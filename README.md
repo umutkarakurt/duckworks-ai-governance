@@ -13,8 +13,8 @@
 </p>
 
 **Organization:** Duckworks *(fictional)*  
-**Project type:** AI governance / cybersecurity / GRC portfolio  
-**Status:** v1.8 portfolio consolidation and hiring-evidence milestone  
+**Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
+**Status:** v1.8 portfolio baseline + Phase II technical AI security engineering workstream initiated  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -71,6 +71,9 @@ This portfolio demonstrates practical competence in:
 - AI impact assessment;
 - human oversight;
 - AI security governance;
+- technical AI security architecture and threat modelling;
+- secure RAG, application/API security, and adversarial validation;
+- security telemetry, detection engineering, and reproducible technical evidence;
 - third-party AI risk management;
 - data governance and privacy integration;
 - control design and evidence requirements;
@@ -343,6 +346,30 @@ First-wave engagement `AUD-AIMS-2026-001` tests the two unsupported `Implemented
 
 > **Evidence boundary:** This is a bounded synthetic repository assurance exercise. Auditor assignment, independence, competence and approval remain unverified. It does not establish production effectiveness, independent enterprise assurance, legal compliance, ISO/IEC 42001 conformity or certification.
 
+
+### Phase II — Technical AI Security Engineering
+
+Project W.I.N.G. now includes a bounded **Phase II Technical AI Security Engineering & Adversarial Validation** workstream. Phase II does not rewrite the original governance-readiness scope; it adds an explicitly authorized synthetic security-engineering layer for selected Duckworks AI systems.
+
+The first target is **AI-006 PondGPT**. The Phase II foundation currently includes:
+
+- **[Technical AI & Cybersecurity Engineering Scope Addendum](01-project-charter-and-context/02-objectives-and-scope/Duckworks_Technical_AI_and_Cybersecurity_Engineering_Scope_Addendum_v1.0.md)** — defines the bounded authorization, in-scope security activities, prohibited activities, evidence rules, roles, acceptance criteria, and synthetic/non-production boundary.
+- **[Technical AI Security Reference & Applicability Baseline](02-regulatory-and-framework-research/Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md)** — separates binding law from standards/framework guidance, government security guidance, technical threat references, and internal Duckworks practices.
+- **[PondGPT Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md)** — defines synthetic components, trust boundaries, OIDC/JWT identity assumptions, deterministic authorization, RAG ingestion, model-provider boundary, optional tool gateway, egress, secrets, telemetry, build integrity, and testable security requirements.
+- **[PondGPT Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md)** — identifies protected assets, attacker profiles, 38 technical threats, control gaps, attack paths, and the initial `PG03-T001`–`PG03-T008` adversarial test set.
+
+The Phase II security model deliberately treats AI as part of an end-to-end information system. Conventional identity, API, software-supply-chain, network, secrets, logging, and authorization controls remain foundational; AI-specific controls are added for prompt injection, RAG poisoning, vector/index integrity, model-output trust, tool manipulation, and model/provider boundaries.
+
+Two security invariants anchor the PondGPT design:
+
+> **Authorization must be enforced before retrieved content enters the LLM context. The model itself is not an access-control mechanism.**
+
+> **Retrieved content and model output are untrusted data. Neither receives system authority merely because an LLM processed or produced it.**
+
+**Current evidence boundary:** the Phase II architecture and threat model are design/test baselines. They do not establish that the depicted architecture exists in production or that the planned adversarial controls are operating effectively. Existing `PG-01` / `PG-02` synthetic evidence remains separately bounded in `80-operating-evidence/AI-006-pondgpt/`.
+
+**Next technical milestone:** implement the PondGPT technical-security validation environment and execute `PG-03 — Prompt Injection & RAG Poisoning Test Suite` using a baseline attack → evidence → remediation → retest → detection-validation chain.
+
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
@@ -387,11 +414,18 @@ The baseline is reconciled through the v1.7 internal-audit programme milestone. 
 
 ### Technical and cybersecurity guidance
 
-The project also uses recognized technical references such as:
+The project also uses recognized cybersecurity and technical references such as:
 
-- ENISA AI cybersecurity guidance;
-- MITRE ATLAS;
-- OWASP GenAI Security guidance.
+- **NIST Cybersecurity Framework (CSF) 2.0**;
+- **NIST AI 100-2 E2025 — Adversarial Machine Learning taxonomy**;
+- **NIST SP 800-218A — Secure Software Development Practices for Generative AI and Dual-Use Foundation Models**;
+- **ENISA — Multilayer Framework for Good Cybersecurity Practices for AI**;
+- **NCSC / international partners — Guidelines for Secure AI System Development**;
+- **MITRE ATLAS**;
+- **OWASP GenAI Security Project**; and
+- **OWASP API Security Top 10 — 2023**.
+
+For PondGPT-specific legal/security applicability and engineering use, see the **[Technical AI Security Reference & Applicability Baseline](02-regulatory-and-framework-research/Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md)**.
 
 ### Important limitation
 
@@ -446,8 +480,8 @@ duckworks-ai-governance/
 | `07-control-framework` | AI control library and control-framework design |
 | `08-policies-standards-and-operations` | Policies, SOPs, playbooks, runbooks, change and data-management documentation |
 | `09-third-party-ai-governance` | Vendor due diligence, contractual requirements, DPAs, supplier governance |
-| `10-system-model-and-technical-documentation` | Model cards, model documentation, AI BOM, architecture and data-flow material |
-| `11-assurance-testing-and-evaluation` | ISO/IEC 42001 evidence mapping, NIST ARIA work, adversarial review, control testing and future audit work |
+| `10-system-model-and-technical-documentation` | Model cards, model documentation, architecture/data flows, Phase II security architecture, and technical threat models |
+| `11-assurance-testing-and-evaluation` | ISO/IEC 42001 evidence mapping, NIST ARIA work, adversarial review, control testing, internal audit, and Phase II technical-security validation |
 | `12-monitoring-reporting-and-roadmap` | Executive decision reporting, KPIs/KRIs, monitoring/reassessment, dashboards, and implementation roadmap |
 | `13-portfolio-navigation-and-hiring-evidence` | Evaluator paths, competency mapping, interview cases, claim boundaries and portfolio closeout |
 | `80-operating-evidence` | Worked risk-to-control implementation, synthetic execution evidence, control testing, evidence indexing, and explicit production-evidence gaps |
@@ -537,6 +571,16 @@ A practical review sequence is:
 24. **Adversarial Review / Findings Register**  
     Review identified weaknesses, unsupported assumptions, gaps, remediation status, and improvement actions.
 
+### Technical-security reviewer path
+
+For a security-focused review, use this shorter sequence after the existing PondGPT operating-evidence package:
+
+1. **[Phase II Scope Addendum](01-project-charter-and-context/02-objectives-and-scope/Duckworks_Technical_AI_and_Cybersecurity_Engineering_Scope_Addendum_v1.0.md)** — confirm authorization and evidence boundaries.
+2. **[Technical AI Security Reference & Applicability Baseline](02-regulatory-and-framework-research/Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md)** — review legal/framework/technical-source separation.
+3. **[PondGPT Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md)** — inspect components, trust boundaries and security invariants.
+4. **[PondGPT Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md)** — inspect attacker paths, priorities, gaps and planned tests.
+5. **`80-operating-evidence/AI-006-pondgpt/`** — compare the design baseline with the evidence that actually exists.
+
 ---
 
 ## 11. Key Portfolio Artifacts
@@ -565,7 +609,9 @@ The repository includes or is intended to include:
 - synthetic AI system inventory;
 - AI asset inventory;
 - AI Bill of Materials;
-- architecture and data-flow diagrams.
+- architecture and data-flow diagrams;
+- PondGPT Phase II technical security architecture; and
+- PondGPT technical threat model with attack paths and test requirements.
 
 ### Assessment
 
@@ -634,11 +680,13 @@ The repository includes or is intended to include:
 - Executive AI Governance Decision Brief;
 - skeptical-review remediation tracker.
 
-### Model and evaluation documentation
+### Model, technical security, and evaluation documentation
 
 - ISO/IEC 42001 AIMS Evidence Baseline v1.7 and master crosswalk;
 - model-card template;
 - DuckTalent model documentation;
+- PondGPT Technical Security Architecture v1.0;
+- PondGPT Technical Threat Model v1.0;
 - NIST ARIA evaluation documentation;
 - adversarial multi-perspective review and findings register.
 
@@ -739,8 +787,8 @@ The initial portfolio does **not** claim to perform or provide:
 
 - production AI development;
 - production deployment;
-- full technical penetration testing;
-- full AI red-team execution;
+- penetration testing of real production or third-party systems;
+- uncontrolled or externally targeted AI red-team activity;
 - statistical fairness validation using real applicant data;
 - legal advice;
 - formal EU AI Act conformity assessment;
@@ -755,13 +803,15 @@ The initial portfolio does **not** claim to perform or provide:
 
 These limitations are deliberate and form part of the project's assurance boundary.
 
+**Phase II exception:** bounded penetration-style, API, RAG, adversarial, supply-chain, and detection testing is now in scope **only** for fictional Duckworks systems, synthetic data, locally controlled components, or explicitly authorized test environments under the Phase II scope addendum. This does not relax the prohibition on unauthorized testing or create production-effectiveness claims.
+
 ---
 
 ## 16. Controlled Future Development
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 baseline is suitable for portfolio evaluation. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. Potential evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a technical AI-security engineering workstream. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The immediate Phase II path is to build the PondGPT synthetic security lab, execute `PG-03`, capture telemetry, remediate observed weaknesses, retest, and reconcile the resulting evidence with the existing risk/control architecture. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
