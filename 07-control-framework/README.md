@@ -10,15 +10,19 @@ This folder translates material AI risks and governance requirements into **test
 ## Current artifacts
 
 - [`Duckworks_AI_Control_Library_v1.0.xlsx`](Duckworks_AI_Control_Library_v1.0.xlsx)
-- [`Duckworks_AI_Control_Framework_Report_v1.4.md`](Duckworks_AI_Control_Framework_Report_v1.4.md) — **authoritative current control-status and applicability-reconciliation report**
+- [`Duckworks_AI_Control_Framework_Report_v1.5.md`](Duckworks_AI_Control_Framework_Report_v1.5.md) — **authoritative current control-status, applicability and audit-reconciliation report**
 
-Versions 1.0–1.3 are retained for version history and are superseded by v1.4.
+Versions 1.0–1.4 are retained for version history and are superseded by v1.5.
 
 - [`01-aims-control-applicability/`](01-aims-control-applicability/) — 45-control applicability method, register, review record and executable validation gate
 
 ## AIMS control applicability
 
 The v1.6 package records 44 Applicable and one Conditionally applicable control decision. It links every canonical control to its defined scope, rationale, owner, risks, evidence state, required action and review triggers. The result grants no production-effectiveness or residual-risk credit.
+
+## AIMS internal-audit reconciliation
+
+The v1.7 first-wave review tests the complete population of controls whose source status is `Implemented` but whose applicability record links no control evidence. `DD-01` and `FF-01` are both **not demonstrated** by reviewed repository evidence. High findings `IAF-2026-002` and `IAF-2026-003` remain open, and neither control receives implementation, effectiveness or risk-reduction credit. The source labels remain visible for history pending human-approved evidence validation or status correction.
 
 ## Control design fields
 
