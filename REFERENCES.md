@@ -2,8 +2,10 @@
 
 **Project:** Duckworks AI Governance Readiness Assessment & Control Framework  
 **Organization:** Duckworks (fictional)  
-**Last verified:** 2026-08-09  
+**Last verified:** 2026-09-10  
 **Purpose:** Maintain a controlled list of public, authoritative sources used to design, assess, and evidence the Duckworks AI governance program.
+
+**Phase II technical-security interpretation:** [Duckworks Technical AI Security Reference & Applicability Baseline v1.0](02-regulatory-and-framework-research/Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md) provides the PondGPT-specific separation between binding law, standards/framework guidance, official cybersecurity guidance, recognized technical threat references, and internal Duckworks engineering requirements.
 
 > **Important:** Duckworks is fictional. The applicability notes below are project assumptions for portfolio purposes and are not legal advice. Regulatory scope should always be validated against the actual facts, jurisdiction, role of the organization (e.g., provider/deployer/importer/distributor), sector, system intended purpose, and current national implementing law.
 >
@@ -37,6 +39,40 @@
 - **Primary use in Duckworks:** QuackBot, PondGPT, DuckDesign AI, and unmanaged generative-AI usage.
 - **Official PDF:** https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
 - **AI RMF resources:** https://www.nist.gov/itl/ai-risk-management-framework/ai-risk-management-framework-resources
+
+### NIST Cybersecurity Framework (CSF) 2.0
+
+- **Publisher:** NIST
+- **Type:** Voluntary cybersecurity risk-management framework
+- **Primary use in Duckworks:** Conventional cybersecurity structure for AI-enabled systems across Govern, Identify, Protect, Detect, Respond, and Recover.
+- **Official publication:** https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20
+- **CSF Resource Center:** https://www.nist.gov/cyberframework
+
+**Duckworks relevance:**  
+Phase II uses CSF 2.0 to ensure that AI-specific testing does not replace foundational identity, access, asset, software, network, detection, response, and recovery disciplines.
+
+### NIST AI 100-2 E2025 — Adversarial Machine Learning
+
+- **Publisher:** NIST
+- **Full title:** *Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations*
+- **Type:** Technical taxonomy and terminology
+- **Date published:** March 2025
+- **Primary use in Duckworks:** Precise attacker-goal, capability, knowledge, lifecycle-stage, poisoning, evasion, privacy, abuse, and mitigation terminology for adversarial AI testing.
+- **Official page:** https://csrc.nist.gov/pubs/ai/100/2/e2025/final
+- **DOI:** https://doi.org/10.6028/NIST.AI.100-2e2025
+
+**Duckworks relevance:**  
+Core Phase II technical reference for PondGPT threat modelling and later adversarial-ML work on systems such as WingInspect Vision. It is not a legal requirement or a control checklist.
+
+### NIST SP 800-218A — Secure Software Development Practices for Generative AI and Dual-Use Foundation Models
+
+- **Publisher:** NIST
+- **Type:** Secure Software Development Framework (SSDF) community profile
+- **Primary use in Duckworks:** Secure AI software development, dependency and artifact integrity, model/application lifecycle security, provenance, vulnerability handling, testing, and release controls.
+- **Official page:** https://csrc.nist.gov/pubs/sp/800/218/a/final
+
+**Duckworks relevance:**  
+Particularly relevant to PondGPT, QuackBot, DuckDesign AI, and other systems built on or integrating generative AI / foundation-model capabilities.
 
 ---
 
@@ -238,6 +274,29 @@ Useful across all AI systems, particularly DuckDesign AI, QuackBot, PondGPT, Win
 **Duckworks relevance:**  
 Especially useful for **QuackBot**, **PondGPT**, **DuckDesign AI**, and **Unregistered GenAI Usage**.
 
+### NCSC / International Partners — Guidelines for Secure AI System Development
+
+- **Publisher:** UK National Cyber Security Centre (NCSC) with international cybersecurity partners
+- **Type:** Government cybersecurity guidance
+- **Version:** 1.0
+- **Primary use in Duckworks:** Secure AI design, development, deployment, operation, threat modelling, supply-chain security, model/data protection, logging, monitoring, incident management, and update management.
+- **Official collection:** https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development
+- **Guidelines page:** https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development/guidelines
+
+**Duckworks relevance:**  
+Useful across the full AI portfolio. Phase II uses its lifecycle framing to connect threat modelling with secure development, deployment, logging, monitoring, and maintenance.
+
+### OWASP API Security Top 10 — 2023
+
+- **Publisher:** OWASP Foundation
+- **Type:** Community API-security guidance
+- **Primary use in Duckworks:** API authorization, authentication, object/property/function-level access control, resource consumption, SSRF, security configuration, API inventory, and safe API consumption.
+- **Official project:** https://owasp.org/API-Security/
+- **2023 edition:** https://owasp.org/API-Security/editions/2023/en/0x11-t10/
+
+**Duckworks relevance:**  
+Core application-security reference for PondGPT and QuackBot. It prevents the technical-security workstream from reducing AI security to prompt injection alone.
+
 ---
 
 ## 8. International Responsible AI Principles
@@ -267,6 +326,9 @@ Useful as an overarching principles layer but should not be treated as a substit
 | Cyber Resilience Act | **Possible** | Possible | Possible | **Possible** | Possible | Possible | — |
 | NIS 2 | Organization-level applicability assessment | Organization-level applicability assessment | Organization-level applicability assessment | Organization-level applicability assessment | Organization-level applicability assessment | Organization-level applicability assessment | Organization-level applicability assessment |
 | NIST AI RMF | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| NIST CSF 2.0 | ✓ | ✓ | ✓ | ✓ | ✓ | **✓ Core** | ✓ |
+| NIST AI 100-2 E2025 | ✓ | **✓ Core** | ✓ | **✓ Core** | ✓ | **✓ Core** | ✓ |
+| NIST SP 800-218A | **✓** | **✓ Core** | Possible | Possible | Possible | **✓ Core** | ✓ |
 | NIST GenAI Profile | ✓ | **✓** | — | — | Possible | **✓** | **✓** |
 | ISO/IEC 42001 | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
 | ISO/IEC 23894 | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
@@ -275,6 +337,8 @@ Useful as an overarching principles layer but should not be treated as a substit
 | ENISA AI Cybersecurity Framework | **✓** | **✓** | ✓ | **✓** | ✓ | **✓** | **✓** |
 | MITRE ATLAS | **✓** | **✓** | ✓ | **✓** | ✓ | **✓** | **✓** |
 | OWASP GenAI Security | **✓** | **✓ Core** | — | — | Possible | **✓ Core** | **✓ Core** |
+| NCSC Secure AI Development | ✓ | **✓** | ✓ | ✓ | ✓ | **✓ Core** | ✓ |
+| OWASP API Security | Possible | **✓ Core** | Possible | Possible | Possible | **✓ Core** | — |
 | OECD AI Principles | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 **Legend**
@@ -291,8 +355,8 @@ Useful as an overarching principles layer but should not be treated as a substit
 When Duckworks documents a regulatory or framework conclusion, use sources in the following order:
 
 1. **Binding legal text** — EUR-Lex / Official Journal.
-2. **Official regulator or competent-authority guidance** — e.g., EDPB, ENISA.
-3. **Formal standards and frameworks** — e.g., ISO/IEC, NIST.
+2. **Official regulator, government, or competent-authority guidance** — e.g., EDPB, ENISA, NCSC, NIST cybersecurity publications.
+3. **Formal standards and frameworks** — e.g., ISO/IEC, NIST AI RMF, NIST CSF.
 4. **Recognized technical threat/control references** — e.g., MITRE ATLAS, OWASP.
 5. **Secondary commentary** — only for additional interpretation; do not use as the primary basis for a legal or compliance conclusion.
 
@@ -303,6 +367,8 @@ For legislation that has been amended, prefer the **current consolidated text fo
 ## 11. Maintenance Rules for This File
 
 - Review links and legal versions **at least quarterly** during the portfolio project.
+- Re-check living technical references such as **MITRE ATLAS** and **OWASP GenAI Security** when assigning technique/category identifiers to a new test case.
+- Record the security-reference version/date used by Phase II test plans so later changes do not silently invalidate prior evidence.
 - Re-check the EU AI Act before making any statement about application dates, classifications, or obligations.
 - Record the date of legal research in each AI impact/risk assessment.
 - Distinguish clearly between:
