@@ -1,0 +1,27 @@
+{
+  "release": "v1.7",
+  "as_of_date": "2026-09-09",
+  "audit_universe_file": "Duckworks_AIMS_Audit_Universe_v1.0.csv",
+  "programme_file": "Duckworks_AIMS_Annual_Audit_Programme_2026-2027_v1.0.csv",
+  "evidence_request_file": "Duckworks_AIMS_Evidence_Request_List_AUD-AIMS-2026-001_v1.0.csv",
+  "test_results_file": "Duckworks_AIMS_First_Wave_Test_Results_AUD-AIMS-2026-001_v1.0.csv",
+  "findings_file": "Duckworks_AIMS_Audit_Findings_and_Actions_Register_v1.0.csv",
+  "expected": {
+    "controls": 45,
+    "P1 Immediate": 2,
+    "P2 High": 23,
+    "P3 Medium": 20,
+    "programme_population": 45,
+    "first_wave_controls": 2,
+    "test_steps": 14,
+    "open_findings": 2,
+    "auto_closed": 0,
+    "production_effectiveness_claims": 0
+  },
+  "required_first_wave_controls": [
+    "DD-01",
+    "FF-01"
+  ],
+  "required_human_disposition": true,
+  "decision_boundary": "Validation only; automation cannot approve audit conclusions, close findings, accept risk, authorize deployment, establish ISO/IEC 42001 conformity or claim production effectiveness."
+}

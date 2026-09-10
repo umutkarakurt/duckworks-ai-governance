@@ -1,0 +1,43 @@
+{
+  "gate": "Duckworks AIMS audit coverage gate",
+  "release": "v1.7",
+  "as_of_date": "2026-09-09",
+  "generated_at_utc": "2026-09-09T12:51:27+00:00",
+  "status": "PASS",
+  "controls_in_universe": 45,
+  "priority_counts": {
+    "P1 Immediate": 2,
+    "P2 High": 23,
+    "P3 Medium": 20
+  },
+  "programme_population": 45,
+  "first_wave_controls": [
+    "DD-01",
+    "FF-01"
+  ],
+  "test_steps": 14,
+  "evidence_requests": 12,
+  "open_findings": 2,
+  "findings_auto_closed": 0,
+  "production_effectiveness_claims": 0,
+  "assertions_total": 13,
+  "assertions_passed": 13,
+  "failed_assertions": [],
+  "assertions": {
+    "all_45_controls_in_universe": true,
+    "control_ids_are_unique": true,
+    "all_controls_have_owner_priority_frequency_and_engagement": true,
+    "priority_counts_match": true,
+    "programme_allocates_complete_population": true,
+    "first_wave_population_matches": true,
+    "first_wave_test_steps_complete": true,
+    "evidence_requests_cover_first_wave": true,
+    "open_findings_match_first_wave": true,
+    "no_automatic_finding_closure": true,
+    "no_production_effectiveness_claim": true,
+    "human_disposition_required_for_all_controls": true,
+    "unsupported_implemented_controls_are_not_passed": true
+  },
+  "human_disposition_required": true,
+  "decision_boundary": "Validation only; automation cannot approve audit conclusions, close findings, accept risk, authorize deployment, establish ISO/IEC 42001 conformity or claim production effectiveness."
+}
