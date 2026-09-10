@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / cybersecurity / GRC portfolio  
-**Status:** v1.7 AIMS internal-audit programme milestone and continuing development  
+**Status:** v1.8 portfolio consolidation and hiring-evidence milestone  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -32,6 +32,14 @@ I wrote items for ISACA's official AAISM Questions, Answers and Explanations.
 Available for AI governance and ISO/IEC 42001 readiness work as a named associate, invoiced from Türkiye — and open to remote and international roles in AI governance, AI risk, GRC and technology assurance.
 
 **[LinkedIn](https://www.linkedin.com/in/r-umut-karakurt/)** · **[Email](mailto:rumutkarakurt@gmail.com)** · **[GitHub](https://github.com/umutkarakurt)** · **[Professional background and contact](#21-professional-background-and-contact)**
+
+---
+
+## Evaluate This Portfolio
+
+Start with the **[Portfolio Evaluator Guide](13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Evaluator_Guide_v1.0.md)**. It provides five-, fifteen- and thirty-minute review paths for hiring managers, AI governance leaders, GRC practitioners and assurance reviewers.
+
+The accompanying **[competency-to-evidence map](13-portfolio-navigation-and-hiring-evidence/Duckworks_Competency_to_Evidence_Map_v1.0.xlsx)** links fourteen role-relevant capabilities to inspectable repository evidence and states the material limitation for every mapping. The **[claim-boundary register](13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Claim_Boundary_Register_v1.0.csv)** distinguishes supported portfolio wording from production, compliance, certification and authority claims that this synthetic project cannot substantiate.
 
 ---
 
@@ -418,6 +426,7 @@ duckworks-ai-governance/
 ├── 10-system-model-and-technical-documentation/
 ├── 11-assurance-testing-and-evaluation/
 ├── 12-monitoring-reporting-and-roadmap/
+├── 13-portfolio-navigation-and-hiring-evidence/
 ├── 80-operating-evidence/
 ├── 90-visuals/
 └── 99-archive/
@@ -440,6 +449,7 @@ duckworks-ai-governance/
 | `10-system-model-and-technical-documentation` | Model cards, model documentation, AI BOM, architecture and data-flow material |
 | `11-assurance-testing-and-evaluation` | ISO/IEC 42001 evidence mapping, NIST ARIA work, adversarial review, control testing and future audit work |
 | `12-monitoring-reporting-and-roadmap` | Executive decision reporting, KPIs/KRIs, monitoring/reassessment, dashboards, and implementation roadmap |
+| `13-portfolio-navigation-and-hiring-evidence` | Evaluator paths, competency mapping, interview cases, claim boundaries and portfolio closeout |
 | `80-operating-evidence` | Worked risk-to-control implementation, synthetic execution evidence, control testing, evidence indexing, and explicit production-evidence gaps |
 | `90-visuals` | Diagrams and supporting visuals |
 | `99-archive` | Superseded drafts and working versions retained for traceability |
@@ -451,6 +461,9 @@ duckworks-ai-governance/
 A hiring manager, auditor, CISO, privacy specialist, or AI product owner does not need to read every artifact.
 
 A practical review sequence is:
+
+0. **[Portfolio Evaluator Guide](13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Evaluator_Guide_v1.0.md)**  
+   Choose the five-, fifteen- or thirty-minute evidence path and use the claim-boundary register to calibrate conclusions.
 
 1. **AI Governance Readiness Assessment**  
    Understand the organization, problem, major findings, and target state.
@@ -629,6 +642,15 @@ The repository includes or is intended to include:
 - NIST ARIA evaluation documentation;
 - adversarial multi-perspective review and findings register.
 
+### Portfolio evaluation and hiring evidence
+
+- five-, fifteen- and thirty-minute evaluator guide;
+- competency-to-evidence map in CSV and Excel formats;
+- six evidence-backed interview case studies and ninety-second walkthrough;
+- claim-boundary register;
+- closeout record and thirty-day hiring-conversion plan; and
+- executable portfolio-integrity gate.
+
 ---
 
 ## 12. Risk Method Summary
@@ -735,11 +757,11 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 ---
 
-## 16. Areas Still Under Development
+## 16. Controlled Future Development
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-Planned or future-phase work may include:
+The v1.8 baseline is suitable for portfolio evaluation. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. Potential evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
@@ -748,7 +770,7 @@ Planned or future-phase work may include:
 - third-party AI due-diligence questionnaire;
 - live / production-connected executive AI governance dashboard beyond the current static decision brief;
 - implementation roadmap;
-- recurring enterprise AI assurance and internal-audit program beyond the bounded DuckTalent demonstration;
+- recurring enterprise AI assurance beyond the current synthetic internal-audit programme;
 - additional formal control-testing workpapers beyond the current AI-004, AI-005 and AI-006 worked examples;
 - expanded operating-evidence coverage beyond the current AI-004, AI-005 and AI-006 worked examples;
 - production system-specific monitoring histories beyond the current synthetic DuckTalent change/reassessment demonstration.
