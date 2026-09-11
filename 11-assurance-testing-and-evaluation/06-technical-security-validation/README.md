@@ -7,50 +7,40 @@
 
 This folder contains reproducible security-validation plans, test implementations, execution records, findings, remediation/retest evidence, and detection-validation artifacts for selected Duckworks AI systems.
 
-## Current target
+## Current target — AI-006 PondGPT
 
-### AI-006 — PondGPT
+The first Phase II implementation targets `PG-03 — Prompt Injection & RAG Poisoning Test Suite`, while exercising supporting authorization, tool, logging, output, provider and change-control boundaries.
 
-PondGPT is the first Phase II target because the existing portfolio already establishes:
-
-- `AI-006-R01 — Privacy & data governance`;
-- `AI-006-R02 — Security & adversarial manipulation`;
-- `AI-006-R03 — Reliability & robustness`;
-- `PG-01 — Permission-Aware Retrieval`;
-- `PG-02 — Automated Permission Regression & DLP Tests`;
-- `PG-03 — Prompt Injection & RAG Poisoning Test Suite`;
-- `PG-04 — Tool Sandboxing & Allowlisted Actions`;
-- `PG-05 — GenAI Security Logging & Alerting`; and
-- `PG-06 — Secure Output Verification & Code Scanning`.
-
-Existing `PG-01` / `PG-02` evidence demonstrates a bounded synthetic authorization-regression mechanism. It does not prove production authorization inheritance, production DLP/SIEM operation, or sustained effectiveness.
+Existing `PG-01` / `PG-02` evidence remains a separate bounded synthetic authorization-regression demonstration and does not prove production authorization inheritance, production DLP/SIEM operation, or sustained effectiveness.
 
 ## Current artifacts
 
-- [`AI-006-pondgpt/Duckworks_PondGPT_PG03_Technical_Security_Validation_Plan_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_PG03_Technical_Security_Validation_Plan_v1.0.md) — executable design for the initial PG-03 lab campaign.
+- [`AI-006-pondgpt/Duckworks_PondGPT_PG03_Technical_Security_Validation_Plan_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_PG03_Technical_Security_Validation_Plan_v1.0.md) — validation design.
+- [`AI-006-pondgpt/lab/`](AI-006-pondgpt/lab/) — executable `pondgpt-lab-0.1.0` synthetic security lab.
+- [`AI-006-pondgpt/lab/reports/Duckworks_PondGPT_PG03_Technical_Security_Test_Report_v1.0.md`](AI-006-pondgpt/lab/reports/Duckworks_PondGPT_PG03_Technical_Security_Test_Report_v1.0.md) — local baseline/remediation/retest result.
 
-The plan depends on:
+## Current local result
 
-- [`PondGPT Technical Security Architecture v1.0`](../../10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md); and
-- [`PondGPT Technical Threat Model v1.0`](../../10-system-model-and-technical-documentation/03-threat-models/AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md).
+- Vulnerable profile: **0 PASS / 8 FAIL** — intentionally seeded security failures reproduced.
+- Hardened profile: **8 PASS / 0 FAIL** — same eight case functions pass after hardening.
+- Prompt-injection detector coverage in `PG03-T005`: **4/5** with zero restricted context/provider chunks in the hardened profile.
+- Local verifier: PASS; pytest: **6 passed**.
 
 ## Evidence chain
 
-Phase II follows this chain:
-
 **Risk → Threat → Security requirement → Deliberately weak baseline → Test → Raw evidence → Finding → Remediation → Same-test retest → Detection validation → Control conclusion → Governance/risk review**
 
-A control must not receive production-effectiveness credit merely because a synthetic lab test passes.
+Baseline failure evidence and hardened retest evidence are retained separately and integrity-hashed.
 
-## Evidence-ID rule
+## Repository-replay requirement
 
-The current canonical PondGPT evidence series already uses `EV-AI006-001` through `EV-AI006-016`.
+The local package is not yet bound to a GitHub commit. The accompanying workflow update adds a `Run PondGPT PG-03 technical security lab` step so `main` can replay the verifier/campaign under Python 3.12 after upload. The workflow also asserts that the generated `source_commit` equals `GITHUB_SHA` and uploads the generated PG-03 evidence as a 30-day GitHub Actions artifact.
 
-Phase II technical-validation artifacts must use the **next unused canonical evidence ID only when the artifact actually exists**. IDs are not pre-populated merely because the validation plan expects an artifact to be produced.
+Canonical evidence IDs should be allocated only after that repository replay succeeds and the actual artifacts are reconciled into the current evidence index.
 
 ## Safety and authorization boundary
 
-Testing in this folder must not target real third-party services, real credentials, real personal data, or systems outside the explicitly controlled Duckworks lab boundary. External provider behavior is simulated with a fictional/local LanternMind adapter unless separate authorization is documented.
+Testing must not target real third-party services, real credentials, real personal data, or systems outside the explicitly controlled Duckworks lab boundary. External provider behavior is simulated with the fictional/local LanternMind adapter.
 
 ---
 
