@@ -1,0 +1,6 @@
+# Direct dependency versions used for the local 2026-09-10 validation run.
+# Transitive dependencies are intentionally not represented as a full supply-chain lock yet.
+fastapi==0.128.2
+pydantic==2.13.4
+pytest==9.0.2
+uvicorn==0.48.0
