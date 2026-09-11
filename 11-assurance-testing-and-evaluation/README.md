@@ -25,6 +25,7 @@ This folder demonstrates how Duckworks moves beyond policy creation toward **eva
 - [`AIMS internal-audit programme`](05-aims-internal-audit-programme/)
 - [`DuckTalent AIMS improvement-cycle package`](04-internal-audit-and-corrective-action/AI-005-ducktalent/)
 - [`PondGPT PG-03 Technical Security Validation Plan v1.0`](06-technical-security-validation/AI-006-pondgpt/Duckworks_PondGPT_PG03_Technical_Security_Validation_Plan_v1.0.md)
+- [`PondGPT PG-03 executable lab and local test report`](06-technical-security-validation/AI-006-pondgpt/lab/)
 - [`AIMS objectives and support package`](../06-governance-operating-model/01-aims-objectives-and-support/)
 - [`AIMS risk, opportunity and management-review cycle`](../12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/)
 
@@ -51,7 +52,9 @@ This folder therefore supports questions such as:
 
 Phase II technical validation is a **controlled engineering activity**, not independent audit assurance.
 
-For AI-006 PondGPT, testing is limited to fictional Duckworks systems, synthetic data, locally controlled components, or explicitly authorized test environments under the Phase II scope addendum. A synthetic PASS may demonstrate that a defined mechanism blocked a defined attack in a specific lab version. It does **not** establish production security, sustained operating effectiveness, legal compliance, ISO conformity/certification, or validated residual-risk reduction.
+For AI-006 PondGPT, testing is limited to fictional Duckworks systems, synthetic data, locally controlled components, or explicitly authorized test environments under the Phase II scope addendum. The current lab has produced a local synthetic baseline/remediation/retest result; repository commit-bound replay remains required before that evidence is treated as repository-verified.
+
+A synthetic PASS may demonstrate that a defined mechanism blocked a defined attack in a specific lab version. It does **not** establish production security, sustained operating effectiveness, legal compliance, ISO conformity/certification, or validated residual-risk reduction.
 
 ## Independence
 
