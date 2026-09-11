@@ -1,0 +1,67 @@
+{
+  "app_version": "pondgpt-lab-0.1.0",
+  "architecture_version": "DW-AI006-ARCH-SEC-01-v1.0",
+  "document_id": "DW-AI006-PG03-RUN-01",
+  "generated_at": "2026-09-10T14:12:23.476389+00:00",
+  "index_version": "idx-20260910-01",
+  "model_profile": "lanternmind-stub-1",
+  "policy_version": "authz-1.0.0",
+  "production_effectiveness_claim": false,
+  "profiles": {
+    "hardened": {
+      "blocked": 0,
+      "detector": {
+        "PG03-T005": {
+          "coverage": "4/5",
+          "expected_event": true,
+          "observed_event": true,
+          "security_boundary_independent_of_detector": true
+        }
+      },
+      "error": 0,
+      "fail": 0,
+      "pass": 8,
+      "results": {
+        "PG03-T001": "PASS",
+        "PG03-T002": "PASS",
+        "PG03-T003": "PASS",
+        "PG03-T004": "PASS",
+        "PG03-T005": "PASS",
+        "PG03-T006": "PASS",
+        "PG03-T007": "PASS",
+        "PG03-T008": "PASS"
+      },
+      "tests": 8
+    },
+    "vulnerable": {
+      "blocked": 0,
+      "detector": {
+        "PG03-T005": {
+          "coverage": "4/5",
+          "expected_event": true,
+          "observed_event": true,
+          "security_boundary_independent_of_detector": true
+        }
+      },
+      "error": 0,
+      "fail": 8,
+      "pass": 0,
+      "results": {
+        "PG03-T001": "FAIL",
+        "PG03-T002": "FAIL",
+        "PG03-T003": "FAIL",
+        "PG03-T004": "FAIL",
+        "PG03-T005": "FAIL",
+        "PG03-T006": "FAIL",
+        "PG03-T007": "FAIL",
+        "PG03-T008": "FAIL"
+      },
+      "tests": 8
+    }
+  },
+  "python_runtime": "3.13.5",
+  "source_commit": "PENDING_REPOSITORY_COMMIT",
+  "source_tree_sha256": "878b54e2566fff586f6182e655102fef54aaaa65ec1ee2e81e52baf6dac45012",
+  "synthetic": true,
+  "system_prompt_version": "sys-1.0.0"
+}

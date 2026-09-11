@@ -1,0 +1,27 @@
+{
+  "files": {
+    "evidence/generated/campaign-summary.json": "4c1a37f570c8a8de73492f4a1c1443363c6feb600b0c9932a8477070424e2b7e",
+    "evidence/generated/ci-verification.txt": "5604991ae65c03560fca01b00ece00e60521124e9c773108da6ec4892860a7dd",
+    "evidence/generated/hardened/PG03-T001.json": "0c3ce3c72a0efb068511b7c238de5ed64bf9e0f3fe18d1d4095d58a0fb4efa53",
+    "evidence/generated/hardened/PG03-T002.json": "59f9d17c725b74b4740fb12f672ff163ceec6ab1cfa23b8eac9f4527f5835319",
+    "evidence/generated/hardened/PG03-T003.json": "1cf3630436ab222fd6472737ae4b6e92e79266c1323f05827a47e324175de4a9",
+    "evidence/generated/hardened/PG03-T004.json": "dda488942424ac6b107ef792d4116102c649c7228218079cdc1fb98be5cdfe64",
+    "evidence/generated/hardened/PG03-T005.json": "71e2eca748452f0ef5e76365f651ba000046de6728b84ec660ae81c584b71947",
+    "evidence/generated/hardened/PG03-T006.json": "b895b05f7590b267523ca8993890f872287d544b3d77501c63cb1ae5f4486f73",
+    "evidence/generated/hardened/PG03-T007.json": "cf7ae19b17451fb33f5e8f17aa5f24c83df44987306971c704c4785793881a3c",
+    "evidence/generated/hardened/PG03-T008.json": "9071098fc6368548aa1ae2a2a0b3cd9a5602bddd6e5b981c9977e3d9e996809f",
+    "evidence/generated/hardened/security-telemetry.jsonl": "c9fdb8e5f6e0241bfb9fbcb12791448fce28c608c9ea46131b20baa2980039cc",
+    "evidence/generated/pytest-summary.txt": "4729102e59db75b5820273a0249979ca622611e03b653c221e4dadacd7a4b70d",
+    "evidence/generated/vulnerable/PG03-T001.json": "f2926ca824c1c94f71d699800a0393702110107403a1580cf22fcce9b52ec1ba",
+    "evidence/generated/vulnerable/PG03-T002.json": "fe38d414624e3d89365f85b963b9d7cb7b9223d66d52fb0130a63ad0e1922747",
+    "evidence/generated/vulnerable/PG03-T003.json": "bc64099f8ec04884f23378a469c9b7dc906ff283a7cea59c42a3ee31052a07f5",
+    "evidence/generated/vulnerable/PG03-T004.json": "bed7040cd7affc5e0f650a2ad1474542210e22d489651e697f9e9eed7895387e",
+    "evidence/generated/vulnerable/PG03-T005.json": "34648448c526cd918138864f777a5e04c835fa72b2db4f5a9b51f496489b7986",
+    "evidence/generated/vulnerable/PG03-T006.json": "b3d2bad4f34949ceb32c0a2af48254fb2ae7d62a4ebf715e1a89699fe5e764d6",
+    "evidence/generated/vulnerable/PG03-T007.json": "5cfc1954f4b6a734a9c4a697088f46b6e75d2f32b1aa92bcbf3c38be26ffb57c",
+    "evidence/generated/vulnerable/PG03-T008.json": "11687e3fc7a2df13633f4ce94bec3ffab2b3c925f9a0fc2dd88410b83a12e146",
+    "evidence/generated/vulnerable/security-telemetry.jsonl": "22f141b81a665f6819b1f82aa2e67d1ed13aeb777e8f726d17b41ca034d4461f"
+  },
+  "generated_at": "2026-09-10T14:12:23.485726+00:00",
+  "manifest_id": "PG03-EVIDENCE-MANIFEST-001"
+}

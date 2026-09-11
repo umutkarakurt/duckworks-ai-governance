@@ -1,0 +1,4 @@
+PG-03 CI verification: PASS
+vulnerable profile: 0 PASS / 8 FAIL (expected seeded failures reproduced)
+hardened profile: 8 PASS / 0 FAIL
+T005 detector coverage: 4/5 with security boundaries intact

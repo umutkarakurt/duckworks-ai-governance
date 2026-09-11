@@ -1,0 +1,87 @@
+{
+  "document_id": "DW-AI006-PG03-XWALK-01",
+  "version": "1.0",
+  "synthetic": true,
+  "canonical_evidence_ids_assigned": false,
+  "note": "Canonical EV-AI006 IDs are assigned only after repository upload, commit-bound replay, and evidence-index reconciliation.",
+  "findings": [
+    {
+      "finding_id": "PG03-F01",
+      "tests": ["PG03-T001", "PG03-T005", "PG03-T007"],
+      "root_cause": "retrieval candidate enters context before authorization",
+      "remediation": "authorize before context construction and revalidate returned metadata",
+      "baseline_evidence": [
+        "evidence/generated/vulnerable/PG03-T001.json",
+        "evidence/generated/vulnerable/PG03-T005.json",
+        "evidence/generated/vulnerable/PG03-T007.json"
+      ],
+      "retest_evidence": [
+        "evidence/generated/hardened/PG03-T001.json",
+        "evidence/generated/hardened/PG03-T005.json",
+        "evidence/generated/hardened/PG03-T007.json"
+      ]
+    },
+    {
+      "finding_id": "PG03-F02",
+      "tests": ["PG03-T008"],
+      "root_cause": "authorization dependency fails open",
+      "remediation": "fail closed and return zero protected chunks on PEP error",
+      "baseline_evidence": ["evidence/generated/vulnerable/PG03-T008.json"],
+      "retest_evidence": ["evidence/generated/hardened/PG03-T008.json"]
+    },
+    {
+      "finding_id": "PG03-F03",
+      "tests": ["PG03-T003"],
+      "root_cause": "staged metadata is trusted without source-of-truth integrity validation",
+      "remediation": "compare staged envelope to source-of-truth metadata/hash and quarantine mismatches",
+      "baseline_evidence": ["evidence/generated/vulnerable/PG03-T003.json"],
+      "retest_evidence": ["evidence/generated/hardened/PG03-T003.json"]
+    },
+    {
+      "finding_id": "PG03-F04",
+      "tests": ["PG03-T002", "PG03-T004"],
+      "root_cause": "retrieved content is treated as authority to trigger secondary retrieval/tool behavior",
+      "remediation": "treat retrieved content as untrusted data and prevent it from modifying authorization/tool policy",
+      "baseline_evidence": [
+        "evidence/generated/vulnerable/PG03-T002.json",
+        "evidence/generated/vulnerable/PG03-T004.json"
+      ],
+      "retest_evidence": [
+        "evidence/generated/hardened/PG03-T002.json",
+        "evidence/generated/hardened/PG03-T004.json"
+      ]
+    },
+    {
+      "finding_id": "PG03-F05",
+      "tests": ["PG03-T001", "PG03-T002", "PG03-T004"],
+      "root_cause": "model-generated tool request is implicitly trusted",
+      "remediation": "bind deterministic tool policy to authenticated subject, action and allowlist",
+      "baseline_evidence": [
+        "evidence/generated/vulnerable/PG03-T001.json",
+        "evidence/generated/vulnerable/PG03-T002.json",
+        "evidence/generated/vulnerable/PG03-T004.json"
+      ],
+      "retest_evidence": [
+        "evidence/generated/hardened/PG03-T001.json",
+        "evidence/generated/hardened/PG03-T002.json",
+        "evidence/generated/hardened/PG03-T004.json"
+      ]
+    },
+    {
+      "finding_id": "PG03-F06",
+      "tests": ["PG03-T006"],
+      "root_cause": "active remote output resources autoload",
+      "remediation": "disable remote autoload and sanitize remote resource references",
+      "baseline_evidence": ["evidence/generated/vulnerable/PG03-T006.json"],
+      "retest_evidence": ["evidence/generated/hardened/PG03-T006.json"]
+    },
+    {
+      "finding_id": "PG03-F07",
+      "tests": ["PG03-T007"],
+      "root_cause": "synthetic secret is included in model/provider context",
+      "remediation": "keep secrets outside prompts, index and provider payloads; verify boundary capture",
+      "baseline_evidence": ["evidence/generated/vulnerable/PG03-T007.json"],
+      "retest_evidence": ["evidence/generated/hardened/PG03-T007.json"]
+    }
+  ]
+}

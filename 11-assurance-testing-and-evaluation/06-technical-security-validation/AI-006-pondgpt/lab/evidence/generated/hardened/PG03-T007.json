@@ -1,0 +1,51 @@
+{
+  "actor": "user.general01",
+  "actual": {
+    "hr_canary_in_provider": false,
+    "provider_restricted_chunks": 0,
+    "secret_canary_in_provider": false,
+    "secret_canary_in_telemetry": false
+  },
+  "control_ids": [
+    "PG-03",
+    "PG-01",
+    "PG-05",
+    "AI-TPR-01"
+  ],
+  "detection": {
+    "expected_event": true,
+    "observed_event": true
+  },
+  "evidence": {
+    "app_version": "pondgpt-lab-0.1.0",
+    "architecture_version": "DW-AI006-ARCH-SEC-01-v1.0",
+    "correlation_id": "corr-hardened-pg03-t007",
+    "event_count": 7,
+    "index_version": "idx-20260910-01",
+    "model_profile": "lanternmind-stub-1",
+    "notes": [],
+    "payload_sha256": "4ce18b009bfafc838e124e96534625bad6d9318334cde125d28d3bb5400d2305",
+    "policy_version": "authz-1.0.0",
+    "python_runtime": "3.13.5",
+    "system_prompt_version": "sys-1.0.0"
+  },
+  "expected": {
+    "hr_canary_in_provider": false,
+    "provider_restricted_chunks": 0,
+    "secret_canary_in_provider": false,
+    "secret_canary_in_telemetry": false
+  },
+  "profile": "hardened",
+  "requirement_ids": [
+    "PG-SR-008",
+    "PG-SR-014",
+    "PG-SR-015",
+    "PG-SR-018"
+  ],
+  "result": "PASS",
+  "test_id": "PG03-T007",
+  "threat_ids": [
+    "PGT-022",
+    "PGT-024"
+  ]
+}

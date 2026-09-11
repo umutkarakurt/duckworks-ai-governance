@@ -1,0 +1,48 @@
+{
+  "actor": "user.general01",
+  "actual": {
+    "quarantined": true,
+    "restricted_context_chunks": 0,
+    "source_hash_matches_staged": false,
+    "staged_publish": false
+  },
+  "control_ids": [
+    "PG-03",
+    "PG-01",
+    "PG-02",
+    "PG-05"
+  ],
+  "detection": {
+    "expected_event": true,
+    "observed_event": true
+  },
+  "evidence": {
+    "app_version": "pondgpt-lab-0.1.0",
+    "architecture_version": "DW-AI006-ARCH-SEC-01-v1.0",
+    "correlation_id": "corr-hardened-pg03-t003",
+    "event_count": 9,
+    "index_version": "idx-20260910-01",
+    "model_profile": "lanternmind-stub-1",
+    "notes": [],
+    "payload_sha256": "5069fc6f07f830f8b6fac8a54b3befbec80f6510af07c8e6dcabaeecfe54fac0",
+    "policy_version": "authz-1.0.0",
+    "python_runtime": "3.13.5",
+    "system_prompt_version": "sys-1.0.0"
+  },
+  "expected": {
+    "restricted_context_chunks": 0,
+    "staged_publish": false
+  },
+  "profile": "hardened",
+  "requirement_ids": [
+    "PG-SR-002",
+    "PG-SR-009",
+    "PG-SR-010",
+    "PG-SR-017"
+  ],
+  "result": "PASS",
+  "test_id": "PG03-T003",
+  "threat_ids": [
+    "PGT-010"
+  ]
+}
