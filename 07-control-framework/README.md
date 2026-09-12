@@ -10,9 +10,9 @@ This folder translates material AI risks and governance requirements into **test
 ## Current artifacts
 
 - [`Duckworks_AI_Control_Library_v1.0.xlsx`](Duckworks_AI_Control_Library_v1.0.xlsx)
-- [`Duckworks_AI_Control_Framework_Report_v1.5.md`](Duckworks_AI_Control_Framework_Report_v1.5.md) — **authoritative current control-status, applicability and audit-reconciliation report**
+- [`Duckworks_AI_Control_Framework_Report_v1.6.md`](Duckworks_AI_Control_Framework_Report_v1.6.md) — **authoritative current control-status, applicability, audit and PG-03 technical-security reconciliation report**
 
-Versions 1.0–1.4 are retained for version history and are superseded by v1.5.
+Versions 1.0–1.5 are retained for version history and are superseded by v1.6.
 
 - [`01-aims-control-applicability/`](01-aims-control-applicability/) — 45-control applicability method, register, review record and executable validation gate
 
@@ -60,6 +60,10 @@ For the current WingInspect worked example, `WI-01 — Qualified Human Final Ins
 
 For the current PondGPT worked example, `PG-02 — Automated Permission Regression & DLP Tests` is treated as **Partially implemented** because the portfolio contains a reproducible executable synthetic test mechanism, generated evidence, seeded-defect detection, gate enforcement, and remediation/retest logic while production identity/connector/DLP/SIEM integration, sustained operating history, and production operating effectiveness remain unvalidated.
 
+`PG-03 — Prompt Injection & RAG Poisoning Test Suite` now has canonical evidence `EV-AI006-017`–`022`: a validation plan, executable vulnerable/hardened lab, baseline findings/remediation, hardened eight-case regression, detection validation and commit-bound GitHub Actions replay. Its historical source label remains `Planned` pending a future control-library workbook revision, but the reconciled evidence maturity is **Synthetic technical implementation and operation tested / commit-bound reproducibility demonstrated**. This does not establish production effectiveness or justify residual-risk reduction.
+
+`PG-04` and `PG-05` receive narrowly scoped supporting evidence from the PG-03 lab for tool authorization and telemetry/detection behavior. `PG-06` is not upgraded because the lab's remote-output test does not demonstrate the full Secure Output Verification & Code Scanning control.
+
 For the current DuckTalent worked example, `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing` is treated as **Partially implemented** because the portfolio contains a reproducible executable synthetic fairness-test mechanism, matched-pair test data, seeded unapproved-feature detection, deployment blocking, remediation, retest, and a bounded corrective-action effectiveness check. Real-applicant fairness, production feature governance, lawful fairness-data processing, legal compliance, and sustained operating effectiveness remain unvalidated. `DT-01` remains **Not implemented**, although a bounded preventive change gate is demonstrated synthetically.
 
 ## Framework mapping
@@ -82,6 +86,7 @@ Three worked examples demonstrate different control archetypes:
 - [`AI-005 DuckTalent internal-audit and corrective-action package`](../11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/) — extends the chain through finding, cause analysis, corrective action, executable recurrence-prevention testing, management review, and narrow closure.
 - [`AI-006 PondGPT operating-evidence package`](../80-operating-evidence/AI-006-pondgpt/) — links `AI-006-R01` to the `PG-01` authorization boundary and `PG-02` detective control, executable permission-regression logic, negative authorization testing, seeded-defect detection, exception/gate evidence, remediation, and retesting.
 - [`AI-006 PondGPT supplier-governance package`](../09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/) — links `AI-006-R01` to `AI-TPR-01`, supplier due diligence, evidence gaps, contractual treatment, a conditional gate, material-change response, monitoring and exit design.
+- [`AI-006 PondGPT PG-03 technical-security validation`](../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/) — links `AI-006-R02` to a threat-model-derived eight-case adversarial suite, deliberately vulnerable baseline, remediation, same-test hardened retest, detection validation, and commit-bound CI evidence.
 
 All three preserve the distinction between synthetic portfolio implementation/testing evidence and production operating effectiveness. The DuckTalent example additionally preserves the boundary between diagnostic fairness testing and any legal discrimination or compliance conclusion.
 

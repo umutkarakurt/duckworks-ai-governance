@@ -1,0 +1,133 @@
+# Duckworks AI Control Framework Report
+
+**Project:** W.I.N.G. — Workflows, Intelligence, Next-Generation Governance  
+**Document ID:** DW-AICF-001  
+**Version:** 1.6  
+**Effective date:** 12 September 2026  
+**Owner:** AI Governance Lead  
+**Approval status:** Portfolio draft — fictional approval not recorded  
+**Evidence reconciliation snapshot:** canonical evidence index v1.8 plus commit-bound PondGPT PG-03 technical-security validation  
+**Supersedes:** Duckworks_AI_Control_Framework_Report_v1.5.md
+
+> Status labels in this report describe the available portfolio evidence. They do not establish legal compliance, ISO/IEC 42001 conformity, certification, production effectiveness or independent assurance.
+
+## 1. Evidence-aware status model
+
+| Status | Minimum meaning | Permitted risk credit |
+|---|---|---|
+| Designed | Control objective, owner, trigger, procedure and required evidence are documented. | None |
+| Implemented | The control mechanism exists for the defined system/version; implementation evidence is retrievable. | No effectiveness credit by itself |
+| Operating | Execution records cover a defined population and period, including exceptions and review. | Possible only after authorized assessment |
+| Effective | Operating evidence and outcomes show the control consistently achieves its objective for the defined scope and period. | May support an approved residual-risk reduction |
+| Validated | Effectiveness has been challenged by a competent reviewer with sufficient independence and limitations recorded. | May support a sustained reduction within the approved methodology |
+| Synthetic operation demonstrated | A bounded fictional/synthetic workflow or test was executed. | No production risk-reduction credit |
+
+A source label such as Implemented or Partially implemented is retained for history, but the reconciled evidence-maturity field controls interpretation.
+
+## 2. Control register
+
+| Control ID | Control | Type | Operating owner | Source status | Linked risks | Evidence IDs | Reconciled evidence maturity | Current risk credit | Next evidence required | Review status |
+|---|---|---|---|---|---|---|---|---|---|---|
+| AI-GOV-01 | Risk-Based Lifecycle Gate | Preventive | Eleanor Duckford - AI Governance Lead | Partially implemented | AI-001-R01; AI-002-R01; AI-002-R03; AI-004-R01; AI-005-R01; AI-005-R02; AI-006-R01; AI-007-R02 | EV-AI005-009; EV-AI005-014; EV-AI005-015; EV-AI005-017; EV-AI005-018; EV-AI005-019; EV-AI005-020; EV-AI005-021; EV-AI006-013 | Synthetic system and supplier lifecycle decisions, corrective-action governance, management decision and narrow closure demonstrated; production effectiveness unverified | No production risk-reduction credit | Add authorized real gate operation, production-period evidence and outcome review; preserve unresolved blockers and reopening triggers. | Open |
+| AI-GOV-02 | Material Change & Reassessment Trigger | Preventive | Eleanor Duckford - AI Governance Lead | Partially implemented | AI-001-R01; AI-001-R02; AI-001-R03; AI-003-R02; AI-004-R03; AI-005-R01; AI-006-R01 | EV-AI005-010; EV-AI005-011; EV-AI005-012; EV-AI005-013; EV-AI005-014; EV-AI005-015; EV-AI005-016; EV-AI005-017; EV-AI005-018; EV-AI005-019; EV-AI005-020; EV-AI005-021; EV-AI006-015 | One bounded DuckTalent change/reassessment/improvement cycle and one bounded PondGPT supplier-change response demonstrated; enterprise-wide and production effectiveness unverified | No production risk-reduction credit | Add enterprise-wide trigger operation and version-bound production evidence, including supplier notices, exceptions, review, approval and reopening outcomes. | Open |
+| AI-GOV-03 | Control Evidence Index | Detective | Eleanor Duckford - AI Governance Lead | Planned | Portfolio-wide evidence governance | EV-AIMS-001–008; EV-AIMS-014–028 | Synthetic evidence governance, applicability, audit planning, first-wave testing, findings and executable validation demonstrated; recurring enterprise operation and production effectiveness unverified | No production risk-reduction credit | Operate the control across the full repository on a defined cadence; retain review, retrieval, access, supersession, audit follow-up, exception and human approval evidence. | Open |
+| AI-INC-01 | AI Incident, Containment & Stop-Use | Corrective | Cassandra Duckley - Chief Information Security Officer | Partially implemented | AI-001-R01; AI-001-R02; AI-002-R02; AI-003-R03; AI-004-R01; AI-005-R03; AI-006-R01; AI-006-R02; AI-007-R01 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| AI-TPR-01 | AI Supplier Due Diligence & Contract Controls | Preventive | Percival Duckworth - Director Procurement & Vendor Assurance | Partially implemented | AI-001-R02; AI-002-R02; AI-005-R01; AI-005-R03; AI-006-R01; AI-007-R03 | EV-AI006-009; EV-AI006-010; EV-AI006-011; EV-AI006-012; EV-AI006-013; EV-AI006-014; EV-AI006-015; EV-AI006-016 | One bounded synthetic PondGPT supplier lifecycle demonstrated from intake through change response and exit design; executed contract, verified supplier evidence and production operation absent | No production risk-reduction credit | Execute and verify blocking contractual terms; obtain supplier security/privacy/hosting/subprocessor evidence; operate monitoring; test export, continuity and deletion; record authorized renewal/exit decisions. | Open |
+| DD-01 | Competent Engineer Approval | Preventive | Felix Duckson - VP Product & Engineering | Implemented | AI-001-R01; AI-001-R03 | EV-AIMS-024–028 (audit-process evidence only) | **Not demonstrated** by reviewed repository evidence; High finding `IAF-2026-002` open | No implementation, effectiveness or risk-reduction credit | Provide execution records, population/period, exceptions, outcome metrics and owner review, or approve a source-status downgrade and risk reassessment. | Open — management response required |
+| DD-02 | Independent Safety Validation Gate | Preventive | Quentin Duckwell - Director Product Safety & Quality | Planned | AI-001-R01 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| DD-03 | Engineering Benchmark & Regression Suite | Detective | Dr. Ada Duckfield - Head of Data & AI | Planned | AI-001-R01; AI-001-R03 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| DD-04 | Engineering Data Boundary & DLP | Preventive | Cassandra Duckley - Chief Information Security Officer | Partially implemented | AI-001-R02 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| DD-05 | Design/Model Version Traceability | Preventive | Dr. Ada Duckfield - Head of Data & AI | Partially implemented | AI-001-R01; AI-001-R03 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| DT-01 | Job-Relevance Criteria & Proxy Feature Governance | Preventive | Beatrice Van Duck - Chief People Officer | Not implemented | AI-005-R01 | EV-AI005-001; EV-AI005-002; EV-AI005-009; EV-AI005-011; EV-AI005-012; EV-AI005-015; EV-AI005-016; EV-AI005-017; EV-AI005-018; EV-AI005-019; EV-AI005-021 | A preventive change gate and cause-linked corrective action are demonstrated synthetically; full job-relevance governance and production operation remain unimplemented | No current risk-reduction credit | Approve job-relevance criteria and feature governance for the real system/version, then operate and independently test the control over a defined period. | Open |
+| DT-02 | Pre-Deployment Fairness & Adverse-Impact Testing | Detective | Beatrice Van Duck - Chief People Officer | Partially implemented | AI-005-R01 | EV-AI005-001; EV-AI005-002; EV-AI005-003; EV-AI005-004; EV-AI005-005; EV-AI005-006; EV-AI005-009; EV-AI005-011; EV-AI005-012; EV-AI005-015; EV-AI005-016; EV-AI005-017; EV-AI005-018; EV-AI005-019; EV-AI005-021 | Synthetic implementation, operation, recurrence-prevention test and bounded corrective-action effectiveness demonstrated; production effectiveness unverified | No production risk-reduction credit | Add version-bound production operating and outcome evidence, lawful evaluation data, defined period/population, exceptions, independent review and approval. | Open |
+| DT-03 | Meaningful Human Review & No Automated Rejection | Preventive | Beatrice Van Duck - Chief People Officer | Not implemented | AI-005-R02 | None linked | Not implemented | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| DT-04 | Reviewer Rationale, Training & Override Monitoring | Preventive | Beatrice Van Duck - Chief People Officer | Not implemented | AI-005-R02 | None linked | Not implemented | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| DT-05 | Applicant Data Minimization, Field Exclusion & Retention | Preventive | Beatrice Van Duck - Chief People Officer | Not implemented | AI-005-R03 | None linked | Not implemented | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| DT-06 | Impact, Privacy & Legal Review Gate | Preventive | Eleanor Duckford - AI Governance Lead | Not implemented | AI-005-R03 | None linked | Not implemented | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| DT-07 | Candidate Notice, Challenge & Human Remedy | Corrective | Beatrice Van Duck - Chief People Officer | Not implemented | AI-005-R01; AI-005-R02 | None linked | Not implemented | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| FF-01 | Human Planning Approval & Override | Preventive | Tobias Duckman - Director Supply Chain | Implemented | AI-003-R01 | EV-AIMS-024–028 (audit-process evidence only) | **Not demonstrated** by reviewed repository evidence; High finding `IAF-2026-003` open | No implementation, effectiveness or risk-reduction credit | Provide execution records, population/period, overrides, outcome metrics and owner review, or approve a source-status downgrade and risk reassessment. | Open — management response required |
+| FF-02 | Back-Testing, Stress Testing & Challenger Review | Detective | Dr. Ada Duckfield - Head of Data & AI | Partially implemented | AI-003-R01; AI-003-R02 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| FF-03 | Automated Drift Alerts & Retraining Trigger | Detective | Dr. Ada Duckfield - Head of Data & AI | Planned | AI-003-R02 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| FF-04 | Supplier/Planning Data Access & Logging | Preventive | Tobias Duckman - Director Supply Chain | Partially implemented | AI-003-R03 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| PG-01 | Permission-Aware Retrieval | Preventive | Oliver Duckett - Head of IT & Cloud | Partially implemented | AI-006-R01 | EV-AI006-001; EV-AI006-002 | Synthetic implementation/operation demonstrated; production effectiveness unverified | No production risk-reduction credit | Add version-bound production operating and outcome evidence, including population, period, exceptions, review and approval. | Open |
+| PG-02 | Automated Permission Regression & DLP Tests | Detective | Oliver Duckett - Head of IT & Cloud | Partially implemented | AI-006-R01 | EV-AI006-001; EV-AI006-002; EV-AI006-003; EV-AI006-004; EV-AI006-005; EV-AI006-006 | Synthetic implementation/operation demonstrated; production effectiveness unverified | No production risk-reduction credit | Add version-bound production operating and outcome evidence, including population, period, exceptions, review and approval. | Open |
+| PG-03 | Prompt Injection & RAG Poisoning Test Suite | Detective | Cassandra Duckley - Chief Information Security Officer | Planned *(historical source label)* | AI-006-R02 | EV-AI006-017; EV-AI006-018; EV-AI006-019; EV-AI006-020; EV-AI006-021; EV-AI006-022 | Synthetic technical implementation, baseline failure/remediation, hardened operation testing and commit-bound reproducibility demonstrated; production effectiveness unverified | No production risk-reduction credit | Validate the control against authorized production-equivalent identity, connector, provider, tool and telemetry boundaries over a defined period; record exceptions, outcomes and independent challenge before any production credit. | Open — source-status update pending control-library revision |
+| PG-04 | Tool Sandboxing & Allowlisted Actions | Preventive | Oliver Duckett - Head of IT & Cloud | Partially implemented | AI-006-R02 | EV-AI006-018; EV-AI006-019; EV-AI006-020 | Bounded synthetic tool-authorization behavior exercised as a supporting PG-03 lab mechanism; broader sandboxing, real tool integration and production effectiveness unverified | No production risk-reduction credit | Add version-bound production-equivalent tool inventory, independent authorization policy, denied/allowed action population, exceptions, egress behavior and operating-period evidence. | Open |
+| PG-05 | GenAI Security Logging & Alerting | Detective | Cassandra Duckley - Chief Information Security Officer | Partially implemented | AI-006-R01; AI-006-R02; AI-006-R03 | EV-AI006-018; EV-AI006-020; EV-AI006-021; EV-AI006-022 | Structured synthetic security telemetry, correlation and detection validation demonstrated in the PG-03 lab with commit-bound replay; production SIEM/alerting integration and sustained operation unverified | No production risk-reduction credit | Add production-equivalent log sources, routing, alert handling, retention/redaction, missed-event analysis, responder evidence and defined-period detection outcomes. | Open |
+| PG-06 | Secure Output Verification & Code Scanning | Preventive | Dr. Ada Duckfield - Head of Data & AI | Partially implemented | AI-006-R03 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| QB-01 | Curated RAG Source Allowlist | Preventive | Clara Duckley - Director Customer Operations | Partially implemented | AI-002-R01; AI-002-R03 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| QB-02 | Grounding, Citation & Abstention Rules | Preventive | Dr. Ada Duckfield - Head of Data & AI | Planned | AI-002-R01; AI-002-R03 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| QB-03 | Human Escalation SLA | Corrective | Clara Duckley - Director Customer Operations | Partially implemented | AI-002-R01; AI-002-R03 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| QB-04 | Prompt Injection & RAG Adversarial Testing | Detective | Cassandra Duckley - Chief Information Security Officer | Planned | AI-002-R02 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| QB-05 | Least-Privilege Retrieval & Tool Boundaries | Preventive | Cassandra Duckley - Chief Information Security Officer | Partially implemented | AI-002-R02 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| QB-06 | GenAI Security & Harm Monitoring | Detective | Cassandra Duckley - Chief Information Security Officer | Planned | AI-002-R01; AI-002-R02 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| SH-01 | AI Acceptable Use Standard | Preventive | Cassandra Duckley - Chief Information Security Officer | Planned | AI-007-R01; AI-007-R02 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| SH-02 | Approved AI Tool Catalogue & Vendor Allowlist | Preventive | Percival Duckworth - Director Procurement & Vendor Assurance | Planned | AI-007-R01; AI-007-R03 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| SH-03 | Shadow AI Discovery, DLP & Blocking | Detective | Cassandra Duckley - Chief Information Security Officer | Planned | AI-007-R01 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| SH-04 | AI Browser Extension & Embedded-App Control | Preventive | Oliver Duckett - Head of IT & Cloud | Weak / ad hoc | AI-007-R01; AI-007-R03 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| SH-05 | Employee Attestation, Manager Accountability & Mandatory Registration | Detective | Eleanor Duckford - AI Governance Lead | Planned | AI-007-R02 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| SH-06 | Exposure Investigation, Decomposition & Remediation | Corrective | Eleanor Duckford - AI Governance Lead | Planned | AI-007-R01; AI-007-R02; AI-007-R03 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| WI-01 | Qualified Human Final Inspection | Preventive | Henrietta Duckwell - Director Manufacturing | Partially implemented | AI-004-R01; AI-004-R02 | EV-AI004-001; EV-AI004-002; EV-AI004-003 | Synthetic implementation/operation demonstrated; production effectiveness unverified | No production risk-reduction credit | Add version-bound production operating and outcome evidence, including population, period, exceptions, review and approval. | Open |
+| WI-02 | Minimum Sensitivity & Safety Validation | Preventive | Quentin Duckwell - Director Product Safety & Quality | Partially implemented | AI-004-R01 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+| WI-03 | Independent QA Sampling & Defect-Escape Monitoring | Detective | Quentin Duckwell - Director Product Safety & Quality | Planned | AI-004-R01; AI-004-R03 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| WI-04 | Fail-Safe Manual Fallback & Stop Rule | Corrective | Henrietta Duckwell - Director Manufacturing | Planned | AI-004-R01 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| WI-05 | False-Positive Tuning & QA Feedback Loop | Corrective | Dr. Ada Duckfield - Head of Data & AI | Planned | AI-004-R02 | None linked | Planned | No current risk-reduction credit | Implement the control, assign stable evidence IDs, operate it over a defined period and test it. | Open |
+| WI-06 | Change-Triggered Revalidation & Locked Baseline | Preventive | Dr. Ada Duckfield - Head of Data & AI | Partially implemented | AI-004-R03 | None linked | Design/status assertion — evidence ID absent | No additional credit | Provide implementation and operating evidence with a stable evidence ID. | Open |
+
+## 3. Portfolio-wide control clarifications
+
+- **AI-GOV-01 — Risk-Based Lifecycle Gate:** EV-AI005-009, EV-AI005-014 and EV-AI005-015–021 demonstrate bounded synthetic DuckTalent gate, corrective-action governance, management-review and narrow closure decisions. They do not establish enterprise-wide operation.
+- **AI-GOV-02 — Material Change & Reassessment Trigger:** EV-AI005-010 through EV-AI005-021 demonstrate one synthetic DuckTalent material-change, reassessment and finding-to-closure cycle.
+- **AI-GOV-03 — Control Evidence Index:** the index exists and is implemented at the portfolio-document level. Its maintenance, retrieval and supersession process has not yet been tested.
+- **AI-INC-01 — AI Incident, Containment & Stop-Use:** seeded exceptions demonstrate related detection, gating and containment behavior. They do not demonstrate the complete incident lifecycle.
+
+### 3.1 Portfolio-wide applicability reconciliation
+
+The v1.6 applicability package evaluates all 45 canonical controls. Forty-four are Applicable within their defined AIMS or AI-entry scope; `AI-TPR-01` is Conditionally applicable when an external provider, hosted service, model/data supplier or material subprocessor is used. No control is excluded.
+
+The result does not change source implementation labels or residual-risk ratings. Nine controls have linked synthetic evidence after reconciliation; 36 have no linked evidence. `DD-01` and `FF-01` retain unsupported Implemented source labels and receive no additional risk credit. Evidence IDs `EV-AIMS-017`–`020` make the method, register, human review and executable validation traceable.
+
+### 3.2 PondGPT PG-03 technical-security reconciliation
+
+Canonical evidence `EV-AI006-017`–`022` now demonstrates a bounded synthetic PG-03 chain from validation design through executable implementation, seeded baseline failure, remediation, same-test hardened retest, detection validation and commit-bound GitHub Actions replay.
+
+The historical `PG-03` source label remains `Planned` because the underlying control-library workbook was not revised in this reconciliation. The authoritative evidence-maturity field therefore governs interpretation: **PG-03 is no longer design-only in the portfolio evidence set**, but production operating effectiveness remains unverified and receives no risk-reduction credit.
+
+The same lab provides **supporting component evidence** for `PG-04` tool authorization and `PG-05` telemetry/detection. It does not establish complete production tool sandboxing or production SIEM operation. `PG-06` is intentionally not upgraded: the PG-03 output-rendering test demonstrates one bounded output-handling path, not the full Secure Output Verification & Code Scanning control.
+
+The successful replay occurred on `main` commit `4998f92238868e1b4f3341ae3ebfbc01bd7881f9` in Evidence reproducibility run #92. The retained artifact `pondgpt-pg03-evidence-4998f92238868e1b4f3341ae3ebfbc01bd7881f9` has digest `sha256:56ef1004b9025fe7c0ac059712fc6548a073b6c6d72618ba02ed74443b342156`.
+
+### 3.3 Internal-audit reconciliation
+
+The v1.7 audit programme assigns all 45 controls to one of four engagements: two P1 Immediate, 23 P2 High and 20 P3 Medium. First-wave engagement `AUD-AIMS-2026-001` tested the complete population of unsupported `Implemented` claims: `DD-01` and `FF-01`. Fourteen test steps and 12 evidence requests did not identify implementation or operating evidence in the reviewed repository. Findings `IAF-2026-002` and `IAF-2026-003` are High and open.
+
+This is a bounded synthetic repository assurance exercise. It does not prove that the controls failed to operate, and auditor independence, competence and formal authorization remain unverified. An authorized independent reviewer must validate the conclusions. The audit gate passes 13 structural assertions and closes zero findings.
+
+## 4. Evidence acceptance requirements
+
+Before a control can be rated Operating, Effective or Validated for a production context, the reviewer must record:
+
+1. Exact AI system, model/service, data, configuration and control version.
+2. Defined population and operating period.
+3. Control owner and actual performer.
+4. Expected and observed execution frequency.
+5. Exceptions, overrides, failures and remediation.
+6. Outcome or effectiveness metric and threshold.
+7. Reviewer competence, independence and limitations.
+8. Approval and resulting lifecycle/risk decision.
+
+A screenshot, folder reference, policy statement or implementation label alone is insufficient evidence of operation or effectiveness.
+
+## 5. Testing approach
+
+| Evidence stage | Minimum test |
+|---|---|
+| Designed | Inspect whether objective, owner, trigger, procedure, evidence and metric are complete and aligned to the mapped risk. |
+| Implemented | Inspect configuration or implementation artifact and verify it applies to the scoped version and boundary. |
+| Operating | Select or evaluate the full defined-period population; verify execution, timeliness, completeness, exceptions and review. |
+| Effective | Evaluate whether outcomes remain within approved thresholds and whether failures were detected and corrected. |
+| Validated | Repeat or independently challenge the test, data, sampling, conclusion and decision linkage. |
+
+## 6. Governance and maintenance
+
+The AI Governance Lead maintains the framework. Control owners supply evidence and explain exceptions. Risk owners approve any credit used in risk scoring. Material changes or control failures trigger reassessment. Control status changes must be reflected simultaneously in the risk register, evidence index, AIMS crosswalk and management reporting.
