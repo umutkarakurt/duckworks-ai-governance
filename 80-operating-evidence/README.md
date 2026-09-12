@@ -8,7 +8,7 @@ This folder contains worked examples showing how an identified AI risk is transl
 
 ## Authoritative evidence index
 
-[`Duckworks_AI_Control_Evidence_Index_v1.7.md`](Duckworks_AI_Control_Evidence_Index_v1.7.md) is the current canonical evidence register. It consolidates 70 stable evidence IDs: 64 available synthetic records and six explicitly unavailable production-evidence records. `EV-AIMS-001`–`008` covers AIMS objectives and support; `EV-AIMS-009`–`016` covers risk, management review and action follow-up; `EV-AIMS-017`–`020` covers control applicability; and `EV-AIMS-021`–`028` covers the internal-audit procedure, universe, programme, first-wave plan, evidence requests, test results, findings, independence limitation and executable gate. Earlier indexes are retained as superseded history.
+[`Duckworks_AI_Control_Evidence_Index_v1.8.md`](Duckworks_AI_Control_Evidence_Index_v1.8.md) is the current canonical evidence register. It consolidates 76 stable evidence IDs: 70 available synthetic records and six explicitly unavailable production-evidence records. `EV-AI006-017`–`022` covers the PondGPT PG-03 validation plan, executable lab, baseline/remediation, hardened retest, detection validation and commit-bound repository replay; `EV-AIMS-001`–`008` covers AIMS objectives and support; `EV-AIMS-009`–`016` covers risk, management review and action follow-up; `EV-AIMS-017`–`020` covers control applicability; and `EV-AIMS-021`–`028` covers the internal-audit procedure, universe, programme, first-wave plan, evidence requests, test results, findings, independence limitation and executable gate. Earlier indexes are retained as superseded history.
 
 ## Purpose
 
@@ -86,6 +86,32 @@ The worked evidence package demonstrates:
 - a control-test conclusion over the complete synthetic test population.
 
 See: [`AI-006-pondgpt/`](./AI-006-pondgpt/)
+
+#### AI-006 — PondGPT Phase II adversarial-security extension
+
+**Material risk:** `AI-006-R02 — Security & adversarial manipulation`
+
+**Primary detective control:** `PG-03 — Prompt Injection & RAG Poisoning Test Suite`
+
+The related technical-security package demonstrates:
+
+- an eight-case PG-03 validation plan;
+- an executable local lab with explicit `vulnerable` and `hardened` profiles;
+- reproducible seeded security-boundary failures;
+- documented remediation;
+- same-test hardened retesting;
+- **8/8 hardened PASS** across `PG03-T001`–`PG03-T008`;
+- a deliberate detector miss while authorization remains intact;
+- provider-boundary and fail-closed assertions;
+- structured correlated telemetry;
+- commit-bound Python 3.12 replay in GitHub Actions against `4998f92238868e1b4f3341ae3ebfbc01bd7881f9`; and
+- a retained CI evidence artifact with a recorded SHA-256 digest.
+
+Canonical evidence IDs: `EV-AI006-017–022`.
+
+See: [`../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/`](../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/)
+
+> **Evidence boundary:** The PG-03 result is synthetic and commit-bound to the defined repository/lab version. It does not establish production PondGPT security, production SIEM/DLP operation, real provider behavior, sustained effectiveness, legal compliance, certification, independent assurance, or residual-risk reduction.
 
 ### AI-005 — DuckTalent AI
 
