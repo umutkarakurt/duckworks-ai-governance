@@ -10,10 +10,10 @@ This folder contains the active Duckworks method for identifying, scoring, treat
 ## Current artifacts
 
 - [`Duckworks_AI_Risk_Classification_Assessment_Methodology_v1.0.md`](Duckworks_AI_Risk_Classification_Assessment_Methodology_v1.0.md)
-- [`Duckworks_AI_Risk_Scenarios_v1.3.md`](Duckworks_AI_Risk_Scenarios_v1.3.md) — **authoritative current scenario register**
+- [`Duckworks_AI_Risk_Scenarios_v1.4.md`](Duckworks_AI_Risk_Scenarios_v1.4.md) — **authoritative current scenario register**
 - [`03-risk-evidence-reconciliation/`](03-risk-evidence-reconciliation/) — reconciliation analysis and workbook
 
-Versions 1.0–1.2 are retained for version history and are superseded by v1.3. Superseded v0.9 working material is retained separately under `99-archive/`.
+Versions 1.0–1.3 are retained for version history and are superseded by v1.4. Superseded v0.9 working material is retained separately under `99-archive/`.
 
 ## Method design
 
@@ -34,6 +34,12 @@ Planned controls receive **no credit** as implemented controls. Residual risk is
 ## Legal separation
 
 Regulatory/legal triage is a separate governance gate. Duckworks Low/Moderate/High/Critical ratings are internal enterprise-risk outcomes and must not be treated as EU AI Act legal classifications.
+
+## PondGPT PG-03 reconciliation
+
+`AI-006-R02 — Security & adversarial manipulation` now links to canonical evidence `EV-AI006-017`–`022`, covering the PG-03 validation plan, executable synthetic lab, baseline failure/remediation, hardened eight-case retest, detection validation and commit-bound GitHub Actions replay.
+
+The evidence changes the **evidence-maturity interpretation**, not the current score or lifecycle gate. The recorded current residual remains **12 High**, PondGPT remains **Restricted pilot only**, and no production risk-reduction credit is granted because production identity/connectors, provider/tool boundaries, SIEM/DLP integration, operating period and outcome effectiveness remain unverified.
 
 ## Evidence-chain expectation
 
