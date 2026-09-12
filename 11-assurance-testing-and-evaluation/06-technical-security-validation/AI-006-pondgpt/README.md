@@ -3,7 +3,7 @@
 **System:** AI-006 — PondGPT  
 **Current governance gate:** Restricted pilot only  
 **Primary Phase II control target:** `PG-03 — Prompt Injection & RAG Poisoning Test Suite`  
-**Status:** Validation plan established; executable synthetic lab v0.1.0 and local PG-03 execution evidence produced; repository replay pending  
+**Status:** Validation plan established; executable synthetic lab v0.1.0 produced; commit-bound repository replay completed successfully  
 
 [← Technical security validation](../README.md) · [← Main portfolio](../../../README.md)
 
@@ -29,11 +29,11 @@ The critical invariant is:
 
 - [`Duckworks_PondGPT_PG03_Technical_Security_Validation_Plan_v1.0.md`](Duckworks_PondGPT_PG03_Technical_Security_Validation_Plan_v1.0.md) — approved-for-build validation design.
 - [`lab/`](lab/) — executable synthetic PondGPT security lab with `vulnerable` and `hardened` profiles.
-- [`lab/reports/Duckworks_PondGPT_PG03_Technical_Security_Test_Report_v1.0.md`](lab/reports/Duckworks_PondGPT_PG03_Technical_Security_Test_Report_v1.0.md) — local execution result and control conclusion.
+- [`lab/reports/Duckworks_PondGPT_PG03_Technical_Security_Test_Report_v1.1.md`](lab/reports/Duckworks_PondGPT_PG03_Technical_Security_Test_Report_v1.1.md) — reconciled local and commit-bound repository execution result and control conclusion.
 - [`lab/findings/Duckworks_PondGPT_PG03_Baseline_Findings_and_Remediation_v1.0.md`](lab/findings/Duckworks_PondGPT_PG03_Baseline_Findings_and_Remediation_v1.0.md) — seeded baseline findings and hardening actions.
 - [`lab/reports/Duckworks_PondGPT_PG03_Detection_Validation_v1.0.md`](lab/reports/Duckworks_PondGPT_PG03_Detection_Validation_v1.0.md) — detector/telemetry result separated from prevention.
 
-## Current local execution result
+## Current execution result
 
 The deliberately vulnerable profile reproduces **8 FAIL / 0 PASS** across `PG03-T001`–`PG03-T008`. The hardened profile returns **8 PASS / 0 FAIL** against the same case functions.
 
@@ -41,19 +41,30 @@ The deliberately vulnerable profile reproduces **8 FAIL / 0 PASS** across `PG03-
 
 Local verification also records **6 pytest tests passed** plus a standard-library CI verification PASS.
 
-## Repository-replay boundary
+## Repository replay result
 
-The generated local evidence records a source-tree SHA-256 but intentionally marks the repository commit as `PENDING_REPOSITORY_COMMIT`. The updated GitHub Actions workflow should replay the PG-03 verifier and campaign under Python 3.12 after upload.
+The repository replay condition is now satisfied.
 
-Until that workflow succeeds, describe the new evidence as **local synthetic execution**, not commit-bound repository evidence.
+GitHub Actions **Evidence reproducibility run #92** completed successfully on `main` against commit `4998f92238868e1b4f3341ae3ebfbc01bd7881f9` using Python 3.12. The workflow regenerated the campaign, ran the standard-library PG-03 verifier, checked the semantic T007/T008 assertions, and verified that the generated `source_commit` matched `GITHUB_SHA`.
 
-## Evidence-ID rule
+The run also retained the generated technical evidence as the workflow artifact `pondgpt-pg03-evidence-4998f92238868e1b4f3341ae3ebfbc01bd7881f9` with digest `sha256:56ef1004b9025fe7c0ac059712fc6548a073b6c6d72618ba02ed74443b342156`. This establishes **commit-bound synthetic reproducibility for the defined lab version**. It does not establish production PondGPT security or sustained operating effectiveness.
 
-The canonical PondGPT evidence series currently extends through `EV-AI006-016`. This executable package intentionally does not pre-assign new canonical evidence IDs. After upload and successful repository replay, the next step is to reconcile actual PG-03 artifacts into the canonical evidence index and allocate the next unused IDs.
+## Canonical evidence reconciliation
+
+The successful replay is reconciled into the canonical evidence index as `EV-AI006-017–022`:
+
+- `EV-AI006-017` — PG-03 validation plan;
+- `EV-AI006-018` — executable synthetic lab;
+- `EV-AI006-019` — vulnerable-baseline findings and remediation record;
+- `EV-AI006-020` — hardened technical-security campaign and test report;
+- `EV-AI006-021` — detection/telemetry validation; and
+- `EV-AI006-022` — commit-bound GitHub Actions replay and retained evidence artifact.
+
+These IDs support a bounded **Synthetic technical implementation demonstrated / Synthetic operation tested / Commit-bound reproducibility demonstrated** conclusion for `PG-03`. They do not support production-effectiveness credit.
 
 ## Governance effect
 
-The lab does not change AI-006 residual risk or its current **Restricted pilot only** gate. A synthetic PASS does not establish production authorization inheritance, production DLP/SIEM, real provider behavior, sustained operating effectiveness, legal compliance, certification, or independent assurance.
+The reconciled PG-03 evidence does not change AI-006 residual risk or its current **Restricted pilot only** gate. A synthetic PASS does not establish production authorization inheritance, production DLP/SIEM, real provider behavior, sustained operating effectiveness, legal compliance, certification, or independent assurance.
 
 ---
 
