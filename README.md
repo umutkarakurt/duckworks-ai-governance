@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 portfolio baseline + Phase II technical AI security engineering workstream initiated  
+**Status:** v1.8 governance baseline + Phase II PondGPT PG-03 commit-bound synthetic technical validation completed  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -268,6 +268,11 @@ The package includes:
 
 ➡️ **[View the AI-006 PondGPT operating-evidence package](80-operating-evidence/AI-006-pondgpt/)**
 
+The Phase II extension addresses `AI-006-R02 — Security & adversarial manipulation` through `PG-03 — Prompt Injection & RAG Poisoning Test Suite`. The executable lab deliberately reproduces eight unsafe baseline conditions, applies documented hardening, reruns the same cases to **8/8 PASS**, separates injection-detector coverage from authorization, and is replayed in GitHub Actions against commit `4998f92238868e1b4f3341ae3ebfbc01bd7881f9`.
+
+➡️ **[View the AI-006 PondGPT PG-03 technical-security validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/)**
+
+
 The related supplier-governance case extends the chain through `AI-TPR-01`: supplier intake, an 18-item due-diligence evidence register, six supplier-risk scenarios, 12 proposed contract controls, a conditional gate decision, monitoring and exit design, a blocked material-change event, and an executable supplier gate.
 
 ➡️ **[View the AI-006 PondGPT supplier-governance package](09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/)**
@@ -366,9 +371,18 @@ Two security invariants anchor the PondGPT design:
 
 > **Retrieved content and model output are untrusted data. Neither receives system authority merely because an LLM processed or produced it.**
 
-**Current evidence boundary:** the Phase II architecture and threat model are design/test baselines. They do not establish that the depicted architecture exists in production or that the planned adversarial controls are operating effectively. Existing `PG-01` / `PG-02` synthetic evidence remains separately bounded in `80-operating-evidence/AI-006-pondgpt/`.
+The Phase II PondGPT foundation now also includes:
 
-**Next technical milestone:** implement the PondGPT technical-security validation environment and execute `PG-03 — Prompt Injection & RAG Poisoning Test Suite` using a baseline attack → evidence → remediation → retest → detection-validation chain.
+- **[PG-03 Technical Security Validation Plan](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/Duckworks_PondGPT_PG03_Technical_Security_Validation_Plan_v1.0.md)** — converts the threat model into eight deterministic adversarial cases and machine-testable acceptance criteria.
+- **[Executable PondGPT security lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/lab/)** — implements explicit vulnerable/hardened profiles, RAG/authorization/tool/provider boundaries and structured telemetry.
+- **[PG-03 Technical Security Test Report v1.1](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/lab/reports/Duckworks_PondGPT_PG03_Technical_Security_Test_Report_v1.1.md)** — records 8/8 seeded baseline failures, 8/8 hardened passes, detector limitations and the commit-bound repository replay.
+- **[PG-03 findings/remediation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/lab/findings/Duckworks_PondGPT_PG03_Baseline_Findings_and_Remediation_v1.0.md)** and **[detection validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/lab/reports/Duckworks_PondGPT_PG03_Detection_Validation_v1.0.md)**.
+
+GitHub Actions **Evidence reproducibility run #92** successfully replayed the PG-03 campaign under Python 3.12 against commit `4998f92238868e1b4f3341ae3ebfbc01bd7881f9`. Canonical evidence IDs `EV-AI006-017`–`022` reconcile the validation design, implementation, failure/remediation, hardened retest, detection evidence and commit-bound CI artifact.
+
+**Current evidence boundary:** Phase II now demonstrates a reproducible, commit-bound **synthetic** PG-03 technical-control chain. It still does not establish that the depicted architecture exists in production, that production identity/connectors/provider/tool boundaries operate as modelled, or that PG-03/PG-04/PG-05 are effective in a real operating environment. No residual-risk or lifecycle-gate credit is granted.
+
+**Next technical milestone:** extend Phase II to a second system, beginning with WingInspect Vision adversarial-ML / computer-vision security analysis, while preserving the existing PondGPT production-evidence gaps for any future production-risk decision.
 
 ---
 
@@ -404,7 +418,7 @@ The governance methodology and controls are informed by:
 
 [View the reconciled AIMS Evidence Baseline v1.7](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.7.md)
 
-The baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix, 70 current evidence IDs, the master crosswalk, and prioritized actions with closure criteria. It recognizes the DuckTalent improvement cycle, PondGPT supplier lifecycle, AIMS objectives-and-support pack, bounded AIMS-wide management-review cycle and the 45-control internal-audit programme while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
+The v1.7 baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix and the 70 evidence IDs available at that baseline snapshot, together with the master crosswalk and prioritized actions with closure criteria. The later PG-03 reconciliation adds `EV-AI006-017`–`022` to the canonical evidence index; those six records are outside the v1.7 AIMS-baseline snapshot and should be incorporated in its next formal refresh. It recognizes the DuckTalent improvement cycle, PondGPT supplier lifecycle, AIMS objectives-and-support pack, bounded AIMS-wide management-review cycle and the 45-control internal-audit programme while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
 
 The baseline is reconciled through the v1.7 internal-audit programme milestone. It does not claim recurring AIMS operation, real competence or authorization, enterprise-wide records operation, production effectiveness, conformity, certification, legal compliance, or independent enterprise assurance.
 
@@ -578,8 +592,9 @@ For a security-focused review, use this shorter sequence after the existing Pond
 1. **[Phase II Scope Addendum](01-project-charter-and-context/02-objectives-and-scope/Duckworks_Technical_AI_and_Cybersecurity_Engineering_Scope_Addendum_v1.0.md)** — confirm authorization and evidence boundaries.
 2. **[Technical AI Security Reference & Applicability Baseline](02-regulatory-and-framework-research/Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md)** — review legal/framework/technical-source separation.
 3. **[PondGPT Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md)** — inspect components, trust boundaries and security invariants.
-4. **[PondGPT Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md)** — inspect attacker paths, priorities, gaps and planned tests.
-5. **`80-operating-evidence/AI-006-pondgpt/`** — compare the design baseline with the evidence that actually exists.
+4. **[PondGPT Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md)** — inspect attacker paths, priorities, gaps and the `PG03-T001`–`PG03-T008` cases.
+5. **[PondGPT PG-03 Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/)** — inspect the validation plan, executable vulnerable/hardened lab, findings/remediation, technical-security report, detection validation and commit-bound CI replay.
+6. **`80-operating-evidence/AI-006-pondgpt/`** — compare the PG-01/PG-02 authorization evidence with the PG-03 adversarial-security chain and the explicit production-evidence gaps.
 
 ---
 
@@ -650,7 +665,7 @@ The repository includes or is intended to include:
 
 ### Operating evidence
 
-- authoritative control-evidence index v1.7 with 70 stable records;
+- authoritative control-evidence index v1.8 with 76 stable records, including `EV-AI006-017`–`022` for PG-03 technical-security validation;
 - WingInspect `WI-01` control implementation card;
 - synthetic WingInspect inspection execution log;
 - Human Release Gate control-test workpaper;
@@ -811,7 +826,7 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a technical AI-security engineering workstream. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The immediate Phase II path is to build the PondGPT synthetic security lab, execute `PG-03`, capture telemetry, remediate observed weaknesses, retest, and reconcile the resulting evidence with the existing risk/control architecture. Additional evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. The PondGPT PG-03 lab, remediation/retest chain, telemetry validation and canonical evidence reconciliation are complete within the synthetic portfolio boundary. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next Phase II path is to extend the same evidence-led method to WingInspect Vision adversarial-ML / computer-vision security, followed by QuackBot public-facing RAG/API security and DuckDesign AI software/supply-chain/tool-privilege risks. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
