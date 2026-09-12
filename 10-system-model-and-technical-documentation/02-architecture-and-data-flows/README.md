@@ -1,64 +1,73 @@
 # Architecture and Data Flows
 
 **Repository path:** `10-system-model-and-technical-documentation/02-architecture-and-data-flows/`  
-**Status:** Portfolio diagrams / architecture design / illustrative technical evidence  
+**Status:** Portfolio diagrams / architecture design / illustrative technical evidence
 
 [← Back to main portfolio](../../README.md) · [↑ Parent folder](../README.md)
 
-This folder contains architecture and data-flow material used to make AI processing boundaries, trust relationships, data movement, integration points, authorization enforcement, model-provider boundaries, and security telemetry easier to review.
+This folder contains architecture and data-flow material used to make AI processing boundaries, trust relationships, data movement, integration points, authorization enforcement, model/provider boundaries, physical acquisition boundaries, human decision points, and security telemetry easier to review.
 
 ## Current artifacts
 
 - `Duckworks_AI_Data_Flow_Diagrams_v1.0.pdf`
 - `Duckworks DFD.png`
 - [`AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md) — Phase II synthetic PondGPT security architecture and engineering baseline.
-
+- [`AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md`](AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md) — Phase II synthetic WingInspect computer-vision security architecture.
 
 ## AI-006 PondGPT Phase II architecture
 
-The PondGPT architecture introduces a deliberately explicit synthetic security design for later adversarial validation. It identifies:
+The PondGPT architecture identifies identity, authorization, RAG, provider, tool, egress, secrets, telemetry, build/release, and evidence boundaries. It is the dependency for the PondGPT threat model and executable PG-03 security lab.
 
-- 17 logical components;
-- 10 trust boundaries;
-- synthetic OIDC/JWT identity and service identities;
-- deterministic permission-aware retrieval before model-context construction;
-- RAG source provenance, ACL/classification metadata, integrity hashes, staging, and publication flow;
-- a Duckworks LLM gateway and fictional LanternMind provider boundary;
-- optional tool-policy enforcement;
-- deny-by-default egress;
-- secrets isolation;
-- normalized security telemetry and correlation IDs;
-- build/release versioning and integrity requirements;
-- security failure modes; and
-- 18 testable PondGPT security requirements.
-
-The architecture is the dependency for the separate **[PondGPT Technical Threat Model](../03-threat-models/AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md)**.
-
-Two design invariants are intentionally explicit:
+Two core invariants remain:
 
 > Authorization must be enforced before retrieved content enters the LLM context.
 
 > Retrieved content and model output are untrusted data and do not acquire security authority through the model.
 
+## AI-004 WingInspect Phase II architecture
+
+The WingInspect architecture adds a different class of security problem: a predictive computer-vision system whose outputs can influence manufacturing quality decisions.
+
+It identifies:
+
+- product / fixture and camera acquisition boundaries;
+- image-to-item provenance;
+- image-quality fail-safe routing;
+- versioned preprocessing;
+- model, class-map, and threshold integrity;
+- dataset / label provenance;
+- vendor/component staging;
+- human inspection;
+- the Mandatory Human Release Gate;
+- QMS/security telemetry; and
+- change-triggered revalidation.
+
+Its critical invariant is:
+
+> **The model may flag or classify defects, but it cannot independently authorize product release.**
+
+The architecture is the dependency for the **[WingInspect Technical Threat Model](../03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)**.
+
 ## Governance use
 
-Data-flow and architecture diagrams support:
+Architecture and data-flow artifacts support:
 
 - privacy and DPIA analysis;
 - data classification and provenance;
 - security threat modelling;
 - third-party boundary identification;
-- access-control and permission review;
-- RAG / knowledge-source analysis;
-- logging and monitoring design;
+- access and integrity review;
+- model/data supply-chain analysis;
+- human-oversight design;
+- logging and monitoring;
 - incident and change analysis.
 
 ## Evidence caution
 
 A diagram or target architecture is an explanatory/design artifact, not proof that the depicted production architecture exists or that the controls shown are operating.
 
-The PondGPT Phase II architecture explicitly labels synthetic design assumptions so that they can be built and tested without being mistaken for production facts. Material production claims—such as actual authorization inheritance, vendor data retention, model endpoints, subprocessors, network segmentation, logging coverage, or product-integrated safety functions—require separate supporting evidence before they can be treated as validated.
+Material production claims require separate supporting evidence. For WingInspect this includes real camera configuration, actual model/runtime, inspection procedures, human authority, model-performance outcomes, defect-escape evidence, product-safety role, and adversarial robustness.
 
 ---
 
-> **Portfolio boundary:** Duckworks, Project W.I.N.G., its personnel, systems, datasets, decisions, controls, and evidence are fictional or synthetic unless a file explicitly identifies a public source. Folder descriptions explain the intended governance role of the artifacts; they do not convert draft, planned, or template material into implemented controls, legal compliance, certification, or independent assurance.
+> **Portfolio boundary:** Duckworks, Project W.I.N.G., its personnel, systems, datasets, decisions, controls, and evidence are fictional or synthetic unless a file explicitly identifies a public source.
