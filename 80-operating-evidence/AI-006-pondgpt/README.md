@@ -1,17 +1,19 @@
-# AI-006 PondGPT — Permission Regression & DLP Operating-Evidence Demonstration
+# AI-006 PondGPT — Operating and Technical-Security Evidence Demonstrations
 
 **AI system:** `AI-006 — PondGPT`  
-**Primary risk:** `AI-006-R01 — Privacy & data governance`  
+**Primary risks:** `AI-006-R01 — Privacy & data governance`; `AI-006-R02 — Security & adversarial manipulation`  
 **Preventive boundary:** `PG-01 — Permission-Aware Retrieval`  
-**Detective control demonstrated:** `PG-02 — Automated Permission Regression & DLP Tests`  
+**Detective controls demonstrated:** `PG-02 — Automated Permission Regression & DLP Tests`; `PG-03 — Prompt Injection & RAG Poisoning Test Suite`  
 **Current governance gate:** Restricted pilot only  
 **Evidence classification:** Portfolio / Synthetic / Non-production
 
 ## Purpose
 
-This package demonstrates how Project W.I.N.G. can translate PondGPT's material authorization risk into a technical control-evidence chain:
+This package demonstrates how Project W.I.N.G. translates two material PondGPT risks into distinct, evidence-producing technical control chains:
 
-**AI-006-R01 → PG-01 preventive authorization boundary → PG-02 detective validation → authorization matrix → automated-style regression execution → detected exception → remediation retest → control-test conclusion**
+**Chain A — authorization:** AI-006-R01 → PG-01 preventive authorization boundary → PG-02 detective validation → authorization matrix → regression execution → detected exception → remediation retest → control-test conclusion
+
+**Chain B — adversarial manipulation:** AI-006-R02 → PG-03 validation plan → executable vulnerable baseline → findings/remediation → same-case hardened retest → detection validation → commit-bound CI replay → canonical evidence reconciliation
 
 The package is deliberately different from the WingInspect worked example. It focuses on **technical access-control assurance**, not a human approval gate.
 
@@ -114,9 +116,51 @@ No third-party Python packages or network access are required.
 
 The script demonstrates that the **control logic is executable and evidence-producing**. It does not establish that real PondGPT production connectors, identity groups, DLP enforcement, SIEM integration, or source-system permissions operate this way.
 
+
+## Phase II adversarial-security extension — PG-03
+
+The Phase II technical-security package is maintained under:
+
+[`../../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/`](../../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/)
+
+It converts the PondGPT architecture and threat model into eight deterministic tests:
+
+- `PG03-T001` — direct instruction override;
+- `PG03-T002` — indirect injection in an authorized document;
+- `PG03-T003` — RAG metadata downgrade;
+- `PG03-T004` — authorized-contributor poisoning;
+- `PG03-T005` — obfuscated injection variants;
+- `PG03-T006` — external-rendering exfiltration;
+- `PG03-T007` — provider-boundary context assertion; and
+- `PG03-T008` — fail-closed authorization.
+
+The deliberately weak profile reproduces **8 FAIL / 0 PASS**. The hardened profile returns **8 PASS / 0 FAIL** against the same case functions. `PG03-T005` records **4/5 detector coverage** while the security boundary remains intact, demonstrating that prompt-injection detection is not being used as the access-control mechanism.
+
+GitHub Actions **Evidence reproducibility run #92** replayed the campaign under Python 3.12 against commit `4998f92238868e1b4f3341ae3ebfbc01bd7881f9`, verified the commit binding and semantic T007/T008 assertions, and retained `pondgpt-pg03-evidence-4998f92238868e1b4f3341ae3ebfbc01bd7881f9` with digest `sha256:56ef1004b9025fe7c0ac059712fc6548a073b6c6d72618ba02ed74443b342156`.
+
+### Canonical PG-03 evidence IDs
+
+- `EV-AI006-017` — PG-03 validation plan;
+- `EV-AI006-018` — executable synthetic lab;
+- `EV-AI006-019` — vulnerable-baseline findings and remediation;
+- `EV-AI006-020` — hardened campaign and technical-security test report;
+- `EV-AI006-021` — detection/telemetry validation;
+- `EV-AI006-022` — commit-bound repository replay and CI evidence artifact.
+
+### PG-03 evidence maturity
+
+Current demonstrated state:
+
+**Designed → Synthetic technical implementation demonstrated → Synthetic failure/remediation demonstrated → Synthetic operation tested → Commit-bound reproducibility demonstrated**
+
+Not demonstrated:
+
+**Production security integration → Defined-period operating effectiveness → Outcome effectiveness → Independent assurance**
+
+The PG-03 evidence does not change PondGPT's **High (12)** current residual score for `AI-006-R02`, the **Restricted pilot only** gate, or any legal/regulatory classification.
+
 ## Supplier-governance extension
 
 The related [PondGPT supplier-governance evidence package](../../09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/) extends this technical authorization demonstration through supplier intake, due diligence, evidence gaps, supplier risk, proposed contract controls, a conditional gate decision, monitoring and exit design, a synthetic material-change response, and an executable supplier gate.
 
 Evidence IDs `EV-AI006-009`–`016` support a bounded synthetic `AI-TPR-01` demonstration. They do not validate LanternMind, execute contract terms, demonstrate recurring supplier monitoring, or change PondGPT's High-risk/restricted-pilot position.
-
