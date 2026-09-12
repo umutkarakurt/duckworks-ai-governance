@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + Phase II PondGPT PG-03 commit-bound synthetic technical validation completed  
+**Status:** v1.8 governance baseline + Phase II PondGPT PG-03 validation completed + WingInspect technical-security foundation established  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -382,7 +382,18 @@ GitHub Actions **Evidence reproducibility run #92** successfully replayed the PG
 
 **Current evidence boundary:** Phase II now demonstrates a reproducible, commit-bound **synthetic** PG-03 technical-control chain. It still does not establish that the depicted architecture exists in production, that production identity/connectors/provider/tool boundaries operate as modelled, or that PG-03/PG-04/PG-05 are effective in a real operating environment. No residual-risk or lifecycle-gate credit is granted.
 
-**Next technical milestone:** extend Phase II to a second system, beginning with WingInspect Vision adversarial-ML / computer-vision security analysis, while preserving the existing PondGPT production-evidence gaps for any future production-risk decision.
+### Second Phase II target — AI-004 WingInspect Vision
+
+The WingInspect foundation is now established before adversarial testing, as required by the Phase II scope:
+
+- **[WingInspect Technical Security Architecture v1.0](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md)** — defines product/image acquisition, provenance, image-quality fail-safe routing, preprocessing/model/configuration integrity, human release authority, telemetry, and change-triggered revalidation.
+- **[WingInspect Technical Threat Model v1.0](10-system-model-and-technical-documentation/03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)** — covers adversarial evasion, physical/image manipulation, dataset/label poisoning, model/configuration tamper, supply-chain compromise, fail-open behavior, automation bias, and release-gate bypass.
+
+The threat model proposes `WISEC-T001`–`WISEC-T008` as the first validation wave. These are **design-only test IDs** until a separate validation plan and executable lab are built.
+
+**WingInspect evidence boundary:** no new canonical evidence IDs, control-effectiveness credit, residual-risk reduction, or lifecycle-gate change is created by these design artifacts.
+
+**Next technical milestone:** create the WingInspect adversarial-ML technical-security validation plan (`DW-AI004-VAL-SEC-01`) and deterministic synthetic lab for `WISEC-T001`–`WISEC-T008`.
 
 ---
 
@@ -595,6 +606,8 @@ For a security-focused review, use this shorter sequence after the existing Pond
 4. **[PondGPT Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md)** — inspect attacker paths, priorities, gaps and the `PG03-T001`–`PG03-T008` cases.
 5. **[PondGPT PG-03 Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/)** — inspect the validation plan, executable vulnerable/hardened lab, findings/remediation, technical-security report, detection validation and commit-bound CI replay.
 6. **`80-operating-evidence/AI-006-pondgpt/`** — compare the PG-01/PG-02 authorization evidence with the PG-03 adversarial-security chain and the explicit production-evidence gaps.
+7. **[WingInspect Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md)** — review physical/image acquisition, model/configuration integrity, fail-safe, human release, and evidence boundaries.
+8. **[WingInspect Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)** — review adversarial-ML attack paths, poisoning/supply-chain threats, P0/P1 priorities, and the planned `WISEC-T001`–`WISEC-T008` validation set.
 
 ---
 
