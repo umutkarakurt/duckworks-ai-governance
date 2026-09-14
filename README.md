@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + Phase II PondGPT PG-03 validation completed + WingInspect commit-bound technical validation and AI-004 evidence reconciliation completed  
+**Status:** v1.8 governance baseline + PondGPT and WingInspect commit-bound technical validation completed + QuackBot public-facing RAG/API technical-security foundation established  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -412,7 +412,31 @@ The technical-evidence increment is reconciled as **`EV-AI004-006`–`011`** thr
 
 **Governance consequence:** no AI-004 score changes; `ASM-008` and `ASM-028` remain open; the gate remains **Restricted pilot only**.
 
-**Next Phase II target:** **AI-002 QuackBot — public-facing RAG/API security**.
+**Next Phase II milestone:** QuackBot architecture/threat-model foundation is established below; executable validation remains pending.
+
+### Third Phase II target — AI-002 QuackBot
+
+QuackBot extends Phase II into a distinct **internet-facing customer-service GenAI/RAG/API** attack surface.
+
+The foundation now includes:
+
+- **[QuackBot Technical Security Reference & Applicability Addendum v1.0](02-regulatory-and-framework-research/Duckworks_QuackBot_Technical_Security_Reference_Applicability_Addendum_v1.0.md)** — separates mandatory-law questions from voluntary guidance and identifies AI Act Article 50 direct-interaction transparency as a QuackBot-specific applicability item without classifying QuackBot as high-risk.
+- **[QuackBot Technical Security Architecture v1.0](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md)** — defines internet/API, anonymous/authenticated session, customer-data authorization, RAG provenance, provider, grounding/escalation, output, resource-control, telemetry and version/change boundaries.
+- **[QuackBot Technical Threat Model v1.0](10-system-model-and-technical-documentation/03-threat-models/AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md)** — identifies 48 technical threat scenarios and 12 design-only validation cases spanning prompt/RAG injection, BOLA/session isolation, customer-data leakage, misinformation, output handling, tool/SSRF paths, resource exhaustion and version integrity.
+
+Two security principles anchor the QuackBot design:
+
+> **The model is not an access-control mechanism. Customer/account authorization must be enforced before private content enters model context.**
+
+> **Retrieved content and model output are untrusted data. Neither acquires application authority through the LLM.**
+
+Candidate tests `QBSEC-T001`–`QBSEC-T012` are **design-only**. No QuackBot test has been executed, no `EV-AI002-*` evidence IDs are allocated, and no `QB-01`–`QB-06` status/evidence maturity is upgraded.
+
+**QuackBot evidence boundary:** architecture and threat modelling improve design traceability only. They do not establish production API/session security, customer-data isolation, provider compliance, prompt-injection resilience, safe customer guidance, legal compliance or operating effectiveness.
+
+**Governance consequence:** `AI-002-R01`, `AI-002-R02` and `AI-002-R03` remain unchanged; `ASM-010` and `ASM-026` remain open; QuackBot remains **Pre-Production / Production Blocked**.
+
+**Next technical milestone:** create `DW-AI002-VAL-SEC-01` and a deterministic synthetic QuackBot validation lab for `QBSEC-T001`–`QBSEC-T012`, then obtain commit-bound replay before any evidence reconciliation.
 
 ---
 
@@ -742,6 +766,9 @@ The repository includes or is intended to include:
 - WingInspect Technical Security Architecture v1.0;
 - WingInspect Technical Threat Model v1.0;
 - WingInspect Technical Security Validation Plan v1.0, Test Report v1.2 and evidence-reconciliation record;
+- QuackBot Technical Security Reference & Applicability Addendum v1.0;
+- QuackBot Technical Security Architecture v1.0;
+- QuackBot Technical Threat Model v1.0;
 - NIST ARIA evaluation documentation;
 - adversarial multi-perspective review and findings register.
 
@@ -866,7 +893,7 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. The PondGPT PG-03 chain is commit-bound and reconciled within the synthetic portfolio boundary. WingInspect adversarial-ML / computer-vision validation is now also commit-bound and reconciled through the controlled AI-004 evidence overlay, while production effectiveness, risk reduction and gate changes remain explicitly unclaimed. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next Phase II path is QuackBot public-facing RAG/API security, followed by DuckDesign AI software/supply-chain/tool-privilege risks. Additional evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. The PondGPT PG-03 and WingInspect technical-validation chains are commit-bound and reconciled within the synthetic portfolio boundary, while production effectiveness, risk reduction and gate changes remain explicitly unclaimed. QuackBot now has its public-facing RAG/API security applicability, architecture and threat-model foundation, but no executable validation evidence yet. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next Phase II milestone is QuackBot executable validation, followed by DuckDesign AI software/supply-chain/tool-privilege risks. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
