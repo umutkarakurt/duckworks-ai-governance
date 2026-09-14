@@ -5,7 +5,7 @@
 
 [← Back to assurance, testing and evaluation](../README.md) · [← Main portfolio](../../README.md)
 
-This folder contains reproducible security-validation plans, test implementations, execution records, findings, remediation/retest evidence, and detection-validation artifacts for selected Duckworks AI systems.
+This folder contains reproducible security-validation plans, executable test implementations, failure/remediation evidence, same-test retesting, detection/control-signal validation and commit-bound replay evidence for selected Duckworks AI systems.
 
 ## AI-006 PondGPT
 
@@ -22,35 +22,47 @@ See [`AI-006-pondgpt/`](AI-006-pondgpt/).
 
 ## AI-004 WingInspect Vision
 
-WingInspect is the second Phase II target.
+WingInspect is the second completed Phase II technical-validation increment.
 
-The first validation increment targets:
+Primary validation targets:
 
 - `WI-02 — Minimum Sensitivity & Safety Validation`;
 - `WI-04 — Fail-Safe Manual Fallback & Stop Rule`;
 - `WI-06 — Change-Triggered Revalidation & Locked Baseline`; and
 - supporting boundary `WI-01 — Qualified Human Final Inspection`.
 
-Current result:
+Canonical replay:
 
 - vulnerable profile: **0 PASS / 8 FAIL**;
 - hardened profile: **8 PASS / 0 FAIL**;
-- six standard-library unit tests passed;
-- WingInspect verifier PASS;
-- commit-bound WingInspect replay succeeded against `5f06f4c13fc45ad3cdc15d5192d26e034f004863`;
-- retained artifact `winginspect-security-evidence-5f06f4c13fc45ad3cdc15d5192d26e034f004863` (`10338040691`; `sha256:d35cd1e5233f34fa0bcf7d04130f92ae6c0bc35640cba81dc148355b2f49285b`); and
-- full workflow run #115 failed only afterward because the final Portfolio Integrity assertion used the wrong JSON path. A corrected clean rerun is pending before canonical evidence reconciliation.
+- six unit tests passed;
+- verifier PASS;
+- full repository semantic verification PASS;
+- commit `8e8bb9e43aca3d4a9d2f5cfb6e401b8469c4ac0b`;
+- run #124 (`34836419132`); and
+- retained artifact `winginspect-security-evidence-8e8bb9e43aca3d4a9d2f5cfb6e401b8469c4ac0b` / `sha256:d9f524770e3e3c406328245f46c7e610c7682cdd6d0072cb51a7fc01f2074f70`.
+
+AI-004 technical evidence is reconciled as `EV-AI004-006–011` through the controlled AI-004 evidence-reconciliation overlay.
 
 See [`AI-004-winginspect/`](AI-004-winginspect/).
 
 ## Evidence chain
 
-**Risk → Threat → Security requirement → Deliberately weak baseline → Test → Raw evidence → Finding → Remediation → Same-test retest → Detection/control-signal validation → Control conclusion → Governance/risk review**
+**Risk → Threat → Security requirement → Deliberately weak baseline → Test → Raw evidence → Finding → Remediation → Same-test retest → Detection/control-signal validation → Commit-bound replay → Control conclusion → Risk/gate reconciliation**
 
-Canonical WingInspect evidence IDs and control/risk reconciliation remain deferred until the corrected full workflow completes green. The WingInspect lab itself has already demonstrated commit-bound reproducibility.
+## Evidence boundary
 
-## Safety boundary
+A successful synthetic technical-validation chain does not establish:
 
-Testing must not target real third parties, real manufacturing systems, real credentials, real people, real products/facilities, or systems outside the controlled synthetic lab.
+- production operation;
+- product safety;
+- legal compliance;
+- ISO conformity/certification;
+- independent assurance; or
+- residual-risk reduction.
 
-> **Evidence boundary:** Technical validation here is synthetic portfolio evidence. It cannot establish production effectiveness, validated risk reduction, legal compliance, certification, or independent assurance.
+No lifecycle gate changes automatically from CI or test success.
+
+## Next technical target
+
+The next planned Phase II system is **AI-002 QuackBot**, focusing on public-facing RAG/API security.
