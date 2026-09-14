@@ -2,165 +2,103 @@
 
 Project W.I.N.G. distinguishes governance documentation from evidence that a governance control is capable of operating.
 
-This folder contains worked examples showing how an identified AI risk is translated into:
+This folder contains worked examples showing how identified AI risks are translated into:
 
 **Risk → Control → Owner → Execution → Evidence → Testing → Governance Decision → Monitoring / Reassessment**
 
-## Authoritative evidence index
+Phase II technical-security examples extend the chain through:
 
-[`Duckworks_AI_Control_Evidence_Index_v1.8.md`](Duckworks_AI_Control_Evidence_Index_v1.8.md) is the current canonical evidence register. It consolidates 76 stable evidence IDs: 70 available synthetic records and six explicitly unavailable production-evidence records. `EV-AI006-017`–`022` covers the PondGPT PG-03 validation plan, executable lab, baseline/remediation, hardened retest, detection validation and commit-bound repository replay; `EV-AIMS-001`–`008` covers AIMS objectives and support; `EV-AIMS-009`–`016` covers risk, management review and action follow-up; `EV-AIMS-017`–`020` covers control applicability; and `EV-AIMS-021`–`028` covers the internal-audit procedure, universe, programme, first-wave plan, evidence requests, test results, findings, independence limitation and executable gate. Earlier indexes are retained as superseded history.
+**Risk → Threat → Security Requirement → Vulnerable Baseline → Technical Test → Raw Evidence → Remediation → Same-Test Retest → Commit-Bound Replay → Reconciliation**
 
-## Purpose
+## Authoritative evidence view
 
-Policies, standards, methodologies, and control descriptions do not by themselves demonstrate implementation.
+[`Duckworks_AI_Control_Evidence_Index_v1.8.md`](Duckworks_AI_Control_Evidence_Index_v1.8.md) remains the master base evidence register for the v1.8 governance baseline.
 
-The artifacts in this folder demonstrate the evidence architecture that would be required to assess whether AI governance controls are operating as intended.
+The first WingInspect technical-security reconciliation is controlled through:
 
-## Evidence States
+[`Duckworks_AI_Control_Evidence_Index_AI004_Reconciliation_v1.0.md`](Duckworks_AI_Control_Evidence_Index_AI004_Reconciliation_v1.0.md)
 
-Project W.I.N.G. distinguishes between five evidence states:
+The base and AI-004 addendum together represent the current evidence view until the next consolidated master-index release.
 
-1. **Designed** — the control has been defined, including its objective, owner, trigger, and required evidence.
-2. **Implemented** — the mechanism, workflow, or system capability required to perform the control exists.
-3. **Operating** — evidence demonstrates that the control is being executed.
-4. **Effective** — evidence indicates that the control materially reduces or manages the underlying risk.
-5. **Validated** — independent or sufficiently rigorous assurance supports the effectiveness conclusion.
+Current combined population:
 
-These states are intentionally separated to avoid granting control-effectiveness credit based only on documentation.
+- v1.8 base evidence records: **76**
+- new AI-004 technical records: **6**
+- combined current records: **82**
+- available synthetic records: **76**
+- not-available evidence records: **6**
+- production-effectiveness conclusions supported: **0**
 
-## Current Worked Examples
+`EV-AI004-006–011` cover the WingInspect validation plan, executable lab, baseline/remediation, hardened test report, detection/control-signal validation and commit-bound replay.
 
-### AIMS internal audit programme
+## Evidence-state discipline
 
-The [`AIMS internal-audit programme`](../11-assurance-testing-and-evaluation/05-aims-internal-audit-programme/) allocates all 45 controls to a risk-based 2026–2027 schedule and performs a bounded first-wave repository review of `DD-01` and `FF-01`. Two High findings remain open; auditor independence, competence and authorization are not demonstrated; the gate closes zero findings.
+Project W.I.N.G. separates:
 
-### AIMS objectives and support
+1. **Designed**
+2. **Implemented / synthetic technical implementation demonstrated**
+3. **Operating / synthetic operation tested**
+4. **Effective**
+5. **Validated**
 
-The [`AIMS objectives-and-support package`](../06-governance-operating-model/01-aims-objectives-and-support/) adds a formula-driven objectives dashboard, competence criteria and records, an executable authorization gate, explicit exceptions, and priority-scope document/evidence control. It demonstrates bounded synthetic management-system support operation and grants no real authorization.
+Synthetic commit-bound reproducibility is an additional evidence attribute; it does not convert synthetic evidence into production evidence.
 
-### AIMS risk, opportunity and management review
-
-The [`AIMS management-review cycle`](../12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/) adds AIMS-level risk/opportunity assessment, a release-triggered objective reconciliation, integrated management-review inputs, a synthetic review record, six assigned actions, deterministic overdue/dependency evaluation and an exception record. It changes no system risk score or lifecycle gate and closes no action automatically.
+## Current worked examples
 
 ### AI-004 — WingInspect Vision
 
-**Material risk:** A manufacturing defect may be missed by WingInspect Vision, allowing a defective component to progress through quality control and creating downstream product-quality or physical-safety harm.
+The AI-004 package now contains:
 
-**Canonical control:** `WI-01 — Qualified Human Final Inspection`
+- `WI-01` Mandatory Human Release Gate design/execution/control-test evidence;
+- Phase II architecture and threat model;
+- `WISEC-T001`–`T008` adversarial/robustness validation;
+- vulnerable/hardened profiles;
+- findings/remediation;
+- hardened retest;
+- detection/control-signal validation;
+- successful GitHub Actions replay against `8e8bb9e43aca3d4a9d2f5cfb6e401b8469c4ac0b`;
+- retained artifact `winginspect-security-evidence-8e8bb9e43aca3d4a9d2f5cfb6e401b8469c4ac0b`; and
+- formal AI-004 evidence reconciliation.
 
-**Operational mechanism demonstrated:** Mandatory Human Release Gate
+Stable IDs: `EV-AI004-001–011`.
 
-The worked evidence package demonstrates:
-
-- control design;
-- accountable operating ownership;
-- execution triggers;
-- independent human decision authority;
-- meaningful AI override capability;
-- auditable decision evidence; and
-- control testing against synthetic records.
-
-See: [`AI-004-winginspect/`](./AI-004-winginspect/)
+See [`AI-004-winginspect/`](AI-004-winginspect/).
 
 ### AI-006 — PondGPT
 
-**Material risk:** Incorrect retrieval permissions or connector authorization may cause PondGPT to return restricted internal information to a user who is not authorized to access the underlying source.
+PondGPT demonstrates permission-aware retrieval / permission regression, supplier-governance lifecycle evidence and the PG-03 adversarial-security extension.
 
-The related [`AI-006 PondGPT supplier-governance package`](../09-third-party-ai-governance/02-worked-supplier-case/AI-006-pondgpt/) extends the evidence chain through `AI-TPR-01`, a conditional supplier decision, material-change response, monitoring and exit design. It does not change the restricted-pilot gate or High-risk position.
+The PG-03 chain is reconciled as `EV-AI006-017–022` and remains synthetic / commit-bound rather than production-effective.
 
-**Preventive boundary:** `PG-01 — Permission-Aware Retrieval`
-
-**Detective control demonstrated:** `PG-02 — Automated Permission Regression & DLP Tests`
-
-The worked evidence package demonstrates:
-
-- a synthetic authorization matrix with positive and negative access expectations;
-- executable permission-regression logic;
-- pilot-source exclusion and synthetic DLP assertions;
-- entitlement-change regression;
-- one deliberately seeded connector ACL defect;
-- automated-style detection of the authorization mismatch;
-- exception and alert evidence;
-- connector/corpus expansion blocking;
-- remediation and successful retesting; and
-- a control-test conclusion over the complete synthetic test population.
-
-See: [`AI-006-pondgpt/`](./AI-006-pondgpt/)
-
-#### AI-006 — PondGPT Phase II adversarial-security extension
-
-**Material risk:** `AI-006-R02 — Security & adversarial manipulation`
-
-**Primary detective control:** `PG-03 — Prompt Injection & RAG Poisoning Test Suite`
-
-The related technical-security package demonstrates:
-
-- an eight-case PG-03 validation plan;
-- an executable local lab with explicit `vulnerable` and `hardened` profiles;
-- reproducible seeded security-boundary failures;
-- documented remediation;
-- same-test hardened retesting;
-- **8/8 hardened PASS** across `PG03-T001`–`PG03-T008`;
-- a deliberate detector miss while authorization remains intact;
-- provider-boundary and fail-closed assertions;
-- structured correlated telemetry;
-- commit-bound Python 3.12 replay in GitHub Actions against `4998f92238868e1b4f3341ae3ebfbc01bd7881f9`; and
-- a retained CI evidence artifact with a recorded SHA-256 digest.
-
-Canonical evidence IDs: `EV-AI006-017–022`.
-
-See: [`../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/`](../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/)
-
-> **Evidence boundary:** The PG-03 result is synthetic and commit-bound to the defined repository/lab version. It does not establish production PondGPT security, production SIEM/DLP operation, real provider behavior, sustained effectiveness, legal compliance, certification, independent assurance, or residual-risk reduction.
+See [`AI-006-pondgpt/`](AI-006-pondgpt/) and [`../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/`](../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/).
 
 ### AI-005 — DuckTalent AI
 
-**Material risk:** Training data, ranking criteria, features, or proxies may systematically disadvantage protected or otherwise disadvantaged applicants and restrict fair access to employment.
+DuckTalent demonstrates fairness/proxy-feature control testing, lifecycle blocking, material-change monitoring/reassessment and a bounded internal-audit/corrective-action cycle.
 
-**Preventive dependency:** `DT-01 — Job-Relevance Criteria & Proxy Feature Governance`
+Its evidence remains synthetic and does not establish production fairness, legal compliance or deployment readiness.
 
-**Detective control demonstrated:** `DT-02 — Pre-Deployment Fairness & Adverse-Impact Testing`
+See [`AI-005-ducktalent/`](AI-005-ducktalent/).
 
-The worked evidence package demonstrates:
+### AIMS evidence
 
-- a synthetic approved-feature allow-list;
-- 24 synthetic applicants arranged as 12 matched pairs;
-- executable fairness/adverse-impact test logic;
-- one deliberately seeded unapproved `Career_Gap_Months` scoring penalty;
-- matched-pair score and group-level diagnostic metrics;
-- detection of the unapproved feature and measurable disparity;
-- pre-deployment gate blocking;
-- generated exception evidence;
-- remediation and full-population retesting;
-- a control-test conclusion that successful retest permits only further governance review; and
-- a synthetic governance gate decision that reviews the available evidence, denies advancement to a real-applicant pilot, records blocking conditions, and defines a reassessment trigger.
+The operating-evidence architecture also links AIMS objective/support, management-review, control-applicability and internal-audit evidence.
 
-See: [`AI-005-ducktalent/`](./AI-005-ducktalent/)
+These records demonstrate bounded management-system mechanics only; they do not establish an operating enterprise AIMS, ISO/IEC 42001 conformity or certification.
 
-Governance decision: [`AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md`](./AI-005-ducktalent/AI-005_2026-09-02_GOV_Governance_Gate_Decision_Record.md)
+## Important limitation
 
-Post-decision monitoring / reassessment: [`../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/`](../12-monitoring-reporting-and-roadmap/AI-005-ducktalent/)
+All execution records, test identities, model behavior, source permissions, alerts, exceptions, code execution and control results are synthetic unless explicitly identified otherwise.
 
-Internal audit and corrective action: [`../11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/`](../11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/)
-
-## Important Limitation
-
-Duckworks is a fictional portfolio organization.
-
-All execution records, test identities, source permissions, alerts, exceptions, code execution, and control results in this folder are **synthetic portfolio evidence** created solely to demonstrate governance operating-model, technical-control, and assurance design.
-
-They do **not** constitute:
+They do not constitute:
 
 - real production records;
-- measured WingInspect model performance;
+- measured WingInspect production model performance;
 - verified manufacturing outcomes;
-- actual PondGPT identity, connector, RAG, DLP, or SIEM activity;
-- validated production authorization inheritance;
-- real DuckTalent applicants, protected-characteristic data, production features, model behavior, fairness outcomes, accessibility results, or legal discrimination conclusions;
-- a real Duckworks AI Governance Committee meeting, real executive approval/non-approval, or real lifecycle authorization;
-- continuous production DuckTalent monitoring, real change telemetry, real reassessment operation, or real production suspension/authorization;
-- longitudinal control-effectiveness evidence;
-- demonstrated reduction of current residual risk; or
+- actual PondGPT identity/RAG/DLP/SIEM activity;
+- real DuckTalent applicants or fairness conclusions;
+- longitudinal control effectiveness;
+- validated reduction of current residual risk; or
 - independent assurance over a live environment.
 
-Synthetic evidence may demonstrate control design, workflow logic, technical testability, and reproducible evidence generation, but it does not justify additional production residual-risk reduction credit.
+Synthetic evidence may demonstrate control design, workflow logic, technical testability and reproducible evidence generation. It does not by itself justify production residual-risk reduction.
