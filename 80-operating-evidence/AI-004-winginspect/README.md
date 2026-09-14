@@ -1,52 +1,83 @@
 # AI-004 — WingInspect Vision Operating Evidence Package
 
-This package demonstrates how a material AI risk is translated into an operating control and an auditable evidence trail.
+This package demonstrates two related but distinct evidence chains for AI-004:
 
-## Evidence Chain
+1. the `WI-01` Mandatory Human Release Gate operating-control example; and
+2. the Phase II technical-security validation and reconciliation chain for `WI-02`, `WI-04` and `WI-06`, with `WI-01` retained as a supporting release boundary.
 
-**AI-004 WingInspect Vision**  
-↓  
+## Evidence chain A — Human release authority
+
 **AI-004-R01 — Missed material manufacturing defect**  
 ↓  
 **WI-01 — Qualified Human Final Inspection**  
 ↓  
-**Mandatory Human Release Gate — worked operating mechanism**  
+**Mandatory Human Release Gate**  
 ↓  
 **Synthetic inspection execution records**  
 ↓  
 **Control test**  
 ↓  
-**Monitoring and production-evidence requirements**
+**Production evidence gap remains**
 
-## Files
+Existing stable evidence IDs:
 
-### 1. Control Implementation Card
+- `EV-AI004-001` — Control Implementation Card
+- `EV-AI004-002` — Synthetic Inspection Log
+- `EV-AI004-003` — Human Release Gate Control Test
+- `EV-AI004-004` — Production Inspection Records — **Not available**
+- `EV-AI004-005` — Post-release Material Defect Trend — **Not available**
 
-[`AI-004_Control_Implementation_Card_Human_Release_Gate.md`](./AI-004_Control_Implementation_Card_Human_Release_Gate.md)
+## Evidence chain B — Phase II technical security
 
-Operationalizes the existing canonical control `WI-01 — Qualified Human Final Inspection` as a Mandatory Human Release Gate and defines its risk, performer, process owner, trigger, evidence, and effectiveness measurement.
+**AI-004-R01 / AI-004-R03**  
+↓  
+**Architecture + threat model**  
+↓  
+**WI-02 / WI-04 / WI-06 technical requirements**  
+↓  
+**WISEC-T001–T008 vulnerable baseline**  
+↓  
+**Findings / remediation**  
+↓  
+**Same-test hardened campaign**  
+↓  
+**Detection / control-signal validation**  
+↓  
+**Commit-bound GitHub Actions replay**  
+↓  
+**Evidence reconciliation**  
+↓  
+**Restricted pilot retained**
 
-### 2. Synthetic Inspection Log
+New stable evidence IDs:
 
-[`AI-004_2026-09-01_APPROVAL_WingInspect_Inspection_Log_Sample.csv`](./AI-004_2026-09-01_APPROVAL_WingInspect_Inspection_Log_Sample.csv)
+- `EV-AI004-006` — Technical Security Validation Plan
+- `EV-AI004-007` — Executable WingInspect Lab
+- `EV-AI004-008` — Baseline Findings and Remediation
+- `EV-AI004-009` — Hardened Campaign + Technical Security Test Report v1.2
+- `EV-AI004-010` — Detection and Control-Signal Validation
+- `EV-AI004-011` — Commit-Bound GitHub Actions Replay + Evidence Artifact
 
-Contains synthetic inspection events demonstrating:
+## Reconciliation record
 
-- qualified human review;
-- accept/reject authority;
-- human disagreement with AI output;
-- documented overrides;
-- timestamps; and
-- final release/block decisions.
+[`Duckworks_WingInspect_Evidence_Reconciliation_Record_v1.0.md`](Duckworks_WingInspect_Evidence_Reconciliation_Record_v1.0.md)
 
-### 3. Control Test Record
+This record is the controlling AI-004 technical-evidence reconciliation overlay until the next consolidated master evidence-index / control-framework / risk-register release.
 
-[`AI-004_2026-09-01_MON_Human_Release_Gate_Control_Test.md`](./AI-004_2026-09-01_MON_Human_Release_Gate_Control_Test.md)
+## Governance result
 
-Tests the complete synthetic population against the `WI-01` human-final-inspection requirements as operationalized through the Mandatory Human Release Gate.
+The new evidence improves the portfolio's ability to demonstrate technical control behavior.
 
-## Portfolio Disclaimer
+It does **not** establish:
 
-All records in this package are synthetic and created solely for portfolio demonstration.
+- production false-negative or defect-escape performance;
+- production human-inspection effectiveness;
+- real adversarial robustness;
+- production fail-safe/change-control effectiveness;
+- product safety;
+- legal compliance;
+- certification;
+- residual-risk reduction; or
+- broader-deployment readiness.
 
-They do not represent real Duckworks manufacturing activity, actual model accuracy, measured defect rates, or validated production control effectiveness.
+The lifecycle gate remains **Restricted pilot only**.
