@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + Phase II PondGPT PG-03 validation completed + WingInspect commit-bound technical validation executed; evidence reconciliation pending clean CI rerun  
+**Status:** v1.8 governance baseline + Phase II PondGPT PG-03 validation completed + WingInspect commit-bound technical validation and AI-004 evidence reconciliation completed  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -384,24 +384,35 @@ GitHub Actions **Evidence reproducibility run #92** successfully replayed the PG
 
 ### Second Phase II target — AI-004 WingInspect Vision
 
-The WingInspect foundation is now established before adversarial testing, as required by the Phase II scope:
+WingInspect now has a complete first-wave Phase II technical-security chain:
 
-- **[WingInspect Technical Security Architecture v1.0](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md)** — defines product/image acquisition, provenance, image-quality fail-safe routing, preprocessing/model/configuration integrity, human release authority, telemetry, and change-triggered revalidation.
-- **[WingInspect Technical Threat Model v1.0](10-system-model-and-technical-documentation/03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)** — covers adversarial evasion, physical/image manipulation, dataset/label poisoning, model/configuration tamper, supply-chain compromise, fail-open behavior, automation bias, and release-gate bypass.
+- **[WingInspect Technical Security Architecture v1.0](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md)** — product/image acquisition, image-quality fail-safe routing, preprocessing/model/configuration integrity, human release authority, telemetry and change-triggered revalidation.
+- **[WingInspect Technical Threat Model v1.0](10-system-model-and-technical-documentation/03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)** — adversarial evasion, physical/image manipulation, dataset/label poisoning, model/configuration tamper, supply-chain compromise, fail-open behavior, automation bias and release-gate bypass.
+- **[WingInspect Technical Security Validation Plan v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Validation_Plan_v1.0.md)** — defines `WISEC-T001`–`WISEC-T008`, vulnerable/hardened profiles, machine assertions, evidence schema and acceptance criteria.
+- **[Executable WingInspect synthetic adversarial-ML lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/)** — deterministic standard-library implementation.
+- **[WingInspect Technical Security Test Report v1.2](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/reports/Duckworks_WingInspect_Technical_Security_Test_Report_v1.2.md)** — clean commit-bound replay and reconciled result.
+- **[WingInspect Evidence Reconciliation Record v1.0](80-operating-evidence/AI-004-winginspect/Duckworks_WingInspect_Evidence_Reconciliation_Record_v1.0.md)** — translates the technical evidence into control/risk/evidence conclusions without changing the lifecycle gate.
 
-The first validation wave `WISEC-T001`–`WISEC-T008` is now implemented under:
+GitHub Actions **Evidence reproducibility run #124** (`34836419132`) completed successfully under Python `3.12.14` against commit `8e8bb9e43aca3d4a9d2f5cfb6e401b8469c4ac0b`.
 
-- **[WingInspect Technical Security Validation Plan v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Validation_Plan_v1.0.md)**
-- **[Executable WingInspect synthetic adversarial-ML lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/)**
-- **[WingInspect Technical Security Test Report v1.1](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/reports/Duckworks_WingInspect_Technical_Security_Test_Report_v1.1.md)**
+The replay:
 
-Local and commit-bound execution reproduce **8/8 seeded vulnerable failures** and return **8/8 hardened PASS** outcomes. `WISEC-T001` intentionally shows that the surrogate can still be evaded while the hardened system-level result passes because validation detects the miss, blocks unsafe baseline use, and preserves independent human release authority.
+- reproduced **8/8 seeded vulnerable failures**;
+- returned **8/8 hardened PASS**;
+- ran **6/6 unit tests successfully**;
+- passed the WingInspect verifier;
+- passed repository-wide semantic evidence verification; and
+- retained artifact `winginspect-security-evidence-8e8bb9e43aca3d4a9d2f5cfb6e401b8469c4ac0b` (artifact `10344067483`, digest `sha256:d9f524770e3e3c406328245f46c7e610c7682cdd6d0072cb51a7fc01f2074f70`).
 
-GitHub Actions replayed the WingInspect lab against commit `5f06f4c13fc45ad3cdc15d5192d26e034f004863` under Python `3.12.14` and successfully uploaded retained artifact `winginspect-security-evidence-5f06f4c13fc45ad3cdc15d5192d26e034f004863` (artifact `10338040691`, digest `sha256:d35cd1e5233f34fa0bcf7d04130f92ae6c0bc35640cba81dc148355b2f49285b`). The overall workflow run #115 later failed only because the final Portfolio Integrity semantic assertion referenced the wrong JSON path; the WingInspect execution, unit tests, verifier, semantic WingInspect checks, and artifact upload all passed.
+`WISEC-T001` remains the key interpretation case: the surrogate can still be evaded, but the hardened system-level result passes because validation detects the miss, blocks unsafe baseline use and preserves independent human release authority.
 
-**WingInspect evidence boundary:** commit-bound **synthetic** technical evidence is now demonstrated, but no production effectiveness, residual-risk reduction, assumption closure, or lifecycle-gate change is granted. Canonical evidence reconciliation is intentionally deferred until the corrected full workflow reruns green.
+The technical-evidence increment is reconciled as **`EV-AI004-006`–`011`** through a controlled AI-004 overlay pending the next consolidated master evidence-index release.
 
-**Next technical milestone:** correct the Portfolio Integrity semantic assertion, obtain a clean green workflow replay, then reconcile the WingInspect evidence into the canonical evidence index, control framework, and risk record. After reconciliation, the next Phase II system target is QuackBot public-facing RAG/API security.
+**WingInspect evidence boundary:** commit-bound **synthetic** technical implementation, hardened operation testing and reproducibility are demonstrated. Production model robustness, manufacturing safety, production control effectiveness, legal compliance, residual-risk reduction and independent assurance remain unverified.
+
+**Governance consequence:** no AI-004 score changes; `ASM-008` and `ASM-028` remain open; the gate remains **Restricted pilot only**.
+
+**Next Phase II target:** **AI-002 QuackBot — public-facing RAG/API security**.
 
 ---
 
@@ -437,7 +448,7 @@ The governance methodology and controls are informed by:
 
 [View the reconciled AIMS Evidence Baseline v1.7](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.7.md)
 
-The v1.7 baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix and the 70 evidence IDs available at that baseline snapshot, together with the master crosswalk and prioritized actions with closure criteria. The later PG-03 reconciliation adds `EV-AI006-017`–`022` to the canonical evidence index; those six records are outside the v1.7 AIMS-baseline snapshot and should be incorporated in its next formal refresh. It recognizes the DuckTalent improvement cycle, PondGPT supplier lifecycle, AIMS objectives-and-support pack, bounded AIMS-wide management-review cycle and the 45-control internal-audit programme while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
+The v1.7 baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix and the 70 evidence IDs available at that baseline snapshot, together with the master crosswalk and prioritized actions with closure criteria. Later Phase II reconciliations add `EV-AI006-017`–`022` for PondGPT and `EV-AI004-006`–`011` for WingInspect. These twelve records are outside the v1.7 AIMS-baseline snapshot and should be incorporated in its next formal refresh. It recognizes the DuckTalent improvement cycle, PondGPT supplier lifecycle, AIMS objectives-and-support pack, bounded AIMS-wide management-review cycle and the 45-control internal-audit programme while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
 
 The baseline is reconciled through the v1.7 internal-audit programme milestone. It does not claim recurring AIMS operation, real competence or authorization, enterprise-wide records operation, production effectiveness, conformity, certification, legal compliance, or independent enterprise assurance.
 
@@ -616,7 +627,8 @@ For a security-focused review, use this shorter sequence after the existing Pond
 6. **`80-operating-evidence/AI-006-pondgpt/`** — compare the PG-01/PG-02 authorization evidence with the PG-03 adversarial-security chain and the explicit production-evidence gaps.
 7. **[WingInspect Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md)** — review physical/image acquisition, model/configuration integrity, fail-safe, human release, and evidence boundaries.
 8. **[WingInspect Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)** — review adversarial-ML attack paths, poisoning/supply-chain threats, P0/P1 priorities, and the `WISEC-T001`–`WISEC-T008` validation set.
-9. **[WingInspect Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/)** — inspect the validation plan, deterministic vulnerable/hardened lab, findings/remediation, detection/control-signal validation, commit-bound replay evidence, and explicit production-effectiveness limitations.
+9. **[WingInspect Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/)** — inspect the validation plan, deterministic vulnerable/hardened lab, findings/remediation, detection/control-signal validation, successful commit-bound replay and explicit production-effectiveness limitations.
+10. **[WingInspect Evidence Reconciliation](80-operating-evidence/AI-004-winginspect/Duckworks_WingInspect_Evidence_Reconciliation_Record_v1.0.md)** — review how the test evidence changes evidence maturity for WI-02/WI-04/WI-06 while leaving scores, assumptions and the Restricted Pilot gate unchanged.
 
 ---
 
@@ -689,10 +701,11 @@ The repository includes or is intended to include:
 
 ### Operating evidence
 
-- authoritative control-evidence index v1.8 with 76 stable records, including `EV-AI006-017`–`022` for PG-03 technical-security validation;
+- authoritative v1.8 control-evidence base with 76 records, supplemented by the controlled WingInspect reconciliation overlay `EV-AI004-006`–`011` for a combined current population of 82 records pending the next consolidated master-index release;
 - WingInspect `WI-01` control implementation card;
 - synthetic WingInspect inspection execution log;
 - Human Release Gate control-test workpaper;
+- WingInspect Phase II validation plan, executable lab, findings/remediation, hardened retest, detection/control-signal validation and commit-bound replay (`EV-AI004-006`–`011`);
 - PondGPT `PG-02` control implementation card;
 - synthetic PondGPT authorization matrix;
 - executable PondGPT permission-regression control;
@@ -728,7 +741,7 @@ The repository includes or is intended to include:
 - PondGPT Technical Threat Model v1.0;
 - WingInspect Technical Security Architecture v1.0;
 - WingInspect Technical Threat Model v1.0;
-- WingInspect Technical Security Validation Plan v1.0 and Test Report v1.1;
+- WingInspect Technical Security Validation Plan v1.0, Test Report v1.2 and evidence-reconciliation record;
 - NIST ARIA evaluation documentation;
 - adversarial multi-perspective review and findings register.
 
@@ -853,7 +866,7 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. The PondGPT PG-03 lab, remediation/retest chain, telemetry validation and canonical evidence reconciliation are complete within the synthetic portfolio boundary. WingInspect adversarial-ML / computer-vision validation has now reached commit-bound synthetic replay; its canonical evidence reconciliation remains pending a clean full-workflow rerun after correction of the Portfolio Integrity semantic assertion. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. After WingInspect reconciliation, the next Phase II path is QuackBot public-facing RAG/API security, followed by DuckDesign AI software/supply-chain/tool-privilege risks. Additional evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. The PondGPT PG-03 chain is commit-bound and reconciled within the synthetic portfolio boundary. WingInspect adversarial-ML / computer-vision validation is now also commit-bound and reconciled through the controlled AI-004 evidence overlay, while production effectiveness, risk reduction and gate changes remain explicitly unclaimed. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next Phase II path is QuackBot public-facing RAG/API security, followed by DuckDesign AI software/supply-chain/tool-privilege risks. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
