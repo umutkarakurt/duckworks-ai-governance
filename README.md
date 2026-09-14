@@ -389,11 +389,17 @@ The WingInspect foundation is now established before adversarial testing, as req
 - **[WingInspect Technical Security Architecture v1.0](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md)** — defines product/image acquisition, provenance, image-quality fail-safe routing, preprocessing/model/configuration integrity, human release authority, telemetry, and change-triggered revalidation.
 - **[WingInspect Technical Threat Model v1.0](10-system-model-and-technical-documentation/03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)** — covers adversarial evasion, physical/image manipulation, dataset/label poisoning, model/configuration tamper, supply-chain compromise, fail-open behavior, automation bias, and release-gate bypass.
 
-The threat model proposes `WISEC-T001`–`WISEC-T008` as the first validation wave. These are **design-only test IDs** until a separate validation plan and executable lab are built.
+The first validation wave `WISEC-T001`–`WISEC-T008` is now implemented under:
 
-**WingInspect evidence boundary:** no new canonical evidence IDs, control-effectiveness credit, residual-risk reduction, or lifecycle-gate change is created by these design artifacts.
+- **[WingInspect Technical Security Validation Plan v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Validation_Plan_v1.0.md)**
+- **[Executable WingInspect synthetic adversarial-ML lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/)**
+- **[WingInspect Technical Security Test Report v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/reports/Duckworks_WingInspect_Technical_Security_Test_Report_v1.0.md)**
 
-**Next technical milestone:** create the WingInspect adversarial-ML technical-security validation plan (`DW-AI004-VAL-SEC-01`) and deterministic synthetic lab for `WISEC-T001`–`WISEC-T008`.
+Local execution reproduces **8/8 seeded vulnerable failures** and returns **8/8 hardened PASS** outcomes. `WISEC-T001` intentionally shows that the surrogate can still be evaded while the hardened system-level result passes because validation detects the miss, blocks unsafe baseline use, and preserves independent human release authority.
+
+**WingInspect evidence boundary:** local synthetic execution only. Repository commit binding is pending; no canonical evidence IDs, production effectiveness, residual-risk reduction, or lifecycle-gate change is granted yet.
+
+**Next technical milestone:** upload this validation increment, obtain a successful commit-bound GitHub Actions replay and retained WingInspect evidence artifact, then reconcile the resulting synthetic evidence into the canonical evidence index, control framework, and risk record without changing the Restricted Pilot gate unless separately justified.
 
 ---
 
