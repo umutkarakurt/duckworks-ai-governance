@@ -24,20 +24,22 @@ See [`AI-006-pondgpt/`](AI-006-pondgpt/).
 
 WingInspect is the second Phase II target.
 
-The first local validation increment targets:
+The first validation increment targets:
 
 - `WI-02 — Minimum Sensitivity & Safety Validation`;
 - `WI-04 — Fail-Safe Manual Fallback & Stop Rule`;
 - `WI-06 — Change-Triggered Revalidation & Locked Baseline`; and
 - supporting boundary `WI-01 — Qualified Human Final Inspection`.
 
-Current local result:
+Current result:
 
 - vulnerable profile: **0 PASS / 8 FAIL**;
 - hardened profile: **8 PASS / 0 FAIL**;
 - six standard-library unit tests passed;
-- local verifier PASS; and
-- repository commit binding pending.
+- WingInspect verifier PASS;
+- commit-bound WingInspect replay succeeded against `5f06f4c13fc45ad3cdc15d5192d26e034f004863`;
+- retained artifact `winginspect-security-evidence-5f06f4c13fc45ad3cdc15d5192d26e034f004863` (`10338040691`; `sha256:d35cd1e5233f34fa0bcf7d04130f92ae6c0bc35640cba81dc148355b2f49285b`); and
+- full workflow run #115 failed only afterward because the final Portfolio Integrity assertion used the wrong JSON path. A corrected clean rerun is pending before canonical evidence reconciliation.
 
 See [`AI-004-winginspect/`](AI-004-winginspect/).
 
@@ -45,7 +47,7 @@ See [`AI-004-winginspect/`](AI-004-winginspect/).
 
 **Risk → Threat → Security requirement → Deliberately weak baseline → Test → Raw evidence → Finding → Remediation → Same-test retest → Detection/control-signal validation → Control conclusion → Governance/risk review**
 
-Canonical evidence IDs and control/risk reconciliation occur only after successful commit-bound repository replay.
+Canonical WingInspect evidence IDs and control/risk reconciliation remain deferred until the corrected full workflow completes green. The WingInspect lab itself has already demonstrated commit-bound reproducibility.
 
 ## Safety boundary
 
