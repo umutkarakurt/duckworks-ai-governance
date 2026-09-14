@@ -1,55 +1,66 @@
 # Regulatory and Framework Research
 
 **Repository path:** `02-regulatory-and-framework-research/`  
-**Status:** Research baseline — verify currency before reuse  
+**Status:** Research baseline — verify currency before reuse
 
 [← Back to main portfolio](../README.md)
 
-This folder contains the legal, regulatory, standards, framework, and technical-security reference research used to inform Project W.I.N.G. governance and Phase II security-engineering decisions.
+This folder contains the legal, regulatory, standards, framework and technical-security reference research used to inform Project W.I.N.G. governance and Phase II security-engineering decisions.
 
 ## Current artifacts
 
-- `Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.md` — narrative research report using a stated evidence hierarchy and system-by-system applicability analysis.
-- `Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.pdf` — formatted review copy.
-- `Duckworks_AI_Governance_Obligations_and_Guidance_Register_v1.0.xlsx` — structured obligations/guidance register for traceable review.
-- [`Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md`](Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md) — Phase II PondGPT-specific technical-security baseline separating binding law, standards/frameworks, official cybersecurity guidance, technical threat references, and internal engineering requirements.
+- `Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.md`
+- `Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.pdf`
+- `Duckworks_AI_Governance_Obligations_and_Guidance_Register_v1.0.xlsx`
+- [`Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md`](Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md) — Phase II technical-security baseline initially worked through PondGPT.
+- [`Duckworks_QuackBot_Technical_Security_Reference_Applicability_Addendum_v1.0.md`](Duckworks_QuackBot_Technical_Security_Reference_Applicability_Addendum_v1.0.md) — system-specific QuackBot applicability addendum for public-facing RAG/API security, GDPR, AI Act Article 50 transparency, and technical guidance.
 - The repository root [`REFERENCES.md`](../REFERENCES.md) is the controlled public-source catalogue.
-
 
 ## Phase II technical-security research
 
-Phase II extends the research layer without treating security guidance as law.
+Phase II separates:
 
-For **AI-006 PondGPT**, the **[Technical AI Security Reference & Applicability Baseline](Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md)** is the detailed working source for technical-security architecture, threat modelling, and later adversarial validation.
+1. **Mandatory legal requirements** — only where scope/trigger conditions are met.
+2. **Standards/formal frameworks** — voluntary or adopted requirements that do not independently prove legal compliance.
+3. **Official cybersecurity guidance** — government/agency security guidance.
+4. **Recognized technical threat/security references** — e.g. MITRE ATLAS and OWASP.
+5. **Duckworks engineering requirements and assumptions** — internal design/test choices.
 
-It distinguishes:
+### PondGPT
 
-1. **Mandatory legal requirements** — only where the relevant legal scope and trigger are established, including GDPR and potentially NIS2; EU AI Act Article 15 is not currently asserted as mandatory for PondGPT because the documented intended purpose does not establish high-risk classification.
-2. **Standards and formal frameworks** — including ISO/IEC 27001, ISO/IEC 42001, NIST CSF 2.0, NIST AI RMF, NIST AI 600-1, NIST AI 100-2 E2025, and NIST SP 800-218A.
-3. **Official cybersecurity guidance** — including ENISA and the NCSC/international secure-AI-development guidance.
-4. **Recognized technical threat/security references** — including MITRE ATLAS, OWASP GenAI Security, and OWASP API Security.
-5. **Duckworks engineering requirements and assumptions** — internal design decisions used to make the synthetic portfolio technically executable.
+The original technical-security baseline covers internal enterprise RAG, authorization, provider/tool and telemetry boundaries.
 
-Framework or technique mapping is used to improve coverage and traceability; it does not independently establish legal compliance, certification, control effectiveness, or production security.
+### QuackBot
+
+The **QuackBot addendum** applies the hierarchy to an internet-facing customer chatbot.
+
+It identifies:
+
+- GDPR as potentially mandatory where customer personal data are processed;
+- EU AI Act Article 50 direct-interaction transparency as a specific mandatory-law applicability review item;
+- no current basis to classify QuackBot as a high-risk AI system;
+- NIS2 applicability as organization/national-law dependent;
+- CRA applicability as not established; and
+- OWASP GenAI/API, NIST, ENISA, NCSC and MITRE sources as guidance/reference rather than law.
+
+The addendum deliberately does not invent a universal customer-warranty legal rule; actual consumer/warranty/product-support obligations require market/product-specific legal review.
 
 ## Evidence hierarchy
 
-The project distinguishes:
-
-1. **Binding legal text** — mandatory where the relevant scope and trigger apply.
-2. **Official regulator, government, or competent-authority guidance** — interpretation, cybersecurity, and implementation support.
-3. **Standards and formal frameworks** — voluntary unless made binding through another mechanism.
-4. **Recognized technical threat/control guidance** — used for threat, architecture, test, and control design, not as law.
-5. **Duckworks organizational practices and assumptions** — internal governance only.
+1. Binding legal text.
+2. Official regulator/government guidance.
+3. Standards/formal frameworks.
+4. Recognized technical threat/control guidance.
+5. Duckworks organizational practices and assumptions.
 
 ## Important interpretation rule
 
-Do not treat ISO, NIST, ENISA, MITRE, OWASP, OECD, or similar mappings as proof of legal compliance or certification. Likewise, a Duckworks High/Critical risk rating does not establish an EU AI Act legal classification.
+Do not treat ISO, NIST, ENISA, MITRE, OWASP or similar mappings as proof of legal compliance, certification, conformity, control effectiveness or production security.
 
-Regulatory applicability remains dependent on intended purpose, legal role, jurisdiction, affected persons, product context, data processing, and current law. Re-verify primary sources before using this material for any real-world conclusion.
+Likewise, a Duckworks High/Critical internal rating does not establish an EU AI Act legal classification.
 
-Living technical sources such as MITRE ATLAS and OWASP GenAI Security should also be re-checked when assigning current technique or category identifiers to a Phase II test case.
+Living sources should be re-checked when assigning current technique/category identifiers to executable tests.
 
 ---
 
-> **Portfolio boundary:** Duckworks, Project W.I.N.G., its personnel, systems, datasets, decisions, controls, and evidence are fictional or synthetic unless a file explicitly identifies a public source. Folder descriptions explain the intended governance role of the artifacts; they do not convert draft, planned, or template material into implemented controls, legal compliance, certification, or independent assurance.
+> **Portfolio boundary:** Duckworks, Project W.I.N.G., its personnel, systems, datasets, decisions, controls and evidence are fictional or synthetic unless explicitly identified otherwise.
