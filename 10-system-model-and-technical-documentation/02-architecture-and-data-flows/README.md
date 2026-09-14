@@ -5,69 +5,85 @@
 
 [← Back to main portfolio](../../README.md) · [↑ Parent folder](../README.md)
 
-This folder contains architecture and data-flow material used to make AI processing boundaries, trust relationships, data movement, integration points, authorization enforcement, model/provider boundaries, physical acquisition boundaries, human decision points, and security telemetry easier to review.
+This folder contains architecture and data-flow material used to make AI processing boundaries, trust relationships, data movement, integration points, authorization enforcement, model/provider boundaries, public/internet boundaries, physical acquisition boundaries, human decision points and security telemetry easier to review.
 
 ## Current artifacts
 
 - `Duckworks_AI_Data_Flow_Diagrams_v1.0.pdf`
 - `Duckworks DFD.png`
-- [`AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md) — Phase II synthetic PondGPT security architecture and engineering baseline.
-- [`AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md`](AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md) — Phase II synthetic WingInspect computer-vision security architecture.
+- [`AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md) — Phase II synthetic PondGPT architecture.
+- [`AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md`](AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md) — Phase II synthetic WingInspect computer-vision architecture.
+- [`AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md`](AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md) — Phase II synthetic public-facing QuackBot RAG/API architecture.
 
-## AI-006 PondGPT Phase II architecture
+## AI-006 PondGPT
 
-The PondGPT architecture identifies identity, authorization, RAG, provider, tool, egress, secrets, telemetry, build/release, and evidence boundaries. It is the dependency for the PondGPT threat model and executable PG-03 security lab.
+PondGPT identifies identity, authorization, RAG, provider, tool, egress, secrets, telemetry, build/release and evidence boundaries.
 
-Two core invariants remain:
+Core invariant:
 
-> Authorization must be enforced before retrieved content enters the LLM context.
+> Authorization is enforced before retrieved content enters LLM context.
 
-> Retrieved content and model output are untrusted data and do not acquire security authority through the model.
+## AI-004 WingInspect Vision
 
-## AI-004 WingInspect Phase II architecture
+WingInspect identifies image acquisition/provenance, image-quality fail-safe routing, preprocessing/model/configuration integrity, human inspection and Mandatory Human Release Gate boundaries.
 
-The WingInspect architecture adds a different class of security problem: a predictive computer-vision system whose outputs can influence manufacturing quality decisions.
+Core invariant:
 
-It identifies:
+> The model may flag/classify defects but cannot independently authorize product release.
 
-- product / fixture and camera acquisition boundaries;
-- image-to-item provenance;
-- image-quality fail-safe routing;
-- versioned preprocessing;
-- model, class-map, and threshold integrity;
-- dataset / label provenance;
-- vendor/component staging;
-- human inspection;
-- the Mandatory Human Release Gate;
-- QMS/security telemetry; and
-- change-triggered revalidation.
+WingInspect has progressed through commit-bound synthetic validation and evidence reconciliation.
 
-Its critical invariant is:
+## AI-002 QuackBot
 
-> **The model may flag or classify defects, but it cannot independently authorize product release.**
+QuackBot adds an internet-facing customer-service threat surface.
 
-The architecture is the dependency for the **[WingInspect Technical Threat Model](../03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)**.
+The architecture identifies:
+
+- public edge/API;
+- session isolation;
+- anonymous versus authenticated-customer mode;
+- object-level customer authorization;
+- public versus customer-specific RAG;
+- source allowlisting/provenance;
+- context minimization;
+- hosted provider boundary;
+- grounding/citation/abstention;
+- human escalation;
+- safe output rendering;
+- tool/action denial by default;
+- rate/resource controls;
+- security telemetry; and
+- change-triggered regression.
+
+Two critical invariants are:
+
+> **The model is not an access-control mechanism.**
+
+> **Retrieved content and model output are untrusted data and do not acquire application authority through the LLM.**
+
+The architecture is the dependency for the **[QuackBot Technical Threat Model](../03-threat-models/AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md)**.
 
 ## Governance use
 
-Architecture and data-flow artifacts support:
+Architecture/data-flow artifacts support:
 
 - privacy and DPIA analysis;
 - data classification and provenance;
 - security threat modelling;
 - third-party boundary identification;
-- access and integrity review;
+- authorization and session review;
+- application/API security;
 - model/data supply-chain analysis;
-- human-oversight design;
-- logging and monitoring;
-- incident and change analysis.
+- human escalation/oversight;
+- logging/monitoring;
+- incident/change analysis.
 
 ## Evidence caution
 
-A diagram or target architecture is an explanatory/design artifact, not proof that the depicted production architecture exists or that the controls shown are operating.
+A diagram or target architecture is an explanatory/design artifact, not proof that the depicted production architecture exists or that the controls are operating.
 
-Material production claims require separate supporting evidence. For WingInspect this includes real camera configuration, actual model/runtime, inspection procedures, human authority, model-performance outcomes, defect-escape evidence, product-safety role, and adversarial robustness.
+For QuackBot, production claims would require real API/session/auth configuration, customer-object authorization, corpus provenance, provider configuration/contract evidence, escalation records, rate-limit operation, output-handling evidence, security telemetry and defined-period outcomes.
 
 ---
 
-> **Portfolio boundary:** Duckworks, Project W.I.N.G., its personnel, systems, datasets, decisions, controls, and evidence are fictional or synthetic unless a file explicitly identifies a public source.
+> **Portfolio boundary:** Duckworks, Project W.I.N.G., its personnel, systems, datasets, decisions, controls and evidence are fictional or synthetic unless explicitly identified otherwise.
