@@ -46,6 +46,23 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
+      - name: Run WingInspect adversarial-ML security lab
+        working-directory: 11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab
+        run: |
+          rm -rf evidence/generated
+          python scripts/run_campaign.py
+          python -m unittest discover -s tests -p "test_*.py"
+          python scripts/ci_verify.py
+
+      - name: Upload WingInspect security evidence artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: winginspect-security-evidence-${{ github.sha }}
+          path: 11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/evidence/generated/
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Run DuckTalent change monitor
         run: python 12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Check.py
 
@@ -78,10 +95,14 @@ jobs:
           python -c "import json,os; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/lab/evidence/generated/campaign-summary.json')); assert d['source_commit']==os.environ['GITHUB_SHA'] and d['production_effectiveness_claim'] is False and d['profiles']['vulnerable']['tests']==8 and d['profiles']['vulnerable']['fail']==8 and d['profiles']['hardened']['tests']==8 and d['profiles']['hardened']['pass']==8 and d['profiles']['hardened']['fail']==0"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/lab/evidence/generated/hardened/PG03-T007.json')); assert d['result']=='PASS' and d['actual']['provider_restricted_chunks']==0 and d['actual']['hr_canary_in_provider'] is False and d['actual']['secret_canary_in_provider'] is False and d['actual']['secret_canary_in_telemetry'] is False"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-006-pondgpt/lab/evidence/generated/hardened/PG03-T008.json')); assert d['result']=='PASS' and d['actual']['restricted_context_chunks']==0 and d['actual']['provider_restricted_chunks']==0 and d['actual']['controlled_deny_or_error'] is True"
+          python -c "import json,os; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/evidence/generated/campaign-summary.json')); assert d['source_commit']==os.environ['GITHUB_SHA'] and d['production_effectiveness_claim'] is False and d['profiles']['vulnerable']=={'tests':8,'pass':0,'fail':8} and d['profiles']['hardened']=={'tests':8,'pass':8,'fail':0}"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/evidence/generated/hardened/WISEC-T001.json')); assert d['result']=='PASS' and d['actual']['model_missed'] is True and d['actual']['validation_blocked'] is True and d['actual']['release_allowed'] is False and d['detection']['dedicated_attack_detector_hit'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/evidence/generated/hardened/WISEC-T007.json')); assert d['result']=='PASS' and d['actual']['runtime_error'] is True and d['actual']['manual_hold'] is True and d['actual']['release_allowed'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/lab/evidence/generated/hardened/WISEC-T008.json')); assert d['result']=='PASS' and d['actual']['human_authorization_present'] is False and d['actual']['release_allowed'] is False and d['actual']['reason']=='human_authorization_missing'"
           python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Result.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==7 and d['Material_Reassessment_Trigger'] is True"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/effectiveness_test_results.json')); assert d['overall_status']=='pass' and d['total_cases']==3 and d['expected_results_met']==3 and d['deployment_authorizations']==0"
           python -c "import json; d=json.load(open('06-governance-operating-model/01-aims-objectives-and-support/Duckworks_AIMS_Authorization_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==3 and d['blocked_records']==2 and d['eligible_for_human_authorization']==1 and d['authorizations_granted_by_script']==0 and d['human_authorization_required'] is True"
           python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/01-aims-management-review-cycle/Duckworks_AIMS_Management_Action_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==6 and d['overdue_escalations']==1 and d['blocked_dependencies']==1 and d['open_monitoring']==4 and d['actions_auto_closed']==0 and d['human_decision_required'] is True"
           python -c "import json; d=json.load(open('07-control-framework/01-aims-control-applicability/Duckworks_AIMS_Control_Applicability_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==7 and d['controls_evaluated']==45 and d['applicable']==44 and d['conditionally_applicable']==1 and d['not_applicable']==0 and d['evidence_linked_controls']==9 and d['unsupported_implemented_without_evidence']==2 and d['decisions_auto_approved']==0 and d['human_approval_required'] is True"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/05-aims-internal-audit-programme/Duckworks_AIMS_Audit_Coverage_Gate_Run_Summary.json')); assert d['status']=='PASS' and d['assertions_passed']==13 and d['controls_in_universe']==45 and d['priority_counts']=={'P1 Immediate':2,'P2 High':23,'P3 Medium':20} and d['programme_population']==45 and d['first_wave_controls']==['DD-01','FF-01'] and d['test_steps']==14 and d['open_findings']==2 and d['findings_auto_closed']==0 and d['production_effectiveness_claims']==0 and d['human_disposition_required'] is True"
-          python -c "import json; d=json.load(open('13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Integrity_Gate_Run_Summary.json')); assert d['status']=='PASS' and d['assertions_passed']==13 and d['assertions_total']==13 and d['checks']['competency_count']==14 and d['checks']['claim_count']==12 and d['checks']['invalid_path_count']==0 and d['checks']['invalid_claim_status_count']==0 and d['checks']['automatic_maturity_upgrades']==0"
+          python -c "import json; d=json.load(open('13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Integrity_Gate_Run_Summary.json')); assert d['status']=='PASS' and d['assertions_passed']==13 and d['assertions_total']==13 and d['checks']['competency_count']==14 and d['checks']['claim_count']==12 and d['checks']['invalid_path_count']==0 and d['checks']['invalid_claim_status_count']==0 and d['automatic_maturity_upgrades']==0"
