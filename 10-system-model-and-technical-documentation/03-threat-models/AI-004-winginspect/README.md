@@ -3,27 +3,18 @@
 **System:** AI-004 — WingInspect Vision  
 **Current governance gate:** Restricted pilot only  
 **Architecture dependency:** `DW-AI004-ARCH-SEC-01 v1.0`  
-**Status:** Threat-model baseline complete; validation plan / execution pending
+**Status:** Threat-model baseline complete; first local validation increment executed
 
 ## Current artifact
 
-- [`Duckworks_WingInspect_Threat_Model_v1.0.md`](Duckworks_WingInspect_Threat_Model_v1.0.md) — adversarial-ML, physical-input, model/data integrity, supply-chain, fail-safe, and release-gate threat model.
+- [`Duckworks_WingInspect_Threat_Model_v1.0.md`](Duckworks_WingInspect_Threat_Model_v1.0.md)
 
-## First-wave validation candidates
+The first-wave cases `WISEC-T001`–`WISEC-T008` are now implemented in the synthetic validation lab:
 
-The threat model defines eight candidate cases, `WISEC-T001`–`WISEC-T008`, covering:
+[`../../../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/`](../../../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/)
 
-- adversarial patch / occlusion evasion;
-- lighting, blur, noise, and compression robustness;
-- model artifact integrity;
-- threshold / preprocessing / class-map tamper;
-- dataset / label poisoning;
-- synthetic backdoor trigger behavior;
-- fail-safe handling of camera/model/quality dependency failure; and
-- Mandatory Human Release Gate bypass attempts.
-
-These IDs are **test design only** until a separate validation plan defines exact fixtures, assertions, evidence schema, vulnerable/hardened profiles, and acceptance logic.
+Local execution records 8/8 deliberately vulnerable failures and 8/8 hardened control PASS outcomes. Repository replay is still required before canonical evidence reconciliation.
 
 ## Evidence boundary
 
-No threat listed here is claimed to exist in a real Duckworks environment. No technical PASS/FAIL evidence is created by this folder.
+The threat model remains a planning/design artifact. The local lab does not establish a real production vulnerability, real model robustness, product safety, or production control effectiveness.
