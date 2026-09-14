@@ -1,0 +1,8 @@
+{"correlation_id": "ab930695c1a21b5f1463", "detection": {"dedicated_attack_detector_hit": false, "validation_oracle_mismatch": true}, "profile": "vulnerable", "result": "FAIL", "test_id": "WISEC-T001"}
+{"correlation_id": "483b3cc16a355e06f888", "detection": {"quality_event": true}, "profile": "vulnerable", "result": "FAIL", "test_id": "WISEC-T002"}
+{"correlation_id": "eb401f96d24bb9049f62", "detection": {"integrity_event": true}, "profile": "vulnerable", "result": "FAIL", "test_id": "WISEC-T003"}
+{"correlation_id": "5672c81b38aaf612e52c", "detection": {"configuration_integrity_event": true}, "profile": "vulnerable", "result": "FAIL", "test_id": "WISEC-T004"}
+{"correlation_id": "716fe36c13dc4e2f6247", "detection": {"dataset_integrity_event": true}, "profile": "vulnerable", "result": "FAIL", "test_id": "WISEC-T005"}
+{"correlation_id": "2760ee6957e0ae3ce8a2", "detection": {"test_artifact_segregated": true, "validation_oracle_mismatch": true}, "profile": "vulnerable", "result": "FAIL", "test_id": "WISEC-T006"}
+{"correlation_id": "b55d313af2044aee323e", "detection": {"runtime_failure_event": true}, "profile": "vulnerable", "result": "FAIL", "test_id": "WISEC-T007"}
+{"correlation_id": "6026beec6ff767594ff7", "detection": {"release_gate_denial_event": false}, "profile": "vulnerable", "result": "FAIL", "test_id": "WISEC-T008"}

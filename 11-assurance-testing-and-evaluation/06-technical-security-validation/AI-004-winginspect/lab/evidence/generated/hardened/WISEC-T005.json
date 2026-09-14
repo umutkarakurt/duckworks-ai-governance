@@ -1,0 +1,55 @@
+{
+  "actual": {
+    "hash_match": false,
+    "promoted": false,
+    "provenance_ok": false,
+    "quarantined": true
+  },
+  "architecture_version": "DW-AI004-ARCH-SEC-01-v1.0",
+  "config_sha256": "c432994e248df47296d899e5df45a1790968b9dde172afa6a0a863f819b62e5b",
+  "config_version": "thr-1.0.0",
+  "control_ids": [
+    "WI-02",
+    "WI-06"
+  ],
+  "correlation_id": "9b658d8269d4544798ff",
+  "dataset_version": "winginspect-fixtures-20260912-01",
+  "detection": {
+    "dataset_integrity_event": true
+  },
+  "evidence_sha256": "d782941ed5365585bdb92d1efc136582edb8e4d372fb7b2c966cb7a63d5fa44c",
+  "expected": {
+    "poisoned_record_quarantined": true
+  },
+  "fixture_ids": [
+    "DATASET-POISON-001"
+  ],
+  "fixture_type": "poisoned",
+  "lab_version": "winginspect-lab-0.1.0",
+  "limitations": [
+    "synthetic deterministic surrogate model",
+    "no real manufacturing camera/model/product",
+    "no production effectiveness claim"
+  ],
+  "model_sha256": "58ad6a3c50f7c20bbdd2e15243343d98a235c923a43778dff4bf8a4915e4073a",
+  "model_version": "synthetic-vision-surrogate-1.0.0",
+  "profile": "hardened",
+  "result": "PASS",
+  "risk_ids": [
+    "AI-004-R01",
+    "AI-004-R03"
+  ],
+  "security_requirement_ids": [
+    "WI-SR-009",
+    "WI-SR-010",
+    "WI-SR-016"
+  ],
+  "test_id": "WISEC-T005",
+  "threat_ids": [
+    "WIT-019",
+    "WIT-020",
+    "WIT-023"
+  ],
+  "threat_model_version": "DW-AI004-TM-01-v1.0",
+  "validation_plan_version": "DW-AI004-VAL-SEC-01-v1.0"
+}

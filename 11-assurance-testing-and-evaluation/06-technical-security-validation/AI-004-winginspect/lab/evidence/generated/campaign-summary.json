@@ -1,0 +1,18 @@
+{
+  "lab_version": "winginspect-lab-0.1.0",
+  "production_effectiveness_claim": false,
+  "profiles": {
+    "hardened": {
+      "fail": 0,
+      "pass": 8,
+      "tests": 8
+    },
+    "vulnerable": {
+      "fail": 8,
+      "pass": 0,
+      "tests": 8
+    }
+  },
+  "python_version": "3.13.5",
+  "source_commit": "LOCAL_UNBOUND"
+}

@@ -1,0 +1,4 @@
+PASS
+vulnerable=8/8 seeded unsafe outcomes reproduced
+hardened=8/8 control assertions passed
+production_effectiveness_claim=false

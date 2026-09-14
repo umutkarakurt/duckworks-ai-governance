@@ -1,0 +1,58 @@
+{
+  "actual": {
+    "backdoor_path": true,
+    "baseline_promoted": true,
+    "expected_label": "DEFECT",
+    "model_label": "OK",
+    "triggered_miss": true,
+    "validation_blocked": false
+  },
+  "architecture_version": "DW-AI004-ARCH-SEC-01-v1.0",
+  "config_sha256": "c432994e248df47296d899e5df45a1790968b9dde172afa6a0a863f819b62e5b",
+  "config_version": "thr-1.0.0",
+  "control_ids": [
+    "WI-02",
+    "WI-06"
+  ],
+  "correlation_id": "2760ee6957e0ae3ce8a2",
+  "dataset_version": "winginspect-fixtures-20260912-01",
+  "detection": {
+    "test_artifact_segregated": true,
+    "validation_oracle_mismatch": true
+  },
+  "evidence_sha256": "71890fe11d48713daec28b3fc351a39c8e68c612e231626a89da5a31a80dd49d",
+  "expected": {
+    "baseline_promoted": true,
+    "triggered_misclassification_detected": true
+  },
+  "fixture_ids": [
+    "FX-BACKDOOR-001"
+  ],
+  "fixture_type": "adversarial",
+  "lab_version": "winginspect-lab-0.1.0",
+  "limitations": [
+    "synthetic deterministic surrogate model",
+    "no real manufacturing camera/model/product",
+    "no production effectiveness claim"
+  ],
+  "model_sha256": "58ad6a3c50f7c20bbdd2e15243343d98a235c923a43778dff4bf8a4915e4073a",
+  "model_version": "synthetic-vision-surrogate-1.0.0",
+  "profile": "vulnerable",
+  "result": "FAIL",
+  "risk_ids": [
+    "AI-004-R01",
+    "AI-004-R03"
+  ],
+  "security_requirement_ids": [
+    "WI-SR-011",
+    "WI-SR-012",
+    "WI-SR-016"
+  ],
+  "test_id": "WISEC-T006",
+  "threat_ids": [
+    "WIT-021",
+    "WIT-022"
+  ],
+  "threat_model_version": "DW-AI004-TM-01-v1.0",
+  "validation_plan_version": "DW-AI004-VAL-SEC-01-v1.0"
+}

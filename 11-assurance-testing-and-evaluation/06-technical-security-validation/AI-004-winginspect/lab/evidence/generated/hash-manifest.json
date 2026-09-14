@@ -1,0 +1,21 @@
+{
+  "campaign-summary.json": "6a5d41afe090ef328bebcd711012e60e5fbcf014caa8e32733abfb8d19070c4c",
+  "hardened-telemetry.jsonl": "9c23aa4e243ae128bb7e5f6e55c3d3bcd5599b22771cd0d81369966b8b147e67",
+  "hardened/WISEC-T001.json": "fb226b370908953f0822136ad406a7ee49a1ccb4508e15d86ea05f5364a161e1",
+  "hardened/WISEC-T002.json": "23ec9f22bffa1ad6a667be6e6f4b78c62d5e531741b8c15a930908e756f8afa7",
+  "hardened/WISEC-T003.json": "b6c576df5f3c4ac97d909f02cef9342808767e8d52d33f4310f883016a877fcb",
+  "hardened/WISEC-T004.json": "b66295edca9893595694e13e1caefb853c9acd88d99c906dc5b08d8c840b0f78",
+  "hardened/WISEC-T005.json": "121f3679bf29fb5c1ebca5bfa546b4a705218f3b8fa47910fb4d90b0ec64c5e3",
+  "hardened/WISEC-T006.json": "becdf44041377799764f3a4f5f20fc70951dafc29fa8fa29cc0c9128fe077ab1",
+  "hardened/WISEC-T007.json": "5c55fbb4ee114ecd25f5d043f6cae1a491a65c2f0f5858508ac27990191bc15c",
+  "hardened/WISEC-T008.json": "217726cb65cf1850899eaf53b95cb2a3080deca3de084a31638932a13fc407b8",
+  "vulnerable-telemetry.jsonl": "d86eca1a6a72e5314706fb84bfcfbb7a9b55c9068161868416b6241eede72a5c",
+  "vulnerable/WISEC-T001.json": "f09a932aa9628e9110ed5c90dc1f346c3542ab1b0dd0bc40a1e1b5cc66ce1a40",
+  "vulnerable/WISEC-T002.json": "3d15526d0dbfb5acbd08a319fa0982a5b6f61155bb2de94ec6f26792fd8acd95",
+  "vulnerable/WISEC-T003.json": "fafe62c40194b9dbbf2bbffd4d1d8defba3c58ca0e869946c58a555d2918be7a",
+  "vulnerable/WISEC-T004.json": "bd58bd1dfcad69c384bba1853022796d185de8961fabaae52065c5e07d946731",
+  "vulnerable/WISEC-T005.json": "671c103bc3d5fc91030dec7586be15325548d1ce8b21161f46472abd8fa279ec",
+  "vulnerable/WISEC-T006.json": "22e64479df841ca15c3d9aa705e613db008d278d2e953f5a4063e7efc217b703",
+  "vulnerable/WISEC-T007.json": "85e0205a6e5b9e844ce40cee45d43d48bb30ff3081db8795c26ca44bf574681f",
+  "vulnerable/WISEC-T008.json": "8210257cd62638bc420654721a74af2e4be00aa16d231b1c8d7918c9f45fe9f5"
+}

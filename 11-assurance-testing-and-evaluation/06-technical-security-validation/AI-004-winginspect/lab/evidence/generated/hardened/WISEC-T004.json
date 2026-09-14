@@ -1,0 +1,55 @@
+{
+  "actual": {
+    "config_blocked": true,
+    "config_match": false,
+    "revalidation_required": true
+  },
+  "architecture_version": "DW-AI004-ARCH-SEC-01-v1.0",
+  "config_sha256": "c432994e248df47296d899e5df45a1790968b9dde172afa6a0a863f819b62e5b",
+  "config_version": "thr-1.0.0",
+  "control_ids": [
+    "WI-06"
+  ],
+  "correlation_id": "c930b835672ff414b5da",
+  "dataset_version": "winginspect-fixtures-20260912-01",
+  "detection": {
+    "configuration_integrity_event": true
+  },
+  "evidence_sha256": "6d01853d999008727b92d0bf07190e21075b553767805ba62efaa9ccf6fd1bd1",
+  "expected": {
+    "config_mismatch_blocks": true,
+    "revalidation_required": true
+  },
+  "fixture_ids": [
+    "CONFIG-TAMPER-001"
+  ],
+  "fixture_type": "configuration",
+  "lab_version": "winginspect-lab-0.1.0",
+  "limitations": [
+    "synthetic deterministic surrogate model",
+    "no real manufacturing camera/model/product",
+    "no production effectiveness claim"
+  ],
+  "model_sha256": "58ad6a3c50f7c20bbdd2e15243343d98a235c923a43778dff4bf8a4915e4073a",
+  "model_version": "synthetic-vision-surrogate-1.0.0",
+  "profile": "hardened",
+  "result": "PASS",
+  "risk_ids": [
+    "AI-004-R01",
+    "AI-004-R03"
+  ],
+  "security_requirement_ids": [
+    "WI-SR-007",
+    "WI-SR-008",
+    "WI-SR-014",
+    "WI-SR-016"
+  ],
+  "test_id": "WISEC-T004",
+  "threat_ids": [
+    "WIT-012",
+    "WIT-013",
+    "WIT-015"
+  ],
+  "threat_model_version": "DW-AI004-TM-01-v1.0",
+  "validation_plan_version": "DW-AI004-VAL-SEC-01-v1.0"
+}

@@ -1,0 +1,8 @@
+{"correlation_id": "431402a2d267eaf28aa9", "detection": {"dedicated_attack_detector_hit": false, "validation_oracle_mismatch": true}, "profile": "hardened", "result": "PASS", "test_id": "WISEC-T001"}
+{"correlation_id": "5f5aa6c69ee5c0a4c547", "detection": {"quality_event": true}, "profile": "hardened", "result": "PASS", "test_id": "WISEC-T002"}
+{"correlation_id": "1366fc8d3cdc9aa7083c", "detection": {"integrity_event": true}, "profile": "hardened", "result": "PASS", "test_id": "WISEC-T003"}
+{"correlation_id": "c930b835672ff414b5da", "detection": {"configuration_integrity_event": true}, "profile": "hardened", "result": "PASS", "test_id": "WISEC-T004"}
+{"correlation_id": "9b658d8269d4544798ff", "detection": {"dataset_integrity_event": true}, "profile": "hardened", "result": "PASS", "test_id": "WISEC-T005"}
+{"correlation_id": "6e1282a62cb2366873a7", "detection": {"test_artifact_segregated": true, "validation_oracle_mismatch": true}, "profile": "hardened", "result": "PASS", "test_id": "WISEC-T006"}
+{"correlation_id": "5269a26bf1aa66856beb", "detection": {"runtime_failure_event": true}, "profile": "hardened", "result": "PASS", "test_id": "WISEC-T007"}
+{"correlation_id": "1204a42e6daff22c3310", "detection": {"release_gate_denial_event": true}, "profile": "hardened", "result": "PASS", "test_id": "WISEC-T008"}
