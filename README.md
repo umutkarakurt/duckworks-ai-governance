@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + PondGPT, WingInspect and QuackBot commit-bound technical validation completed + DuckDesign Phase II technical-security foundation established  
+**Status:** v1.8 governance baseline + PondGPT, WingInspect, QuackBot and DuckDesign commit-bound technical validation completed + AI-001 evidence reconciliation completed  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -454,7 +454,7 @@ The technical increment is reconciled as **`EV-AI002-001–007`**.
 
 **Governance consequence:** no AI-002 score changes; `ASM-010` and `ASM-026` remain open; the gate remains **Pre-Production / Production Blocked**.
 
-**Next Phase II milestone:** DuckDesign architecture/threat-model foundation is established below; executable validation remains pending.
+**Next Phase II milestone:** DuckDesign commit-bound validation and evidence reconciliation are completed below; the next candidate technical-security target is AI-003 FeatherForecast.
 
 ### Fourth Phase II target — AI-001 DuckDesign AI
 
@@ -476,13 +476,32 @@ Three security principles anchor the design:
 
 The foundation deliberately does **not** treat the historical `DD-01 — Competent Engineer Approval` source label as evidence that the control is operating. The existing High internal-audit finding `IAF-2026-002` remains open.
 
-Candidate tests `DDSEC-T001`–`DDSEC-T012` are **design-only**. No DuckDesign technical-security test has been executed, no `EV-AI001-*` IDs are allocated, and no `DD-01`–`DD-05` evidence maturity is upgraded.
+The executable Phase II increment now includes:
 
-**DuckDesign evidence boundary:** architecture and threat modelling improve design traceability only. They do not establish AetherForge data handling, production engineering-data DLP, generated-code security, dependency/build integrity, tool privilege, product safety, machinery/product conformity, legal compliance or operating effectiveness.
+- **[DuckDesign Technical Security Validation Plan v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/Duckworks_DuckDesign_Technical_Security_Validation_Plan_v1.0.md)**;
+- **[deterministic DuckDesign validation lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/)** implementing `DDSEC-T001`–`DDSEC-T012`;
+- **[DuckDesign Technical Security Test Report v1.1](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/reports/Duckworks_DuckDesign_Technical_Security_Test_Report_v1.1.md)**; and
+- **[DuckDesign Evidence Reconciliation](80-operating-evidence/AI-001-duckdesign/Duckworks_DuckDesign_Evidence_Reconciliation_Record_v1.0.md)**.
+
+GitHub Actions run **#166** (`34961107816`) replayed the DuckDesign lab against commit `1c1fd170347dff466eb9d4a670e4355905119be2` under Python `3.12.14`.
+
+It:
+
+- reproduced **12/12 seeded vulnerable failures**;
+- returned **12/12 hardened PASS**;
+- passed **10/10 unit tests**;
+- passed the DuckDesign semantic verifier and repository-wide semantic assertions; and
+- retained artifact `duckdesign-security-evidence-1c1fd170347dff466eb9d4a670e4355905119be2` (artifact `10393790467`, digest `sha256:fec7f78a7077d66890b9d00897eaf0bd21948a754912db77db89b7b1fa31edcb`).
+
+The technical increment is reconciled as **`EV-AI001-001–007`**.
+
+`EV-AI001-007` deliberately isolates the narrow `DDSEC-T009` exact-artifact engineer-approval mechanism. It reduces uncertainty about control mechanism design but does **not** demonstrate production or production-equivalent `DD-01` operation and does not close `IAF-2026-002`.
+
+**DuckDesign evidence boundary:** commit-bound synthetic technical implementation, hardened operation testing, detection/control-signal validation and reproducibility are demonstrated. Actual AetherForge data handling, production engineering-data DLP, universal generated-code security, dependency/build integrity, real tool privilege, product safety, machinery/product conformity, legal compliance and production operating effectiveness remain unverified.
 
 **Governance consequence:** `AI-001-R01`, `AI-001-R02` and `AI-001-R03` remain unchanged; `ASM-007`, `ASM-020` and `ASM-025` remain open; `IAF-2026-002` remains open; DuckDesign remains **Restricted Pilot only**.
 
-**Next technical milestone:** create `DW-AI001-VAL-SEC-01` and a deterministic DuckDesign validation lab for `DDSEC-T001`–`DDSEC-T012`, then obtain commit-bound replay before allocating `EV-AI001-*` evidence.
+**Next technical milestone:** obtain production or production-equivalent evidence for the DD controls—especially `DD-01`—or begin a separate AI-003 FeatherForecast Phase II architecture/threat-model foundation before any executable testing.
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
@@ -706,7 +725,9 @@ For a security-focused review, use this shorter sequence after the existing Pond
 14. **[QuackBot Evidence Reconciliation](80-operating-evidence/AI-002-quackbot/Duckworks_QuackBot_Evidence_Reconciliation_Record_v1.0.md)** — review `EV-AI002-001–007`, the bounded QB control-maturity updates and the unchanged Production Blocked gate.
 15. **[DuckDesign Security Applicability Addendum](02-regulatory-and-framework-research/Duckworks_DuckDesign_Technical_Security_Reference_Applicability_Addendum_v1.0.md)** — review the AI Act/product/machinery/CRA/trade-secret boundary and supply-chain reference hierarchy.
 16. **[DuckDesign Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-001-duckdesign/Duckworks_DuckDesign_Technical_Security_Architecture_v1.0.md)** — review engineering-data, provider, dependency, sandbox, tool, safety-validation, approval and provenance boundaries.
-17. **[DuckDesign Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-001-duckdesign/Duckworks_DuckDesign_Threat_Model_v1.0.md)** — review `DDT-001`–`DDT-048`, attack paths and the design-only `DDSEC-T001`–`DDSEC-T012` validation set.
+17. **[DuckDesign Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-001-duckdesign/Duckworks_DuckDesign_Threat_Model_v1.0.md)** — review `DDT-001`–`DDT-048`, attack paths and the `DDSEC-T001`–`DDSEC-T012` validation set.
+18. **[DuckDesign Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/)** — inspect the 12-case vulnerable/hardened lab, generated-code/dependency/tool/safety/approval/provenance assertions, semantic checks and commit-bound artifact.
+19. **[DuckDesign Evidence Reconciliation](80-operating-evidence/AI-001-duckdesign/Duckworks_DuckDesign_Evidence_Reconciliation_Record_v1.0.md)** — review `EV-AI001-001–007`, bounded DD control-maturity updates, unchanged risk scores, the open `IAF-2026-002` finding and unchanged Restricted Pilot gate.
 
 
 ---
@@ -782,12 +803,13 @@ The repository includes or is intended to include:
 
 ### Operating evidence
 
-- authoritative v1.8 control-evidence base with 76 records, supplemented by WingInspect `EV-AI004-006`–`011` and QuackBot `EV-AI002-001`–`007` reconciliation overlays for a combined current population of **89** records pending the next consolidated master-index release;
+- authoritative v1.8 control-evidence base with 76 records, supplemented by WingInspect `EV-AI004-006`–`011`, QuackBot `EV-AI002-001`–`007`, and DuckDesign `EV-AI001-001`–`007` reconciliation overlays for a combined current population of **96** records pending the next consolidated master-index release;
 - WingInspect `WI-01` control implementation card;
 - synthetic WingInspect inspection execution log;
 - Human Release Gate control-test workpaper;
 - WingInspect Phase II validation plan, executable lab, findings/remediation, hardened retest, detection/control-signal validation and commit-bound replay (`EV-AI004-006`–`011`);
 - QuackBot Phase II validation plan, executable lab, findings/remediation, hardened retest, detection/control-signal validation, interaction-disclosure design assertion and commit-bound replay (`EV-AI002-001`–`007`);
+- DuckDesign Phase II validation plan, executable lab, findings/remediation, hardened retest, detection/control-signal validation, commit-bound replay and exact-artifact approval-binding evidence (`EV-AI001-001`–`007`);
 - PondGPT `PG-02` control implementation card;
 - synthetic PondGPT authorization matrix;
 - executable PondGPT permission-regression control;
@@ -951,7 +973,7 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect and QuackBot now each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. Production effectiveness, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. DuckDesign now has its Phase II applicability, architecture and threat-model foundation. The next major Phase II milestone is DuckDesign executable software-supply-chain/generated-code/tool-privilege validation. Additional evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect, QuackBot and DuckDesign each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. DuckDesign also has a controlled AI-001 evidence/control/risk reconciliation overlay while `IAF-2026-002` remains open. Production effectiveness, product safety, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next candidate Phase II system target is AI-003 FeatherForecast, beginning with system-specific architecture and threat modelling before executable testing. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
