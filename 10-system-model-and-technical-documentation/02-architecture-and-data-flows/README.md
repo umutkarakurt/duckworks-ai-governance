@@ -49,6 +49,13 @@ Core invariants:
 
 The architecture is the dependency for the **[FeatherForecast Technical Threat Model](../03-threat-models/AI-003-featherforecast/Duckworks_FeatherForecast_Threat_Model_v1.0.md)**.
 
+The first-wave technical validation and governance reconciliation are now available at:
+
+- **[FeatherForecast Technical Security Validation](../../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/)**; and
+- **[FeatherForecast Evidence Reconciliation](../../80-operating-evidence/AI-003-featherforecast/Duckworks_FeatherForecast_Evidence_Reconciliation_Record_v1.0.md)**.
+
+The reconciliation reserves `EV-AI003-001–007` while preserving `IAF-2026-003` as open and the **Continue with monitoring** governance position.
+
 ## Evidence caution
 
 Target architecture is design evidence, not proof that the depicted production architecture exists or that its controls operate effectively.
