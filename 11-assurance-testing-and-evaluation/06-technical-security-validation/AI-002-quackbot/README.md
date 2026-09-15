@@ -3,7 +3,7 @@
 **System:** AI-002 — QuackBot  
 **Current governance gate:** **Pre-Production / Production Blocked**  
 **Validation target:** `QB-01`–`QB-06`, with supporting `AI-GOV-02` and `AI-TPR-01` boundaries  
-**Status:** deterministic synthetic lab v0.1.0 locally executed; repository replay pending
+**Status:** first Phase II QuackBot technical-validation increment commit-bound and reconciled within the synthetic portfolio boundary
 
 ## Current artifacts
 
@@ -12,71 +12,58 @@
 - [`lab/findings/Duckworks_QuackBot_Baseline_Findings_and_Remediation_v1.0.md`](lab/findings/Duckworks_QuackBot_Baseline_Findings_and_Remediation_v1.0.md)
 - [`lab/reports/Duckworks_QuackBot_Detection_and_Control_Signal_Validation_v1.0.md`](lab/reports/Duckworks_QuackBot_Detection_and_Control_Signal_Validation_v1.0.md)
 - [`lab/reports/Duckworks_QuackBot_AI_Interaction_Disclosure_Design_Assertion_v1.0.md`](lab/reports/Duckworks_QuackBot_AI_Interaction_Disclosure_Design_Assertion_v1.0.md)
-- [`lab/reports/Duckworks_QuackBot_Technical_Security_Test_Report_v1.0.md`](lab/reports/Duckworks_QuackBot_Technical_Security_Test_Report_v1.0.md)
+- [`lab/reports/Duckworks_QuackBot_Technical_Security_Test_Report_v1.1.md`](lab/reports/Duckworks_QuackBot_Technical_Security_Test_Report_v1.1.md)
+- [`../../../80-operating-evidence/AI-002-quackbot/Duckworks_QuackBot_Evidence_Reconciliation_Record_v1.0.md`](../../../80-operating-evidence/AI-002-quackbot/Duckworks_QuackBot_Evidence_Reconciliation_Record_v1.0.md)
 
-## Current local result
+## Canonical commit-bound result
 
-- Vulnerable profile: **0 PASS / 12 FAIL**
-- Hardened profile: **12 PASS / 0 FAIL**
-- Unit tests: **8/8 PASS**
-- Local verifier: **PASS**
-- `QB-COMP-001`: **PASS**
-- Source binding: `LOCAL_UNBOUND`
-- `production_effectiveness_claim=false`
+GitHub Actions **Evidence reproducibility run #147** (`34946047428`) completed successfully against:
 
-## Key security interpretation
+`25525cc2c09c6b6557ddb9e7706fdaf81ce1796f`
 
-The lab is designed to prove **system boundaries**, not model refusal quality.
+Result:
 
-Examples:
+- vulnerable: **0 PASS / 12 FAIL**;
+- hardened: **12 PASS / 0 FAIL**;
+- unit tests: **8/8 PASS**;
+- QuackBot semantic verifier: PASS;
+- repository semantic verification: PASS;
+- `QB-COMP-001`: PASS;
+- Python `3.12.14`;
+- artifact `quackbot-security-evidence-25525cc2c09c6b6557ddb9e7706fdaf81ce1796f`;
+- artifact ID `10387591380`; and
+- digest `sha256:a4f50c18553c5996e118b26fedbb4a7e976db703443f7516ec146d673e974391`.
 
-- anonymous sessions cannot reach customer-private retrieval;
-- authenticated customer-object access is enforced server-side;
-- retrieved instructions do not acquire control authority;
-- unsupported material guidance abstains/escalates;
-- tools/egress remain disabled by default;
-- resource limits operate before provider invocation; and
-- material configuration drift blocks promotion pending regression.
+## Evidence IDs
 
-## Legal-transparency assertion
+The first QuackBot technical-security increment is reconciled as:
 
-`QB-COMP-001` separately verifies that the synthetic hardened interaction flow displays an AI-interaction disclosure before or at first interaction.
-
-It is not counted as one of the twelve security tests and is not a claim of full legal compliance.
+`EV-AI002-001`–`EV-AI002-007`.
 
 ## Evidence maturity
 
-Demonstrated locally:
+Demonstrated:
 
-**Designed → Synthetic technical implementation → Seeded failure reproduction → Hardened synthetic operation tested → Detection/control-signal validation**
+**Designed → Synthetic technical implementation → Seeded failure/remediation → Hardened synthetic operation tested → Detection/control-signal validation → Commit-bound reproducibility**
 
-Not yet demonstrated:
+Separately demonstrated:
 
-**Commit-bound reproducibility → Canonical evidence reconciliation → Production integration → Defined-period operating effectiveness → Outcome effectiveness → Independent assurance**
+**Synthetic AI-interaction disclosure design assertion**
+
+Not demonstrated:
+
+**Production integration → Defined-period operating effectiveness → Outcome effectiveness → Independent assurance → Legal compliance**
 
 ## Governance effect
 
-No `EV-AI002-*` IDs are allocated yet.
-
-No AI-002 risk score changes.
-
-No production-effectiveness upgrade for `QB-01`–`QB-06`.
+No AI-002 score changes.
 
 `ASM-010` and `ASM-026` remain open.
 
-The production gate remains **blocked**.
+No production-effectiveness claim is created.
 
-## Next step
+The lifecycle gate remains **Pre-Production / Production Blocked**.
 
-Upload this package and obtain a clean GitHub Actions replay with:
+## Next Phase II target
 
-- `source_commit == GITHUB_SHA`;
-- 12 vulnerable failures reproduced;
-- 12 hardened PASS;
-- unit tests PASS;
-- semantic verification PASS;
-- `QB-COMP-001=PASS`;
-- retained QuackBot evidence artifact; and
-- `production_effectiveness_claim=false`.
-
-Only after that replay should stable `EV-AI002-*` IDs and control/risk reconciliation be considered.
+After this reconciliation increment, the next major technical-security target is **AI-001 DuckDesign AI — software/supply-chain/generated-code/tool-privilege security**.
