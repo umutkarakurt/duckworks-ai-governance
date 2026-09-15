@@ -330,4 +330,4 @@ The current governance position remains:
 
 > **CONTINUE WITH MONITORING**
 
-The FeatherForecast threat model is now established. The next technical step is `DW-AI003-VAL-SEC-01` — a separate technical-security validation plan followed by a deterministic synthetic lab for `FFSEC-T001`–`FFSEC-T012`.
+The FeatherForecast threat model, `DW-AI003-VAL-SEC-01` validation plan and deterministic `FFSEC-T001`–`FFSEC-T012` lab are now established locally. The next technical step is a clean commit-bound repository replay with retained evidence before any canonical evidence allocation or control/risk reconciliation.
