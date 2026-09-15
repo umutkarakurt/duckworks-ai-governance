@@ -1,0 +1,67 @@
+{
+  "actual": {
+    "build_allowed": false,
+    "dependency_name": "approved-sim-lib",
+    "dependency_version": "1.0.0",
+    "expected_hash": "a5b9be5222f45d2b02188bcdc44cf0aa841a2d7d478d92bf85762589c4e0a438",
+    "hash_match": false,
+    "integrity_mismatch_blocked": true,
+    "observed_hash": "a5138581a91aae9a886db38ed64c76f013d0df71217e1cf2c73d5134cb5abcf9",
+    "promotion_allowed": false
+  },
+  "architecture_version": "DW-AI001-ARCH-SEC-01 v1.0",
+  "config_version": "dd-config-1.0",
+  "control_ids": [
+    "DD-03",
+    "DD-05"
+  ],
+  "correlation_id": "corr-ddsec-t005-hardened",
+  "dependency_policy_version": "dd-dependency-policy-1.0",
+  "detection": {
+    "dependency_integrity_failure_event": true
+  },
+  "evidence_sha256": "7a73159e05e3f260d76ea794411908018ba34a87cc44a4a371e72ea6b3f11593",
+  "expected": {
+    "build_allowed": false,
+    "hash_match": false,
+    "integrity_mismatch_blocked": true,
+    "promotion_allowed": false
+  },
+  "generated_artifact_hash": "754c4ceefaca908244de9ef4ac9b5fda776658298ddc516f9c975cc43be9d555",
+  "generated_artifact_id": "DD-ART-005",
+  "lab_version": "duckdesign-lab-0.1.0",
+  "limitations": [
+    "deterministic synthetic engineering/application/supply-chain surrogate",
+    "no real Duckworks CAD, repository, build system or product",
+    "no real AetherForge service or contract evidence",
+    "no production control, product-safety, conformity or legal-compliance conclusion"
+  ],
+  "product_safety_claim": false,
+  "production_effectiveness_claim": false,
+  "profile": "hardened",
+  "prompt_policy_version": "dd-prompt-policy-1.0",
+  "provider_model_version": "aetherforge-sim-model-1.0",
+  "requirement_ids": [
+    "DD-SR-013",
+    "DD-SR-014",
+    "DD-SR-030",
+    "DD-SR-033"
+  ],
+  "result": "PASS",
+  "risk_ids": [
+    "AI-001-R01",
+    "AI-001-R03"
+  ],
+  "synthetic_engineer_id": "DD-ENG-SYN-001",
+  "test_id": "DDSEC-T005",
+  "threat_ids": [
+    "DDT-021",
+    "DDT-023",
+    "DDT-024",
+    "DDT-025",
+    "DDT-026"
+  ],
+  "threat_model_version": "DW-AI001-TM-01 v1.0",
+  "tool_policy_version": "dd-tool-policy-1.0",
+  "validation_plan_version": "DW-AI001-VAL-SEC-01 v1.0"
+}

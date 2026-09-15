@@ -51,16 +51,44 @@ The interaction-disclosure assertion is kept separate from the twelve adversaria
 
 See [`AI-002-quackbot/`](AI-002-quackbot/).
 
+## AI-001 DuckDesign AI
+
+DuckDesign is the fourth Phase II technical-security target and the first dedicated **engineering / generated-code / software-supply-chain / build-provenance / tool-privilege** case.
+
+Current local validation:
+
+- `DDSEC-T001`–`DDSEC-T012`;
+- vulnerable: **0 PASS / 12 FAIL**;
+- hardened: **12 PASS / 0 FAIL**;
+- unit tests: **10/10 PASS**;
+- semantic verifier: **PASS**;
+- source binding: `LOCAL_UNBOUND`;
+- repository replay: **pending**;
+- canonical `EV-AI001-*` allocation: **none**; and
+- `IAF-2026-002`: **remains open**.
+
+Primary target controls:
+
+- `DD-01 — Competent Engineer Approval`;
+- `DD-02 — Independent Safety Validation Gate`;
+- `DD-03 — Engineering Benchmark & Regression Suite`;
+- `DD-04 — Engineering Data Boundary & DLP`; and
+- `DD-05 — Design/Model Version Traceability`.
+
+The local lab demonstrates synthetic technical behavior only. It does not prove that `DD-01` operates in a production or production-equivalent process and therefore does not close the open High audit finding.
+
+See [`AI-001-duckdesign/`](AI-001-duckdesign/).
+
 ## Evidence chain
 
 **Risk → Threat → Security requirement → Deliberately weak baseline → Test → Raw evidence → Finding → Remediation → Same-test retest → Detection/control-signal validation → Commit-bound replay → Control conclusion → Risk/gate reconciliation**
 
 ## Evidence boundary
 
-A successful synthetic validation chain does not establish production operation, legal compliance, ISO conformity/certification, independent assurance or residual-risk reduction.
+A successful synthetic validation chain does not establish production operation, product safety, product/machinery conformity, legal compliance, ISO conformity/certification, independent assurance or residual-risk reduction.
 
-No lifecycle gate changes automatically from CI or test success.
+No lifecycle gate changes automatically from local/CI test success.
 
-## Next Phase II target
+## Next Phase II milestone
 
-The next major technical-security target is **AI-001 DuckDesign AI**, focusing on software/supply-chain/generated-code/tool-privilege security.
+Upload the DuckDesign validation increment and obtain a clean commit-bound replay plus retained evidence artifact. Only after that should AI-001 canonical evidence reconciliation be performed.

@@ -1,0 +1,116 @@
+{
+  "files": [
+    {
+      "path": "campaign-summary.json",
+      "sha256": "955e6ae9334a9723f888b3a6e5bbadb2c9fdd4cd4571ea63068fcf12766650f2"
+    },
+    {
+      "path": "ci-verification.txt",
+      "sha256": "c50acb1f077a022a99e88b448875f3dd08daf1034b67b3fbcaa6eabae88df670"
+    },
+    {
+      "path": "hardened/DDSEC-T001.json",
+      "sha256": "8c8f7a31cdbb796f93dabc3f4457014208c371f2704a79094c099ed8a3c9fc6c"
+    },
+    {
+      "path": "hardened/DDSEC-T002.json",
+      "sha256": "572c20ffb0571239065b9d47e6dc1527e9dfc61c81836a7d685e34d2101c2e15"
+    },
+    {
+      "path": "hardened/DDSEC-T003.json",
+      "sha256": "35d2e87235377603cfa4672d521697f94bb86dc252aebe6cbc585d95630ca05a"
+    },
+    {
+      "path": "hardened/DDSEC-T004.json",
+      "sha256": "0ef3e5fc93b5819fc3b0b181ad427aa670b25ae5ae8bb11cdc71b66e26f67d8a"
+    },
+    {
+      "path": "hardened/DDSEC-T005.json",
+      "sha256": "8f1cb7f701c75e33d66d98881ef9789beb0d26043f4dacf4225450d6423bc20c"
+    },
+    {
+      "path": "hardened/DDSEC-T006.json",
+      "sha256": "ad13b275db30dbf7fff8173c86a250dc18193350061eab23f8b3027040c040ee"
+    },
+    {
+      "path": "hardened/DDSEC-T007.json",
+      "sha256": "41271de0a10d98483d18dc03e63e0f4f9e4da02629f1913d2411cf0cb7a575aa"
+    },
+    {
+      "path": "hardened/DDSEC-T008.json",
+      "sha256": "ffe2cabeb9672703b4d3767b126ccc55a31f6ab8140a530b655295a669980f40"
+    },
+    {
+      "path": "hardened/DDSEC-T009.json",
+      "sha256": "3e9725071579218467486015d99e75ee8b6c620792b493491ed063b5394b238d"
+    },
+    {
+      "path": "hardened/DDSEC-T010.json",
+      "sha256": "ee6ea125c20068ab1b146c575cc52e936bce9474aee673f5900f6b79bea3b811"
+    },
+    {
+      "path": "hardened/DDSEC-T011.json",
+      "sha256": "0f31f725daf5b83cd4b0ec72e3d14f5f66ea081f98fa2d99e9bb4defb9f9e146"
+    },
+    {
+      "path": "hardened/DDSEC-T012.json",
+      "sha256": "985f1bd846dde84b8eb3724a3a5064a591f216a3cdb07efa7e06dda90ed52136"
+    },
+    {
+      "path": "telemetry.jsonl",
+      "sha256": "5035729d9c8b5d82bc221eb3437bbcd9682376a88116ec98a52aed34f18291a6"
+    },
+    {
+      "path": "unittest-summary.txt",
+      "sha256": "f0a659d46d338104cec56a327f2394d45d14ddd3b106d2896e7be7112d573e3f"
+    },
+    {
+      "path": "vulnerable/DDSEC-T001.json",
+      "sha256": "6052145c93941b8360f25a7171612b0cd0fd6a6b61cd6c4edb43bb1b69a2dc59"
+    },
+    {
+      "path": "vulnerable/DDSEC-T002.json",
+      "sha256": "1a7e354a4532dd706b92b325524885a0c5ec1bfef19f22321b836af877479176"
+    },
+    {
+      "path": "vulnerable/DDSEC-T003.json",
+      "sha256": "b300f1126f1884e5aa7da3b8cdc018dc4a0f8bed64715157095f02b2018a0aa4"
+    },
+    {
+      "path": "vulnerable/DDSEC-T004.json",
+      "sha256": "243bd5f394fde3802b2b9cebdff04cd1c7b75d879c78dd964df32533499573b6"
+    },
+    {
+      "path": "vulnerable/DDSEC-T005.json",
+      "sha256": "857f5b8532ab3ad1da1e1d0fe160b3f35e8705c30abe85155e737c14fa1a6cb8"
+    },
+    {
+      "path": "vulnerable/DDSEC-T006.json",
+      "sha256": "86a86936dc8bf50577a353939627d754509680bbc71a5402f7ca94f3c0fc572c"
+    },
+    {
+      "path": "vulnerable/DDSEC-T007.json",
+      "sha256": "b08964151685d82b6516344bed811882723d1ae605da1f4f9ee030b727d03d5e"
+    },
+    {
+      "path": "vulnerable/DDSEC-T008.json",
+      "sha256": "8f364ef58bcf2e0dd53bdb775b60c98996b1d358426be8dfc586949e2c4894e5"
+    },
+    {
+      "path": "vulnerable/DDSEC-T009.json",
+      "sha256": "d0b893912471573cf694f00d2fc6bcb2d5e43a106dfc9a1b7a0b7d91b277b7a5"
+    },
+    {
+      "path": "vulnerable/DDSEC-T010.json",
+      "sha256": "0fa7c96a5c9625bda5450845a9f315bfc826332a37c937361e7d79aed65c74a7"
+    },
+    {
+      "path": "vulnerable/DDSEC-T011.json",
+      "sha256": "6661ec4bbb90efc15d8238c20689a7690c57c303b94f0dcd44184bdead690abf"
+    },
+    {
+      "path": "vulnerable/DDSEC-T012.json",
+      "sha256": "56be9df6173970cd90c5d705e584c40eee3e310cd8d13fe89067928558fa51b2"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "actual": {
+    "approved_dependency": false,
+    "build_started": true,
+    "dependency_denied": false,
+    "dependency_name": "duckcad-optimizer-pro",
+    "dependency_resolved": true,
+    "public_registry_fallback_used": true
+  },
+  "architecture_version": "DW-AI001-ARCH-SEC-01 v1.0",
+  "config_version": "dd-config-1.0",
+  "control_ids": [
+    "DD-03",
+    "DD-05"
+  ],
+  "correlation_id": "corr-ddsec-t004-vulnerable",
+  "dependency_policy_version": "dd-dependency-policy-1.0",
+  "detection": {
+    "unapproved_dependency_event": false
+  },
+  "evidence_sha256": "12282f19d5d5334eab2009e3ccfb4e30a4fdc3d41aa467bd26ab81798f3beb2d",
+  "expected": {
+    "dependency_denied": true,
+    "dependency_resolved": false,
+    "public_registry_fallback_used": false
+  },
+  "generated_artifact_hash": "a69404609fce8f6e49edb65bff1920aeda6fc9dfb46db11a96bf2ba0e4e3866c",
+  "generated_artifact_id": "DD-ART-004",
+  "lab_version": "duckdesign-lab-0.1.0",
+  "limitations": [
+    "deterministic synthetic engineering/application/supply-chain surrogate",
+    "no real Duckworks CAD, repository, build system or product",
+    "no real AetherForge service or contract evidence",
+    "no production control, product-safety, conformity or legal-compliance conclusion"
+  ],
+  "product_safety_claim": false,
+  "production_effectiveness_claim": false,
+  "profile": "vulnerable",
+  "prompt_policy_version": "dd-prompt-policy-1.0",
+  "provider_model_version": "aetherforge-sim-model-1.0",
+  "requirement_ids": [
+    "DD-SR-011",
+    "DD-SR-012",
+    "DD-SR-013"
+  ],
+  "result": "FAIL",
+  "risk_ids": [
+    "AI-001-R01",
+    "AI-001-R03"
+  ],
+  "synthetic_engineer_id": "DD-ENG-SYN-001",
+  "test_id": "DDSEC-T004",
+  "threat_ids": [
+    "DDT-019",
+    "DDT-020",
+    "DDT-022"
+  ],
+  "threat_model_version": "DW-AI001-TM-01 v1.0",
+  "tool_policy_version": "dd-tool-policy-1.0",
+  "validation_plan_version": "DW-AI001-VAL-SEC-01 v1.0"
+}

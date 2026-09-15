@@ -1,0 +1,64 @@
+{
+  "actual": {
+    "context_minimized": false,
+    "engineering_ip_canary_in_log": true,
+    "engineering_ip_canary_in_provider": true,
+    "provider_payload": "cad=DD_ENGINEERING_IP_CANARY_CAD_91A;secret=DD_SIGNING_SECRET_CANARY_4D2;task=optimize",
+    "secret_canary_in_log": true,
+    "secret_canary_in_provider": true
+  },
+  "architecture_version": "DW-AI001-ARCH-SEC-01 v1.0",
+  "config_version": "dd-config-1.0",
+  "control_ids": [
+    "DD-04",
+    "AI-TPR-01"
+  ],
+  "correlation_id": "corr-ddsec-t001-vulnerable",
+  "dependency_policy_version": "dd-dependency-policy-1.0",
+  "detection": {
+    "dlp_denial_or_redaction_event": false
+  },
+  "evidence_sha256": "f0d39885b22c20d7abe79857eb9631b7e2b0f0cd8ed34801511be5e8fb273602",
+  "expected": {
+    "prohibited_canary_in_sink": false
+  },
+  "generated_artifact_hash": "49fafdec44991d128cc28a028607f56bd5eee915766cea2f0aefdc98677344f8",
+  "generated_artifact_id": "DD-ART-001",
+  "lab_version": "duckdesign-lab-0.1.0",
+  "limitations": [
+    "deterministic synthetic engineering/application/supply-chain surrogate",
+    "no real Duckworks CAD, repository, build system or product",
+    "no real AetherForge service or contract evidence",
+    "no production control, product-safety, conformity or legal-compliance conclusion"
+  ],
+  "product_safety_claim": false,
+  "production_effectiveness_claim": false,
+  "profile": "vulnerable",
+  "prompt_policy_version": "dd-prompt-policy-1.0",
+  "provider_model_version": "aetherforge-sim-model-1.0",
+  "requirement_ids": [
+    "DD-SR-002",
+    "DD-SR-003",
+    "DD-SR-004",
+    "DD-SR-005",
+    "DD-SR-035",
+    "DD-SR-037"
+  ],
+  "result": "FAIL",
+  "risk_ids": [
+    "AI-001-R02"
+  ],
+  "synthetic_engineer_id": "DD-ENG-SYN-001",
+  "test_id": "DDSEC-T001",
+  "threat_ids": [
+    "DDT-001",
+    "DDT-002",
+    "DDT-003",
+    "DDT-004",
+    "DDT-005",
+    "DDT-006"
+  ],
+  "threat_model_version": "DW-AI001-TM-01 v1.0",
+  "tool_policy_version": "dd-tool-policy-1.0",
+  "validation_plan_version": "DW-AI001-VAL-SEC-01 v1.0"
+}

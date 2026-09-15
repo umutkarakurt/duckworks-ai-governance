@@ -1,0 +1,6 @@
+[project]
+name = "duckworks-duckdesign-security-lab"
+version = "0.1.0"
+description = "Deterministic synthetic generated-code, software-supply-chain and tool-privilege security lab for Project W.I.N.G."
+requires-python = ">=3.12"
+dependencies = []

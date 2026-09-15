@@ -1,0 +1,60 @@
+{
+  "actual": {
+    "approval_accepted": false,
+    "approval_invalidated": true,
+    "current_artifact_hash": "161259e969858a7d98a0bf650960a7f40826dd9832e3d14f81525ace4cce320b",
+    "hash_match": false,
+    "rereview_required": true,
+    "reviewed_artifact_hash": "db89236ee086a902beeb367126f383dcfd1f3f71e6b40272b7123f16989e3ada"
+  },
+  "architecture_version": "DW-AI001-ARCH-SEC-01 v1.0",
+  "config_version": "dd-config-1.0",
+  "control_ids": [
+    "DD-01",
+    "DD-05"
+  ],
+  "correlation_id": "corr-ddsec-t009-hardened",
+  "dependency_policy_version": "dd-dependency-policy-1.0",
+  "detection": {
+    "approval_integrity_mismatch_event": true
+  },
+  "evidence_sha256": "be54b2ffd0d342baa496d87786295cd211d9784274b0160b50d8fb97d7780c90",
+  "expected": {
+    "approval_accepted": false,
+    "approval_invalidated": true,
+    "rereview_required": true
+  },
+  "generated_artifact_hash": "9e7f97f167ffd4596f84b653a8d3e5fbede242f276c3c177c00650fca6ece4ef",
+  "generated_artifact_id": "DD-ART-009",
+  "lab_version": "duckdesign-lab-0.1.0",
+  "limitations": [
+    "deterministic synthetic engineering/application/supply-chain surrogate",
+    "no real Duckworks CAD, repository, build system or product",
+    "no real AetherForge service or contract evidence",
+    "no production control, product-safety, conformity or legal-compliance conclusion"
+  ],
+  "product_safety_claim": false,
+  "production_effectiveness_claim": false,
+  "profile": "hardened",
+  "prompt_policy_version": "dd-prompt-policy-1.0",
+  "provider_model_version": "aetherforge-sim-model-1.0",
+  "requirement_ids": [
+    "DD-SR-025",
+    "DD-SR-026",
+    "DD-SR-027"
+  ],
+  "result": "PASS",
+  "risk_ids": [
+    "AI-001-R01",
+    "AI-001-R03"
+  ],
+  "synthetic_engineer_id": "DD-ENG-SYN-001",
+  "test_id": "DDSEC-T009",
+  "threat_ids": [
+    "DDT-040",
+    "DDT-041"
+  ],
+  "threat_model_version": "DW-AI001-TM-01 v1.0",
+  "tool_policy_version": "dd-tool-policy-1.0",
+  "validation_plan_version": "DW-AI001-VAL-SEC-01 v1.0"
+}

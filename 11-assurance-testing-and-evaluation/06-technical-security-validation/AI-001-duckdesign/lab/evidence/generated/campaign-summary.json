@@ -1,0 +1,28 @@
+{
+  "architecture_version": "DW-AI001-ARCH-SEC-01 v1.0",
+  "assumption_closure_authorized": false,
+  "campaign": "DuckDesign Software-Supply-Chain / Generated-Code / Tool-Privilege Technical Security Validation",
+  "evidence_id_allocation_authorized": false,
+  "iaf_2026_002_closure_authorized": false,
+  "lab_version": "duckdesign-lab-0.1.0",
+  "legal_compliance_claim": false,
+  "pilot_gate_change_authorized": false,
+  "product_safety_claim": false,
+  "production_effectiveness_claim": false,
+  "profiles": {
+    "hardened": {
+      "fail": 0,
+      "pass": 12,
+      "tests": 12
+    },
+    "vulnerable": {
+      "fail": 12,
+      "pass": 0,
+      "tests": 12
+    }
+  },
+  "risk_score_change_authorized": false,
+  "source_commit": "LOCAL_UNBOUND",
+  "threat_model_version": "DW-AI001-TM-01 v1.0",
+  "validation_plan_version": "DW-AI001-VAL-SEC-01 v1.0"
+}

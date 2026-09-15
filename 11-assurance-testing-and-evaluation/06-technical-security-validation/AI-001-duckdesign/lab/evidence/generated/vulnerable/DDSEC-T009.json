@@ -1,0 +1,60 @@
+{
+  "actual": {
+    "approval_accepted": true,
+    "approval_invalidated": false,
+    "current_artifact_hash": "161259e969858a7d98a0bf650960a7f40826dd9832e3d14f81525ace4cce320b",
+    "hash_match": false,
+    "rereview_required": false,
+    "reviewed_artifact_hash": "db89236ee086a902beeb367126f383dcfd1f3f71e6b40272b7123f16989e3ada"
+  },
+  "architecture_version": "DW-AI001-ARCH-SEC-01 v1.0",
+  "config_version": "dd-config-1.0",
+  "control_ids": [
+    "DD-01",
+    "DD-05"
+  ],
+  "correlation_id": "corr-ddsec-t009-vulnerable",
+  "dependency_policy_version": "dd-dependency-policy-1.0",
+  "detection": {
+    "approval_integrity_mismatch_event": false
+  },
+  "evidence_sha256": "9d66a23fc5d84716a35e1805a88e721eafc501a84041b9618315d7a054e364e8",
+  "expected": {
+    "approval_accepted": false,
+    "approval_invalidated": true,
+    "rereview_required": true
+  },
+  "generated_artifact_hash": "58ee80a0ab51f9eb903999c49b30a4b7ca87ed007c5bc0eb62714e34a6e22f0f",
+  "generated_artifact_id": "DD-ART-009",
+  "lab_version": "duckdesign-lab-0.1.0",
+  "limitations": [
+    "deterministic synthetic engineering/application/supply-chain surrogate",
+    "no real Duckworks CAD, repository, build system or product",
+    "no real AetherForge service or contract evidence",
+    "no production control, product-safety, conformity or legal-compliance conclusion"
+  ],
+  "product_safety_claim": false,
+  "production_effectiveness_claim": false,
+  "profile": "vulnerable",
+  "prompt_policy_version": "dd-prompt-policy-1.0",
+  "provider_model_version": "aetherforge-sim-model-1.0",
+  "requirement_ids": [
+    "DD-SR-025",
+    "DD-SR-026",
+    "DD-SR-027"
+  ],
+  "result": "FAIL",
+  "risk_ids": [
+    "AI-001-R01",
+    "AI-001-R03"
+  ],
+  "synthetic_engineer_id": "DD-ENG-SYN-001",
+  "test_id": "DDSEC-T009",
+  "threat_ids": [
+    "DDT-040",
+    "DDT-041"
+  ],
+  "threat_model_version": "DW-AI001-TM-01 v1.0",
+  "tool_policy_version": "dd-tool-policy-1.0",
+  "validation_plan_version": "DW-AI001-VAL-SEC-01 v1.0"
+}

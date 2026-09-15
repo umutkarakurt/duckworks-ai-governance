@@ -1,0 +1,65 @@
+{
+  "actual": {
+    "approved_model_version": "aetherforge-sim-model-1.0",
+    "approved_tool_policy_version": "dd-tool-policy-1.0",
+    "material_change_detected": false,
+    "observed_model_version": "aetherforge-sim-model-1.1-unapproved",
+    "observed_tool_policy_version": "dd-tool-policy-1.1-unapproved",
+    "promotion_blocked": false,
+    "regression_required": false,
+    "silent_promotion": true
+  },
+  "architecture_version": "DW-AI001-ARCH-SEC-01 v1.0",
+  "config_version": "dd-config-1.0",
+  "control_ids": [
+    "DD-03",
+    "DD-05",
+    "AI-GOV-02"
+  ],
+  "correlation_id": "corr-ddsec-t010-vulnerable",
+  "dependency_policy_version": "dd-dependency-policy-1.0",
+  "detection": {
+    "material_change_event": false
+  },
+  "evidence_sha256": "b0357171a20f87674814a719d1f957af20ebf52594afb3695cbd017f620e6a6a",
+  "expected": {
+    "material_change_detected": true,
+    "promotion_blocked": true,
+    "regression_required": true
+  },
+  "generated_artifact_hash": "36e13278ced5477ef4b0bdcc018680240f9e210b43931908aaa51b12e51f2f77",
+  "generated_artifact_id": "DD-ART-010",
+  "lab_version": "duckdesign-lab-0.1.0",
+  "limitations": [
+    "deterministic synthetic engineering/application/supply-chain surrogate",
+    "no real Duckworks CAD, repository, build system or product",
+    "no real AetherForge service or contract evidence",
+    "no production control, product-safety, conformity or legal-compliance conclusion"
+  ],
+  "product_safety_claim": false,
+  "production_effectiveness_claim": false,
+  "profile": "vulnerable",
+  "prompt_policy_version": "dd-prompt-policy-1.0",
+  "provider_model_version": "aetherforge-sim-model-1.0",
+  "requirement_ids": [
+    "DD-SR-005",
+    "DD-SR-030",
+    "DD-SR-031",
+    "DD-SR-032"
+  ],
+  "result": "FAIL",
+  "risk_ids": [
+    "AI-001-R01",
+    "AI-001-R02",
+    "AI-001-R03"
+  ],
+  "synthetic_engineer_id": "DD-ENG-SYN-001",
+  "test_id": "DDSEC-T010",
+  "threat_ids": [
+    "DDT-043",
+    "DDT-044"
+  ],
+  "threat_model_version": "DW-AI001-TM-01 v1.0",
+  "tool_policy_version": "dd-tool-policy-1.0",
+  "validation_plan_version": "DW-AI001-VAL-SEC-01 v1.0"
+}
