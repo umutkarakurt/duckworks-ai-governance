@@ -38,9 +38,16 @@ Architecture, threat model, executable generated-code/software-supply-chain/tool
 - **[FeatherForecast Technical Security Architecture v1.0](02-architecture-and-data-flows/AI-003-featherforecast/Duckworks_FeatherForecast_Technical_Security_Architecture_v1.0.md)**
 - **[FeatherForecast Technical Threat Model v1.0](03-threat-models/AI-003-featherforecast/Duckworks_FeatherForecast_Threat_Model_v1.0.md)**
 
-FeatherForecast is currently at **architecture + threat-model foundation**.
+FeatherForecast now has a completed first-wave Phase II chain:
 
-The design focuses on:
+- architecture and threat model;
+- `DW-AI003-VAL-SEC-01` validation plan;
+- deterministic `FFSEC-T001`–`FFSEC-T012` vulnerable/hardened lab;
+- commit-bound GitHub Actions replay;
+- retained evidence artifact; and
+- canonical reconciliation as `EV-AI003-001–007`.
+
+The validated synthetic design focuses on:
 
 - forecasting-source integrity and lineage;
 - poisoning/backfill manipulation;
@@ -53,7 +60,7 @@ The design focuses on:
 - platform availability/manual fallback; and
 - known-good rollback/evidence reconstruction.
 
-`FFSEC-T001`–`FFSEC-T012` are design-only candidate tests. No `EV-AI003-*` IDs are allocated.
+`IAF-2026-003` remains open, production forecast accuracy/effectiveness is not established, and the governance position remains **Continue with monitoring**.
 
 The technical-security workstream remains governed by the **[Phase II Scope Addendum](../01-project-charter-and-context/02-objectives-and-scope/Duckworks_Technical_AI_and_Cybersecurity_Engineering_Scope_Addendum_v1.0.md)**.
 
