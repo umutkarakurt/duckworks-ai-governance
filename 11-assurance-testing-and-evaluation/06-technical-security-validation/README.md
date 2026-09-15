@@ -80,6 +80,32 @@ The commit-bound lab and reconciliation demonstrate bounded synthetic technical 
 
 See [`AI-001-duckdesign/`](AI-001-duckdesign/).
 
+## AI-003 FeatherForecast
+
+FeatherForecast is the fifth Phase II technical-security target and the first dedicated **predictive-ML data integrity / poisoning / drift / operational decision-resilience** case.
+
+Current local validation:
+
+- `FFSEC-T001`–`FFSEC-T012`;
+- vulnerable: **0 PASS / 12 FAIL**;
+- hardened: **12 PASS / 0 FAIL**;
+- unit tests: **10/10 PASS**;
+- semantic verifier: **PASS**;
+- source binding: `LOCAL_UNBOUND`;
+- repository replay: **pending**;
+- canonical `EV-AI003-*` allocation: **none**; and
+- `IAF-2026-003`: **remains open**.
+
+Primary target controls:
+
+- `FF-01 — Human Planning Approval & Override`;
+- `FF-02 — Back-Testing, Stress Testing & Challenger Review`;
+- `FF-03 — Automated Drift Alerts & Retraining Trigger`; and
+- `FF-04 — Supplier/Planning Data Access & Logging`.
+
+The local lab demonstrates bounded synthetic pipeline/control behavior only. It does not prove production forecast accuracy, real poisoning resistance, Northstar security, sustained drift monitoring or production `FF-01` operation.
+
+See [`AI-003-featherforecast/`](AI-003-featherforecast/).
 ## Evidence chain
 
 **Risk → Threat → Security requirement → Deliberately weak baseline → Test → Raw evidence → Finding → Remediation → Same-test retest → Detection/control-signal validation → Commit-bound replay → Control conclusion → Risk/gate reconciliation**
@@ -92,4 +118,4 @@ No lifecycle gate changes automatically from local/CI test success.
 
 ## Next Phase II milestone
 
-DuckDesign first-wave commit-bound validation and evidence reconciliation are complete. The next candidate technical-security target is **AI-003 FeatherForecast** for data integrity/poisoning, drift, decision-support resilience and monitoring evidence, subject to a separate system-specific architecture/threat-model foundation before testing.
+FeatherForecast architecture/threat modelling and local executable validation are complete. The next Phase II milestone is a clean commit-bound FeatherForecast replay with a retained evidence artifact before any `EV-AI003-*` allocation or AI-003 evidence/control/risk reconciliation.

@@ -1,0 +1,85 @@
+{
+  "access_decision": "NOT_APPLICABLE",
+  "actual": {
+    "challenger_validation_passed": false,
+    "known_good_state_hash": "56b5adb7fce4ee730594fb0403fbf6387764b0d9b695cf64b6a5b1558a79f573",
+    "known_good_state_restored": true,
+    "promotion_blocked": true,
+    "proposed_state_hash": "f91bb3aa47fbe26a31aacb312db93344af55b692eaf96e5f657162abd0e891b7",
+    "retraining_data_approved": false,
+    "revalidation_required": true,
+    "rollback_config_matches": true,
+    "rollback_data_matches": true,
+    "rollback_model_matches": true,
+    "unvalidated_promotion_allowed": false
+  },
+  "architecture_version": "DW-AI003-ARCH-SEC-01 v1.0",
+  "config_version": "ff-config-1.0",
+  "control_ids": [
+    "FF-02",
+    "FF-03",
+    "AI-GOV-02",
+    "AI-INC-01"
+  ],
+  "correlation_id": "corr-ffsec-t012-hardened",
+  "data_snapshot_version": "ff-approved-snapshot-2026w37",
+  "detection": {
+    "unvalidated_promotion_or_rollback_event": true
+  },
+  "evidence_sha256": "6f3c126bd2fabf8d0bc6bf3a4e2c08877af3352a51d47c3393c131a9b17274bd",
+  "expected": {
+    "known_good_state_restored": true,
+    "rollback_config_matches": true,
+    "rollback_data_matches": true,
+    "rollback_model_matches": true,
+    "unvalidated_promotion_allowed": false
+  },
+  "feature_schema_version": "ff-feature-pipeline-1.0",
+  "forecast_accuracy_claim": false,
+  "forecast_hash": "181a2719cd4d645a3ac943428f832a521d69bc9d6cb4d65cc00ee62e29cd40fb",
+  "forecast_id": "FF-FC-012-hardened",
+  "forecast_stale": false,
+  "lab_version": "featherforecast-lab-0.1.0",
+  "legal_compliance_claim": false,
+  "limitations": [
+    "deterministic synthetic forecasting-pipeline and decision-control surrogate",
+    "no real Duckworks planning, procurement, production or supplier system",
+    "no real Northstar service, contract, model or telemetry evidence",
+    "no production forecast-accuracy, control-effectiveness, supplier-assurance or legal-compliance conclusion"
+  ],
+  "manager_approval_state": "NOT_APPLICABLE",
+  "model_version": "northstar-sim-forecast-model-1.0",
+  "production_effectiveness_claim": false,
+  "profile": "hardened",
+  "requirement_ids": [
+    "FF-SR-011",
+    "FF-SR-012",
+    "FF-SR-013",
+    "FF-SR-014",
+    "FF-SR-030",
+    "FF-SR-031",
+    "FF-SR-034"
+  ],
+  "result": "PASS",
+  "risk_ids": [
+    "AI-003-R01",
+    "AI-003-R02"
+  ],
+  "rollback_state": "VERIFIED_KNOWN_GOOD",
+  "source_fixture": {
+    "approved_data_snapshot": "ff-approved-snapshot-2026w37",
+    "fixture_id": "FF-FIX-012",
+    "schema_version": "ff-data-schema-1.0"
+  },
+  "source_fixture_hash": "f7a256dc8f7fd5d14aa15abeac9d8d4da59399391f2517b6679f4a5495ee7f8f",
+  "test_id": "FFSEC-T012",
+  "threat_ids": [
+    "FFT-020",
+    "FFT-024",
+    "FFT-045",
+    "FFT-046"
+  ],
+  "threat_model_version": "DW-AI003-TM-01 v1.0",
+  "threshold_version": "ff-threshold-policy-1.0",
+  "validation_plan_version": "DW-AI003-VAL-SEC-01 v1.0"
+}

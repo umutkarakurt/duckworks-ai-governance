@@ -1,0 +1,116 @@
+{
+  "files": [
+    {
+      "path": "campaign-summary.json",
+      "sha256": "c34e38a719b3a807667a9470fb9887c33992ce50c67a10de6d0a7f3415389703"
+    },
+    {
+      "path": "ci-verification.txt",
+      "sha256": "66469778a0210f1d51069b191d58943db0a5f350beca3d40cd4b700c3a2debcf"
+    },
+    {
+      "path": "hardened/FFSEC-T001.json",
+      "sha256": "2236561603c53f618851826916cc7b2f78116b3e8cb940890c7fbc898e055189"
+    },
+    {
+      "path": "hardened/FFSEC-T002.json",
+      "sha256": "4a030e666768b27f6982f6118e286698c900c7c0d1685ace5fddb3a65acbf2dd"
+    },
+    {
+      "path": "hardened/FFSEC-T003.json",
+      "sha256": "c81c0766be18eac72b7206b3a01139ca94417cb56e4c7dbcdd0114f5c47f43d0"
+    },
+    {
+      "path": "hardened/FFSEC-T004.json",
+      "sha256": "f7b009b7454b0a369055876c457a382019eed848ad63bdf2fb2e63a7ba2289f4"
+    },
+    {
+      "path": "hardened/FFSEC-T005.json",
+      "sha256": "1c9c96276c05f702687d6d53ba3ab77280408b1a88032485ae1685302470f731"
+    },
+    {
+      "path": "hardened/FFSEC-T006.json",
+      "sha256": "4ba580bb7a7e6c856e5ac454d86d2f724399db345171543ebdc00093fa68a4f2"
+    },
+    {
+      "path": "hardened/FFSEC-T007.json",
+      "sha256": "2ac410810920afd19428c1f5f3d7ffc7b39cf99657a1f7aded2b5b9d9d35b6a9"
+    },
+    {
+      "path": "hardened/FFSEC-T008.json",
+      "sha256": "556c78d05d538bdaad1bab5075e93897879aaf2e7cb823377c8c3d912e89a194"
+    },
+    {
+      "path": "hardened/FFSEC-T009.json",
+      "sha256": "c175c5aee9ab2797f6afb31db5891f2d5f1890cc09aaa4eca29730dd66afd2b0"
+    },
+    {
+      "path": "hardened/FFSEC-T010.json",
+      "sha256": "c589582e19f91ee659d92d3c522ccedd8eca79b2717b037f3d313d45d6c7176d"
+    },
+    {
+      "path": "hardened/FFSEC-T011.json",
+      "sha256": "7b9a9b9c127ad0715ca746c32663899c0ad797a1e234b18f00fa6ffc18b3556e"
+    },
+    {
+      "path": "hardened/FFSEC-T012.json",
+      "sha256": "6c135a6ee1fb23d29bdf7ec9600db555c637ebf5b9e360cec1fdaeac76e9f9b8"
+    },
+    {
+      "path": "telemetry.jsonl",
+      "sha256": "c53d02f66930defec7dcf45001fe4cc30ea052a4813c039711bfb21badbd6452"
+    },
+    {
+      "path": "unittest-summary.txt",
+      "sha256": "81b088a24e29ba7912877b767dddc43f46b2c062fcc3f37d6333071c0c2edcd6"
+    },
+    {
+      "path": "vulnerable/FFSEC-T001.json",
+      "sha256": "75b8821de095d1958be20b971ff0d3baa5a245b674e091bcca05d1ee9783d42b"
+    },
+    {
+      "path": "vulnerable/FFSEC-T002.json",
+      "sha256": "77d7149db2d8f8236cadef6d14c20f9bcb7a9e6fb8968298ea611a0338d992b6"
+    },
+    {
+      "path": "vulnerable/FFSEC-T003.json",
+      "sha256": "1cb25ed98e6b0f2ddf6a774663a816f271b44c3dd06d454d71be7393fa479adb"
+    },
+    {
+      "path": "vulnerable/FFSEC-T004.json",
+      "sha256": "19cf0bdbec87be191654ccb7ecb30473fb5446c31ebd78d208b64f724620a90b"
+    },
+    {
+      "path": "vulnerable/FFSEC-T005.json",
+      "sha256": "1db8c5845f19e4b8ff144e1b88cef0fe823d1308618259f7c6cfc3e438e0900f"
+    },
+    {
+      "path": "vulnerable/FFSEC-T006.json",
+      "sha256": "b65669b18d9b7e1b7ad70ecfb4c2925ff1b68b61675c96311cc9a00ea19310d7"
+    },
+    {
+      "path": "vulnerable/FFSEC-T007.json",
+      "sha256": "873dcfcfc89da23edd1487c9eedc0b35502ab380475b0bb1f05509dc2a77d9f0"
+    },
+    {
+      "path": "vulnerable/FFSEC-T008.json",
+      "sha256": "10e7f5bb32874cece8bdae6290424a7993253d178741efe0346539ab14c033da"
+    },
+    {
+      "path": "vulnerable/FFSEC-T009.json",
+      "sha256": "1c8c2c4000b48a9f20a0a103db01dafbdc38fcfca2e08fbaceb79b9eb3585e42"
+    },
+    {
+      "path": "vulnerable/FFSEC-T010.json",
+      "sha256": "72dc4d8315d106606954894d33ff5117d7dfa2ca1a0363fe0165a906f5abc677"
+    },
+    {
+      "path": "vulnerable/FFSEC-T011.json",
+      "sha256": "89526d340aefd0c03de1a74a75637bbe6b340b767e8376faa0394150049da3c8"
+    },
+    {
+      "path": "vulnerable/FFSEC-T012.json",
+      "sha256": "1b6018deee4f4064fdb61d55baf1cae137ba1e87f8ff0ee0dd35e81b021df4b4"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "access_decision": "NOT_APPLICABLE",
+  "actual": {
+    "approval_bypass_possible": false,
+    "approval_required": true,
+    "authorized_manager_approval_present": false,
+    "commitment_blocked": true,
+    "direct_commitment_created": false,
+    "material_commitment_requested": true
+  },
+  "architecture_version": "DW-AI003-ARCH-SEC-01 v1.0",
+  "config_version": "ff-config-1.0",
+  "control_ids": [
+    "FF-01"
+  ],
+  "correlation_id": "corr-ffsec-t008-hardened",
+  "data_snapshot_version": "ff-approved-snapshot-2026w37",
+  "detection": {
+    "manager_approval_gate_denial_event": true
+  },
+  "evidence_sha256": "226e27f20ae68fb12f77ed14d281d72977bc594f5afc92a059872cb38b58474c",
+  "expected": {
+    "approval_bypass_possible": false,
+    "commitment_blocked": true,
+    "direct_commitment_created": false
+  },
+  "feature_schema_version": "ff-feature-pipeline-1.0",
+  "forecast_accuracy_claim": false,
+  "forecast_hash": "c6aca0c50eb11a4dacb00765a4cb99c1889636b3c644f54a2b7a3eb25ed75193",
+  "forecast_id": "FF-FC-008-hardened",
+  "forecast_stale": false,
+  "lab_version": "featherforecast-lab-0.1.0",
+  "legal_compliance_claim": false,
+  "limitations": [
+    "deterministic synthetic forecasting-pipeline and decision-control surrogate",
+    "no real Duckworks planning, procurement, production or supplier system",
+    "no real Northstar service, contract, model or telemetry evidence",
+    "no production forecast-accuracy, control-effectiveness, supplier-assurance or legal-compliance conclusion"
+  ],
+  "manager_approval_state": "MISSING",
+  "model_version": "northstar-sim-forecast-model-1.0",
+  "production_effectiveness_claim": false,
+  "profile": "hardened",
+  "requirement_ids": [
+    "FF-SR-020",
+    "FF-SR-021",
+    "FF-SR-022",
+    "FF-SR-038"
+  ],
+  "result": "PASS",
+  "risk_ids": [
+    "AI-003-R01"
+  ],
+  "rollback_state": "NOT_APPLICABLE",
+  "source_fixture": {
+    "approved_data_snapshot": "ff-approved-snapshot-2026w37",
+    "fixture_id": "FF-FIX-008",
+    "schema_version": "ff-data-schema-1.0"
+  },
+  "source_fixture_hash": "8c4622aba64fae46ff6db6594bb14f68afe709b12e178e478eea797c5ae9191f",
+  "test_id": "FFSEC-T008",
+  "threat_ids": [
+    "FFT-028",
+    "FFT-029",
+    "FFT-031",
+    "FFT-032"
+  ],
+  "threat_model_version": "DW-AI003-TM-01 v1.0",
+  "threshold_version": "ff-threshold-policy-1.0",
+  "validation_plan_version": "DW-AI003-VAL-SEC-01 v1.0"
+}

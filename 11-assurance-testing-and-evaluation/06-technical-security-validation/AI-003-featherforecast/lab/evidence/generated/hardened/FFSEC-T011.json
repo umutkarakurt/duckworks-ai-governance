@@ -1,0 +1,75 @@
+{
+  "access_decision": "NOT_APPLICABLE",
+  "actual": {
+    "decision_support_allowed_from_stale_forecast": false,
+    "forecast_marked_stale": true,
+    "last_forecast_age_hours": 96,
+    "manual_or_degraded_mode_active": true,
+    "northstar_available": false,
+    "source_feed_current": false,
+    "stale_presented_as_current": false
+  },
+  "architecture_version": "DW-AI003-ARCH-SEC-01 v1.0",
+  "config_version": "ff-config-1.0",
+  "control_ids": [
+    "FF-01",
+    "FF-03",
+    "AI-INC-01"
+  ],
+  "correlation_id": "corr-ffsec-t011-hardened",
+  "data_snapshot_version": "ff-approved-snapshot-2026w37",
+  "detection": {
+    "platform_or_source_outage_event": true
+  },
+  "evidence_sha256": "5e202cfb94bef710aeb820bb3ed5531a483c76ad71eecc3d25305786e33d3a6d",
+  "expected": {
+    "decision_support_allowed_from_stale_forecast": false,
+    "forecast_marked_stale": true,
+    "manual_or_degraded_mode_active": true
+  },
+  "feature_schema_version": "ff-feature-pipeline-1.0",
+  "forecast_accuracy_claim": false,
+  "forecast_hash": "48f0f727b22485ccf876655dd020d5e5574b368b23a74dd6c39d5c0c81778a31",
+  "forecast_id": "FF-FC-011-hardened",
+  "forecast_stale": true,
+  "lab_version": "featherforecast-lab-0.1.0",
+  "legal_compliance_claim": false,
+  "limitations": [
+    "deterministic synthetic forecasting-pipeline and decision-control surrogate",
+    "no real Duckworks planning, procurement, production or supplier system",
+    "no real Northstar service, contract, model or telemetry evidence",
+    "no production forecast-accuracy, control-effectiveness, supplier-assurance or legal-compliance conclusion"
+  ],
+  "manager_approval_state": "NOT_APPLICABLE",
+  "model_version": "northstar-sim-forecast-model-1.0",
+  "production_effectiveness_claim": false,
+  "profile": "hardened",
+  "requirement_ids": [
+    "FF-SR-017",
+    "FF-SR-028",
+    "FF-SR-029",
+    "FF-SR-032",
+    "FF-SR-033"
+  ],
+  "result": "PASS",
+  "risk_ids": [
+    "AI-003-R01",
+    "AI-003-R02"
+  ],
+  "rollback_state": "NOT_APPLICABLE",
+  "source_fixture": {
+    "approved_data_snapshot": "ff-approved-snapshot-2026w37",
+    "fixture_id": "FF-FIX-011",
+    "schema_version": "ff-data-schema-1.0"
+  },
+  "source_fixture_hash": "efaaf20984e7d06597d6e6f430421867b6c6bf8e77a32c70250e4e76cc990236",
+  "test_id": "FFSEC-T011",
+  "threat_ids": [
+    "FFT-041",
+    "FFT-042",
+    "FFT-043"
+  ],
+  "threat_model_version": "DW-AI003-TM-01 v1.0",
+  "threshold_version": "ff-threshold-policy-1.0",
+  "validation_plan_version": "DW-AI003-VAL-SEC-01 v1.0"
+}

@@ -1,0 +1,6 @@
+[project]
+name = "duckworks-featherforecast-security-lab"
+version = "0.1.0"
+description = "Deterministic synthetic data-integrity, drift and decision-resilience security lab for Project W.I.N.G."
+requires-python = ">=3.12"
+dependencies = []

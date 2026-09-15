@@ -1,0 +1,29 @@
+{
+  "architecture_version": "DW-AI003-ARCH-SEC-01 v1.0",
+  "assumption_closure_authorized": false,
+  "campaign": "FeatherForecast Data Integrity / Poisoning / Drift / Decision-Support Resilience Validation",
+  "current_governance_position": "CONTINUE_WITH_MONITORING",
+  "evidence_id_allocation_authorized": false,
+  "forecast_accuracy_claim": false,
+  "governance_gate_change_authorized": false,
+  "iaf_2026_003_closure_authorized": false,
+  "lab_version": "featherforecast-lab-0.1.0",
+  "legal_compliance_claim": false,
+  "production_effectiveness_claim": false,
+  "profiles": {
+    "hardened": {
+      "fail": 0,
+      "pass": 12,
+      "tests": 12
+    },
+    "vulnerable": {
+      "fail": 12,
+      "pass": 0,
+      "tests": 12
+    }
+  },
+  "risk_score_change_authorized": false,
+  "source_commit": "LOCAL_UNBOUND",
+  "threat_model_version": "DW-AI003-TM-01 v1.0",
+  "validation_plan_version": "DW-AI003-VAL-SEC-01 v1.0"
+}
