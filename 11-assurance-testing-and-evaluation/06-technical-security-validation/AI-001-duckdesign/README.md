@@ -3,7 +3,7 @@
 **System:** AI-001 — DuckDesign AI  
 **Current governance gate:** **Restricted Pilot only**  
 **Validation target:** `DD-01`–`DD-05`, with supporting `AI-GOV-02`, `AI-TPR-01` and `AI-INC-01` boundaries  
-**Status:** deterministic synthetic lab v0.1.0 commit-bound replay completed; canonical evidence reconciliation pending
+**Status:** deterministic synthetic lab v0.1.0 commit-bound replay completed; canonical evidence reconciliation completed
 
 ## Current artifacts
 
@@ -11,7 +11,8 @@
 - [`lab/`](lab/)
 - [`lab/findings/Duckworks_DuckDesign_Baseline_Findings_and_Remediation_v1.0.md`](lab/findings/Duckworks_DuckDesign_Baseline_Findings_and_Remediation_v1.0.md)
 - [`lab/reports/Duckworks_DuckDesign_Detection_and_Control_Signal_Validation_v1.0.md`](lab/reports/Duckworks_DuckDesign_Detection_and_Control_Signal_Validation_v1.0.md)
-- [`lab/reports/Duckworks_DuckDesign_Technical_Security_Test_Report_v1.0.md`](lab/reports/Duckworks_DuckDesign_Technical_Security_Test_Report_v1.0.md)
+- [`lab/reports/Duckworks_DuckDesign_Technical_Security_Test_Report_v1.1.md`](lab/reports/Duckworks_DuckDesign_Technical_Security_Test_Report_v1.1.md)
+- [`../../../80-operating-evidence/AI-001-duckdesign/Duckworks_DuckDesign_Evidence_Reconciliation_Record_v1.0.md`](../../../80-operating-evidence/AI-001-duckdesign/Duckworks_DuckDesign_Evidence_Reconciliation_Record_v1.0.md)
 
 ## Current commit-bound result
 
@@ -64,23 +65,24 @@ Production or production-equivalent operating evidence for `DD-01` is still abse
 
 Demonstrated:
 
-**Designed → Synthetic technical implementation → Seeded failure reproduction → Hardened synthetic operation tested → Detection/control-signal validation → Commit-bound reproducibility**
+**Designed → Synthetic technical implementation → Seeded failure reproduction → Hardened synthetic operation tested → Detection/control-signal validation → Commit-bound reproducibility → Canonical evidence reconciliation**
 
 Not yet demonstrated:
 
-**Canonical evidence reconciliation → Production integration → Defined-period operating effectiveness → Product/outcome effectiveness → Independent assurance**
+**Production integration → Defined-period operating effectiveness → Product/outcome effectiveness → Independent assurance**
+
+## Reconciled evidence IDs
+
+`EV-AI001-001`–`EV-AI001-007` are now the stable evidence IDs for this first executable DuckDesign validation increment.
+
+They cover the validation plan, executable lab, seeded findings/remediation, commit-bound hardened campaign, detection/control-signal validation, retained CI artifact, and the narrow `DDSEC-T009` exact-artifact approval-binding result.
 
 ## Next step
 
-The clean commit-bound replay has completed successfully.
+The DuckDesign first-wave technical-security increment is now reconciled.
 
-The next controlled phase is **AI-001 canonical evidence reconciliation**:
+The next evidence requirement is **production or production-equivalent operating evidence**, especially for `DD-01` and the open High finding `IAF-2026-002`.
 
-- allocate stable `EV-AI001-*` evidence IDs against the verified replay;
-- reconcile the synthetic evidence maturity of `DD-01`–`DD-05` without granting production-effectiveness credit;
-- preserve all AI-001 risk scores unless separately justified;
-- keep `ASM-007`, `ASM-020` and `ASM-025` open unless independent evidence supports closure;
-- keep `IAF-2026-002` open because the lab does not demonstrate production or production-equivalent operation of `DD-01`; and
-- keep DuckDesign at **Restricted Pilot only** unless a separate governance decision changes the gate.
+A future broader-use decision would require real/production-equivalent approval populations, independent safety-validation records, benchmark/regression outcomes, engineering-data/provider evidence, version/provenance/change records, exceptions, metrics, owner review and independent assurance.
 
-The run itself does not authorize deployment, product-safety claims, legal-compliance claims or residual-risk reduction.
+`ASM-007`, `ASM-020` and `ASM-025` remain open, `IAF-2026-002` remains open, and DuckDesign remains **Restricted Pilot only**.
