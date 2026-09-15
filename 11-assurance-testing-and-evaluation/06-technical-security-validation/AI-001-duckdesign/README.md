@@ -3,7 +3,7 @@
 **System:** AI-001 — DuckDesign AI  
 **Current governance gate:** **Restricted Pilot only**  
 **Validation target:** `DD-01`–`DD-05`, with supporting `AI-GOV-02`, `AI-TPR-01` and `AI-INC-01` boundaries  
-**Status:** deterministic synthetic lab v0.1.0 locally executed; repository replay pending
+**Status:** deterministic synthetic lab v0.1.0 commit-bound replay completed; canonical evidence reconciliation pending
 
 ## Current artifacts
 
@@ -13,16 +13,27 @@
 - [`lab/reports/Duckworks_DuckDesign_Detection_and_Control_Signal_Validation_v1.0.md`](lab/reports/Duckworks_DuckDesign_Detection_and_Control_Signal_Validation_v1.0.md)
 - [`lab/reports/Duckworks_DuckDesign_Technical_Security_Test_Report_v1.0.md`](lab/reports/Duckworks_DuckDesign_Technical_Security_Test_Report_v1.0.md)
 
-## Current local result
+## Current commit-bound result
 
 - vulnerable: **0 PASS / 12 FAIL**
 - hardened: **12 PASS / 0 FAIL**
 - unit tests: **10/10 PASS**
 - semantic verifier: **PASS**
-- source binding: `LOCAL_UNBOUND`
+- Python: `3.12.14`
+- source commit: `1c1fd170347dff466eb9d4a670e4355905119be2`
+- Evidence reproducibility run: **#166 / `34961107816`**
+- retained artifact: `duckdesign-security-evidence-1c1fd170347dff466eb9d4a670e4355905119be2`
+- artifact ID: `10393790467`
+- artifact digest: `sha256:fec7f78a7077d66890b9d00897eaf0bd21948a754912db77db89b7b1fa31edcb`
+- artifact retention expiry: **15 October 2026**
 - `production_effectiveness_claim=false`
 - `product_safety_claim=false`
+- `legal_compliance_claim=false`
+- `risk_score_change_authorized=false`
+- `pilot_gate_change_authorized=false`
+- `evidence_id_allocation_authorized=false`
 - `iaf_2026_002_closure_authorized=false`
+- `assumption_closure_authorized=false`
 
 ## Interpretation
 
@@ -51,26 +62,25 @@ Production or production-equivalent operating evidence for `DD-01` is still abse
 
 ## Evidence maturity
 
-Demonstrated locally:
+Demonstrated:
 
-**Designed → Synthetic technical implementation → Seeded failure reproduction → Hardened synthetic operation tested → Detection/control-signal validation**
+**Designed → Synthetic technical implementation → Seeded failure reproduction → Hardened synthetic operation tested → Detection/control-signal validation → Commit-bound reproducibility**
 
 Not yet demonstrated:
 
-**Commit-bound reproducibility → Canonical evidence reconciliation → Production integration → Defined-period operating effectiveness → Product/outcome effectiveness → Independent assurance**
+**Canonical evidence reconciliation → Production integration → Defined-period operating effectiveness → Product/outcome effectiveness → Independent assurance**
 
 ## Next step
 
-Upload this package and obtain a clean GitHub Actions replay with:
+The clean commit-bound replay has completed successfully.
 
-- `source_commit == GITHUB_SHA`;
-- 12 vulnerable seeded failures;
-- 12 hardened PASS;
-- 10 unit tests PASS;
-- semantic verification PASS;
-- retained DuckDesign evidence artifact;
-- `production_effectiveness_claim=false`;
-- `product_safety_claim=false`; and
-- `iaf_2026_002_closure_authorized=false`.
+The next controlled phase is **AI-001 canonical evidence reconciliation**:
 
-Only after that replay should stable `EV-AI001-*` IDs and AI-001 control/risk reconciliation be considered.
+- allocate stable `EV-AI001-*` evidence IDs against the verified replay;
+- reconcile the synthetic evidence maturity of `DD-01`–`DD-05` without granting production-effectiveness credit;
+- preserve all AI-001 risk scores unless separately justified;
+- keep `ASM-007`, `ASM-020` and `ASM-025` open unless independent evidence supports closure;
+- keep `IAF-2026-002` open because the lab does not demonstrate production or production-equivalent operation of `DD-01`; and
+- keep DuckDesign at **Restricted Pilot only** unless a separate governance decision changes the gate.
+
+The run itself does not authorize deployment, product-safety claims, legal-compliance claims or residual-risk reduction.
