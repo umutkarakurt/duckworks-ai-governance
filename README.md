@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + PondGPT, WingInspect, QuackBot and DuckDesign commit-bound technical validation completed + AI-001 evidence reconciliation completed  
+**Status:** v1.8 governance baseline + PondGPT, WingInspect, QuackBot and DuckDesign commit-bound technical validation completed + AI-001 evidence reconciliation completed + FeatherForecast Phase II architecture/threat-model foundation established  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -454,7 +454,7 @@ The technical increment is reconciled as **`EV-AI002-001–007`**.
 
 **Governance consequence:** no AI-002 score changes; `ASM-010` and `ASM-026` remain open; the gate remains **Pre-Production / Production Blocked**.
 
-**Next Phase II milestone:** DuckDesign commit-bound validation and evidence reconciliation are completed below; the next candidate technical-security target is AI-003 FeatherForecast.
+**Next Phase II milestone:** FeatherForecast architecture/threat-model foundation is now established; the next major technical step is `DW-AI003-VAL-SEC-01` and a deterministic `FFSEC-T001`–`FFSEC-T012` validation lab.
 
 ### Fourth Phase II target — AI-001 DuckDesign AI
 
@@ -501,7 +501,7 @@ The technical increment is reconciled as **`EV-AI001-001–007`**.
 
 **Governance consequence:** `AI-001-R01`, `AI-001-R02` and `AI-001-R03` remain unchanged; `ASM-007`, `ASM-020` and `ASM-025` remain open; `IAF-2026-002` remains open; DuckDesign remains **Restricted Pilot only**.
 
-**Next technical milestone:** obtain production or production-equivalent evidence for the DD controls—especially `DD-01`—or begin a separate AI-003 FeatherForecast Phase II architecture/threat-model foundation before any executable testing.
+**Next technical milestone:** obtain production or production-equivalent evidence for the DD controls—especially `DD-01`—while the active Phase II build moves to FeatherForecast executable validation through `DW-AI003-VAL-SEC-01` and `FFSEC-T001`–`FFSEC-T012`.
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
@@ -973,7 +973,7 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect, QuackBot and DuckDesign each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. DuckDesign also has a controlled AI-001 evidence/control/risk reconciliation overlay while `IAF-2026-002` remains open. Production effectiveness, product safety, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next candidate Phase II system target is AI-003 FeatherForecast, beginning with system-specific architecture and threat modelling before executable testing. Additional evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect, QuackBot and DuckDesign each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. DuckDesign also has a controlled AI-001 evidence/control/risk reconciliation overlay while `IAF-2026-002` remains open. FeatherForecast now has its Phase II technical-security applicability, architecture and threat-model foundation, with `FFSEC-T001`–`FFSEC-T012` still design-only and no `EV-AI003-*` evidence allocated. Production effectiveness, product safety, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next major Phase II milestone is FeatherForecast executable validation through `DW-AI003-VAL-SEC-01` and a deterministic lab. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
