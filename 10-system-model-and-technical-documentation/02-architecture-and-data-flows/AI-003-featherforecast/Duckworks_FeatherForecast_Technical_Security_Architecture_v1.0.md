@@ -330,4 +330,4 @@ The current governance position remains:
 
 > **CONTINUE WITH MONITORING**
 
-The FeatherForecast threat model, `DW-AI003-VAL-SEC-01` validation plan and deterministic `FFSEC-T001`–`FFSEC-T012` lab are now established locally. The next technical step is a clean commit-bound repository replay with retained evidence before any canonical evidence allocation or control/risk reconciliation.
+The FeatherForecast threat model, validation plan and `FFSEC-T001`–`FFSEC-T012` lab have now completed commit-bound replay and canonical reconciliation. The next technical evidence requirement is production or production-equivalent operation, including real approval/override populations, back-test/drift evidence, access/logging, Northstar supplier/platform evidence and continuity/rollback outcomes.
