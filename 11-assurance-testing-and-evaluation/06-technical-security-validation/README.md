@@ -84,16 +84,17 @@ See [`AI-001-duckdesign/`](AI-001-duckdesign/).
 
 FeatherForecast is the fifth Phase II technical-security target and the first dedicated **predictive-ML data integrity / poisoning / drift / operational decision-resilience** case.
 
-Current local validation:
+Canonical result:
 
 - `FFSEC-T001`–`FFSEC-T012`;
 - vulnerable: **0 PASS / 12 FAIL**;
 - hardened: **12 PASS / 0 FAIL**;
 - unit tests: **10/10 PASS**;
 - semantic verifier: **PASS**;
-- source binding: `LOCAL_UNBOUND`;
-- repository replay: **pending**;
-- canonical `EV-AI003-*` allocation: **none**; and
+- commit `285b5bdedaef1295d9648c46e17a1aaef7b3428b`;
+- run #191 / `34971811660`;
+- retained artifact `featherforecast-security-evidence-285b5bdedaef1295d9648c46e17a1aaef7b3428b`;
+- evidence reconciled as `EV-AI003-001–007`; and
 - `IAF-2026-003`: **remains open**.
 
 Primary target controls:
@@ -103,7 +104,7 @@ Primary target controls:
 - `FF-03 — Automated Drift Alerts & Retraining Trigger`; and
 - `FF-04 — Supplier/Planning Data Access & Logging`.
 
-The local lab demonstrates bounded synthetic pipeline/control behavior only. It does not prove production forecast accuracy, real poisoning resistance, Northstar security, sustained drift monitoring or production `FF-01` operation.
+The commit-bound lab and reconciliation demonstrate bounded synthetic pipeline/control behavior only. They do not prove production forecast accuracy, real poisoning resistance, Northstar security, sustained drift monitoring or production `FF-01` operation.
 
 See [`AI-003-featherforecast/`](AI-003-featherforecast/).
 ## Evidence chain
@@ -118,4 +119,4 @@ No lifecycle gate changes automatically from local/CI test success.
 
 ## Next Phase II milestone
 
-FeatherForecast architecture/threat modelling and local executable validation are complete. The next Phase II milestone is a clean commit-bound FeatherForecast replay with a retained evidence artifact before any `EV-AI003-*` allocation or AI-003 evidence/control/risk reconciliation.
+FeatherForecast first-wave commit-bound validation and evidence reconciliation are complete. The next Phase II target should be chosen from a documented remaining gap; production or production-equivalent evidence is still required before operational-effectiveness claims.
