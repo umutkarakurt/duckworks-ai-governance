@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + PondGPT and WingInspect commit-bound validation completed + QuackBot public-facing RAG/API local technical validation completed; commit-bound replay pending  
+**Status:** v1.8 governance baseline + PondGPT, WingInspect and QuackBot commit-bound technical validation completed; AI-002 evidence reconciliation completed  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -412,41 +412,49 @@ The technical-evidence increment is reconciled as **`EV-AI004-006`–`011`** thr
 
 **Governance consequence:** no AI-004 score changes; `ASM-008` and `ASM-028` remain open; the gate remains **Restricted pilot only**.
 
-**Next Phase II milestone:** QuackBot executable validation is locally complete; commit-bound replay and later evidence reconciliation remain pending.
+**Next Phase II milestone:** QuackBot commit-bound validation and evidence reconciliation are complete; the next major target is DuckDesign AI software/supply-chain/generated-code/tool-privilege security.
 
 ### Third Phase II target — AI-002 QuackBot
 
 QuackBot extends Phase II into a distinct **internet-facing customer-service GenAI/RAG/API** attack surface.
 
-The foundation now includes:
+The technical foundation includes:
 
-- **[QuackBot Technical Security Reference & Applicability Addendum v1.0](02-regulatory-and-framework-research/Duckworks_QuackBot_Technical_Security_Reference_Applicability_Addendum_v1.0.md)** — separates mandatory-law questions from voluntary guidance and identifies AI Act Article 50 direct-interaction transparency as a QuackBot-specific applicability item without classifying QuackBot as high-risk.
-- **[QuackBot Technical Security Architecture v1.0](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md)** — defines internet/API, anonymous/authenticated session, customer-data authorization, RAG provenance, provider, grounding/escalation, output, resource-control, telemetry and version/change boundaries.
-- **[QuackBot Technical Threat Model v1.0](10-system-model-and-technical-documentation/03-threat-models/AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md)** — identifies 48 technical threat scenarios and 12 design-only validation cases spanning prompt/RAG injection, BOLA/session isolation, customer-data leakage, misinformation, output handling, tool/SSRF paths, resource exhaustion and version integrity.
+- **[QuackBot Technical Security Reference & Applicability Addendum v1.0](02-regulatory-and-framework-research/Duckworks_QuackBot_Technical_Security_Reference_Applicability_Addendum_v1.0.md)**
+- **[QuackBot Technical Security Architecture v1.0](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md)**
+- **[QuackBot Technical Threat Model v1.0](10-system-model-and-technical-documentation/03-threat-models/AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md)**
+- **[QuackBot Public-Facing RAG/API Technical Security Validation Plan v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/Duckworks_QuackBot_Public_Facing_RAG_API_Technical_Security_Validation_Plan_v1.0.md)**
+- **[Deterministic QuackBot validation lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/)**
+- **[Technical Security Test Report v1.1](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/reports/Duckworks_QuackBot_Technical_Security_Test_Report_v1.1.md)**
+- **[QuackBot Evidence Reconciliation Record v1.0](80-operating-evidence/AI-002-quackbot/Duckworks_QuackBot_Evidence_Reconciliation_Record_v1.0.md)**
 
-Two security principles anchor the QuackBot design:
+Two security principles anchor the design:
 
 > **The model is not an access-control mechanism. Customer/account authorization must be enforced before private content enters model context.**
 
 > **Retrieved content and model output are untrusted data. Neither acquires application authority through the LLM.**
 
-The first executable validation increment is now implemented:
+GitHub Actions **Evidence reproducibility run #147** (`34946047428`) completed successfully against commit `25525cc2c09c6b6557ddb9e7706fdaf81ce1796f` under Python `3.12.14`.
 
-- **[QuackBot Public-Facing RAG/API Technical Security Validation Plan v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/Duckworks_QuackBot_Public_Facing_RAG_API_Technical_Security_Validation_Plan_v1.0.md)**
-- **[Deterministic QuackBot validation lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/)**
-- **[Baseline Findings and Remediation v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/findings/Duckworks_QuackBot_Baseline_Findings_and_Remediation_v1.0.md)**
-- **[Detection and Control-Signal Validation v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/reports/Duckworks_QuackBot_Detection_and_Control_Signal_Validation_v1.0.md)**
-- **[Technical Security Test Report v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/reports/Duckworks_QuackBot_Technical_Security_Test_Report_v1.0.md)**
+The replay:
 
-Local execution reproduces **12/12 seeded vulnerable failures** and returns **12/12 hardened PASS**, with **8/8 unit tests PASS** and the local semantic verifier PASS.
+- reproduced **12/12 seeded vulnerable failures**;
+- returned **12/12 hardened PASS**;
+- passed **8/8 unit tests**;
+- passed the QuackBot semantic verifier;
+- passed repository-wide semantic evidence verification;
+- passed the separate `QB-COMP-001` interaction-disclosure design assertion; and
+- retained artifact `quackbot-security-evidence-25525cc2c09c6b6557ddb9e7706fdaf81ce1796f` (artifact `10387591380`, digest `sha256:a4f50c18553c5996e118b26fedbb4a7e976db703443f7516ec146d673e974391`).
 
-A separate `QB-COMP-001` assertion verifies that the synthetic hardened interaction flow presents an AI-interaction disclosure before or at first interaction. It is deliberately separated from the twelve adversarial-security cases and is not a claim of full legal compliance.
+The technical increment is reconciled as **`EV-AI002-001–007`**.
 
-**QuackBot evidence boundary:** the local result demonstrates deterministic synthetic implementation and control behavior only. It remains `LOCAL_UNBOUND`; no `EV-AI002-*` evidence IDs are allocated, no `QB-01`–`QB-06` production-effectiveness maturity is upgraded, and no production API/session/customer-data/provider-security claim is made.
+`QB-COMP-001` is deliberately kept separate from the twelve adversarial-security cases. It demonstrates a synthetic interaction-disclosure design assertion only and does not establish full EU AI Act Article 50 compliance.
 
-**Governance consequence:** `AI-002-R01`, `AI-002-R02` and `AI-002-R03` remain unchanged; `ASM-010` and `ASM-026` remain open; QuackBot remains **Pre-Production / Production Blocked**.
+**QuackBot evidence boundary:** commit-bound synthetic technical implementation, hardened operation testing and reproducibility are demonstrated. Production API/session/customer-data/provider security, legal compliance, production control effectiveness and residual-risk reduction remain unverified.
 
-**Next technical milestone:** upload this validation increment, obtain a clean commit-bound GitHub Actions replay and retained QuackBot evidence artifact, then reconcile the resulting synthetic evidence into the evidence/control/risk architecture without changing the production-blocked gate unless separately justified.
+**Governance consequence:** no AI-002 score changes; `ASM-010` and `ASM-026` remain open; the gate remains **Pre-Production / Production Blocked**.
+
+**Next major Phase II target:** **AI-001 DuckDesign AI — software/supply-chain/generated-code/tool-privilege security**.
 
 ---
 
@@ -482,7 +490,7 @@ The governance methodology and controls are informed by:
 
 [View the reconciled AIMS Evidence Baseline v1.7](11-assurance-testing-and-evaluation/03-iso42001/duckworks-iso42001-evidence-baseline-v1.7.md)
 
-The v1.7 baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix and the 70 evidence IDs available at that baseline snapshot, together with the master crosswalk and prioritized actions with closure criteria. Later Phase II reconciliations add `EV-AI006-017`–`022` for PondGPT and `EV-AI004-006`–`011` for WingInspect. These twelve records are outside the v1.7 AIMS-baseline snapshot and should be incorporated in its next formal refresh. It recognizes the DuckTalent improvement cycle, PondGPT supplier lifecycle, AIMS objectives-and-support pack, bounded AIMS-wide management-review cycle and the 45-control internal-audit programme while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
+The v1.7 baseline connects the proposed AI Management System (AIMS) scope and responsibilities to an 18-theme evidence matrix and the 70 evidence IDs available at that baseline snapshot, together with the master crosswalk and prioritized actions with closure criteria. Later Phase II reconciliations add `EV-AI006-017`–`022` for PondGPT, `EV-AI004-006`–`011` for WingInspect and `EV-AI002-001`–`007` for QuackBot. These nineteen records are outside the v1.7 AIMS-baseline snapshot and should be incorporated in its next formal refresh. It recognizes the DuckTalent improvement cycle, PondGPT supplier lifecycle, AIMS objectives-and-support pack, bounded AIMS-wide management-review cycle and the 45-control internal-audit programme while preserving the distinction between portfolio demonstrations and an operating enterprise AIMS.
 
 The baseline is reconciled through the v1.7 internal-audit programme milestone. It does not claim recurring AIMS operation, real competence or authorization, enterprise-wide records operation, production effectiveness, conformity, certification, legal compliance, or independent enterprise assurance.
 
@@ -663,6 +671,10 @@ For a security-focused review, use this shorter sequence after the existing Pond
 8. **[WingInspect Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md)** — review adversarial-ML attack paths, poisoning/supply-chain threats, P0/P1 priorities, and the `WISEC-T001`–`WISEC-T008` validation set.
 9. **[WingInspect Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-004-winginspect/)** — inspect the validation plan, deterministic vulnerable/hardened lab, findings/remediation, detection/control-signal validation, successful commit-bound replay and explicit production-effectiveness limitations.
 10. **[WingInspect Evidence Reconciliation](80-operating-evidence/AI-004-winginspect/Duckworks_WingInspect_Evidence_Reconciliation_Record_v1.0.md)** — review how the test evidence changes evidence maturity for WI-02/WI-04/WI-06 while leaving scores, assumptions and the Restricted Pilot gate unchanged.
+11. **[QuackBot Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md)** — review public/API, session, customer-object, RAG, provider, output, tool/egress and telemetry boundaries.
+12. **[QuackBot Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md)** — review `QBT-001`–`QBT-048` and the `QBSEC-T001`–`QBSEC-T012` validation set.
+13. **[QuackBot Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/)** — inspect the vulnerable/hardened lab, 12/12 replay, interaction-disclosure assertion, semantic checks and commit-bound artifact.
+14. **[QuackBot Evidence Reconciliation](80-operating-evidence/AI-002-quackbot/Duckworks_QuackBot_Evidence_Reconciliation_Record_v1.0.md)** — review `EV-AI002-001–007`, the bounded QB control-maturity updates and the unchanged Production Blocked gate.
 
 ---
 
@@ -903,7 +915,7 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. The PondGPT PG-03 and WingInspect technical-validation chains are commit-bound and reconciled within the synthetic portfolio boundary, while production effectiveness, risk reduction and gate changes remain explicitly unclaimed. QuackBot now has its public-facing RAG/API applicability, architecture, threat model and first deterministic local validation increment; commit-bound replay and evidence reconciliation remain pending. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. After QuackBot replay/reconciliation, the next major Phase II target is DuckDesign AI software/supply-chain/tool-privilege security. Additional evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect and QuackBot now each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. Production effectiveness, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next major Phase II target is DuckDesign AI software/supply-chain/generated-code/tool-privilege security. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
@@ -913,8 +925,8 @@ The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II 
 - live / production-connected executive AI governance dashboard beyond the current static decision brief;
 - implementation roadmap;
 - recurring enterprise AI assurance beyond the current synthetic internal-audit programme;
-- additional formal control-testing workpapers beyond the current AI-004, AI-005 and AI-006 worked examples;
-- expanded operating-evidence coverage beyond the current AI-004, AI-005 and AI-006 worked examples;
+- additional formal control-testing workpapers beyond the current AI-002, AI-004, AI-005 and AI-006 worked examples;
+- expanded operating-evidence coverage beyond the current AI-002, AI-004, AI-005 and AI-006 worked examples;
 - production system-specific monitoring histories beyond the current synthetic DuckTalent change/reassessment demonstration.
 
 The existence of a policy, framework, or template should not be interpreted as evidence that the process is fully operational.
