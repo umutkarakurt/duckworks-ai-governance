@@ -324,4 +324,4 @@ The governance position remains:
 
 > **CONTINUE WITH MONITORING**
 
-The next technical step is `DW-AI003-VAL-SEC-01` — a separate FeatherForecast data-integrity / poisoning / drift / decision-support resilience validation plan followed by a deterministic synthetic lab for `FFSEC-T001`–`FFSEC-T012`.
+The validation plan and deterministic `FFSEC-T001`–`FFSEC-T012` lab are now established locally. The next technical step is a clean commit-bound repository replay with retained evidence before any canonical `EV-AI003-*` allocation or AI-003 control/risk reconciliation.
