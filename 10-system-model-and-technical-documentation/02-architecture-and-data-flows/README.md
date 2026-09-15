@@ -18,40 +18,39 @@ This folder contains architecture and data-flow material used to make trust rela
 - [`AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md`](AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md)
 - [`AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md`](AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md)
 - [`AI-001-duckdesign/Duckworks_DuckDesign_Technical_Security_Architecture_v1.0.md`](AI-001-duckdesign/Duckworks_DuckDesign_Technical_Security_Architecture_v1.0.md)
+- [`AI-003-featherforecast/Duckworks_FeatherForecast_Technical_Security_Architecture_v1.0.md`](AI-003-featherforecast/Duckworks_FeatherForecast_Technical_Security_Architecture_v1.0.md)
 
-## AI-001 DuckDesign AI
+## AI-003 FeatherForecast
 
-DuckDesign adds a software/engineering supply-chain security case.
+FeatherForecast adds a predictive-ML / operational-planning security and resilience case.
 
 The architecture identifies:
 
-- engineering workspace and identity;
-- engineering-data vault and DLP/context policy;
-- AetherForge provider boundary;
-- generated-artifact staging;
-- generated-code/content scanning;
-- approved dependency proxy;
-- isolated execution/build sandbox;
-- CAD/simulation tool gateway;
-- engineering benchmark/regression;
-- independent safety-validation gate;
-- engineer approval bound to exact artifact hash;
-- artifact/design registry;
-- SBOM/provenance;
-- version/change control;
-- security telemetry; and
-- rollback/evidence infrastructure.
+- source-system and service-identity boundaries;
+- ingestion and data-quality/integrity validation;
+- quarantine and historical-backfill review;
+- versioned datasets and lineage;
+- feature-pipeline and training-serving consistency;
+- Northstar platform boundary;
+- model/configuration/threshold registry;
+- forecast-result integrity and staleness;
+- backtest/drift/performance monitoring;
+- challenger/stress-test gate;
+- authorized manager approval/override;
+- downstream commitment separation;
+- access/security telemetry; and
+- manual fallback / known-good rollback.
 
 Core invariants:
 
-> **Generated model output does not gain execution or release authority merely because it was produced by the AI.**
+> **Unapproved or integrity-failed data cannot silently enter the approved forecast path.**
 
-> **Engineer approval must bind to the exact artifact/version reviewed, and required independent safety validation cannot be bypassed by model or engineer workflow.**
+> **Forecasts support decisions; they do not directly authorize material purchasing or production commitments.**
 
-The architecture is the dependency for the **[DuckDesign Technical Threat Model](../03-threat-models/AI-001-duckdesign/Duckworks_DuckDesign_Threat_Model_v1.0.md)**.
+The architecture is the dependency for the **[FeatherForecast Technical Threat Model](../03-threat-models/AI-003-featherforecast/Duckworks_FeatherForecast_Threat_Model_v1.0.md)**.
 
 ## Evidence caution
 
 Target architecture is design evidence, not proof that the depicted production architecture exists or that its controls operate effectively.
 
-For DuckDesign, production claims would require actual AetherForge contract/architecture evidence, engineering-data controls, generated-code/build/dependency evidence, tool-policy records, benchmark/safety validation, version/provenance, engineer approvals and defined-period outcomes.
+For FeatherForecast, production-effectiveness claims require actual data-lineage/integrity evidence, Northstar architecture/contract records, model/configuration versions, backtest/drift outcomes, approval/override populations, access/logging evidence, fallback/rollback exercises and defined-period outcomes.
