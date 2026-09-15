@@ -1,0 +1,56 @@
+{
+  "actual": {
+    "limit_enforced_before_provider": true,
+    "provider_invocations": 3,
+    "requests_attempted": 7,
+    "requests_blocked": 4,
+    "synthetic_request_limit": 3
+  },
+  "architecture_version": "DW-AI002-ARCH-SEC-01 v1.0",
+  "auth_policy_version": "qb-authz-policy-1.0",
+  "config_version": "qb-config-1.0",
+  "control_ids": [
+    "QB-06"
+  ],
+  "correlation_id": "corr-qbsec-t010-hardened",
+  "detection": {
+    "blocked_requests": 4,
+    "resource_limit_event": true
+  },
+  "evidence_sha256": "5664a2715a1e5377686711f1db71c656146270a6d07eb01bf7c755d32c3a85a6",
+  "expected": {
+    "provider_invocations": 3,
+    "requests_blocked": 4
+  },
+  "kb_version": "qb-public-kb-1.0",
+  "lab_version": "quackbot-lab-0.1.0",
+  "limitations": [
+    "deterministic synthetic application/RAG/API surrogate",
+    "no real customer data",
+    "no real HelixRiver service",
+    "no production security or legal-compliance conclusion"
+  ],
+  "production_effectiveness_claim": false,
+  "profile": "hardened",
+  "provider_model_version": "helixriver-sim-model-1.0",
+  "requirement_ids": [
+    "QB-SR-015",
+    "QB-SR-016",
+    "QB-SR-030"
+  ],
+  "result": "PASS",
+  "risk_ids": [
+    "AI-002-R02"
+  ],
+  "session_mode": "anonymous",
+  "synthetic_customer_id": "QB-CUST-SYN-A",
+  "synthetic_user_id": "QB-USER-SYN-001",
+  "test_id": "QBSEC-T010",
+  "threat_ids": [
+    "QBT-001",
+    "QBT-002",
+    "QBT-048"
+  ],
+  "threat_model_version": "DW-AI002-TM-01 v1.0",
+  "validation_plan_version": "DW-AI002-VAL-SEC-01 v1.0"
+}

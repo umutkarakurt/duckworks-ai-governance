@@ -1,0 +1,6 @@
+[project]
+name = "duckworks-quackbot-security-lab"
+version = "0.1.0"
+description = "Deterministic synthetic public-facing RAG/API security lab for Project W.I.N.G."
+requires-python = ">=3.12"
+dependencies = []

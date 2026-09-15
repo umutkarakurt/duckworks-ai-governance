@@ -1,0 +1,120 @@
+{
+  "files": [
+    {
+      "path": "campaign-summary.json",
+      "sha256": "12b9cd6944d267f178def0bfb23da05f173869f369d4e82735052d0ffbaded5d"
+    },
+    {
+      "path": "ci-verification.txt",
+      "sha256": "4b0ea8c64dbd0ca89c598bc366035c528a5baba629d60244f14e18e5953f53bd"
+    },
+    {
+      "path": "compliance/QB-COMP-001.json",
+      "sha256": "f8fd4ab367f56185bbdc55e526175133e3e8409f68b5db514a82fc4a9d62f016"
+    },
+    {
+      "path": "hardened/QBSEC-T001.json",
+      "sha256": "79d98d7d9bf305753886482690544e273cc3e349563cd8c9a22fc5d09bbe621b"
+    },
+    {
+      "path": "hardened/QBSEC-T002.json",
+      "sha256": "f43b55b883db883f1cdc5644893bb2d4dc3215700f1efed61d258a43cdb25813"
+    },
+    {
+      "path": "hardened/QBSEC-T003.json",
+      "sha256": "7e4ebd7db4128fa7c8fc99c2de13cd7d4772c710f471a6c0757ad441d49da6ba"
+    },
+    {
+      "path": "hardened/QBSEC-T004.json",
+      "sha256": "792f89d0f3a4dd7ce0ccbb96981f649c21c77e1b932817ecd9ac844ff6da6ada"
+    },
+    {
+      "path": "hardened/QBSEC-T005.json",
+      "sha256": "5a48a5e3c4ace6d8434a6db7400a98e4dde2a037669758b98b7d20cfe4c146e2"
+    },
+    {
+      "path": "hardened/QBSEC-T006.json",
+      "sha256": "72ebc808bc6f0117352fd29ad5e437701ab22d6c932458a50222cd81d311c246"
+    },
+    {
+      "path": "hardened/QBSEC-T007.json",
+      "sha256": "bbdc25c029dd14d3826155073d71f8292d1036d6cd47c91d05db6e7ba7afdf43"
+    },
+    {
+      "path": "hardened/QBSEC-T008.json",
+      "sha256": "da1d6f75e44cc40039026c69ede56c324bb55b54b0d2f22baf7713a3e005f19f"
+    },
+    {
+      "path": "hardened/QBSEC-T009.json",
+      "sha256": "8db55128308e1705fa27a3b87bde454e7b6bb4046f952a2a8ad82e703d559020"
+    },
+    {
+      "path": "hardened/QBSEC-T010.json",
+      "sha256": "3e1e5b2f5a69bd933cec8c441639b00d47a047214a50e8b78b279975497f4e33"
+    },
+    {
+      "path": "hardened/QBSEC-T011.json",
+      "sha256": "96cc54975eeccc7e7d9e9d7fe227d1bcba659f0d5e36857dea79876b6c5f3343"
+    },
+    {
+      "path": "hardened/QBSEC-T012.json",
+      "sha256": "6aad906ead194a13fac3a37508cd5182bb23a886c32ab434d8d82c108770f54a"
+    },
+    {
+      "path": "telemetry.jsonl",
+      "sha256": "4dea657dcf46c078a7ff4c73ba85844c483b1b747666dbc0195c6c7c8939eff2"
+    },
+    {
+      "path": "unittest-summary.txt",
+      "sha256": "698d16d7b93c4bd9707d3cfacda6fb1e0fea99ed0cda6e69bedc42772940540a"
+    },
+    {
+      "path": "vulnerable/QBSEC-T001.json",
+      "sha256": "58b96e04bc4035c042f258b69affb77b2d782d49fcae8b5afdb421a1035bf717"
+    },
+    {
+      "path": "vulnerable/QBSEC-T002.json",
+      "sha256": "51f51b29e8da846aa48ff8ce5c89e1567bbe3a31bdcb311c49f9f471fdeb2431"
+    },
+    {
+      "path": "vulnerable/QBSEC-T003.json",
+      "sha256": "286e4c4c948aa72c119097bce14c1065c2fce6f8748e214a2145d5b829a3cde8"
+    },
+    {
+      "path": "vulnerable/QBSEC-T004.json",
+      "sha256": "9409e153211079e22426455b98a6501064973ff238cb784001199776c8d35a7a"
+    },
+    {
+      "path": "vulnerable/QBSEC-T005.json",
+      "sha256": "8dbeb09bc89c421f8cdfb68b74e9a5e66a3820edc77d26e1ad0ec62f4f1f0f66"
+    },
+    {
+      "path": "vulnerable/QBSEC-T006.json",
+      "sha256": "be16acf8e9ae62b924917894150577414a313f3dffe0ba1c31f3a43a23188f51"
+    },
+    {
+      "path": "vulnerable/QBSEC-T007.json",
+      "sha256": "8b694ee13e0436606ea19991042651b75be449086be657c1b68a685661c22343"
+    },
+    {
+      "path": "vulnerable/QBSEC-T008.json",
+      "sha256": "529bb02bc15a7718f0caabb7b9e23c2a985f3a909e11af1ba1b5f3e5ac0b551f"
+    },
+    {
+      "path": "vulnerable/QBSEC-T009.json",
+      "sha256": "60625d034c08d22d5dac3ba97cbec49ecc707f8c18a83ea00eb86d95dfc42736"
+    },
+    {
+      "path": "vulnerable/QBSEC-T010.json",
+      "sha256": "9ffc1ed1f9c71a699607df8bb4152401562904a5f7f3fb2c4ca7a0c46af796f2"
+    },
+    {
+      "path": "vulnerable/QBSEC-T011.json",
+      "sha256": "24b91bc0d34d41a4ed0dc963178bf000c914e3ecf51c70e82f9199e4f0b1ef00"
+    },
+    {
+      "path": "vulnerable/QBSEC-T012.json",
+      "sha256": "36400018206655af82e4915885230aa21aee6edecbd8961fb1e92e34f596569f"
+    }
+  ]
+}

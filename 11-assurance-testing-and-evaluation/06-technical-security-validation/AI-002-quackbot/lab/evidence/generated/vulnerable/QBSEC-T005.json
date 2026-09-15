@@ -1,0 +1,56 @@
+{
+  "actual": {
+    "authenticated_customer": "QB-CUST-SYN-A",
+    "authorization_denied": false,
+    "cross_customer_object_returned": true,
+    "customer_b_canary_in_response": true,
+    "requested_customer": "QB-CUST-SYN-B"
+  },
+  "architecture_version": "DW-AI002-ARCH-SEC-01 v1.0",
+  "auth_policy_version": "qb-authz-policy-1.0",
+  "config_version": "qb-config-1.0",
+  "control_ids": [
+    "QB-05",
+    "QB-06"
+  ],
+  "correlation_id": "corr-qbsec-t005-vulnerable",
+  "detection": {
+    "object_authorization_denial_event": false
+  },
+  "evidence_sha256": "f3b1ec417935d2d622a463a4393bee348a1fc114cd4767f34cb4e90ce2ae92f2",
+  "expected": {
+    "authorization_denied": true,
+    "cross_customer_object_returned": false
+  },
+  "kb_version": "qb-public-kb-1.0",
+  "lab_version": "quackbot-lab-0.1.0",
+  "limitations": [
+    "deterministic synthetic application/RAG/API surrogate",
+    "no real customer data",
+    "no real HelixRiver service",
+    "no production security or legal-compliance conclusion"
+  ],
+  "production_effectiveness_claim": false,
+  "profile": "vulnerable",
+  "provider_model_version": "helixriver-sim-model-1.0",
+  "requirement_ids": [
+    "QB-SR-003",
+    "QB-SR-005",
+    "QB-SR-006",
+    "QB-SR-030"
+  ],
+  "result": "FAIL",
+  "risk_ids": [
+    "AI-002-R02"
+  ],
+  "session_mode": "authenticated",
+  "synthetic_customer_id": "QB-CUST-SYN-A",
+  "synthetic_user_id": "QB-USER-SYN-001",
+  "test_id": "QBSEC-T005",
+  "threat_ids": [
+    "QBT-004",
+    "QBT-026"
+  ],
+  "threat_model_version": "DW-AI002-TM-01 v1.0",
+  "validation_plan_version": "DW-AI002-VAL-SEC-01 v1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "actual": {
+    "disclosure_text": "You are interacting with Duckworks QuackBot, an AI-assisted support service.",
+    "shown_before_or_at_first_interaction": true,
+    "synthetic_ui_only": true
+  },
+  "assertion_id": "QB-COMP-001",
+  "evidence_sha256": "c8f6a2021c74472fb97e2dd36488c499e3151be469853faad57f4477545fc082",
+  "legal_compliance_claim": false,
+  "legal_design_topic": "EU AI Act Article 50 direct-interaction transparency applicability",
+  "limitations": [
+    "synthetic UI-flow assertion only",
+    "does not establish full Article 50 compliance",
+    "legal role and exception analysis remain subject to legal review"
+  ],
+  "profile": "hardened",
+  "result": "PASS"
+}

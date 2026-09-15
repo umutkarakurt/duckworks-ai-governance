@@ -1,0 +1,5 @@
+PASS: QuackBot campaign semantic verification
+vulnerable=12/12 seeded unsafe outcomes reproduced
+hardened=12/12 control assertions passed
+QB-COMP-001=PASS
+production_effectiveness_claim=false

@@ -1,0 +1,27 @@
+{
+  "architecture_version": "DW-AI002-ARCH-SEC-01 v1.0",
+  "campaign": "QuackBot Public-Facing RAG/API Technical Security Validation",
+  "compliance_assertions": {
+    "QB-COMP-001": "PASS"
+  },
+  "evidence_id_allocation_authorized": false,
+  "lab_version": "quackbot-lab-0.1.0",
+  "production_effectiveness_claim": false,
+  "production_gate_change_authorized": false,
+  "profiles": {
+    "hardened": {
+      "fail": 0,
+      "pass": 12,
+      "tests": 12
+    },
+    "vulnerable": {
+      "fail": 12,
+      "pass": 0,
+      "tests": 12
+    }
+  },
+  "risk_score_change_authorized": false,
+  "source_commit": "LOCAL_UNBOUND",
+  "threat_model_version": "DW-AI002-TM-01 v1.0",
+  "validation_plan_version": "DW-AI002-VAL-SEC-01 v1.0"
+}
