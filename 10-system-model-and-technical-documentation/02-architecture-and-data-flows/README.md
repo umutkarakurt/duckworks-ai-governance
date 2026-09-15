@@ -5,85 +5,48 @@
 
 [← Back to main portfolio](../../README.md) · [↑ Parent folder](../README.md)
 
-This folder contains architecture and data-flow material used to make AI processing boundaries, trust relationships, data movement, integration points, authorization enforcement, model/provider boundaries, public/internet boundaries, physical acquisition boundaries, human decision points and security telemetry easier to review.
+This folder contains architecture and data-flow material used to make trust relationships, data movement, model/provider boundaries, authorization, tool privilege, human decision points, supply-chain/build dependencies and security telemetry easier to review.
 
-## Current artifacts
+## Current Phase II architectures
 
-- `Duckworks_AI_Data_Flow_Diagrams_v1.0.pdf`
-- `Duckworks DFD.png`
-- [`AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md) — Phase II synthetic PondGPT architecture.
-- [`AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md`](AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md) — Phase II synthetic WingInspect computer-vision architecture.
-- [`AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md`](AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md) — Phase II synthetic public-facing QuackBot RAG/API architecture.
+- [`AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md)
+- [`AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md`](AI-004-winginspect/Duckworks_WingInspect_Technical_Security_Architecture_v1.0.md)
+- [`AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md`](AI-002-quackbot/Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md)
+- [`AI-001-duckdesign/Duckworks_DuckDesign_Technical_Security_Architecture_v1.0.md`](AI-001-duckdesign/Duckworks_DuckDesign_Technical_Security_Architecture_v1.0.md)
 
-## AI-006 PondGPT
+## AI-001 DuckDesign AI
 
-PondGPT identifies identity, authorization, RAG, provider, tool, egress, secrets, telemetry, build/release and evidence boundaries.
-
-Core invariant:
-
-> Authorization is enforced before retrieved content enters LLM context.
-
-## AI-004 WingInspect Vision
-
-WingInspect identifies image acquisition/provenance, image-quality fail-safe routing, preprocessing/model/configuration integrity, human inspection and Mandatory Human Release Gate boundaries.
-
-Core invariant:
-
-> The model may flag/classify defects but cannot independently authorize product release.
-
-WingInspect has progressed through commit-bound synthetic validation and evidence reconciliation.
-
-## AI-002 QuackBot
-
-QuackBot adds an internet-facing customer-service threat surface.
+DuckDesign adds a software/engineering supply-chain security case.
 
 The architecture identifies:
 
-- public edge/API;
-- session isolation;
-- anonymous versus authenticated-customer mode;
-- object-level customer authorization;
-- public versus customer-specific RAG;
-- source allowlisting/provenance;
-- context minimization;
-- hosted provider boundary;
-- grounding/citation/abstention;
-- human escalation;
-- safe output rendering;
-- tool/action denial by default;
-- rate/resource controls;
+- engineering workspace and identity;
+- engineering-data vault and DLP/context policy;
+- AetherForge provider boundary;
+- generated-artifact staging;
+- generated-code/content scanning;
+- approved dependency proxy;
+- isolated execution/build sandbox;
+- CAD/simulation tool gateway;
+- engineering benchmark/regression;
+- independent safety-validation gate;
+- engineer approval bound to exact artifact hash;
+- artifact/design registry;
+- SBOM/provenance;
+- version/change control;
 - security telemetry; and
-- change-triggered regression.
+- rollback/evidence infrastructure.
 
-Two critical invariants are:
+Core invariants:
 
-> **The model is not an access-control mechanism.**
+> **Generated model output does not gain execution or release authority merely because it was produced by the AI.**
 
-> **Retrieved content and model output are untrusted data and do not acquire application authority through the LLM.**
+> **Engineer approval must bind to the exact artifact/version reviewed, and required independent safety validation cannot be bypassed by model or engineer workflow.**
 
-The architecture is the dependency for the **[QuackBot Technical Threat Model](../03-threat-models/AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md)**.
-
-## Governance use
-
-Architecture/data-flow artifacts support:
-
-- privacy and DPIA analysis;
-- data classification and provenance;
-- security threat modelling;
-- third-party boundary identification;
-- authorization and session review;
-- application/API security;
-- model/data supply-chain analysis;
-- human escalation/oversight;
-- logging/monitoring;
-- incident/change analysis.
+The architecture is the dependency for the **[DuckDesign Technical Threat Model](../03-threat-models/AI-001-duckdesign/Duckworks_DuckDesign_Threat_Model_v1.0.md)**.
 
 ## Evidence caution
 
-A diagram or target architecture is an explanatory/design artifact, not proof that the depicted production architecture exists or that the controls are operating.
+Target architecture is design evidence, not proof that the depicted production architecture exists or that its controls operate effectively.
 
-For QuackBot, production claims would require real API/session/auth configuration, customer-object authorization, corpus provenance, provider configuration/contract evidence, escalation records, rate-limit operation, output-handling evidence, security telemetry and defined-period outcomes.
-
----
-
-> **Portfolio boundary:** Duckworks, Project W.I.N.G., its personnel, systems, datasets, decisions, controls and evidence are fictional or synthetic unless explicitly identified otherwise.
+For DuckDesign, production claims would require actual AetherForge contract/architecture evidence, engineering-data controls, generated-code/build/dependency evidence, tool-policy records, benchmark/safety validation, version/provenance, engineer approvals and defined-period outcomes.
