@@ -7,6 +7,11 @@
 
 This folder contains architecture and data-flow material used to make trust relationships, data movement, model/provider boundaries, authorization, tool privilege, human decision points, supply-chain/build dependencies and security telemetry easier to review.
 
+## Existing data-flow artifacts
+
+- [`Duckworks_AI_Data_Flow_Diagrams_v1.0.pdf`](Duckworks_AI_Data_Flow_Diagrams_v1.0.pdf)
+- [`Duckworks DFD.png`](Duckworks%20DFD.png)
+
 ## Current Phase II architectures
 
 - [`AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_Technical_Security_Architecture_v1.0.md)
