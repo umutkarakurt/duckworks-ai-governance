@@ -7,6 +7,12 @@
 
 This folder contains the legal, regulatory, standards, framework and technical-security research used to inform Project W.I.N.G. governance and Phase II engineering decisions.
 
+## Core research artifacts
+
+- [`Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.md`](Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.md)
+- [`Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.pdf`](Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.pdf)
+- [`Duckworks_AI_Governance_Obligations_and_Guidance_Register_v1.0.xlsx`](Duckworks_AI_Governance_Obligations_and_Guidance_Register_v1.0.xlsx)
+
 ## Current Phase II applicability artifacts
 
 - [`Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md`](Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md)
