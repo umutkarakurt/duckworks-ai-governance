@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + PondGPT, WingInspect, QuackBot, DuckDesign and FeatherForecast commit-bound technical validation completed + AI-001 and AI-003 evidence reconciliation completed  
+**Status:** v1.8 governance baseline + five-system Phase II commit-bound technical validation and canonical evidence reconciliation completed + Phase II technical-assurance consolidation and first-wave closure completed  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -40,6 +40,8 @@ Available for AI governance and ISO/IEC 42001 readiness work as a named associat
 Start with the **[Portfolio Evaluator Guide](13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Evaluator_Guide_v1.0.md)**. It provides five-, fifteen- and thirty-minute review paths for hiring managers, AI governance leaders, GRC practitioners and assurance reviewers.
 
 The accompanying **[competency-to-evidence map](13-portfolio-navigation-and-hiring-evidence/Duckworks_Competency_to_Evidence_Map_v1.0.xlsx)** links fourteen role-relevant capabilities to inspectable repository evidence and states the material limitation for every mapping. The **[claim-boundary register](13-portfolio-navigation-and-hiring-evidence/Duckworks_Portfolio_Claim_Boundary_Register_v1.0.csv)** distinguishes supported portfolio wording from production, compliance, certification and authority claims that this synthetic project cannot substantiate.
+
+For the technical-security workstream, start with the **[Phase II Technical Assurance Programme Summary](11-assurance-testing-and-evaluation/06-technical-security-validation/Duckworks_PhaseII_Technical_Assurance_Programme_Summary_v1.0.md)**. It consolidates the five completed system chains, 52 canonical campaign cases, cross-system assurance themes, evidence boundaries and programme-level closure decision.
 
 ---
 
@@ -539,6 +541,24 @@ Two interpretation boundaries are central:
 **Governance consequence:** no AI-003 score changes; `ASM-011` and `ASM-027` remain open; `IAF-2026-003` remains open; the governance position remains **Continue with monitoring**.
 
 **Next technical milestone:** obtain production or production-equivalent operating evidence for `FF-01`–`FF-04`—especially the approval population required by `IAF-2026-003`—or select the next Phase II target from a documented portfolio gap.
+
+### Phase II technical-assurance consolidation and closure
+
+The first-wave technical-security programme is now consolidated across PondGPT, WingInspect, QuackBot, DuckDesign and FeatherForecast.
+
+Programme-level artifacts:
+
+- **[Phase II Technical Assurance Programme Summary](11-assurance-testing-and-evaluation/06-technical-security-validation/Duckworks_PhaseII_Technical_Assurance_Programme_Summary_v1.0.md)** — five-system executive/technical view and claim boundaries;
+- **[Cross-System AI Security Control & Test Coverage Matrix](11-assurance-testing-and-evaluation/06-technical-security-validation/Duckworks_Cross_System_AI_Security_Control_and_Test_Matrix_v1.0.md)** — coverage by security theme and system;
+- **[Technical AI Security Assurance Methodology](11-assurance-testing-and-evaluation/06-technical-security-validation/Duckworks_Technical_AI_Security_Assurance_Methodology_v1.0.md)** — reusable assurance chain, evidence-maturity ladder, acceptance and retest rules; and
+- **[Phase II Technical AI Security Assurance Closure Report](01-project-charter-and-context/02-objectives-and-scope/Duckworks_PhaseII_Technical_AI_Security_Assurance_Closure_Report_v1.0.md)** — objective/acceptance-criteria closure, residual gaps and reopening triggers.
+
+The closure is deliberately narrow:
+
+> **The first-wave synthetic / commit-bound technical-assurance build is complete. Production operating effectiveness, independent assurance, legal compliance and unresolved audit/system evidence gaps remain open.**
+
+Future technical work is trigger-driven: a new threat class, material system change, incident/control failure, production-equivalent evidence, evaluator feedback or a defined assurance requirement. Additional synthetic artifacts are not added merely to increase volume.
+
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
