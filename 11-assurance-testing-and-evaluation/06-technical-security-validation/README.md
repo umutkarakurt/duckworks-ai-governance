@@ -11,7 +11,6 @@ This folder contains reproducible security-validation plans, executable test imp
 
 PondGPT is the first completed Phase II technical-validation chain.
 
-- `PG-03 — Prompt Injection & RAG Poisoning Test Suite`
 - 8/8 vulnerable seeded failures reproduced;
 - 8/8 hardened PASS;
 - commit-bound replay completed;
@@ -24,8 +23,8 @@ See [`AI-006-pondgpt/`](AI-006-pondgpt/).
 
 WingInspect is the second completed Phase II technical-validation increment.
 
-- vulnerable: **0 PASS / 8 FAIL**
-- hardened: **8 PASS / 0 FAIL**
+- vulnerable: 0 PASS / 8 FAIL;
+- hardened: 8 PASS / 0 FAIL;
 - commit-bound replay completed;
 - AI-004 evidence reconciled as `EV-AI004-006–011`; and
 - production effectiveness remains unverified.
@@ -34,29 +33,21 @@ See [`AI-004-winginspect/`](AI-004-winginspect/).
 
 ## AI-002 QuackBot
 
-QuackBot is the third Phase II technical-security target and the first explicitly **internet-facing customer-service RAG/API** case.
+QuackBot is the third completed Phase II technical-validation increment and the first explicitly internet-facing customer-service RAG/API case.
 
-Current local validation:
+Canonical result:
 
-- `QBSEC-T001`–`QBSEC-T012`;
 - vulnerable: **0 PASS / 12 FAIL**;
 - hardened: **12 PASS / 0 FAIL**;
 - unit tests: **8/8 PASS**;
-- local verifier: PASS;
-- `QB-COMP-001` AI-interaction-disclosure design assertion: PASS;
-- source binding: `LOCAL_UNBOUND`; and
-- repository replay: **pending**.
+- QuackBot semantic verifier: PASS;
+- `QB-COMP-001`: PASS;
+- commit `25525cc2c09c6b6557ddb9e7706fdaf81ce1796f`;
+- run #147 / `34946047428`;
+- retained artifact `quackbot-security-evidence-25525cc2c09c6b6557ddb9e7706fdaf81ce1796f`; and
+- evidence reconciled as `EV-AI002-001–007`.
 
-Primary target controls:
-
-- `QB-01 — Curated RAG Source Allowlist`;
-- `QB-02 — Grounding, Citation & Abstention Rules`;
-- `QB-03 — Human Escalation SLA`;
-- `QB-04 — Prompt Injection & RAG Adversarial Testing`;
-- `QB-05 — Least-Privilege Retrieval & Tool Boundaries`; and
-- `QB-06 — GenAI Security & Harm Monitoring`.
-
-No `EV-AI002-*` evidence IDs are allocated yet.
+The interaction-disclosure assertion is kept separate from the twelve adversarial-security tests and does not establish full legal compliance.
 
 See [`AI-002-quackbot/`](AI-002-quackbot/).
 
@@ -66,6 +57,10 @@ See [`AI-002-quackbot/`](AI-002-quackbot/).
 
 ## Evidence boundary
 
-A successful synthetic technical-validation chain does not establish production operation, legal compliance, customer-data protection in production, ISO conformity/certification, independent assurance or residual-risk reduction.
+A successful synthetic validation chain does not establish production operation, legal compliance, ISO conformity/certification, independent assurance or residual-risk reduction.
 
-No lifecycle gate changes automatically from local/CI test success.
+No lifecycle gate changes automatically from CI or test success.
+
+## Next Phase II target
+
+The next major technical-security target is **AI-001 DuckDesign AI**, focusing on software/supply-chain/generated-code/tool-privilege security.
