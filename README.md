@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + PondGPT, WingInspect, QuackBot and DuckDesign commit-bound technical validation completed + AI-001 evidence reconciliation completed + FeatherForecast Phase II architecture/threat-model foundation established  
+**Status:** v1.8 governance baseline + PondGPT, WingInspect, QuackBot and DuckDesign commit-bound technical validation completed + AI-001 evidence reconciliation completed + FeatherForecast Phase II local executable validation completed; commit-bound replay pending  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -502,6 +502,40 @@ The technical increment is reconciled as **`EV-AI001-001–007`**.
 **Governance consequence:** `AI-001-R01`, `AI-001-R02` and `AI-001-R03` remain unchanged; `ASM-007`, `ASM-020` and `ASM-025` remain open; `IAF-2026-002` remains open; DuckDesign remains **Restricted Pilot only**.
 
 **Next technical milestone:** obtain production or production-equivalent evidence for the DD controls—especially `DD-01`—while the active Phase II build moves to FeatherForecast executable validation through `DW-AI003-VAL-SEC-01` and `FFSEC-T001`–`FFSEC-T012`.
+### Fifth Phase II target — AI-003 FeatherForecast
+
+FeatherForecast extends Phase II into **predictive-ML data integrity, poisoning/backfill resistance, training-serving consistency, drift interpretation, decision authority, supplier/planning-data access and continuity**.
+
+The technical foundation and local validation now include:
+
+- **[FeatherForecast Security Reference & Applicability Addendum v1.0](02-regulatory-and-framework-research/Duckworks_FeatherForecast_Technical_Security_Reference_Applicability_Addendum_v1.0.md)**;
+- **[FeatherForecast Technical Security Architecture v1.0](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-003-featherforecast/Duckworks_FeatherForecast_Technical_Security_Architecture_v1.0.md)**;
+- **[FeatherForecast Technical Threat Model v1.0](10-system-model-and-technical-documentation/03-threat-models/AI-003-featherforecast/Duckworks_FeatherForecast_Threat_Model_v1.0.md)**;
+- **[FeatherForecast Technical Security Validation Plan v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/Duckworks_FeatherForecast_Technical_Security_Validation_Plan_v1.0.md)**; and
+- **[deterministic FeatherForecast validation lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/)** implementing `FFSEC-T001`–`FFSEC-T012`.
+
+The local campaign:
+
+- reproduced **12/12 deliberately seeded vulnerable failures**;
+- returned **12/12 hardened PASS**;
+- passed **10/10 unit tests**; and
+- passed the FeatherForecast semantic verifier.
+
+The local evidence is currently `LOCAL_UNBOUND`. No `EV-AI003-*` IDs are allocated until a successful commit-bound GitHub Actions replay is retained.
+
+Two interpretation boundaries are central:
+
+> **A drift alert is not the control objective. The defined pipeline must distinguish data-quality failure from drift and prevent silent automated promotion.**
+
+> **Forecast output is decision support. It cannot directly authorize a material purchasing or production commitment.**
+
+`FFSEC-T008` and `FFSEC-T009` provide synthetic evidence about the manager-approval/decision-record mechanism, but they do **not** demonstrate production or production-equivalent `FF-01` operation and do not close `IAF-2026-003`.
+
+**FeatherForecast evidence boundary:** local synthetic implementation, seeded failure reproduction, hardened retesting and control-signal validation are demonstrated. Production forecast accuracy, production poisoning resistance, real Northstar security, production drift-monitoring effectiveness, sustained human-approval operation, residual-risk reduction and legal compliance remain unverified.
+
+**Governance consequence:** no AI-003 score changes; `ASM-011` and `ASM-027` remain open; `IAF-2026-003` remains open; the governance position remains **Continue with monitoring**.
+
+**Next technical milestone:** upload the lab, obtain a clean commit-bound replay and retained evidence artifact, then consider stable `EV-AI003-*` allocation and AI-003 evidence/control/risk reconciliation.
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
@@ -728,6 +762,9 @@ For a security-focused review, use this shorter sequence after the existing Pond
 17. **[DuckDesign Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-001-duckdesign/Duckworks_DuckDesign_Threat_Model_v1.0.md)** — review `DDT-001`–`DDT-048`, attack paths and the `DDSEC-T001`–`DDSEC-T012` validation set.
 18. **[DuckDesign Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/)** — inspect the 12-case vulnerable/hardened lab, generated-code/dependency/tool/safety/approval/provenance assertions, semantic checks and commit-bound artifact.
 19. **[DuckDesign Evidence Reconciliation](80-operating-evidence/AI-001-duckdesign/Duckworks_DuckDesign_Evidence_Reconciliation_Record_v1.0.md)** — review `EV-AI001-001–007`, bounded DD control-maturity updates, unchanged risk scores, the open `IAF-2026-002` finding and unchanged Restricted Pilot gate.
+20. **[FeatherForecast Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-003-featherforecast/Duckworks_FeatherForecast_Technical_Security_Architecture_v1.0.md)** — review data-ingestion, lineage, feature/model/config, drift, forecast, approval, access and continuity boundaries.
+21. **[FeatherForecast Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-003-featherforecast/Duckworks_FeatherForecast_Threat_Model_v1.0.md)** — review `FFT-001`–`FFT-048`, attack/failure paths and `FFSEC-T001`–`FFSEC-T012`.
+22. **[FeatherForecast Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/)** — inspect the local 12-case vulnerable/hardened lab, drift/data-quality discrimination, approval/access/resilience assertions and explicit production-evidence limitations.
 
 
 ---
@@ -764,7 +801,10 @@ The repository includes or is intended to include:
 - QuackBot public-facing RAG/API architecture, threat model and commit-bound validation chain;
 - DuckDesign technical-security applicability addendum;
 - DuckDesign software-supply-chain/generated-code/tool-privilege architecture; and
-- DuckDesign technical threat model with `DDSEC-T001`–`DDSEC-T012` design-only validation cases.
+- DuckDesign technical threat model with `DDSEC-T001`–`DDSEC-T012` validation cases;
+- FeatherForecast technical-security applicability addendum;
+- FeatherForecast data-integrity / drift / decision-resilience architecture and threat model; and
+- FeatherForecast Technical Security Validation Plan v1.0 plus local deterministic `FFSEC-T001`–`FFSEC-T012` validation lab.
 
 ### Assessment
 
@@ -973,7 +1013,7 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect, QuackBot and DuckDesign each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. DuckDesign also has a controlled AI-001 evidence/control/risk reconciliation overlay while `IAF-2026-002` remains open. FeatherForecast now has its Phase II technical-security applicability, architecture and threat-model foundation, with `FFSEC-T001`–`FFSEC-T012` still design-only and no `EV-AI003-*` evidence allocated. Production effectiveness, product safety, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next major Phase II milestone is FeatherForecast executable validation through `DW-AI003-VAL-SEC-01` and a deterministic lab. Additional evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect, QuackBot and DuckDesign each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. DuckDesign also has a controlled AI-001 evidence/control/risk reconciliation overlay while `IAF-2026-002` remains open. FeatherForecast now has its Phase II applicability, architecture, threat model, validation plan and locally executed deterministic `FFSEC-T001`–`FFSEC-T012` lab. The local result is not yet commit-bound and no `EV-AI003-*` evidence is allocated. Production effectiveness, product safety, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next major Phase II milestone is a clean commit-bound FeatherForecast replay with a retained evidence artifact, followed by controlled AI-003 evidence reconciliation. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
