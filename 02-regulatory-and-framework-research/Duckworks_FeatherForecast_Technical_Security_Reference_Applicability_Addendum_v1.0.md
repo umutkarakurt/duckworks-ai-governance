@@ -197,4 +197,4 @@ The current governance position remains:
 
 > **CONTINUE WITH MONITORING**
 
-The next technical step is a separate FeatherForecast architecture and threat model before any executable security-validation plan is created.
+The FeatherForecast architecture and threat model are now established. The next technical step is `DW-AI003-VAL-SEC-01` — a separate data-integrity / poisoning / drift / decision-support resilience validation plan followed by a deterministic synthetic lab for `FFSEC-T001`–`FFSEC-T012`.
