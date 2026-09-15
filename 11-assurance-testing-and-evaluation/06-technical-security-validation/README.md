@@ -1,11 +1,34 @@
 # Phase II Technical Security Validation
 
 **Repository path:** `11-assurance-testing-and-evaluation/06-technical-security-validation/`  
-**Status:** Phase II controlled technical-validation workstream — synthetic / non-production
+**Status:** Phase II first-wave technical-assurance programme consolidated and closed at synthetic / commit-bound portfolio level — production effectiveness not established
 
 [← Back to assurance, testing and evaluation](../README.md) · [← Main portfolio](../../README.md)
 
 This folder contains reproducible security-validation plans, executable test implementations, failure/remediation evidence, same-test retesting, detection/control-signal validation and commit-bound replay evidence for selected Duckworks AI systems.
+
+## Programme consolidation and closure
+
+Start with these programme-level artifacts:
+
+1. [`Duckworks_PhaseII_Technical_Assurance_Programme_Summary_v1.0.md`](Duckworks_PhaseII_Technical_Assurance_Programme_Summary_v1.0.md) — consolidated five-system result, quantitative view, canonical anchors and claim boundaries.
+2. [`Duckworks_Cross_System_AI_Security_Control_and_Test_Matrix_v1.0.md`](Duckworks_Cross_System_AI_Security_Control_and_Test_Matrix_v1.0.md) — cross-system synthetic coverage by security/control theme.
+3. [`Duckworks_Technical_AI_Security_Assurance_Methodology_v1.0.md`](Duckworks_Technical_AI_Security_Assurance_Methodology_v1.0.md) — reusable technical-assurance method and evidence-maturity ladder.
+4. [`../../01-project-charter-and-context/02-objectives-and-scope/Duckworks_PhaseII_Technical_AI_Security_Assurance_Closure_Report_v1.0.md`](../../01-project-charter-and-context/02-objectives-and-scope/Duckworks_PhaseII_Technical_AI_Security_Assurance_Closure_Report_v1.0.md) — closure against original objectives/acceptance criteria and residual gaps.
+
+Consolidated first-wave result:
+
+- **5** differentiated AI-security system chains;
+- **52** canonical campaign test cases;
+- **52/52** deliberately seeded unsafe baseline outcomes reproduced;
+- **52/52** hardened PASS outcomes;
+- **40** supplemental automated unit tests;
+- commit-bound replay for all five systems;
+- **33** canonical technical-validation evidence records; and
+- **0** production-effectiveness conclusions created from synthetic validation.
+
+**Closure boundary:** first-wave build complete does not mean enterprise AI-security risk is resolved. Production integration/effectiveness, independent assurance and system-specific open findings/gaps remain visible.
+
 
 ## AI-006 PondGPT
 
@@ -117,6 +140,20 @@ A successful synthetic validation chain does not establish production operation,
 
 No lifecycle gate changes automatically from local/CI test success.
 
-## Next Phase II milestone
+## Phase II closure / future trigger
 
-FeatherForecast first-wave commit-bound validation and evidence reconciliation are complete. The next Phase II target should be chosen from a documented remaining gap; production or production-equivalent evidence is still required before operational-effectiveness claims.
+The planned first-wave Phase II build is **closed**.
+
+Do not add another system-specific synthetic campaign solely to increase coverage counts.
+
+Reopen or extend technical assurance when there is a documented trigger such as:
+
+- a new AI system with a materially new threat class;
+- a material architecture/model/provider/data/tool/use change;
+- an incident or control failure;
+- production or production-equivalent evidence becoming available;
+- an open finding requiring technical validation;
+- an independent-review request; or
+- a genuine portfolio/hiring credibility gap.
+
+Potential future scope candidates include AI-007 shadow-GenAI discovery/containment, model extraction/privacy attacks, multi-agent trust, autonomous external-action safety, or production MLOps/cloud assurance—but none is a Phase II closure blocker.
