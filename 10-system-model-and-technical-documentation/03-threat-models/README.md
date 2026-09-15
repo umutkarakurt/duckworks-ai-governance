@@ -21,7 +21,7 @@ This folder contains system-specific technical threat models that convert archit
 - WingInspect — commit-bound synthetic validation completed and reconciled.
 - QuackBot — commit-bound synthetic validation completed and reconciled.
 - DuckDesign — commit-bound synthetic validation completed and reconciled; `IAF-2026-002` remains open.
-- FeatherForecast — architecture/threat-model foundation complete; `FFSEC-T001`–`FFSEC-T012` are design-only pending validation plan/lab; `IAF-2026-003` remains open.
+- FeatherForecast — commit-bound synthetic validation completed and reconciled as `EV-AI003-001–007`; `IAF-2026-003` remains open; production forecast accuracy and control effectiveness remain unverified.
 
 ## Evidence boundary
 
