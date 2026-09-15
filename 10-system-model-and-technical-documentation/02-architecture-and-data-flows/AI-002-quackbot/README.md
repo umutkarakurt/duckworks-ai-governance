@@ -3,28 +3,30 @@
 **System:** AI-002 — QuackBot  
 **Business function:** Customer Operations  
 **Current governance gate:** **Pre-Production / Production Blocked**  
-**Status:** Synthetic security-architecture baseline established; first local validation increment executed
+**Status:** Synthetic security architecture established; first technical-validation increment commit-bound and reconciled
 
-## Current architecture
+## Current artifact
 
 - [`Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md`](Duckworks_QuackBot_Technical_Security_Architecture_v1.0.md)
 
-Related validation:
+Related artifacts:
 
+- [`../../03-threat-models/AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md`](../../03-threat-models/AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md)
 - [`../../../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/`](../../../11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/)
+- [`../../../80-operating-evidence/AI-002-quackbot/Duckworks_QuackBot_Evidence_Reconciliation_Record_v1.0.md`](../../../80-operating-evidence/AI-002-quackbot/Duckworks_QuackBot_Evidence_Reconciliation_Record_v1.0.md)
 
-Local validation currently records **12/12 seeded vulnerable failures** and **12/12 hardened PASS**, but remains `LOCAL_UNBOUND` pending repository replay.
+Canonical commit-bound replay:
 
-Two core invariants remain:
+`25525cc2c09c6b6557ddb9e7706fdaf81ce1796f`
 
-> **The model is not an access-control mechanism. Customer/account authorization must be enforced before private content enters model context.**
+The architecture preserves two critical invariants:
 
-> **Retrieved content and model output are untrusted data. Neither acquires application authority because an LLM processed or generated it.**
+> **The model is not an access-control mechanism. Customer/account authorization is enforced before private content enters model context.**
+
+> **Retrieved content and model output are untrusted data and do not acquire application authority through the LLM.**
 
 ## Evidence boundary
 
-The architecture is a target design. The local lab demonstrates only synthetic behavior against that design.
-
-It does not establish production API/session security, customer-data isolation, provider compliance, RAG integrity, legal compliance or deployment readiness.
+The successful synthetic replay does not prove that this target architecture exists in production or that real API/session/customer-data/provider boundaries are effective.
 
 The production gate remains **blocked**.
