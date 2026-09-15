@@ -18,6 +18,7 @@ This folder contains the legal, regulatory, standards, framework and technical-s
 - [`Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md`](Duckworks_Technical_AI_Security_Reference_and_Applicability_Baseline_v1.0.md)
 - [`Duckworks_QuackBot_Technical_Security_Reference_Applicability_Addendum_v1.0.md`](Duckworks_QuackBot_Technical_Security_Reference_Applicability_Addendum_v1.0.md)
 - [`Duckworks_DuckDesign_Technical_Security_Reference_Applicability_Addendum_v1.0.md`](Duckworks_DuckDesign_Technical_Security_Reference_Applicability_Addendum_v1.0.md)
+- [`Duckworks_FeatherForecast_Technical_Security_Reference_Applicability_Addendum_v1.0.md`](Duckworks_FeatherForecast_Technical_Security_Reference_Applicability_Addendum_v1.0.md)
 - The root [`REFERENCES.md`](../REFERENCES.md) remains the controlled public-source catalogue.
 
 ## Research hierarchy
@@ -40,6 +41,19 @@ The DuckDesign addendum records:
 - GDPR only where personal data enters the engineering workflow;
 - NIS2 as organization/national-law dependent;
 - NIST SSDF / 800-218A, NCSC, SLSA, OpenSSF, OWASP and MITRE as guidance/reference rather than law.
+
+
+## FeatherForecast applicability highlights
+
+The FeatherForecast addendum records:
+
+- no current basis to classify the internal supply-chain forecasting/decision-support system as an EU AI Act high-risk AI system;
+- reassessment if intended purpose, affected persons, product integration, decision authority or safety role changes;
+- NIS2 as an organization/national-law scope question, with supply-chain security, resilience, access and effectiveness testing relevant if Duckworks is in scope;
+- Trade Secrets Directive relevance where supplier/commercial planning information meets the legal definition;
+- GDPR only where personal data enter supplier/contact/log data;
+- CRA applicability as unestablished for the internal planning service; and
+- NIST AI RMF, NIST AI 100-2, NCSC, MITRE ATLAS and secure-ML references as guidance rather than mandatory law.
 
 ## Important interpretation rule
 
