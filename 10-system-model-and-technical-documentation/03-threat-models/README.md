@@ -9,33 +9,22 @@ This folder contains system-specific technical threat models that convert archit
 
 ## Current threat models
 
-- [`AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md) — internal RAG / GenAI application threat model and PG-03 baseline.
+- [`AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md`](AI-006-pondgpt/Duckworks_PondGPT_Threat_Model_v1.0.md) — internal RAG / GenAI threat model.
 - [`AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md`](AI-004-winginspect/Duckworks_WingInspect_Threat_Model_v1.0.md) — adversarial-ML / computer-vision threat model.
-- [`AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md`](AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md) — public-facing customer chatbot/RAG/API threat model covering internet abuse, session/auth, BOLA, prompt/RAG injection, customer-data leakage, misinformation, output handling, excessive agency/SSRF, resource exhaustion and change integrity.
-
-## Method
-
-Threat models may use:
-
-- STRIDE-style conventional cybersecurity analysis;
-- NIST adversarial-ML / GenAI risk terminology;
-- MITRE ATLAS attack themes;
-- OWASP GenAI Security;
-- OWASP API Security;
-- system-specific abuse/failure cases;
-- asset/trust-boundary analysis; and
-- risk/control traceability.
-
-Threat-model priorities indicate **technical testing urgency**, not Duckworks enterprise risk scores.
+- [`AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md`](AI-002-quackbot/Duckworks_QuackBot_Threat_Model_v1.0.md) — public-facing customer chatbot/RAG/API threat model.
 
 ## Current validation state
 
-- PondGPT — commit-bound synthetic technical validation completed and reconciled.
-- WingInspect — commit-bound synthetic technical validation completed and reconciled.
-- QuackBot — architecture/threat-model baseline complete; `QBSEC-T001`–`QBSEC-T012` are design-only pending validation plan/lab.
+- PondGPT — commit-bound synthetic validation completed and reconciled.
+- WingInspect — commit-bound synthetic validation completed and reconciled.
+- QuackBot — `QBSEC-T001`–`QBSEC-T012` implemented and locally executed: **12 vulnerable failures reproduced / 12 hardened PASS**; commit-bound replay pending.
+
+## Method
+
+Threat models may use STRIDE-style analysis, NIST AI/GenAI terminology, MITRE ATLAS, OWASP GenAI Security, OWASP API Security, system-specific abuse/failure cases, asset/trust-boundary analysis and risk/control traceability.
+
+Threat-model priorities indicate **technical testing urgency**, not Duckworks enterprise risk scores.
 
 ## Evidence boundary
 
-A threat model describes plausible attack/failure paths and planned validation.
-
-It is not evidence that a threat occurred, a production vulnerability exists or a control is effective.
+A threat model describes plausible attack/failure paths and planned/implemented validation. It is not itself evidence that a production vulnerability exists or a control is effective.
