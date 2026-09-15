@@ -10,7 +10,7 @@ This folder contains the legal, regulatory, standards, framework and technical-s
 ## Core research artifacts
 
 - [`Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.md`](Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.md)
-- [`Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.pdf`](Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.pdf)
+- [`Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.docx`](Duckworks_AI_Governance_Regulatory_and_Framework_Research_Report_v1.0.docx)
 - [`Duckworks_AI_Governance_Obligations_and_Guidance_Register_v1.0.xlsx`](Duckworks_AI_Governance_Obligations_and_Guidance_Register_v1.0.xlsx)
 
 ## Current Phase II applicability artifacts
