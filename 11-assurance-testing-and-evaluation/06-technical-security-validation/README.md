@@ -55,16 +55,17 @@ See [`AI-002-quackbot/`](AI-002-quackbot/).
 
 DuckDesign is the fourth Phase II technical-security target and the first dedicated **engineering / generated-code / software-supply-chain / build-provenance / tool-privilege** case.
 
-Current local validation:
+Canonical result:
 
 - `DDSEC-T001`–`DDSEC-T012`;
 - vulnerable: **0 PASS / 12 FAIL**;
 - hardened: **12 PASS / 0 FAIL**;
 - unit tests: **10/10 PASS**;
 - semantic verifier: **PASS**;
-- source binding: `LOCAL_UNBOUND`;
-- repository replay: **pending**;
-- canonical `EV-AI001-*` allocation: **none**; and
+- commit `1c1fd170347dff466eb9d4a670e4355905119be2`;
+- run #166 / `34961107816`;
+- retained artifact `duckdesign-security-evidence-1c1fd170347dff466eb9d4a670e4355905119be2`;
+- evidence reconciled as `EV-AI001-001–007`; and
 - `IAF-2026-002`: **remains open**.
 
 Primary target controls:
@@ -75,7 +76,7 @@ Primary target controls:
 - `DD-04 — Engineering Data Boundary & DLP`; and
 - `DD-05 — Design/Model Version Traceability`.
 
-The local lab demonstrates synthetic technical behavior only. It does not prove that `DD-01` operates in a production or production-equivalent process and therefore does not close the open High audit finding.
+The commit-bound lab and reconciliation demonstrate bounded synthetic technical behavior only. They do not prove that `DD-01` operates in a production or production-equivalent process and therefore do not close the open High audit finding.
 
 See [`AI-001-duckdesign/`](AI-001-duckdesign/).
 
@@ -91,4 +92,4 @@ No lifecycle gate changes automatically from local/CI test success.
 
 ## Next Phase II milestone
 
-Upload the DuckDesign validation increment and obtain a clean commit-bound replay plus retained evidence artifact. Only after that should AI-001 canonical evidence reconciliation be performed.
+DuckDesign first-wave commit-bound validation and evidence reconciliation are complete. The next candidate technical-security target is **AI-003 FeatherForecast** for data integrity/poisoning, drift, decision-support resilience and monitoring evidence, subject to a separate system-specific architecture/threat-model foundation before testing.
