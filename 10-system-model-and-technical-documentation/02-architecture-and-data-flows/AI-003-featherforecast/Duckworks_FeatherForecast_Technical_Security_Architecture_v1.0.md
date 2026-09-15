@@ -242,7 +242,7 @@ flowchart LR
 | `FF-01 — Human Planning Approval & Override` | FF-C15 / FF-C17 / FF-C16 | Historical source label Implemented, but repository review says implementation is not demonstrated; `IAF-2026-003` open |
 | `FF-02 — Back-Testing, Stress Testing & Challenger Review` | FF-C13 / FF-C14 / FF-C20 | Partially implemented source label; evidence absent |
 | `FF-03 — Automated Drift Alerts & Retraining Trigger` | FF-C13 / FF-C11 | Planned; no linked operating evidence |
-| `FF-04 — Supplier/Planning Data Access & Logging` | FF-C04 / FF-C18 / FF-C24–026 requirements | Partially implemented source label; evidence absent |
+| `FF-04 — Supplier/Planning Data Access & Logging` | FF-C04 / FF-C18 / FF-SR-024–026 | Partially implemented source label; evidence absent |
 | `AI-GOV-02` | FF-SR-034 | Enterprise-wide operation not demonstrated by this architecture |
 | `AI-INC-01` | FF-C19 / FF-C18 | No AI-003 incident operating evidence |
 
@@ -330,4 +330,4 @@ The current governance position remains:
 
 > **CONTINUE WITH MONITORING**
 
-The next technical step is the FeatherForecast threat model, followed by a separate technical-security validation plan and synthetic lab.
+The FeatherForecast threat model is now established. The next technical step is `DW-AI003-VAL-SEC-01` — a separate technical-security validation plan followed by a deterministic synthetic lab for `FFSEC-T001`–`FFSEC-T012`.
