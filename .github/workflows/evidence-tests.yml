@@ -82,6 +82,25 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
+      - name: Run DuckDesign generated-code and supply-chain security lab
+        working-directory: 11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab
+        run: |
+          set -o pipefail
+          rm -rf evidence/generated
+          python scripts/run_campaign.py
+          python -m unittest discover -s tests -p "test_*.py" 2>&1 | tee evidence/generated/unittest-summary.txt
+          python scripts/ci_verify.py 2>&1 | tee evidence/generated/ci-verification.txt
+          python scripts/build_hash_manifest.py
+
+      - name: Upload DuckDesign security evidence artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: duckdesign-security-evidence-${{ github.sha }}
+          path: 11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Run DuckTalent change monitor
         run: python 12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Check.py
 
@@ -125,6 +144,14 @@ jobs:
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/evidence/generated/hardened/QBSEC-T011.json')); assert d['result']=='PASS' and d['actual']['pii_canary_in_provider'] is False and d['actual']['secret_canary_in_provider'] is False and d['actual']['pii_canary_in_security_log'] is False and d['actual']['secret_canary_in_security_log'] is False"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/evidence/generated/hardened/QBSEC-T012.json')); assert d['result']=='PASS' and d['actual']['version_drift_detected'] is True and d['actual']['revalidation_required'] is True and d['actual']['promotion_blocked'] is True"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-002-quackbot/lab/evidence/generated/compliance/QB-COMP-001.json')); assert d['result']=='PASS' and d['actual']['shown_before_or_at_first_interaction'] is True and d['legal_compliance_claim'] is False"
+          python -c "import json,os; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/campaign-summary.json')); assert d['source_commit']==os.environ['GITHUB_SHA'] and d['production_effectiveness_claim'] is False and d['product_safety_claim'] is False and d['legal_compliance_claim'] is False and d['risk_score_change_authorized'] is False and d['pilot_gate_change_authorized'] is False and d['evidence_id_allocation_authorized'] is False and d['iaf_2026_002_closure_authorized'] is False and d['assumption_closure_authorized'] is False and d['profiles']['vulnerable']=={'tests':12,'pass':0,'fail':12} and d['profiles']['hardened']=={'tests':12,'pass':12,'fail':0}"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T001.json')); assert d['result']=='PASS' and d['actual']['engineering_ip_canary_in_provider'] is False and d['actual']['secret_canary_in_provider'] is False and d['actual']['engineering_ip_canary_in_log'] is False and d['actual']['secret_canary_in_log'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T003.json')); assert d['result']=='PASS' and d['actual']['scanner_flagged_prohibited_behavior'] is True and d['actual']['sandbox_enforced'] is True and d['actual']['shell_allowed'] is False and d['actual']['external_network_allowed'] is False and d['actual']['artifact_promoted'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T004.json')); assert d['result']=='PASS' and d['actual']['dependency_denied'] is True and d['actual']['dependency_resolved'] is False and d['actual']['public_registry_fallback_used'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T008.json')); assert d['result']=='PASS' and d['actual']['safety_gate_blocked'] is True and d['actual']['promotion_allowed'] is False and d['actual']['bypass_possible'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T009.json')); assert d['result']=='PASS' and d['actual']['approval_invalidated'] is True and d['actual']['rereview_required'] is True and d['actual']['approval_accepted'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T011.json')); assert d['result']=='PASS' and d['actual']['artifact_quarantined'] is True and d['actual']['artifact_promoted'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T012.json')); assert d['result']=='PASS' and d['actual']['known_good_state_restored'] is True and d['actual']['rollback_hash_verified'] is True and d['actual']['correlated_failure_event_present'] is True and d['actual']['automatic_risk_or_gate_change'] is False"
           python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Result.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==7 and d['Material_Reassessment_Trigger'] is True"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/effectiveness_test_results.json')); assert d['overall_status']=='pass' and d['total_cases']==3 and d['expected_results_met']==3 and d['deployment_authorizations']==0"
           python -c "import json; d=json.load(open('06-governance-operating-model/01-aims-objectives-and-support/Duckworks_AIMS_Authorization_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==3 and d['blocked_records']==2 and d['eligible_for_human_authorization']==1 and d['authorizations_granted_by_script']==0 and d['human_authorization_required'] is True"
