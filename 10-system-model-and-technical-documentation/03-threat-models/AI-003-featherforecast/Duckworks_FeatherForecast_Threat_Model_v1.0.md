@@ -324,4 +324,4 @@ The governance position remains:
 
 > **CONTINUE WITH MONITORING**
 
-The validation plan and deterministic `FFSEC-T001`–`FFSEC-T012` lab are now established locally. The next technical step is a clean commit-bound repository replay with retained evidence before any canonical `EV-AI003-*` allocation or AI-003 control/risk reconciliation.
+The validation plan and deterministic `FFSEC-T001`–`FFSEC-T012` lab have now completed commit-bound replay and canonical evidence reconciliation. Further testing should be triggered by production or production-equivalent evidence, material model/data/configuration/vendor/use change, control failure, adverse planning outcome or a deliberate next-phase assurance objective.
