@@ -101,6 +101,25 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
+      - name: Run FeatherForecast data-integrity and decision-resilience security lab
+        working-directory: 11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab
+        run: |
+          set -o pipefail
+          rm -rf evidence/generated
+          python scripts/run_campaign.py
+          python -m unittest discover -s tests -p "test_*.py" 2>&1 | tee evidence/generated/unittest-summary.txt
+          python scripts/ci_verify.py 2>&1 | tee evidence/generated/ci-verification.txt
+          python scripts/build_hash_manifest.py
+
+      - name: Upload FeatherForecast security evidence artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: featherforecast-security-evidence-${{ github.sha }}
+          path: 11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Run DuckTalent change monitor
         run: python 12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Check.py
 
@@ -152,6 +171,14 @@ jobs:
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T009.json')); assert d['result']=='PASS' and d['actual']['approval_invalidated'] is True and d['actual']['rereview_required'] is True and d['actual']['approval_accepted'] is False"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T011.json')); assert d['result']=='PASS' and d['actual']['artifact_quarantined'] is True and d['actual']['artifact_promoted'] is False"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-001-duckdesign/lab/evidence/generated/hardened/DDSEC-T012.json')); assert d['result']=='PASS' and d['actual']['known_good_state_restored'] is True and d['actual']['rollback_hash_verified'] is True and d['actual']['correlated_failure_event_present'] is True and d['actual']['automatic_risk_or_gate_change'] is False"
+          python -c "import json,os; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/campaign-summary.json')); assert d['source_commit']==os.environ['GITHUB_SHA'] and d['production_effectiveness_claim'] is False and d['forecast_accuracy_claim'] is False and d['legal_compliance_claim'] is False and d['risk_score_change_authorized'] is False and d['governance_gate_change_authorized'] is False and d['evidence_id_allocation_authorized'] is False and d['iaf_2026_003_closure_authorized'] is False and d['assumption_closure_authorized'] is False and d['current_governance_position']=='CONTINUE_WITH_MONITORING' and d['profiles']['vulnerable']=={'tests':12,'pass':0,'fail':12} and d['profiles']['hardened']=={'tests':12,'pass':12,'fail':0}"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/hardened/FFSEC-T001.json')); assert d['result']=='PASS' and d['actual']['batch_quarantined'] is True and d['actual']['batch_entered_approved_snapshot'] is False and d['actual']['forecast_generated_from_batch'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/hardened/FFSEC-T003.json')); assert d['result']=='PASS' and d['actual']['training_serving_skew_detected'] is True and d['actual']['scoring_allowed'] is False and d['actual']['promotion_allowed'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/hardened/FFSEC-T006.json')); assert d['result']=='PASS' and d['actual']['quality_case']['classification']=='DATA_QUALITY' and d['actual']['drift_case']['classification']=='DRIFT' and d['actual']['automatic_promotion'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/hardened/FFSEC-T008.json')); assert d['result']=='PASS' and d['actual']['commitment_blocked'] is True and d['actual']['direct_commitment_created'] is False and d['actual']['approval_bypass_possible'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/hardened/FFSEC-T010.json')); assert d['result']=='PASS' and d['actual']['access_decision']=='DENY' and d['actual']['access_logged'] is True and d['actual']['commercial_canary_in_response'] is False and d['actual']['commercial_canary_in_export'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/hardened/FFSEC-T011.json')); assert d['result']=='PASS' and d['actual']['forecast_marked_stale'] is True and d['actual']['manual_or_degraded_mode_active'] is True and d['actual']['decision_support_allowed_from_stale_forecast'] is False"
+          python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/evidence/generated/hardened/FFSEC-T012.json')); assert d['result']=='PASS' and d['actual']['promotion_blocked'] is True and d['actual']['known_good_state_restored'] is True and d['actual']['rollback_model_matches'] is True and d['actual']['rollback_config_matches'] is True and d['actual']['rollback_data_matches'] is True"
           python -c "import json; d=json.load(open('12-monitoring-reporting-and-roadmap/AI-005-ducktalent/AI-005_2026-09-02_MON_Change_Regression_Result.json')); assert d['Failed_Control_Assertions']==0 and d['Passed_Control_Assertions']==7 and d['Material_Reassessment_Trigger'] is True"
           python -c "import json; d=json.load(open('11-assurance-testing-and-evaluation/04-internal-audit-and-corrective-action/AI-005-ducktalent/evidence/effectiveness_test_results.json')); assert d['overall_status']=='pass' and d['total_cases']==3 and d['expected_results_met']==3 and d['deployment_authorizations']==0"
           python -c "import json; d=json.load(open('06-governance-operating-model/01-aims-objectives-and-support/Duckworks_AIMS_Authorization_Gate_Run_Summary.json')); assert d['failed_assertions']==0 and d['expected_results_met']==3 and d['blocked_records']==2 and d['eligible_for_human_authorization']==1 and d['authorizations_granted_by_script']==0 and d['human_authorization_required'] is True"
