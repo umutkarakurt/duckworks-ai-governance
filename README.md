@@ -14,7 +14,7 @@
 
 **Organization:** Duckworks *(fictional)*  
 **Project type:** AI governance / AI security / cybersecurity / GRC portfolio  
-**Status:** v1.8 governance baseline + PondGPT, WingInspect, QuackBot and DuckDesign commit-bound technical validation completed + AI-001 evidence reconciliation completed + FeatherForecast Phase II local executable validation completed; commit-bound replay pending  
+**Status:** v1.8 governance baseline + PondGPT, WingInspect, QuackBot, DuckDesign and FeatherForecast commit-bound technical validation completed + AI-001 and AI-003 evidence reconciliation completed  
 **Data classification:** Case-study material is fictional, synthetic, anonymized, or public-source; author profile and contact details are real
 
 ---
@@ -514,14 +514,17 @@ The technical foundation and local validation now include:
 - **[FeatherForecast Technical Security Validation Plan v1.0](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/Duckworks_FeatherForecast_Technical_Security_Validation_Plan_v1.0.md)**; and
 - **[deterministic FeatherForecast validation lab](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/lab/)** implementing `FFSEC-T001`–`FFSEC-T012`.
 
-The local campaign:
+GitHub Actions run **#191** (`34971811660`) replayed the FeatherForecast lab against commit `285b5bdedaef1295d9648c46e17a1aaef7b3428b` under Python `3.12.14`.
+
+It:
 
 - reproduced **12/12 deliberately seeded vulnerable failures**;
 - returned **12/12 hardened PASS**;
-- passed **10/10 unit tests**; and
-- passed the FeatherForecast semantic verifier.
+- passed **10/10 unit tests**;
+- passed the FeatherForecast semantic verifier and repository-level assertions; and
+- retained artifact `featherforecast-security-evidence-285b5bdedaef1295d9648c46e17a1aaef7b3428b` (artifact `10396704621`, digest `sha256:41ef49f1620d7c06fe3c3381c05f7a913be612895c08d36f47a18ef0554528ea`).
 
-The local evidence is currently `LOCAL_UNBOUND`. No `EV-AI003-*` IDs are allocated until a successful commit-bound GitHub Actions replay is retained.
+The technical increment is reconciled as **`EV-AI003-001–007`**.
 
 Two interpretation boundaries are central:
 
@@ -529,13 +532,13 @@ Two interpretation boundaries are central:
 
 > **Forecast output is decision support. It cannot directly authorize a material purchasing or production commitment.**
 
-`FFSEC-T008` and `FFSEC-T009` provide synthetic evidence about the manager-approval/decision-record mechanism, but they do **not** demonstrate production or production-equivalent `FF-01` operation and do not close `IAF-2026-003`.
+`EV-AI003-007` isolates the `FFSEC-T008/T009` manager-approval/decision-record mechanism. It reduces uncertainty about control design but does **not** demonstrate production or production-equivalent `FF-01` operation and does not close `IAF-2026-003`.
 
-**FeatherForecast evidence boundary:** local synthetic implementation, seeded failure reproduction, hardened retesting and control-signal validation are demonstrated. Production forecast accuracy, production poisoning resistance, real Northstar security, production drift-monitoring effectiveness, sustained human-approval operation, residual-risk reduction and legal compliance remain unverified.
+**FeatherForecast evidence boundary:** synthetic technical implementation, hardened operation testing, control-signal validation and commit-bound reproducibility are demonstrated. Production forecast accuracy, production poisoning resistance, real Northstar security, production drift-monitoring effectiveness, sustained human-approval operation, residual-risk reduction and legal compliance remain unverified.
 
 **Governance consequence:** no AI-003 score changes; `ASM-011` and `ASM-027` remain open; `IAF-2026-003` remains open; the governance position remains **Continue with monitoring**.
 
-**Next technical milestone:** upload the lab, obtain a clean commit-bound replay and retained evidence artifact, then consider stable `EV-AI003-*` allocation and AI-003 evidence/control/risk reconciliation.
+**Next technical milestone:** obtain production or production-equivalent operating evidence for `FF-01`–`FF-04`—especially the approval population required by `IAF-2026-003`—or select the next Phase II target from a documented portfolio gap.
 ---
 
 ## 8. Regulatory, Standards, and Framework Approach
@@ -764,7 +767,8 @@ For a security-focused review, use this shorter sequence after the existing Pond
 19. **[DuckDesign Evidence Reconciliation](80-operating-evidence/AI-001-duckdesign/Duckworks_DuckDesign_Evidence_Reconciliation_Record_v1.0.md)** — review `EV-AI001-001–007`, bounded DD control-maturity updates, unchanged risk scores, the open `IAF-2026-002` finding and unchanged Restricted Pilot gate.
 20. **[FeatherForecast Technical Security Architecture](10-system-model-and-technical-documentation/02-architecture-and-data-flows/AI-003-featherforecast/Duckworks_FeatherForecast_Technical_Security_Architecture_v1.0.md)** — review data-ingestion, lineage, feature/model/config, drift, forecast, approval, access and continuity boundaries.
 21. **[FeatherForecast Technical Threat Model](10-system-model-and-technical-documentation/03-threat-models/AI-003-featherforecast/Duckworks_FeatherForecast_Threat_Model_v1.0.md)** — review `FFT-001`–`FFT-048`, attack/failure paths and `FFSEC-T001`–`FFSEC-T012`.
-22. **[FeatherForecast Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/)** — inspect the local 12-case vulnerable/hardened lab, drift/data-quality discrimination, approval/access/resilience assertions and explicit production-evidence limitations.
+22. **[FeatherForecast Technical Security Validation](11-assurance-testing-and-evaluation/06-technical-security-validation/AI-003-featherforecast/)** — inspect the commit-bound 12-case vulnerable/hardened lab, drift/data-quality discrimination, approval/access/resilience assertions and explicit production-evidence limitations.
+23. **[FeatherForecast Evidence Reconciliation](80-operating-evidence/AI-003-featherforecast/Duckworks_FeatherForecast_Evidence_Reconciliation_Record_v1.0.md)** — review `EV-AI003-001–007`, bounded FF control-maturity updates, unchanged risk scores, open `IAF-2026-003` and unchanged Continue-with-monitoring position.
 
 
 ---
@@ -843,13 +847,14 @@ The repository includes or is intended to include:
 
 ### Operating evidence
 
-- authoritative v1.8 control-evidence base with 76 records, supplemented by WingInspect `EV-AI004-006`–`011`, QuackBot `EV-AI002-001`–`007`, and DuckDesign `EV-AI001-001`–`007` reconciliation overlays for a combined current population of **96** records pending the next consolidated master-index release;
+- authoritative v1.8 control-evidence base with 76 records, supplemented by WingInspect `EV-AI004-006`–`011`, QuackBot `EV-AI002-001`–`007`, DuckDesign `EV-AI001-001`–`007`, and FeatherForecast `EV-AI003-001`–`007` reconciliation overlays for a combined current population of **103** records pending the next consolidated master-index release;
 - WingInspect `WI-01` control implementation card;
 - synthetic WingInspect inspection execution log;
 - Human Release Gate control-test workpaper;
 - WingInspect Phase II validation plan, executable lab, findings/remediation, hardened retest, detection/control-signal validation and commit-bound replay (`EV-AI004-006`–`011`);
 - QuackBot Phase II validation plan, executable lab, findings/remediation, hardened retest, detection/control-signal validation, interaction-disclosure design assertion and commit-bound replay (`EV-AI002-001`–`007`);
 - DuckDesign Phase II validation plan, executable lab, findings/remediation, hardened retest, detection/control-signal validation, commit-bound replay and exact-artifact approval-binding evidence (`EV-AI001-001`–`007`);
+- FeatherForecast Phase II validation plan, executable lab, findings/remediation, hardened retest, detection/control-signal validation, commit-bound replay and manager-approval/decision-record evidence (`EV-AI003-001`–`007`);
 - PondGPT `PG-02` control implementation card;
 - synthetic PondGPT authorization matrix;
 - executable PondGPT permission-regression control;
@@ -1013,7 +1018,7 @@ These limitations are deliberate and form part of the project's assurance bounda
 
 The repository is designed to expose remaining gaps rather than hide them.
 
-The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect, QuackBot and DuckDesign each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. DuckDesign also has a controlled AI-001 evidence/control/risk reconciliation overlay while `IAF-2026-002` remains open. FeatherForecast now has its Phase II applicability, architecture, threat model, validation plan and locally executed deterministic `FFSEC-T001`–`FFSEC-T012` lab. The local result is not yet commit-bound and no `EV-AI003-*` evidence is allocated. Production effectiveness, product safety, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next major Phase II milestone is a clean commit-bound FeatherForecast replay with a retained evidence artifact, followed by controlled AI-003 evidence reconciliation. Additional evidence-led work may include:
+The v1.8 governance baseline is suitable for portfolio evaluation, and Phase II now extends it with a commit-bound technical AI-security engineering workstream. PondGPT, WingInspect, QuackBot and DuckDesign each have a bounded technical-validation chain with commit-bound synthetic evidence and explicit claim limitations. DuckDesign also has a controlled AI-001 evidence/control/risk reconciliation overlay while `IAF-2026-002` remains open. FeatherForecast now has its Phase II applicability, architecture, threat model, validation plan, commit-bound deterministic `FFSEC-T001`–`FFSEC-T012` lab and controlled AI-003 evidence/control/risk reconciliation overlay. Production effectiveness, product safety, risk reduction and gate changes remain unclaimed unless separately supported. Future work should close a documented gap, respond to evaluator feedback, support a named target role or correct a repository defect. The next major Phase II milestone should be selected from a documented remaining gap. For FeatherForecast, production or production-equivalent operating evidence remains necessary before any production-effectiveness or residual-risk claim. Additional evidence-led work may include:
 
 - AI intake form and lifecycle-gate workflow;
 - dedicated human-oversight standard;
